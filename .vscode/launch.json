@@ -12,9 +12,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "C:/Users/baldu/Documents/arduino_uno/final_project/main/main/.pio/build/huzzah/firmware.elf",
+            "executable": "C:/Users/amaln/OneDrive - Danmarks Tekniske Universitet/7. Semester/34338 Telecommunication programming project/BFIT/.pio/build/huzzah/firmware.elf",
             "projectEnvName": "huzzah",
-            "toolchainBinDir": "C:/Users/baldu/.platformio/packages/toolchain-xtensa/bin",
+            "toolchainBinDir": "C:/Users/amaln/.platformio/packages/toolchain-xtensa/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "preLaunchTask": {
                 "type": "PlatformIO",
@@ -25,18 +25,18 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "C:/Users/baldu/Documents/arduino_uno/final_project/main/main/.pio/build/huzzah/firmware.elf",
+            "executable": "C:/Users/amaln/OneDrive - Danmarks Tekniske Universitet/7. Semester/34338 Telecommunication programming project/BFIT/.pio/build/huzzah/firmware.elf",
             "projectEnvName": "huzzah",
-            "toolchainBinDir": "C:/Users/baldu/.platformio/packages/toolchain-xtensa/bin",
+            "toolchainBinDir": "C:/Users/amaln/.platformio/packages/toolchain-xtensa/bin",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (without uploading)",
-            "executable": "C:/Users/baldu/Documents/arduino_uno/final_project/main/main/.pio/build/huzzah/firmware.elf",
+            "executable": "C:/Users/amaln/OneDrive - Danmarks Tekniske Universitet/7. Semester/34338 Telecommunication programming project/BFIT/.pio/build/huzzah/firmware.elf",
             "projectEnvName": "huzzah",
-            "toolchainBinDir": "C:/Users/baldu/.platformio/packages/toolchain-xtensa/bin",
+            "toolchainBinDir": "C:/Users/amaln/.platformio/packages/toolchain-xtensa/bin",
             "internalConsoleOptions": "openOnSessionStart",
             "loadMode": "manual"
         }
