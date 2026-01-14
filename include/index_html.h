@@ -1,3 +1,17 @@
+/**
+ * @file index_html.h
+ * @author Baldur G. Toftegaard
+ * @brief 
+ * @version 0.1
+ * @date 13-01-2026
+ * @par Revision history
+ * | Version |    Date    | Description                                                             |
+ * |---------|------------|-------------------------------------------------------------------------|
+ * | 0.1     | 13-01-2026 | Creaded file,                                                           |
+ * | 0.1     |            |                                                                         |
+ * @copyright Copyright (c) 2026 
+ */
+
 #ifndef INDEX_HTML_H
 #define INDEX_HTML_H
 
