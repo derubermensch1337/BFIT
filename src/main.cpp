@@ -1,3 +1,19 @@
+/**
+ * @file main.cpp
+ * @authors Baldur G. Toftegaard,
+ * @brief Main, used to establish a webs server. 
+ * @date 13-01-2026
+ * @version 0.1
+ * @par Revision history
+ * | Version |    Date    | Description                       |
+ * |---------|------------|-----------------------------------|
+ * | 0.1     | 13-01-2026 | Add creating a web server         |
+ * | 0.1     |            |                                   |
+ * 
+ * @copyright Copyright (c) 2026
+ * 
+*/
+
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WiFiMulti.h>   // Include the Wi-Fi-Multi library
