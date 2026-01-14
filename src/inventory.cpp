@@ -1,18 +1,20 @@
-#include "Arduino.h"
-#include "inventory.h"
+/**
+ * @file inventory.h
+ * @authors Baldur G. Toftegaard,
+ * @brief  
+ * @date 14-01-2026
+ * @version 0.1
+ * @par Revision history
+ * | Version |    Date    | Description                       |
+ * |---------|------------|-----------------------------------|
+ * | 0.1     | 14-01-2026 | Create file                       |
+ * | 0.1     |            |                                   |
+ *
+ * @copyright Copyright (c) 2026
+ * 
+*/
 
-struct user {
-    char name[25];
-    char room[3];
-    uint8_t green;
-    uint8_t clasic;
-    uint8_t sommersby;
-    uint8_t limfjords_porter;
-    uint8_t cola;
-    uint8_t cola_zero;
-};
+#ifndef INVENTORY_H
+#define INVENTORY_H
 
-
-struct inventory {
-    /* data */
-};
+#endif
