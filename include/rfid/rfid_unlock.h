@@ -16,45 +16,81 @@
 #ifndef RFID_UNLOCK_H
 #define RFID_UNLOCK_H  
 
+// Libraries
 #include <SPI.h>
 #include <MFRC522.h>
 
+// Pins
+#define SS_PIN D8
+#define RST_PIN D3
+
+// Constants
 #define MAX_ROOMS = 17
-#define UID_LENGTH = 4 // 4 bytes
+#define UID_LENGTH = 4 // 4 bytes is standard
+
+// Commands
+// add usr command, like press 'a'
 
 // User struct containing room number and UID
 struct User {
-    byte uid[UID_LENGHT];
+    byte uid[UID_LENGTH];
     int roomNumber;
 }
 
 // Create all users
-User user[MAX_ROOMS];
+User users[MAX_ROOMS];
 int userCount = 0;
 
-
 // Add room number 
-void add_new_room_number (){
+void add_user (){
     if (userCount >= MAX_ROOMS) {
         Serial.println("Database full.");
         return;
     }   
 
-    // prompt user for their room number
+    // Prompt user for their room number
+    Serial.println("Enter room number: ");
+    while(!Serial.available()){
 
+    };
 
-    // read tag
+    // Parse room number
+    int roomNumber = Serial.parseInt();
+    Serial.print("Room number received: ")
+    Serial.println(roomNumber);
 
-    // check if it already exists by comparing UIDs
+    // Prompt user to scan their RFID tag
+    Serial.println("Scan your RFID tag.")
+    byte uid[UID_LENGTH];
+    
+    // Read tag
+    while(!read_RFID_tag(rfid, uid)){
+        // wait for tag
+    }
 
-        // if it does, print "already in database"
-        // if not, add to database and print something like "resident added"
+    // Check if tag is already registered
+    for (int i = 0; i++; i<userCount){
+        if (compare_UID(uid, users[i].uid)){ // if match is found
+            Serial.println("Tag already registered in database.");
+            return; // skip the rest of the code
+        }
+    }
 
+    // Store new user
+    for (int i = 0; i++; i<UID_LENGTH){
+        users[userCount].uid[i]=uid[i]; // store the 4 bytes
+    }
+    users[userCount].roomNumber = roomNumber; // add room number
+    userCount++;
+
+    Serial.println("Successfully added new user.");
 }
 
+/* Helper functions 
+    compare_UID
+    read_RFID_tag
+*/ 
 
-
-// Helper functions
 // Compares two uid tags and returns true if they are identical
 bool compare_UID (byte *uid1, byte *uid2){
     for (int i=0; i<UID_LENGTH;i++){
@@ -65,5 +101,25 @@ bool compare_UID (byte *uid1, byte *uid2){
     return true; 
 }
 
+ // Read RFID tag (mostly copied from X's github)
+ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
+
+    // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
+    if (!rfid.PICC_IsNewCardPresent()){
+        return;
+    }
+
+    // Verify if the NUID has been read
+    if (!rfid.PICC_ReadCardSerial()){
+        return;
+    }
+
+    for (byte i = 0; i < UID_LENGTH; i++) {
+        uidBuffer[i] = rfid.uid.uidByte[i];
+    }
+
+    rfid.PICC_HaltA();
+    return true;
+ }
 
 #endif 
