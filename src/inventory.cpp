@@ -5,10 +5,10 @@
  * @date 14-01-2026
  * @version 0.1
  * @par Revision history
- * | Version |    Date    | Description                       |
- * |---------|------------|-----------------------------------|
- * |   0.1   | 14-01-2026 | Create file                       |
- * |         |            |                                   |
+ * | Version |    Date    | Description                             |
+ * |---------|------------|-----------------------------------------|
+ * |   0.1   | 14-01-2026 | Create file                             |
+ * |   0.2   | 15-01-2026 | Began programming the inventory system  |
  *
  * @copyright Copyright (c) 2026
  * 
