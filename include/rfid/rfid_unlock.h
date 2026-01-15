@@ -29,13 +29,16 @@
 // Commands
 enum RFIDcommand {
     CMD_NONE,
-    CMD_ADD_USER
+    CMD_ADD_USER,
+    CMD_OPEN,
+    CMD_LOCK,
+    CMD_REMOVE_USER
 };
 
 // User struct
 struct User {
     byte uid[UID_LENGTH];
-    int roomNumber;
+    int roomNumber; 
 };
 
 // Extern globals declared
@@ -46,8 +49,9 @@ extern int userCount;
 RFIDcommand check_command(void);
 void setup_RFID_reader(MFRC522 &rfid);
 void add_user(MFRC522 &rfid);
-
 bool compare_UID(byte *uid1, byte *uid2);
 bool read_RFID_tag(MFRC522 &rfid, byte *uidBuffer);
+void display_commands(void);
+
 
 #endif

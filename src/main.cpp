@@ -28,6 +28,7 @@
 #include "rfid/rfid_unlock.h"
 
 MFRC522 rfid(SS_PIN, RST_PIN);
+RFIDcommand activeCommand = CMD_NONE; // Initial command
 
 ESP8266WiFiMulti wifiMulti;
 ESP8266WebServer server(80);  // Create an instance of the server
@@ -81,11 +82,33 @@ void setup() {
 
   // Initialize RFID reader
   setup_RFID_reader(rfid);
+  
+  // Display commands
+  display_commands(); 
 } 
 
 void loop() {
   server.handleClient();
-  
+  // TODO: this should be moved inside a function
+  // If no command is active, check for a new one and latch
+  if (activeCommand == CMD_NONE) {
+    RFIDcommand newCmd = check_command();
+    if (newCmd != activeCommand){
+      activeCommand = newCmd;
+    }
+  }
+  // Execute active command
+switch (activeCommand) {
+  case CMD_ADD_USER:
+    add_user(rfid);            // blocking by design
+    activeCommand = CMD_NONE; 
+    Serial.println("Ready for next command.");
+    break;
+  case CMD_NONE:
+  default:
+    // do nothing
+    break;
+  }
 }
 
 void handleNotFound(){

@@ -47,7 +47,7 @@ void setup_RFID_reader(MFRC522 &rfid){
     Serial.println("RFID system ready.");
 }
 
-// ====================== Add room number ===================================
+// ====================== Add user ===================================
 void add_user (MFRC522 &rfid){
     if (userCount >= MAX_ROOMS) {
         Serial.println("Database full.");
@@ -119,4 +119,11 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
     rfid.PICC_HaltA();
     return true;
 }
+
+
+void display_commands(){
+    Serial.println("Press 'a' to add a user.");
+}
+
+
 
