@@ -25,7 +25,9 @@
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
-#include "RFID_UNLOCK.h"
+#include "rfid/rfid_unlock.h"
+
+MFRC522 rfid(SS_PIN, RST_PIN);
 
 ESP8266WiFiMulti wifiMulti;
 ESP8266WebServer server(80);  // Create an instance of the server
@@ -76,6 +78,12 @@ void setup() {
   // Start the server
   server.begin();
   Serial.println("Server started"); 
+
+  // Initialize RFID reader
+  setup_RFID_reader(rfid);
+
+
+
 } 
 
 void loop() {
