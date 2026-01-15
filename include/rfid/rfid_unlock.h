@@ -29,8 +29,10 @@
 #define UID_LENGTH = 4 // 4 bytes is standard
 
 // Commands
-// todo: add usr command, like press 'a'
-
+enum RFIDcommand {
+    CMD_NONE,
+    CMD_ADD_USER
+};
 
 // User struct containing room number and UID
 struct User {
@@ -42,8 +44,27 @@ struct User {
 User users[MAX_ROOMS];
 int userCount = 0;
 
-// ====================== Command
+// ====================== Check command =====================================
+RFIDcommand check_command(){
+    if (!Serial.available()){
+        return CMD_NONE;
+    };
 
+    char cmd = Serial.read(); // Read keyboard character pressed
+
+    switch (cmd) {
+        case 'a':
+            return CMD_ADD_USER; 
+            break;
+        case 'n':
+            return CMD_NONE;
+            break;
+        default:
+            return CMD_NONE;
+            break;
+    }
+
+}
 
 // ====================== Setup RFID reader =================================
 void setup_RFID_reader(){
@@ -97,10 +118,7 @@ void add_user (){
     Serial.println("Successfully added new user.");
 }
 
-/* Helper functions 
-    compare_UID
-    read_RFID_tag
-*/ 
+// HELPER FUNCTIONS 
 
 // Compares two uid tags and returns true if they are identical
 bool compare_UID (byte *uid1, byte *uid2){
@@ -133,4 +151,4 @@ bool compare_UID (byte *uid1, byte *uid2){
     return true;
  }
 
-#endif 
+#endif
