@@ -33,7 +33,7 @@ void handleNotFound();
 
 void setup() {
   Serial.begin(115200);
-  delay(10);
+  delay(200);
   
   // Connect to WiFi network
   WiFi.begin("Baldur's A56", "MyPasskeyA56");  // add Wi-Fi networks you want to connect to
