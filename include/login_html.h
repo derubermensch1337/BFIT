@@ -7,8 +7,8 @@
  * @par Revision history
  * | Version |    Date    | Description                                                             |
  * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 13-01-2026 | Creaded file,                                                           |
- * | 0.1     |            |                                                                         |
+ * |   0.1   | 13-01-2026 | Creaded file,                                                           |
+ * |         |            |                                                                         |
  * 
  * @copyright Copyright (c) 2026
  */

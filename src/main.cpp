@@ -5,10 +5,12 @@
  * @date 13-01-2026
  * @version 0.1
  * @par Revision history
- * | Version |    Date    | Description                       |
- * |---------|------------|-----------------------------------|
- * | 0.1     | 13-01-2026 | Add creating a web server         |
- * | 0.1     |            |                                   |
+ * | Version |    Date    | Description                           |
+ * |---------|------------|---------------------------------------|
+ * |   0.1   | 13-01-2026 | Add creating a web server             |
+ * |   0.2   | 15-01-2026 | Added base graph for displaying sales |
+ * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement          |
+ * 
  * 
  * @copyright Copyright (c) 2026
  * 
@@ -26,6 +28,17 @@
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
 
+int salePoleClassicHight = 30;
+
+const int BUTTON_1_PIN = 4;   // D2 (GPIO4)
+const int BUTTON_2_PIN = 5;   // D1 (GPIO5)
+
+bool lastB1 = HIGH;
+bool lastB2 = HIGH;
+
+unsigned long lastChangeMs = 0;
+const unsigned long debounceMs = 50;
+
 ESP8266WiFiMulti wifiMulti;
 ESP8266WebServer server(80);  // Create an instance of the server
 
@@ -33,8 +46,11 @@ void handleNotFound();
 
 void setup() {
   Serial.begin(115200);
-  delay(10);
-  
+  delay(200);                             // Delay to alow the board rate to be configure before continuing (stops standard boadloader print from messing up).
+
+  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
+
   // Connect to WiFi network
   WiFi.begin("Baldur's A56", "MyPasskeyA56");  // add Wi-Fi networks you want to connect to
   // wifiMulti.addAP("Inteno-66C1", "069B55753B6C9A");  // add Wi-Fi networks you want to connect to
@@ -56,8 +72,20 @@ void setup() {
     Serial.println("Error setting up MDNS responder!");
   }
 
+  /*
   server.on("/", HTTP_GET, []() {
     server.send_P(200, "text/html", INDEX_HTML);
+  });
+  */
+
+  server.on("/", HTTP_GET, []() {
+    String page = FPSTR(INDEX_HTML);
+    page.replace("%SALE_HIGHT%", String(salePoleClassicHight));
+    server.send(200, "text/html", page);
+  });
+  
+  server.on("/saleHight", HTTP_GET, []() {
+    server.send(200, "text/plain", String(salePoleClassicHight));
   });
 
   server.on("/style.css", HTTP_GET, []() {
@@ -71,7 +99,7 @@ void setup() {
   server.on("/admin", HTTP_GET, []() {
     server.send_P(200, "text/html", ADMIN_HTML);
   });
-    
+
   // Start the server
   server.begin();
   Serial.println("Server started"); 
@@ -79,7 +107,29 @@ void setup() {
 
 void loop() {
   server.handleClient();
+  yield();
+  bool b1 = digitalRead(BUTTON_1_PIN);
+  bool b2 = digitalRead(BUTTON_2_PIN);
+
+  unsigned long now = millis();
+
+  // debounce window shared (simple + effective)
+  if (now - lastChangeMs > debounceMs) {
+    // detect falling edge (HIGH -> LOW) == press
+    if (lastB1 == HIGH && b1 == LOW) {
+      salePoleClassicHight += 30;
+       lastChangeMs = now;
+    }
+    if (lastB2 == HIGH && b2 == LOW) {
+      salePoleClassicHight -= 30;
+      lastChangeMs = now;
+    }
+  }
+
+  lastB1 = b1;
+  lastB2 = b2;
 }
+
 
 void handleNotFound(){
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
