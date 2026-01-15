@@ -47,37 +47,37 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
           			<th scope="col">Beers Consumed</th>
           		</tr>
           	</thead><tbody class="horizontal">
-          		<tr style="height:85%">
+          		<tr style="height:%1_BEEERS%">
           			<th scope="row">Joseph von Humperdink</th>
-          			<td><span>85%</span></td>
+          			<td><span>%1_BEERS%</span></td>
           		</tr>
-          		<tr style="height:23%">
+          		<tr style="height:%2_BEEERS%">
           			<th scope="row">Goolash McGunderson</th>
-          			<td><span>23%</span></td>
+          			<td><span>%2_BEEERS%</span></td>
           		</tr>
-          		<tr style="height:7%">
+          		<tr style="height:%3_BEEERS%">
           			<th scope="row">Gulash the Splendiferous</th>
-          			<td><span>7%</span></td>
+          			<td><span>%3_BEEERS%</span></td>
           		</tr>
-          		<tr style="height:38%">
+          		<tr style="height:%4_BEEERS%">
           			<th scope="row">Flblthp, the Fool</th>
-          			<td><span>38%</span></td>
+          			<td><span>%4_BEEERS%</span></td>
           		</tr>
-          		<tr style="height:38%">
+          		<tr style="height:5_BEEERS%">
           			<th scope="row">James David Vance</th>
-          			<td><span>38%</span></td>
+          			<td><span>%5_BEEERS%</span></td>
           		</tr>
-          		<tr style="height:38%">
+          		<tr style="height:%6_BEEERS%">
           			<th scope="row">Ben Shapiro</th>
-          			<td><span>38%</span></td>
+          			<td><span>%6_BEEERS%</span></td>
           		</tr>
-          		<tr style="height:38%">
+          		<tr style="height:%7_BEEERS">
           			<th scope="row">Alexandra Ocasio Cortez</th>
-          			<td><span>38%</span></td>
+          			<td><span>%7_BEEERS%</span></td>
           		</tr>
-          		<tr style="height:38%">
+          		<tr style="height:%8_BEEERS">
           			<th scope="row">Cloop</th>
-          			<td><span>38%</span></td>
+          			<td><span>%8_BEEERS%</span></td>
           		</tr>
           		</tr>
           	</tbody>
