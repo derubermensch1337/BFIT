@@ -29,7 +29,8 @@
 #define UID_LENGTH = 4 // 4 bytes is standard
 
 // Commands
-// add usr command, like press 'a'
+// todo: add usr command, like press 'a'
+
 
 // User struct containing room number and UID
 struct User {
@@ -41,7 +42,17 @@ struct User {
 User users[MAX_ROOMS];
 int userCount = 0;
 
-// Add room number 
+// ====================== Command
+
+
+// ====================== Setup RFID reader =================================
+void setup_RFID_reader(){
+    SPI.begin();
+    rfid.PCD_init();
+    Serial.println("RFID system ready.");
+}
+
+// ====================== Add room number ===================================
 void add_user (){
     if (userCount >= MAX_ROOMS) {
         Serial.println("Database full.");
