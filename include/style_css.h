@@ -9,7 +9,7 @@
  * |---------|------------|-------------------------------------------------------------------------|
  * | 0.1     | 13-01-2026 | Creaded file, implemented start and admin page, started general design  |
  * | 0.1     |            |                                                                         |
- * 
+ * | 0.2     | 15-01-2026 | Implementing Dynamic Tables                                             |
  * @copyright Copyright (c) 2026
 */
 
@@ -19,72 +19,218 @@
 #include <pgmspace.h>
 
 const char STYLE_CSS[] PROGMEM = R"rawliteral(
-    body {
-        background-color: #dbdbdb;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+body {
+    background-color: #dbdbdb;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-    .login_box {
-        width: fit-content;
-        margin: 80px auto;
-    }
+.login_box {
+    width: fit-content;
+    margin: 80px auto;
+}
+
+.sale_box {
+    margin-top: 50px;     /* distance from top bar */
+    margin-left: 50px;    /* left spacing from page edge */
+    margin-right: 50px;   /* right spacing from page edge */
+
+    height: 500px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
+
+table {                             // Define the table element. 
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #000000;
+}
+
+th, td {                            // Define table header and the table row.
+    border: 1px solid #000000;
+    padding: 6px;
+    text-align: left;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 16px;
+    background-color: #ffffff;
+    border-bottom: 2px solid #000000;
+    box-sizing: border-box;
+}
+
+.topbar .left {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.topbar .right a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.topbar .right a:hover {
+    text-decoration: underline;
+}
+
+.sale {
+    background-color: #ffffff;
+    width:500px;
+    height:100px; 
+    font-size:24px;
+}
+
+.graph {
+	margin-bottom:1em;
+  font:normal 100%/150% arial,helvetica,sans-serif;
+}
+
+.graph caption {
+	font:bold 150%/120% arial,helvetica,sans-serif;
+	padding-bottom:0.33em;
+}
+
+.graph tbody th {
+	text-align:right;
+}
+
+@supports (display:grid) {
+
+	@media (min-width:32em) {
+
+		.graph {
+			display:block;
+      width:600px;
+      height:300px;
+		}
+
+		.graph caption {
+			display:block;
+		}
+
+		.graph thead {
+			display:none;
+		}
+
+		.graph tbody {
+			position:relative;
+			display:grid;
+			grid-template-columns:repeat(auto-fit, minmax(2em, 1fr));
+			column-gap:2.5%;
+			align-items:end;
+			height:100%;
+			margin:3em 0 1em 2.8em;
+			padding:0 1em;
+			border-bottom:2px solid rgba(0,0,0,0.5);
+			background:repeating-linear-gradient(
+				180deg,
+				rgba(170,170,170,0.7) 0,
+				rgba(170,170,170,0.7) 1px,
+				transparent 1px,
+				transparent 20%
+			);
+		}
+
+		.graph tbody:before,
+		.graph tbody:after {
+			position:absolute;
+			left:-3.2em;
+			width:2.8em;
+			text-align:right;
+			font:bold 80%/120% arial,helvetica,sans-serif;
+		}
+
+		.graph tbody:before {
+			content:"100%";
+			top:-0.6em;
+		}
+
+		.graph tbody:after {
+			content:"0%";
+			bottom:-0.6em;
+		}
+
+		.graph tr {
+			position:relative;
+			display:block;
+		}
+
+		.graph tr:hover {
+			z-index:999;
+		}
+
+		.graph th,
+		.graph td {
+			display:block;
+			text-align:center;
+		}
+
+		.graph tbody th {
+			position:absolute;
+			top:-3em;
+			left:0;
+			width:100%;
+			font-weight:normal;
+			text-align:center;
+      white-space:nowrap;
+			text-indent:0;
+			transform:rotate(-45deg);
+		}
+
+		.graph tbody th:after {
+			content:"";
+		}
+
+		.graph td {
+			width:100%;
+			height:100%;
+			background:#F63;
+			border-radius:0.5em 0.5em 0 0;
+			transition:background 0.5s;
+		}
+
+		.graph tr:hover td {
+			opacity:0.7;
+		}
+
+		.graph td span {
+			overflow:hidden;
+			position:absolute;
+			left:50%;
+			top:50%;
+			width:0;
+			padding:0.5em 0;
+			margin:-1em 0 0;
+			font:normal 85%/120% arial,helvetica,sans-serif;
+/* 			background:white; */
+/* 			box-shadow:0 0 0.25em rgba(0,0,0,0.6); */
+			font-weight:bold;
+			opacity:0;
+			transition:opacity 0.5s;
+      color:white;
+		}
+
+		.toggleGraph:checked + table td span,
+		.graph tr:hover td span {
+			width:4em;
+			margin-left:-2em; /* 1/2 the declared width */
+			opacity:1;
+		}
+
+
+
     
-    .sale_box {
-        margin-top: 50px;     /* distance from top bar */
-        margin-left: 50px;    /* left spacing from page edge */
-        margin-right: 50px;   /* right spacing from page edge */
 
-        height: 500px;
-        background: #ffffff;
-        border: 2px solid #000000;
-        box-sizing: border-box;
-    }
 
-    table {                             // Define the table element. 
-        width: 100%;
-        border-collapse: collapse;
-        border: 2px solid #000000;
-    }
+	} /* min-width:32em */
 
-    th, td {                            // Define table header and the table row.
-        border: 1px solid #000000;
-        padding: 6px;
-        text-align: left;
-    }
-
-    .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 10px 16px;
-        background-color: #ffffff;
-        border-bottom: 2px solid #000000;
-        box-sizing: border-box;
-    }
-
-    .topbar .left {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .topbar .right a {
-        text-decoration: none;
-        color: #000000;
-        font-size: 16px;
-    }
-
-    .topbar .right a:hover {
-        text-decoration: underline;
-    }
-    
-    .sale {
-        background-color: #ffffff;
-        width:500px;
-        height:100px; 
-        font-size:24px;
-    }
-)rawliteral";
+} /* grid only */ 
+rawliteral";
 
 #endif
