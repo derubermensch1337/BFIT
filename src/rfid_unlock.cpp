@@ -37,7 +37,6 @@ RFIDcommand check_command(){
             return CMD_NONE;
             break;
     }
-
 }
 
 // ====================== Setup RFID reader =================================

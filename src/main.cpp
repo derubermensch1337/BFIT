@@ -81,13 +81,11 @@ void setup() {
 
   // Initialize RFID reader
   setup_RFID_reader(rfid);
-
-
-
 } 
 
 void loop() {
   server.handleClient();
+  
 }
 
 void handleNotFound(){
