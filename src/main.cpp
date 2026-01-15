@@ -5,10 +5,12 @@
  * @date 13-01-2026
  * @version 0.1
  * @par Revision history
- * | Version |    Date    | Description                       |
- * |---------|------------|-----------------------------------|
- * | 0.1     | 13-01-2026 | Add creating a web server         |
- * | 0.2     | 15-01-2026 | Added base graph for displaying sales |
+ * | Version |    Date    | Description                           |
+ * |---------|------------|---------------------------------------|
+ * |   0.1   | 13-01-2026 | Add creating a web server             |
+ * |   0.2   | 15-01-2026 | Added base graph for displaying sales |
+ * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement          |
+ * 
  * 
  * @copyright Copyright (c) 2026
  * 
@@ -21,12 +23,10 @@
 #include <ESP8266mDNS.h>        // Include the mDNS library
 
 #include <Arduino.h>
-#include "index_html.h"
-//#include "INDEX_HTML.h"
+#include "INDEX_HTML.h"
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
-#include "SALE_HTML.h"
 
 int salePoleClassicHight = 30;
 
@@ -100,10 +100,6 @@ void setup() {
     server.send_P(200, "text/html", ADMIN_HTML);
   });
 
-  server.on("/sale", HTTP_GET, []() {
-    server.send_P(200, "text/html", SALE_HTML);
-  });
-    
   // Start the server
   server.begin();
   Serial.println("Server started"); 

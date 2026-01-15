@@ -8,7 +8,7 @@
  * | Version |    Date    | Description                                             |
  * |---------|------------|---------------------------------------------------------|
  * | 0.1     | 14-01-2026 | Create file                                             |
- * | 0.2     | 15-01-2026 | Added data type for beverages, products adn invenntory  |
+ * | 0.2     | 15-01-2026 | Added data type for beverages, products and invenntory  |
  *
  * @copyright Copyright (c) 2026
  * 
@@ -44,5 +44,7 @@ typedef struct {                // type to keep track of all products.
     product_stock fridge[6];    // the different products being stocked in the fridge.
     uint8_t product_stocked;    // used to keep track if there are items out of stock.
 } inventory;
+
+item make_item(const char *name, item_type type, uint8_t weight, uint8_t price);
 
 #endif

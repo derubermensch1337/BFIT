@@ -7,8 +7,9 @@
  * @par Revision history
  * | Version |    Date    | Description                                                             |
  * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 13-01-2026 | Creaded file, implemented start and admin page, started general design  |
- * | 0.2     | 15-01-2026 | Added base graph for displaying sales                                   |
+ * |   0.1   | 13-01-2026 | Creaded file, implemented start and admin page, started general design  |
+ * |   0.2   | 15-01-2026 | Added base graph for displaying sales                                   |
+ * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement          |
  * 
  * @copyright Copyright (c) 2026
 */
@@ -30,16 +31,6 @@ body {
         margin: 80px auto;
     }
     
-    .sale_box {
-        margin-top: 50px;
-      	margin-left: 50px;    
-        margin-right: 50px;
-        height: 500px;
-        background: #ffffff;
-        border: 2px solid #000000;
-        box-sizing: border-box;
-    }
-
     table {
         width: 100%;
         border-collapse: collapse;
@@ -78,34 +69,38 @@ body {
         text-decoration: underline;
     }
     
-    .sale {
+    .sale_box {
         background-color: #ffffff;
-        width:500px;
-        height:100px; 
-        font-size:24px;
+        width: 1500px;
+        height: 600px;
+        margin: 20px auto;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding: 0px;
     }
-	
 
     .sale_room {
         display: flex;
-        align-items: flex-end;
-        gap: 2px;
-        height: 200px;
-        width: fit-content;
-        border: 2px solid #000000;
+        flex-direction: column-reverse; 
+        align-items: stretch;
+
+        width: 50px;
         box-sizing: border-box;
     }
-	
+
     .sale_pole_green {
         height: 50px;
-      	width: 98px;
+        width: 50px;
         background: #4fc908;
     }
 
     .sale_pole_clasic {
-		/* 
-      	width: 50px;
-        background: #d0c420;
+        width: 50px;
+        background: #efe33a;
     }
 )rawliteral";
 
