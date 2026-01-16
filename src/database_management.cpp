@@ -43,20 +43,37 @@ void print_users_db(User* ptr) {
 
   for (int i = 0; i < MAX_ROOMS; i++) {
     Serial.print("index: ");
-    Serial.println(i);
-    Serial.print("Room number: ");
-    Serial.println((*(ptr + i)).roomNumber);
+    Serial.print(i);
+    Serial.print('\t');
+
+    Serial.print("Room:  ");
+    Serial.print((*(ptr + i)).roomNumber);
+    Serial.print('\t');
+
     Serial.print("uid: ");
-    Serial.print((*(ptr + i)).uid[0]);
-    Serial.print(" ");
-    Serial.print((*(ptr + i)).uid[1]);
-    Serial.print(" ");
-    Serial.print((*(ptr + i)).uid[2]);
-    Serial.print(" ");
-    Serial.println((*(ptr + i)).uid[3]);
+    print_uid(ptr + i);
+    Serial.print('\t');
+
     Serial.print("balance: ");
-    Serial.println((*(ptr + i)).balance);
+    Serial.print((*(ptr + i)).balance);
     Serial.println("");
+  }
+}
+
+void print_uid(User* ptr) {
+  //Currently prints decimal
+  //Pads number with spaces to 3 chars
+  //Pointer to the user whose uid we want to print
+  byte myByte = 0;
+  for (int i = 0; i < UID_LENGTH; i++) {
+    myByte = (*ptr).uid[i];
+    if (myByte < 10) {
+      Serial.print("  ");
+    } else if (myByte < 100) {
+      Serial.print(" ");
+    }
+    Serial.print(myByte);
+    Serial.print(" ");
   }
 }
 
