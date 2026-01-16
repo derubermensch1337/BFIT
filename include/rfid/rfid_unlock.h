@@ -38,7 +38,8 @@ enum RFIDcommand {
 // User struct
 struct User {
     byte uid[UID_LENGTH];
-    int roomNumber; 
+    int roomNumber;
+    int balance; 
 };
 
 // Extern globals declared
