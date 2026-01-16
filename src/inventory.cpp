@@ -57,13 +57,13 @@ bool inventory_add_product(
     return true;                                                        // if adding the priduct was succsesfull we return 1
 }
 
-bool inventory_remove_product(
-    inventory *inventory, 
-    product beverage, 
-    uint8_t quantity
-){
+// bool inventory_remove_product(
+//     inventory *inventory, 
+//     product beverage, 
+//     uint8_t quantity
+// ){
 
-}
+// }
 
 void inventory_print(
         inventory *inventory
