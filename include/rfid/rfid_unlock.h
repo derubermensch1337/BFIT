@@ -1,22 +1,15 @@
 /**
  * @file rfid_unlock.h
- * @authors Amal Araweelo Almis
- * @brief 
- * @version 0.1
- * @date 15-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 15-01-2026 | Created file.                                                           |
- * |         |            |                                                                         |
- * 
- * @copyright Copyright (c) 2026
+ * @brief Track user RFID and inventory
+ * @author Amal Araweelo Almis
+ * @author Amal Araweelo Almis
  */
 #ifndef RFID_UNLOCK_H
 #define RFID_UNLOCK_H  
 
 #include <SPI.h>
 #include <MFRC522.h>
+#include "inventory.h"
 
 // Pins
 #define SS_PIN 15 // Use GPIO pins for HUZZAH instead of D8
@@ -35,10 +28,13 @@ enum RFIDcommand {
     CMD_REMOVE_USER
 };
 
-// User struct
+/**
+ * @brief Define user ID, room, and inventory
+ */
 struct User {
-    byte uid[UID_LENGTH];
-    int roomNumber; 
+    byte uid[UID_LENGTH];       /**< User ID */
+    int roomNumber;             /**< Users room number */
+    inventory user_innventory;  /**< Inventory for the user */
 };
 
 // Extern globals declared

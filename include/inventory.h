@@ -9,6 +9,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
+#include <Arduino.h>
 
 #define INVENTORY_CAPACITY 6
 
@@ -37,17 +38,17 @@ typedef struct {
  * @brief Struckt for keeping track of the original and current quantity of a beverage.
 */
 typedef struct {
-    product beverage;       /**< The beverage being tracked */
-    uint8_t original_qty;   /**< The original quantity of the beverage in stock */
-    uint8_t current_qty;    /**< The current quantity of the beverage in stock */
+    product beverage;           /**< The beverage being tracked */
+    uint8_t original_quantity;  /**< The original quantity of the beverage in stock */
+    uint8_t current_quantity;   /**< The current quantity of the beverage in stock */
 } products_stocked;
 
 /**
  * @brief Struckt for holding the fridge inventory.
 */
 typedef struct {
-    products_stocked fridge[INVENTORY_CAPACITY];    /**< The beverages being stocked */
-    uint8_t number_products_stocked;                /**< Number of beverages stocked, prevents overflow */
+    products_stocked produckts_in_inventory[INVENTORY_CAPACITY];    /**< The beverages being stocked */
+    uint8_t number_of_products_stocked;                /**< Number of beverages stocked, prevents overflow */
 } inventory;
 
 
@@ -79,5 +80,7 @@ product make_product(const char *name, beverage_type type, uint8_t weight, uint8
  * @return false - there was an error adding the beverage
  */
 bool inventory_add_product(inventory *inventory, product beverage, uint8_t quantity);
+
+void print_inventory(inventory *inventory);
 
 #endif

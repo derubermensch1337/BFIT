@@ -3,3 +3,22 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+.vscode/
+# PlatformIO
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Build artifacts
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+*.db
+*.dbLite
+*.d
+
+# VS Code settings (optional; depends on team policy)
+.vscode/

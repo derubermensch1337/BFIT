@@ -15,6 +15,7 @@
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
+#include "rfid/rfid_unlock.h"
 
 int salePoleClassicHight = 30;
 
