@@ -16,6 +16,7 @@
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
 #include "rfid/rfid_unlock.h"
+#include "inventory.h"
 
 int salePoleClassicHight = 30;
 
@@ -61,12 +62,6 @@ void setup() {
     Serial.println("Error setting up MDNS responder!");
   }
 
-  /*
-  server.on("/", HTTP_GET, []() {
-    server.send_P(200, "text/html", INDEX_HTML);
-  });
-  */
-
   server.on("/", HTTP_GET, []() {
     String page = FPSTR(INDEX_HTML);
     page.replace("%SALE_HIGHT%", String(salePoleClassicHight));
@@ -92,6 +87,16 @@ void setup() {
   // Start the server
   server.begin();
   Serial.println("Server started"); 
+
+  product tuborg_clasic = inventory_make_product("Tuborg clasic", beer, 250, 12);
+  inventory fridge;
+  inventory_init(&fridge);
+
+  inventory_add_product(&fridge, tuborg_clasic, 10);
+
+  inventory_print(&fridge);
+
+  inventory_print(&fridge);
 } 
 
 void loop() {
@@ -114,25 +119,11 @@ void loop() {
       lastChangeMs = now;
     }
   }
-
   lastB1 = b1;
   lastB2 = b2;
 }
 
-
 void handleNotFound(){
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
 }
-
-
-// server.on("/LED", HTTP_POST, handleLED);
-// server.onNotFound(handleNotFound);
-
-// void handleLED() {                          // If a POST request is made to URI /LED
-//   digitalWrite(led,!digitalRead(led));      // Change the state of the LED
-//   server.sendHeader("Location","/");        // Add a header to respond with a new location for the browser to go to the home page again
-//   server.send(303);                         // Send it back to the browser with an HTTP status 303 (See Other) to redirect
-// }
-
-
 

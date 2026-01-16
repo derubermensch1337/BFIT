@@ -7,11 +7,21 @@
 #include "inventory.h"
 #include <string.h>
 
-void inventory_init(inventory *inventory) {                             // make an instance of the inventory.
+void inventory_init(
+        inventory *inventory
+){
     memset(inventory, 0, sizeof(*inventory));                           // make sure that the part of memory used for storing beverages is empty befor we start filling inventory.
 }
 
-product make_product(const char *name, beverage_type type, uint8_t weight, uint8_t price) {
+/**
+ * @todo evt. lav input om til en struct m. en wrapper for ease of use.
+ */
+product inventory_make_product(
+        const char *name, 
+        beverage_type type,
+        uint8_t weight,
+        uint8_t price
+){
     product new_product;                                                // we make an instance of the item type.
     memset(&new_product, 0, sizeof(new_product));                       // we start by making sure that the memory used for the item is empty.
 
@@ -26,11 +36,14 @@ product make_product(const char *name, beverage_type type, uint8_t weight, uint8
     return new_product;
 }
 
-
 /**
  * @todo Make universal add product, make new function for restocking inventory
 */
-bool inventory_add_product(inventory *inventory, product product, uint8_t quantity) {
+bool inventory_add_product(
+        inventory *inventory,
+        product product,
+        uint8_t quantity
+){
     if (inventory->number_of_products_stocked >= INVENTORY_CAPACITY)     // check if the user has atempted to add more products than that suported by the code. If so return false. 
         return false;  
 
@@ -38,14 +51,23 @@ bool inventory_add_product(inventory *inventory, product product, uint8_t quanti
         inventory->number_of_products_stocked];                         // we make an pointer into the product_stock struct of the inventory.
     
     product_in_fridge->beverage = product;                              // we can now use that pointer to add the product.
-    product_in_fridge->original_quantity = quantity;                         // add the starting stock quantity,
-    product_in_fridge->current_quantity  = quantity;                         // add the current stock quantity.
+    product_in_fridge->current_quantity  += quantity;                   // add the product to the inventory stock.
 
     inventory->number_of_products_stocked++;                            // increase the counter keeping track of the number of different products stocked.
     return true;                                                        // if adding the priduct was succsesfull we return 1
 }
 
-void print_inventory(inventory *inventory){
+bool inventory_remove_product(
+    inventory *inventory, 
+    product beverage, 
+    uint8_t quantity
+){
+
+}
+
+void inventory_print(
+        inventory *inventory
+){
     for (uint8_t index = 0; index < inventory->number_of_products_stocked; index++) {
         products_stocked *produckts_in_inventory = &inventory->produckts_in_inventory[index];
         
