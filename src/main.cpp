@@ -106,7 +106,10 @@ switch (activeCommand) {
     break;
   case CMD_NONE:
   default:
-    // do nothing
+    // Check for RFID tag
+    if(validate_rfid(rfid) == true) {
+      //Open door
+    }
     break;
   }
 }

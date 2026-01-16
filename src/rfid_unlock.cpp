@@ -92,6 +92,26 @@ void add_user (MFRC522 &rfid){
     Serial.println("Successfully added new user.");
 }
 
+// ======================== CHECK IF SHOULD UNLOCK ================================
+bool validate_rfid(MFRC522 myRFID){
+    byte uid[UID_LENGTH];   //Maybe move to more global place?
+    bool open = false;
+    //If a tag can be read
+    if(read_RFID_tag(myRFID, uid)){
+        // Check if tag is registered
+        for (int i = 0; i<userCount; i++){
+            if (compare_UID(uid, users[i].uid)){ // if match is found
+                open = true; //
+            }
+        }
+
+    //Open door
+    Serial.println("Door will be opened!");
+    }
+
+    return open;
+}
+
 // ======================== HELPER FUNCTIONS ================================
 
 // Compares two uid tags and returns true if they are identical

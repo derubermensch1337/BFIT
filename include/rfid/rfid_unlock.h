@@ -54,6 +54,10 @@ bool compare_UID(byte *uid1, byte *uid2);
 bool read_RFID_tag(MFRC522 &rfid, byte *uidBuffer);
 void display_commands(void);
 
+//Anssi
+bool validate_rfid(MFRC522 myRFID);
+
+
 // For database management
 void get_users_db(User* ptr);
 void print_users_db(User* ptr);
