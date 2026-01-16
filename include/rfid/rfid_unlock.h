@@ -53,5 +53,10 @@ bool compare_UID(byte *uid1, byte *uid2);
 bool read_RFID_tag(MFRC522 &rfid, byte *uidBuffer);
 void display_commands(void);
 
+// For database management
+void get_users_db(User* ptr);
+void print_users_db(User* ptr);
+void delete_user_db();
+void add_user_db();
 
 #endif
