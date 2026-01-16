@@ -21,7 +21,38 @@ void add_user_db(){
 }
 
 void delete_user_db(){
-    
+    //Asks for index(es) to be deleted and sets their bytes to a defined 'null' value
+
+  EEPROM.begin(sizeof(users));
+
+  int idxToDelete = -1;     //Users are in database starting at index 0
+  byte fillByte = 0;        //The byte to fill a deleted user
+  bool wasChanged = false;  //If something becomes deleted
+
+  do {
+    Serial.println("which index to delete? Negative to cancel.");
+    idxToDelete = read_integer();
+    if (idxToDelete > 0) {
+
+      //Sets all bytes for one user to a specified 'null' value
+      for (int i = 0; i < sizeof(User); i++) {
+        EEPROM.write(idxToDelete * sizeof(User) + i, fillByte);
+      }
+
+      wasChanged = true;
+      Serial.print(idxToDelete);
+      Serial.println(" is set for deletion. Delete another index? Negative to continue.");
+    }
+  } while (idxToDelete > 0);  //If one is deleted, another can be as well
+
+  // Only commit if changes have been made to save flash memory
+  if (wasChanged == true) {
+    EEPROM.commit();
+  }
+
+  //Get and print the updated database
+  Serial.println("Database after deletion:");
+  get_users_db(&users[0]);
 }
 
 void get_users_db(User* ptr) {

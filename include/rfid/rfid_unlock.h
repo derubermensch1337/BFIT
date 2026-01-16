@@ -56,8 +56,10 @@ void display_commands(void);
 // For database management
 void get_users_db(User* ptr);
 void print_users_db(User* ptr);
+void print_uid(User* ptr);
 void delete_user_db();
 void add_user_db();
 int read_integer();
+
 
 #endif
