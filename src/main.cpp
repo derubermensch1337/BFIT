@@ -1,19 +1,7 @@
 /**
- * @file main.cpp
- * @authors Baldur G. Toftegaard,
- * @brief Main, used to establish a webs server. 
- * @date 13-01-2026
- * @version 0.1
- * @par Revision history
- * | Version |    Date    | Description                           |
- * |---------|------------|---------------------------------------|
- * |   0.1   | 13-01-2026 | Add creating a web server             |
- * |   0.2   | 15-01-2026 | Added base graph for displaying sales |
- * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement          |
- * 
- * 
- * @copyright Copyright (c) 2026
- * 
+ * @file    main.cpp
+ * @brief   Main, used to establish a webs server.
+ * @author  Baldur G. Toftegaard 
 */
 
 #include <ESP8266WiFi.h>

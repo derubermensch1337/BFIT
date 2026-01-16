@@ -1,16 +1,7 @@
 /**
  * @file index_html.h
+ * @brief HTML for the start page
  * @author Baldur G. Toftegaard
- * @brief 
- * @version 0.1
- * @date 13-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * |   0.1   | 13-01-2026 | Creaded file,                                                           |
- * |   0.2   | 15-01-2026 | Added base graph for displaying sales                                   |
- * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement      |
- * @copyright Copyright (c) 2026 
  */
 
 #ifndef INDEX_HTML_H
