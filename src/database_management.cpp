@@ -59,3 +59,38 @@ void print_users_db(User* ptr) {
     Serial.println("");
   }
 }
+
+int read_integer() {
+
+  int myInteger = 0;  //Chars converted to string
+
+  Serial.println("Please insert an integer ");
+
+  while (myInteger == 0) {
+    myInteger = Serial.parseInt();  //returns 0 after 1 second
+    if (myInteger != 0) {           // If integer is not returned, goes to previous line
+
+      //Print the received number
+      Serial.print("Received number: ");
+      Serial.println(myInteger);
+
+      //Ask for confirmation to avoid unexpected chars from the buffer
+      Serial.print("Confirm with 'y': ");
+      while (Serial.available() == 0) {
+        //Wait until there is input
+        // Maybe a timeout would be necessary here?
+      }
+      if (Serial.read() == 'y') {
+        break;  //Breaks out of the while loop and confirm integer
+      } else {
+        //Go back to top of while loop
+        Serial.println("Rejected number. Insert an integer ");
+        myInteger = 0;
+      }
+    }
+  }
+
+  Serial.print("Confirmed number: ");
+  Serial.println(myInteger);
+  return myInteger;
+}
