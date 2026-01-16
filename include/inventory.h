@@ -5,11 +5,11 @@
  * @date 14-01-2026
  * @version 0.1
  * @par Revision history
- * | Version |    Date    | Description                                             |
- * |---------|------------|---------------------------------------------------------|
- * | 0.1     | 14-01-2026 | Create file                                             |
- * | 0.2     | 15-01-2026 | Added data type for beverages, products and invenntory  |
- *
+ * | Version |    Date    | Description                                                                     |
+ * |---------|------------|---------------------------------------------------------------------------------|
+ * |   0.1   | 14-01-2026 | Create file                                                                     |
+ * |   0.2   | 15-01-2026 | Added data type for beverages, products and invenntory                          |
+ * |   0.3   | 16-01-2026 | Added functionality to init inventory, make product and and product to fridge   |
  * @copyright Copyright (c) 2026
  * 
 */
@@ -18,6 +18,8 @@
 #define INVENTORY_H
 
 #include "Arduino.h"
+
+#define INVENTORY_CAPACITY 6
 
 typedef enum {                  // Create the different types of beverages.
     beer, 
@@ -28,7 +30,7 @@ typedef enum {                  // Create the different types of beverages.
 } item_type;
 
 typedef struct {                // create different types of products.
-    char name[20];
+    char name[20];              
     item_type item;
     uint8_t weight;
     uint8_t price; 
@@ -46,5 +48,9 @@ typedef struct {                // type to keep track of all products.
 } inventory;
 
 item make_item(const char *name, item_type type, uint8_t weight, uint8_t price);
+
+bool inventory_add_product(inventory *inventory, item product, uint8_t quantity);
+
+void inventory_init(inventory *inventory);
 
 #endif
