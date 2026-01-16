@@ -90,7 +90,7 @@ bool inventory_add_product(inventory *inventory, product beverage, uint8_t quant
  * @return true - the beverage was removed from the inventory
  * @return false - there was an error removing the beverage
  */
-bool inventory_remove_product(inventory *inventory, product beverage, uint8_t quantity);
+// bool inventory_remove_product(inventory *inventory, product beverage, uint8_t quantity);
 
 /**
  * @brief Function to print a users inventory
