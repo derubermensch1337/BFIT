@@ -15,6 +15,7 @@
 
 //Is this needed here?
 #include "rfid/rfid_unlock.h"
+#include <EEPROM.h>
 
 
 void add_user_db(){
