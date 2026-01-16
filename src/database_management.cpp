@@ -58,13 +58,16 @@ void delete_user_db(){
 }
 
 void get_users_db(User* ptr) {
+// Fetches users from database and writes them to users[]
 
   EEPROM.begin(sizeof(users));
 
   for (int i = 0; i < MAX_ROOMS; i++) {
+    //get uid
     for (int j = 0; j < UID_LENGTH; j++) {
       EEPROM.get(i * sizeof(User) + j, (*(ptr + i)).uid[j]);
     }
+    //get other data
     EEPROM.get(i * sizeof(User) + 4, (*(ptr + i)).roomNumber);
     EEPROM.get(i * sizeof(User) + 8, (*(ptr + i)).balance);
   }
@@ -100,11 +103,14 @@ void print_uid(User* ptr) {
   byte myByte = 0;
   for (int i = 0; i < UID_LENGTH; i++) {
     myByte = (*ptr).uid[i];
+
+    //Whitespace padding
     if (myByte < 10) {
       Serial.print("  ");
     } else if (myByte < 100) {
       Serial.print(" ");
     }
+
     Serial.print(myByte);
     Serial.print(" ");
   }
@@ -117,7 +123,7 @@ int read_integer() {
   Serial.println("Please insert an integer ");
 
   while (myInteger == 0) {
-    myInteger = Serial.parseInt();  //returns 0 after 1 second
+    myInteger = Serial.parseInt();  //returns 0 after 1 second (=goes to top of while)
     if (myInteger != 0) {           // If integer is not returned, goes to previous line
 
       //Print the received number
@@ -140,33 +146,40 @@ int read_integer() {
     }
   }
 
+    // Confirmation message
   Serial.print("Confirmed number: ");
   Serial.println(myInteger);
   return myInteger;
 }
 
 int find_empty_index(User* ptr) {
+//Returns the first index for a room with 0 or negative room number
   //returns -1 if all are full
   int foundIndex = -1;
-  int numRoom = 0;
+  int numRoom = 0; //Temporary storage for number of the room
+
   for (int i = 0; i < MAX_ROOMS; i++) {
+    //Use pointer arithmetic, get the user at location, access roomNumber via dot notation
     numRoom = (*(ptr + i)).roomNumber;
-    //Serial.println(numRoom);
+    //Serial.println(numRoom); //For debugging
     if (numRoom <= 0) {
       foundIndex = i;
-      break;
+      break; //escape for
     }
   }
   return foundIndex;
 }
 
 int count_rooms(User* ptr) {
+    // Counts the number of rooms in the database with valid numbers
+    // Meaning, how many spots are taken
   int counter = 0;
-  int numRoom = 0;
+  int numRoom = 0; //Temporary storage for number of the room
 
   for (int i = 0; i < MAX_ROOMS; i++) {
+    //Use pointer arithmetic, get the user at location, access roomNumber via dot notation
     numRoom = (*(ptr + i)).roomNumber;
-    //Serial.println(numRoom);
+    //Serial.println(numRoom); //For debugging
     if (numRoom > 0) {
       counter++;
     }
