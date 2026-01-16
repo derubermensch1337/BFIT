@@ -59,6 +59,7 @@ void print_users_db(User* ptr);
 void print_uid(User* ptr);
 void delete_user_db();
 void add_user_db();
+// Helpers
 int read_integer();
 int find_empty_index(User* ptr);
 int count_rooms(User* ptr);

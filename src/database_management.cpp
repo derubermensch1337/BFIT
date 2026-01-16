@@ -17,7 +17,7 @@
 #include "rfid/rfid_unlock.h"
 #include <EEPROM.h>
 
-
+// ====================== Add and delete users =====================================
 void add_user_db(){
 
 }
@@ -75,7 +75,11 @@ void get_users_db(User* ptr) {
   print_users_db(ptr);
 }
 
+// ====================== Print users and UID =====================================
+
 void print_users_db(User* ptr) {
+
+    // Prints the users currently at the users array as rows
 
   for (int i = 0; i < MAX_ROOMS; i++) {
     Serial.print("index: ");
@@ -115,6 +119,8 @@ void print_uid(User* ptr) {
     Serial.print(" ");
   }
 }
+
+// ====================== Helper functions =====================================
 
 int read_integer() {
 
