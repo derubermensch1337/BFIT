@@ -13,6 +13,7 @@
  * 
 */
 
+//Is this needed here?
 #include "rfid/rfid_unlock.h"
 
 
@@ -141,4 +142,33 @@ int read_integer() {
   Serial.print("Confirmed number: ");
   Serial.println(myInteger);
   return myInteger;
+}
+
+int find_empty_index(User* ptr) {
+  //returns -1 if all are full
+  int foundIndex = -1;
+  int numRoom = 0;
+  for (int i = 0; i < MAX_ROOMS; i++) {
+    numRoom = (*(ptr + i)).roomNumber;
+    //Serial.println(numRoom);
+    if (numRoom <= 0) {
+      foundIndex = i;
+      break;
+    }
+  }
+  return foundIndex;
+}
+
+int count_rooms(User* ptr) {
+  int counter = 0;
+  int numRoom = 0;
+
+  for (int i = 0; i < MAX_ROOMS; i++) {
+    numRoom = (*(ptr + i)).roomNumber;
+    //Serial.println(numRoom);
+    if (numRoom > 0) {
+      counter++;
+    }
+  }
+  return counter;
 }
