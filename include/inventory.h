@@ -48,7 +48,7 @@ typedef struct {
 */
 typedef struct {
     products_stocked produckts_in_inventory[INVENTORY_CAPACITY];    /**< The beverages being stocked */
-    uint8_t number_of_products_stocked;                /**< Number of beverages stocked, prevents overflow */
+    uint8_t number_of_products_stocked;                             /**< Number of beverages stocked, prevents overflow */
 } inventory;
 
 
@@ -76,21 +76,43 @@ product inventory_make_product(const char *name, beverage_type type, uint8_t wei
  * @param inventory 
  * @param beverage 
  * @param quantity 
- * @return true - the beverage was added to the inventory
- * @return false - there was an error adding the beverage
+ * @return true - the product was added to the inventory
+ * @return false - there was an error adding the product
  */
 bool inventory_add_product(inventory *inventory, product beverage, uint8_t quantity);
 
 /**
- * @brief 
+ * @brief Function for removing product from inventory
  * 
  * @param inventory 
  * @param beverage 
  * @param quantity 
+ * @return true - the product was removed from the inventory
+ * @return false - there was an error removing the product
+ */
+bool inventory_remove_product(inventory *inventory, product beverage);
+
+/**
+ * @brief Function for adding to the amount of a beverage in an inventory
+ * 
+ * @param inventory 
+ * @param beverage_type 
+ * @param amount 
+ * @return true - the beverage was added to the inventory
+ * @return false - there was an error adding the beverage
+ */
+bool inventory_add_beverage(inventory *inventory, product  beverage, uint8_t amount);
+
+/**
+ * @brief Function for removing from the amount of a beverage in an inventory
+ * 
+ * @param inventory 
+ * @param beverag 
+ * @param amount 
  * @return true - the beverage was removed from the inventory
  * @return false - there was an error removing the beverage
  */
-// bool inventory_remove_product(inventory *inventory, product beverage, uint8_t quantity);
+bool inventory_remove_beverage(inventory *inventory, product beverag, uint8_t amount);
 
 /**
  * @brief Function to print a users inventory

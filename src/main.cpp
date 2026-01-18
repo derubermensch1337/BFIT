@@ -15,8 +15,11 @@
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
-// #include "rfid/rfid_unlock.h"
+#include "rfid/rfid_unlock.h"
 #include "inventory.h"
+
+MFRC522 rfid(SS_PIN, RST_PIN);
+RFIDcommand activeCommand = CMD_NONE; // Initial command
 
 int salePoleClassicHight = 30;
 

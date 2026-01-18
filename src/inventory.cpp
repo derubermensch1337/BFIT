@@ -7,7 +7,7 @@
 #include "inventory.h"
 #include <string.h>
 
-void inventory_init(
+void inventory_init (
         inventory *inventory
 ){
     memset(inventory, 0, sizeof(*inventory));                           // make sure that the part of memory used for storing beverages is empty befor we start filling inventory.
@@ -16,8 +16,8 @@ void inventory_init(
 /**
  * @todo evt. lav input om til en struct m. en wrapper for ease of use.
  */
-product inventory_make_product(
-        const char *name, 
+product inventory_make_product (
+        const char *product_name, 
         beverage_type type,
         uint8_t weight,
         uint8_t price
@@ -25,8 +25,8 @@ product inventory_make_product(
     product new_product;                                                // we make an instance of the item type.
     memset(&new_product, 0, sizeof(new_product));                       // we start by making sure that the memory used for the item is empty.
 
-    if (name) {                                                         // make sure the user provided an input for the name.
-        strncpy(new_product.name, name, sizeof(new_product.name) - 1);  // copy the input into the instanse of the item strukt.
+    if (product_name) {                                                         // make sure the user provided an input for the name.
+        strncpy(new_product.name, product_name, sizeof(new_product.name) - 1);  // copy the input into the instanse of the item strukt.
         new_product.name[sizeof(new_product.name) - 1] = '\0';          // go back and manualy add a end of line terminator (incase the input was to long and got cut of).
     } 
 
@@ -36,10 +36,8 @@ product inventory_make_product(
     return new_product;
 }
 
-/**
- * @todo Make universal add product, make new function for restocking inventory
-*/
-bool inventory_add_product(
+
+bool inventory_add_product (
         inventory *inventory,
         product product,
         uint8_t quantity
@@ -57,18 +55,87 @@ bool inventory_add_product(
     return true;                                                        // if adding the priduct was succsesfull we return 1
 }
 
-// bool inventory_remove_product(
-//     inventory *inventory, 
-//     product beverage, 
-//     uint8_t quantity
-// ){
+bool inventory_remove_product (
+    inventory *inventory, 
+    product beverage
+){
+    for (uint8_t index;
+        index < inventory->number_of_products_stocked;
+        index++
+    ){
+        products_stocked *products_in_inventory = &inventory->produckts_in_inventory[index];
 
-// }
+        if (products_in_inventory->beverage.beverage == beverage.beverage &&
+            strcmp(products_in_inventory->beverage.name, beverage.name) == 0
+        ){
+            for (uint8_t second_index = index; second_index + 1 < inventory->number_of_products_stocked; second_index++
+            ){
+                inventory->produckts_in_inventory[second_index] = inventory->produckts_in_inventory[second_index+1];
+                
+            }
+            inventory->number_of_products_stocked--;
 
-void inventory_print(
+            memset(&inventory->produckts_in_inventory[inventory->number_of_products_stocked],
+                0,
+                sizeof(inventory->produckts_in_inventory[0]));
+        }
+    }
+}
+
+bool inventory_add_beverage(
+    inventory *inventory, 
+    product beverag, 
+    uint8_t amount
+){
+    if (!inventory || amount == 0)
+        return false;
+
+    for (uint8_t index = 0; index < inventory->number_of_products_stocked; index++
+    ){
+        products_stocked *product_in_inventory = &inventory->produckts_in_inventory[index];
+
+        if (product_in_inventory->beverage.beverage == beverag.beverage &&
+            strcmp(product_in_inventory->beverage.name, beverag.name) == 0
+        ){
+            if ((uint16_t)product_in_inventory->current_quantity + amount > UINT8_MAX)
+            return false;
+            
+            product_in_inventory->current_quantity += amount;
+            return true;
+        }
+    }
+    return false;
+}
+
+bool inventory_remove_beverage(
+    inventory *inventory, 
+    product beverag, 
+    uint8_t amount
+){
+    if (!inventory || amount == 0)
+        return false;
+
+    for (uint8_t index = 0; index < inventory->number_of_products_stocked; index++
+    ){
+        products_stocked *product_in_inventory = &inventory->produckts_in_inventory[index];
+
+        if (product_in_inventory->beverage.beverage == beverag.beverage &&
+            strcmp(product_in_inventory->beverage.name, beverag.name) == 0
+        ){
+            product_in_inventory->current_quantity -= amount;
+            return true;
+        }
+    }
+    return false;
+}
+
+void inventory_print (
         inventory *inventory
 ){
-    for (uint8_t index = 0; index < inventory->number_of_products_stocked; index++) {
+    for (uint8_t index = 0;
+        index < inventory->number_of_products_stocked;
+        index++
+    ){
         products_stocked *produckts_in_inventory = &inventory->produckts_in_inventory[index];
         
         Serial.print("Product ");
