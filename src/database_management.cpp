@@ -98,8 +98,6 @@ void get_users_db(User* ptr) {
 
 // ====================== Print users and UID =====================================
 
-void print_users_db(User* ptr) {
-
     // Prints the users currently at the users array as rows
 
   for (int i = 0; i < MAX_ROOMS; i++) {
