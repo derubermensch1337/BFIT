@@ -25,7 +25,11 @@
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
-#include "rfid/rfid_unlock.h"
+#include "rfid_access.h"
+#include "lock_ctrl.h"
+
+// Global definition
+bool doorUnlocked = false;
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 RFIDcommand activeCommand = CMD_NONE; // Initial command
@@ -87,6 +91,10 @@ void setup() {
   // Get users from database
   get_users_db(&users[0]);
 
+  
+  // Lock servo
+  lock_ctrl_init();
+
   // Display commands
   display_commands(); 
 } 
@@ -102,24 +110,33 @@ void loop() {
     }
   }
   // Execute active command
-switch (activeCommand) {
-  case CMD_ADD_USER:
-    // add_user(rfid);            // blocking by design
+  switch (activeCommand) {
+    case CMD_ADD_USER:
+      // add_user(rfid);            // blocking by design
     // activeCommand = CMD_NONE; 
     //Serial.println("Ready for next command.");
     // break;
   case CMD_REMOVE_USER:
     user_management(activeCommand, &users[0], rfid);
-    activeCommand = CMD_NONE; 
-    break;
-  case CMD_NONE:
-  default:
-    // Check for RFID tag
-    if(validate_rfid(rfid) == true) {
-      //Open door
+      activeCommand = CMD_NONE; 
+        break;
+    case CMD_NONE:
+    default:
+      // Check RFID only if door is locked
+      if (!doorUnlocked && validate_rfid(rfid)) {
+        Serial.println("Access granted. Unlocking door.");
+        unlock_door();
+        doorUnlocked = true;
+      }
+
+      // Lock when door is closed
+      if (doorUnlocked && is_box_closed()) {
+        Serial.println("Closed door. Locking door.");
+        lock_door();
+        doorUnlocked = false;
+      }
+      break;
     }
-    break;
-  }
 }
 
 void handleNotFound(){

@@ -1,5 +1,5 @@
 /**
- * @file rfid_unlock.cpp
+ * @file rfid_access.cpp
  * @authors Amal Araweelo Almis
  * @brief 
  * @version 0.1
@@ -12,7 +12,7 @@
  * 
  * @copyright Copyright (c) 2026
  */
-#include "rfid/rfid_unlock.h"
+#include "rfid_access.h"
 
 // Definitions
 User users[MAX_ROOMS];
