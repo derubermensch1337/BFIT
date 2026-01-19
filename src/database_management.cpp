@@ -39,35 +39,41 @@ Use commands from EEPROM.h library
 #include <EEPROM.h>
 
 // ====================== Add and delete users =====================================
-void user_management(RFIDcommand localCmd, User* ptr, MFRC522 &rfid){
+// A while loop is used so multiple changes can be committed to EEPROM with one write
+void user_management(RFIDcommand incomingCommand, User* ptr, MFRC522 &rfid){
 
-  bool wasChanged = false;  //If something becomes added or deleted, EEPROM is written
-  
+  bool wasChanged = false;  // If something becomes added or deleted, EEPROM is written
+  RFIDcommand localCmd = incomingCommand;
+
   while(localCmd != CMD_CONFIRM){
     switch(localCmd) {
       case CMD_ADD_USER:
         // Try to add new user
         if(add_user(rfid)){
-          Serial.println("User added.");
+          Serial.println("User added succesfully.");
           wasChanged = true;
         } else {
           // If for example user count was full, or uid already in use
           Serial.println("Adding user failed.");
         }
         localCmd = CMD_NONE;
-        Serial.println("Give new command. 'c' to confirm changes.");
+        display_commands_um();
         break;
       case CMD_REMOVE_USER:
         // Try to remove user
         if(remove_user()){
-            Serial.println("User added.");
+            Serial.println("User removed.");
             wasChanged = true;
         }else{
           // If
           Serial.println("Removing user failed.");
         }
         localCmd = CMD_NONE;
-        Serial.println("Give new command. 'c' to confirm changes.");
+        display_commands_um();
+        display_commands_um();
+        break;
+      case CMD_PRINT:
+        print_all_users(&users[0]);
         break;
       case CMD_NONE:
       default:
@@ -78,7 +84,6 @@ void user_management(RFIDcommand localCmd, User* ptr, MFRC522 &rfid){
   }
 
   if (wasChanged == true) {
-    Serial.println("Changes will be written to EEPROM.");
     EEPROM.begin(sizeof(users));
     
     //Prepare to write users to EEPROM
@@ -88,6 +93,8 @@ void user_management(RFIDcommand localCmd, User* ptr, MFRC522 &rfid){
     
     // Actually modify EEPROM
     EEPROM.commit();
+    Serial.println("Changes written to EEPROM.");
+
 
     //Print the updated database
     Serial.println("Database after modification:");

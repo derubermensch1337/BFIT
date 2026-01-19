@@ -109,17 +109,20 @@ void loop() {
       activeCommand = newCmd;
     }
   }
+
   // Execute active command
   switch (activeCommand) {
     case CMD_ADD_USER:
-      // add_user(rfid);            // blocking by design
-    // activeCommand = CMD_NONE; 
-    //Serial.println("Ready for next command.");
-    // break;
-  case CMD_REMOVE_USER:
-    user_management(activeCommand, &users[0], rfid);
-      activeCommand = CMD_NONE; 
-        break;
+    case CMD_REMOVE_USER:
+      user_management(activeCommand, &users[0], rfid);
+      activeCommand = CMD_NONE;
+      display_commands();  
+      break;
+    case CMD_PRINT:
+      print_all_users(&users[0]);
+      activeCommand = CMD_NONE;
+      display_commands();  
+      break;
     case CMD_NONE:
     default:
       // Check RFID only if door is locked

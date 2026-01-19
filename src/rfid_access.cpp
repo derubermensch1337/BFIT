@@ -65,9 +65,9 @@ bool add_user (MFRC522 &rfid){
     }   
 
     int emptyIndex = find_empty_index(&users[0]);
-    Serial.print("The index ");
+    Serial.print("Index ");
     Serial.print(emptyIndex);
-    Serial.println(" is unused:");
+    Serial.println(" is empty:");
     print_single_user(&users[0], emptyIndex);
     Serial.println("");
 
@@ -76,6 +76,11 @@ bool add_user (MFRC522 &rfid){
     int roomNumber = read_integer();
     Serial.print("Room number received: ");
     Serial.println(roomNumber);
+
+    if(roomNumber<=0){
+        Serial.println("Room number must be positive");
+        return false;
+    }
 
     // Prompt user to scan their RFID tag
     Serial.println("Scan your RFID tag.");
@@ -87,11 +92,13 @@ bool add_user (MFRC522 &rfid){
     }
     Serial.print("Received tag: ");
     print_uid(&uid[0]);
+    Serial.println("");
 
     // Check if tag is already registered
     for (int i = 0; i < MAX_ROOMS; i++){
         if ( users[i].roomNumber>0 && compare_UID(uid, users[i].uid)){ // if match is found
-            Serial.println("Tag already registered in database.");
+            Serial.print("Tag already registered in database in index ");
+            Serial.println(i);
             return false; // skip the rest of the code
         }
     }
@@ -103,7 +110,6 @@ bool add_user (MFRC522 &rfid){
     users[emptyIndex].roomNumber = roomNumber; // add room number
     users[emptyIndex].balance = 0;
 
-    Serial.println("Successfully added new user.");
     return true;
 }
 
@@ -158,8 +164,18 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
 
 
 void display_commands(){
-    Serial.println("Available commands:\n\t-'a' to add a user.\n\t-'r' to remove users.");
+    Serial.println("Available commands:\n\t\
+        -'a' to add a user\n\t\
+        -'r' to remove users\n\t\
+        -'p' to print the array 'users'");
 }
 
+void display_commands_um(){
+    Serial.println("Available commands:\n\t\
+        -'a' to add a user\n\t\
+        -'r' to remove users\n\t\
+        -'p' to print the array 'users'\n\t\
+        -'c' to confirm changes");
+}
 
 

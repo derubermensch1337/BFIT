@@ -56,6 +56,8 @@ bool remove_user();
 bool compare_UID(byte *uid1, byte *uid2);
 bool read_RFID_tag(MFRC522 &rfid, byte *uidBuffer);
 void display_commands(void);
+void display_commands_um();
+
 
 //Anssi
 void get_users_db(User* ptr);
