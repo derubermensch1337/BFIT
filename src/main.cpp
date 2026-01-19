@@ -110,6 +110,8 @@ void loop() {
       activeCommand = newCmd;
     }
   }
+  // Serial.print("Command before switch: ");
+  // Serial.println(activeCommand);
 
   // Execute active command
   switch (activeCommand) {
@@ -135,21 +137,24 @@ void loop() {
 
       // Start timer when door is closed
       if (doorUnlocked && is_box_closed() && timer == 0) {
+        Serial.println("Door is closed but not locked, starting timer");
         timer = millis();
       }
 
       //Reset timer if door is opened
       if (!is_box_closed() && timer > 0) {
+        Serial.println("Door is opened, resetting timer");
         timer = 0;
       }
 
       //Close the door when 1000 ms has passed since door is closed
       if (doorUnlocked && is_box_closed() && timer != 0 && (millis() - timer > 1000)) {
-        Serial.println("Closed door. Locking door.");
+        Serial.println("Door is closed. Locking door.");
         lock_door();
         doorUnlocked = false;
         timer = 0;
       }
+
       break;
     }
 }

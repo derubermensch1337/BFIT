@@ -19,7 +19,7 @@ static Servo lockServo;
 
 // Fixed 0 mechanically
 static const int UNLOCK_POS = 0;
-static const int LOCK_POS   = 100;
+static const int LOCK_POS   = 15;
 
 // Internal latched state
 static bool boxClosed = false;
@@ -42,11 +42,17 @@ void unlock_door() {
 
 bool is_box_closed(){
     int light = analogRead(LIGHT_PIN);
+
     if (!boxClosed && light < CLOSED_THRESHOLD) {
         boxClosed = true;
 
     } else if (boxClosed && light > OPEN_THRESHOLD){
         boxClosed = false;
+    }
+
+    if(millis()%1000 == 0) {
+        //Serial.println(light);
+        //Serial.println(boxClosed);
     }
 
     return boxClosed;
