@@ -32,7 +32,9 @@ enum RFIDcommand {
     CMD_ADD_USER,
     CMD_OPEN,
     CMD_LOCK,
-    CMD_REMOVE_USER
+    CMD_REMOVE_USER,
+    CMD_CONFIRM,
+    CMD_PRINT
 };
 
 // User struct
@@ -46,26 +48,28 @@ struct User {
 extern User users[MAX_ROOMS];
 extern int userCount;
 
-// Function prototypes
+// Function declarations
 RFIDcommand check_command(void);
 void setup_RFID_reader(MFRC522 &rfid);
-void add_user(MFRC522 &rfid);
+bool add_user(MFRC522 &rfid);
+bool remove_user();
 bool compare_UID(byte *uid1, byte *uid2);
 bool read_RFID_tag(MFRC522 &rfid, byte *uidBuffer);
 void display_commands(void);
 
 //Anssi
+void get_users_db(User* ptr);
+void user_management(RFIDcommand cmd, User* ptr, MFRC522 &rfid);
 bool validate_rfid(MFRC522 myRFID);
 
+//Printing users
+void print_single_user(User* ptr, int idx);
+void print_all_users(User* ptr);
+void print_uid(byte* ptr);
 
-// For database management
-void get_users_db(User* ptr);
-void print_users_db(User* ptr);
-void print_uid(User* ptr);
-void delete_user_db();
-void add_user_db();
 // Helpers
 int read_integer();
+bool read_confirmation();
 int find_empty_index(User* ptr);
 int count_rooms(User* ptr);
 

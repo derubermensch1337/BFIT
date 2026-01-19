@@ -39,6 +39,7 @@ void setup() {
   Serial.begin(115200);
   delay(200);
   
+  /*
   // Connect to WiFi network
   WiFi.begin("Baldur's A56", "MyPasskeyA56");  // add Wi-Fi networks you want to connect to
   // wifiMulti.addAP("Inteno-66C1", "069B55753B6C9A");  // add Wi-Fi networks you want to connect to
@@ -79,16 +80,19 @@ void setup() {
   // Start the server
   server.begin();
   Serial.println("Server started"); 
-
+*/
   // Initialize RFID reader
   setup_RFID_reader(rfid);
   
+  // Get users from database
+  get_users_db(&users[0]);
+
   // Display commands
   display_commands(); 
 } 
 
 void loop() {
-  server.handleClient();
+  //server.handleClient();
   // TODO: this should be moved inside a function
   // If no command is active, check for a new one and latch
   if (activeCommand == CMD_NONE) {
@@ -100,9 +104,13 @@ void loop() {
   // Execute active command
 switch (activeCommand) {
   case CMD_ADD_USER:
-    add_user(rfid);            // blocking by design
+    // add_user(rfid);            // blocking by design
+    // activeCommand = CMD_NONE; 
+    //Serial.println("Ready for next command.");
+    // break;
+  case CMD_REMOVE_USER:
+    user_management(activeCommand, &users[0], rfid);
     activeCommand = CMD_NONE; 
-    Serial.println("Ready for next command.");
     break;
   case CMD_NONE:
   default:
