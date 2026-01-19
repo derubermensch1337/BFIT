@@ -13,13 +13,11 @@ void inventory_init (
     memset(inventory, 0, sizeof(*inventory));                           // make sure that the part of memory used for storing beverages is empty befor we start filling inventory.
 }
 
-/**
- * @todo evt. lav input om til en struct m. en wrapper for ease of use.
- */
+
 product inventory_make_product (
         const char *product_name, 
         beverage_type type,
-        uint8_t weight,
+        uint16_t weight,
         uint8_t price
 ){
     product new_product;                                                // we make an instance of the item type.
@@ -59,7 +57,7 @@ bool inventory_remove_product (
     inventory *inventory, 
     product beverage
 ){
-    for (uint8_t index;
+    for (uint8_t index = 0;
         index < inventory->number_of_products_stocked;
         index++
     ){
@@ -80,6 +78,7 @@ bool inventory_remove_product (
                 sizeof(inventory->produckts_in_inventory[0]));
         }
     }
+    return true;
 }
 
 bool inventory_add_beverage(

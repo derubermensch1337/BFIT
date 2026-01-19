@@ -30,92 +30,92 @@ const char INDEX_HTML[] PROGMEM = R"rawliteral(
         <div class="sale_box">
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar1" class="sale_pole_clasic" style="height: 20px;"></div>
+                <div id="room1_clasic" class="sale_pole_clasic" style="height: 20px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar2" class="sale_pole_clasic" style="height: 30px;"></div>
+                <div id="room2_clasic" class="sale_pole_clasic" style="height: 30px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar3" class="sale_pole_clasic" style="height: 40px;"></div>
+                <div id="room3_clasic" class="sale_pole_clasic" style="height: 40px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar4" class="sale_pole_clasic" style="height: 50px;"></div>
+                <div id="room4_clasic" class="sale_pole_clasic" style="height: 50px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar5" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room5_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar6" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room6_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">            
                 <div class="sale_pole_green"></div>
-                <div id="bar7" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room7_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar8" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room8_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar9" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room9_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar10" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room10_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar11" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room11_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar12" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room12_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar13" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room13_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar14" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room14_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar15" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room15_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar16" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room16_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar17" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="room17_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
 
             <div class="sale_room">
                 <div class="sale_pole_green"></div>
-                <div id="bar18" class="sale_pole_clasic" style="height: 60px;"></div>
+                <div id="bar18_clasic" class="sale_pole_clasic" style="height: 60px;"></div>
             </div>
         </div>
 

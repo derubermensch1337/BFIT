@@ -68,7 +68,7 @@ void inventory_init(inventory *inventory);
  * @param price 
  * @return item created
  */
-product inventory_make_product(const char *name, beverage_type type, uint8_t weight, uint8_t price);
+product inventory_make_product(const char *name, beverage_type type, uint16_t weight, uint8_t price);
 
 /**
  * @brief Function for adding product to inventory.
@@ -79,7 +79,7 @@ product inventory_make_product(const char *name, beverage_type type, uint8_t wei
  * @return true - the product was added to the inventory
  * @return false - there was an error adding the product
  */
-bool inventory_add_product(inventory *inventory, product beverage, uint8_t quantity);
+bool inventory_add_product(inventory *inventory, product beverage, uint16_t quantity);
 
 /**
  * @brief Function for removing product from inventory
@@ -101,7 +101,7 @@ bool inventory_remove_product(inventory *inventory, product beverage);
  * @return true - the beverage was added to the inventory
  * @return false - there was an error adding the beverage
  */
-bool inventory_add_beverage(inventory *inventory, product  beverage, uint8_t amount);
+bool inventory_add_beverage(inventory *inventory, product  beverage, uint16_t amount);
 
 /**
  * @brief Function for removing from the amount of a beverage in an inventory

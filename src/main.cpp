@@ -15,11 +15,12 @@
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
-#include "rfid/rfid_unlock.h"
+//#include "rfid/rfid_unlock.h"
 #include "inventory.h"
+#include "init_users_and_sale.h"
 
-MFRC522 rfid(SS_PIN, RST_PIN);
-RFIDcommand activeCommand = CMD_NONE; // Initial command
+// MFRC522 rfid(SS_PIN, RST_PIN);
+// RFIDcommand activeCommand = CMD_NONE; // Initial command
 
 int salePoleClassicHight = 30;
 
@@ -90,16 +91,6 @@ void setup() {
   // Start the server
   server.begin();
   Serial.println("Server started"); 
-
-  product tuborg_clasic = inventory_make_product("Tuborg clasic", beer, 250, 12);
-  inventory fridge;
-  inventory_init(&fridge);
-
-  inventory_add_product(&fridge, tuborg_clasic, 10);
-
-  inventory_print(&fridge);
-
-  inventory_print(&fridge);
 } 
 
 void loop() {
