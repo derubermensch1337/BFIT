@@ -1,5 +1,5 @@
 /**
- * @file rfid_unlock.h
+ * @file rfid_access.h
  * @authors Amal Araweelo Almis
  * @brief 
  * @version 0.1
@@ -12,8 +12,8 @@
  * 
  * @copyright Copyright (c) 2026
  */
-#ifndef RFID_UNLOCK_H
-#define RFID_UNLOCK_H  
+#ifndef RFID_ACCESS_H
+#define RFID_ASCESS_H  
 
 #include <SPI.h>
 #include <MFRC522.h>
@@ -56,7 +56,6 @@ void display_commands(void);
 
 //Anssi
 bool validate_rfid(MFRC522 myRFID);
-
 
 // For database management
 void get_users_db(User* ptr);
