@@ -83,7 +83,6 @@ body {
     }
 
     .sale_pole_green {
-        height: 50px;
         width: 50px;
         background: #4fc908;
     }

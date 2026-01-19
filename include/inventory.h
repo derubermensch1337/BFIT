@@ -57,7 +57,9 @@ typedef struct {
  * 
  * @param Inventory Inventory instance to initialize 
  */
-void inventory_init(inventory *inventory);
+void inventory_init(
+    inventory *inventory
+);
 
 /**
  * @brief Function for defining a new item.
@@ -68,7 +70,12 @@ void inventory_init(inventory *inventory);
  * @param price 
  * @return item created
  */
-product inventory_make_product(const char *name, beverage_type type, uint16_t weight, uint8_t price);
+product inventory_make_product(
+    const char *name, 
+    beverage_type type, 
+    uint16_t weight, 
+    uint8_t price
+);
 
 /**
  * @brief Function for adding product to inventory.
@@ -79,7 +86,11 @@ product inventory_make_product(const char *name, beverage_type type, uint16_t we
  * @return true - the product was added to the inventory
  * @return false - there was an error adding the product
  */
-bool inventory_add_product(inventory *inventory, product beverage, uint16_t quantity);
+bool inventory_add_product(
+    inventory *inventory, 
+    product beverage, 
+    uint16_t quantity
+);
 
 /**
  * @brief Function for removing product from inventory
@@ -90,7 +101,10 @@ bool inventory_add_product(inventory *inventory, product beverage, uint16_t quan
  * @return true - the product was removed from the inventory
  * @return false - there was an error removing the product
  */
-bool inventory_remove_product(inventory *inventory, product beverage);
+bool inventory_remove_product(
+    inventory *inventory, 
+    product beverage
+);
 
 /**
  * @brief Function for adding to the amount of a beverage in an inventory
@@ -101,7 +115,11 @@ bool inventory_remove_product(inventory *inventory, product beverage);
  * @return true - the beverage was added to the inventory
  * @return false - there was an error adding the beverage
  */
-bool inventory_add_beverage(inventory *inventory, product  beverage, uint16_t amount);
+bool inventory_add_beverage(
+    inventory *inventory,
+    product  beverage,
+    uint16_t amount
+);
 
 /**
  * @brief Function for removing from the amount of a beverage in an inventory
@@ -112,13 +130,19 @@ bool inventory_add_beverage(inventory *inventory, product  beverage, uint16_t am
  * @return true - the beverage was removed from the inventory
  * @return false - there was an error removing the beverage
  */
-bool inventory_remove_beverage(inventory *inventory, product beverag, uint8_t amount);
-
+bool inventory_remove_beverage(
+    inventory *inventory, 
+    product beverag, 
+    uint8_t amount
+);
+    
 /**
  * @brief Function to print a users inventory
  * 
  * @param inventory 
  */
-void inventory_print(inventory *inventory);
+void inventory_print(
+    inventory *inventory
+);
 
 #endif

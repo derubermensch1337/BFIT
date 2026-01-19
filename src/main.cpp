@@ -11,7 +11,8 @@
 #include <ESP8266mDNS.h>        // Include the mDNS library
 
 #include <Arduino.h>
-#include "INDEX_HTML.h"
+#include "index_html.h"
+#include "sale_html.h"
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
@@ -19,19 +20,10 @@
 #include "inventory.h"
 #include "init_users_and_sale.h"
 
-// MFRC522 rfid(SS_PIN, RST_PIN);
-// RFIDcommand activeCommand = CMD_NONE; // Initial command
+static constexpr uint8_t ROOM_COUNT = 18;
+static int greenHeight[ROOM_COUNT]   = {0, 0, 23,30,80,30,26,22,20,23,92,29,26,94,23,8,3,0};
+static int classicHeight[ROOM_COUNT] = {200,4,23,30,80,30,26,22,20,23,92,29,26,94,23,38,83,90};
 
-int salePoleClassicHight = 30;
-
-const int BUTTON_1_PIN = 4;   // D2 (GPIO4)
-const int BUTTON_2_PIN = 5;   // D1 (GPIO5)
-
-bool lastB1 = HIGH;
-bool lastB2 = HIGH;
-
-unsigned long lastChangeMs = 0;
-const unsigned long debounceMs = 50;
 
 ESP8266WiFiMulti wifiMulti;
 ESP8266WebServer server(80);  // Create an instance of the server
@@ -42,18 +34,13 @@ void setup() {
   Serial.begin(115200);
   delay(200);                             // Delay to alow the board rate to be configure before continuing (stops standard boadloader print from messing up).
 
-  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
-  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
-
   // Connect to WiFi network
-  WiFi.begin("Baldur's A56", "MyPasskeyA56");  // add Wi-Fi networks you want to connect to
-  // wifiMulti.addAP("Inteno-66C1", "069B55753B6C9A");  // add Wi-Fi networks you want to connect to
-  Serial.print("Connecting ...");
- 
-  while (wifiMulti.run() != WL_CONNECTED) {
+  WiFi.begin("Baldur's A56", "MyPasskeyA56");
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
+
   Serial.println("");
   Serial.println("WiFi connected to ");
   Serial.println(WiFi.SSID());
@@ -67,15 +54,9 @@ void setup() {
   }
 
   server.on("/", HTTP_GET, []() {
-    String page = FPSTR(INDEX_HTML);
-    page.replace("%SALE_HIGHT%", String(salePoleClassicHight));
-    server.send(200, "text/html", page);
+    send_sale_html_page(server, ROOM_COUNT, greenHeight, classicHeight);
   });
   
-  server.on("/saleHight", HTTP_GET, []() {
-    server.send(200, "text/plain", String(salePoleClassicHight));
-  });
-
   server.on("/style.css", HTTP_GET, []() {
     server.send_P(200, "text/css", STYLE_CSS);
   });
@@ -96,25 +77,6 @@ void setup() {
 void loop() {
   server.handleClient();
   yield();
-  bool b1 = digitalRead(BUTTON_1_PIN);
-  bool b2 = digitalRead(BUTTON_2_PIN);
-
-  unsigned long now = millis();
-
-  // debounce window shared (simple + effective)
-  if (now - lastChangeMs > debounceMs) {
-    // detect falling edge (HIGH -> LOW) == press
-    if (lastB1 == HIGH && b1 == LOW) {
-      salePoleClassicHight += 30;
-       lastChangeMs = now;
-    }
-    if (lastB2 == HIGH && b2 == LOW) {
-      salePoleClassicHight -= 30;
-      lastChangeMs = now;
-    }
-  }
-  lastB1 = b1;
-  lastB2 = b2;
 }
 
 void handleNotFound(){
