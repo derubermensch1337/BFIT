@@ -30,6 +30,7 @@
 
 // Global definition
 bool doorUnlocked = false;
+unsigned long timer = 0;
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 RFIDcommand activeCommand = CMD_NONE; // Initial command
@@ -132,11 +133,22 @@ void loop() {
         doorUnlocked = true;
       }
 
-      // Lock when door is closed
-      if (doorUnlocked && is_box_closed()) {
+      // Start timer when door is closed
+      if (doorUnlocked && is_box_closed() && timer == 0) {
+        timer = millis();
+      }
+
+      //Reset timer if door is opened
+      if (!is_box_closed() && timer > 0) {
+        timer = 0;
+      }
+
+      //Close the door when 1000 ms has passed since door is closed
+      if (doorUnlocked && is_box_closed() && timer != 0 && (millis() - timer > 1000)) {
         Serial.println("Closed door. Locking door.");
         lock_door();
         doorUnlocked = false;
+        timer = 0;
       }
       break;
     }
@@ -145,7 +157,6 @@ void loop() {
 void handleNotFound(){
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
 }
-
 
 // server.on("/LED", HTTP_POST, handleLED);
 // server.onNotFound(handleNotFound);
