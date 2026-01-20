@@ -28,7 +28,7 @@ product inventory_make_product (
         new_product.name[sizeof(new_product.name) - 1] = '\0';          // go back and manualy add a end of line terminator (incase the input was to long and got cut of).
     } 
 
-    new_product.beverage = type;                                        // we give the item a type.
+    new_product.beverage_variant = type;                                // we give the item a type.
     new_product.weight = weight;                                        // we give the item a weight. 
     new_product.price = price;                                          // we give the item a price.
     return new_product;
@@ -63,7 +63,7 @@ bool inventory_remove_product (
     ){
         products_stocked *products_in_inventory = &inventory->produckts_in_inventory[index];
 
-        if (products_in_inventory->beverage.beverage == beverage.beverage &&
+        if (products_in_inventory->beverage.beverage_variant == beverage.beverage_variant &&
             strcmp(products_in_inventory->beverage.name, beverage.name) == 0
         ){
             for (uint8_t second_index = index; second_index + 1 < inventory->number_of_products_stocked; second_index++
@@ -93,7 +93,7 @@ bool inventory_add_beverage(
     ){
         products_stocked *product_in_inventory = &inventory->produckts_in_inventory[index];
 
-        if (product_in_inventory->beverage.beverage == beverag.beverage &&
+        if (product_in_inventory->beverage.beverage_variant == beverag.beverage_variant &&
             strcmp(product_in_inventory->beverage.name, beverag.name) == 0
         ){
             if ((uint16_t)product_in_inventory->current_quantity + amount > UINT8_MAX)
@@ -118,7 +118,7 @@ bool inventory_remove_beverage(
     ){
         products_stocked *product_in_inventory = &inventory->produckts_in_inventory[index];
 
-        if (product_in_inventory->beverage.beverage == beverag.beverage &&
+        if (product_in_inventory->beverage.beverage_variant == beverag.beverage_variant &&
             strcmp(product_in_inventory->beverage.name, beverag.name) == 0
         ){
             product_in_inventory->current_quantity -= amount;
@@ -143,7 +143,7 @@ void inventory_print (
 
         Serial.print(produckts_in_inventory->beverage.name);
         Serial.print(", type=");
-        Serial.print((int)produckts_in_inventory->beverage.beverage);
+        Serial.print((int)produckts_in_inventory->beverage.beverage_variant);
 
         Serial.print(", weight=");
         Serial.print(produckts_in_inventory->beverage.weight);

@@ -51,6 +51,13 @@ extern const char SALE_BOX_ROOM_STOP[] PROGMEM;
 */
 extern const char SALE_BOX_STOP[] PROGMEM;
 
+/**
+ * @brief 
+ * @param server 
+ * @param room_number 
+ * @param bar_type 
+ * @param bar_height 
+ */
 void send_sale_html_graph(
     ESP8266WebServer &server,
     uint8_t room_number,
@@ -58,6 +65,13 @@ void send_sale_html_graph(
     int bar_height
 );
 
+/**
+ * @brief 
+ * @param server 
+ * @param room_count 
+ * @param greenHeight 
+ * @param classicHeights 
+*/
 void send_sale_html_page(
     ESP8266WebServer &server,
     uint8_t room_count,

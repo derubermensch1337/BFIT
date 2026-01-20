@@ -5,6 +5,10 @@
 */
 
 #include "init_users_and_sale.h"
+#include "HX711.h"
+#include <math.h>
+
+#define scale_error = 15*2;
 
 void init_users_and_products (
 ){
@@ -60,4 +64,26 @@ void init_users_and_products (
     
     inventory_print(&fridge);
 }
-  
+
+void perform_sale(
+    uint16_t weight_removed,
+    char *type_sold,
+    uint16_t user_id,
+    inventory *fridge_inventory
+){
+    uint8_t product_number;
+    for (
+        uint8_t index = 0; 
+        index >= fridge_inventory->number_of_products_stocked; 
+        index++
+    ){  
+        if (strcmp(type_sold, fridge_inventory->produckts_in_inventory[index].beverage.name) == 0) {
+            product_number = index;
+            break;
+        }
+    }
+
+    products_stocked *product_in_inventory = &fridge_inventory->produckts_in_inventory[product_number];
+
+    // uint16_t number_of_products_sold = ... ;
+}

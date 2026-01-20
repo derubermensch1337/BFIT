@@ -28,10 +28,10 @@ typedef enum {
  * @brief Struct holding the information for one item.
 */
 typedef struct {
-    char name[20];          /**< Beverage  name */              
-    beverage_type beverage; /**< Beverage  type */
-    uint8_t weight;         /**< Beverage  weight */
-    uint8_t price;          /**< Beverage  price */
+    char name[20];                  /**< Beverage  name */              
+    beverage_type beverage_variant; /**< Beverage  type */
+    uint8_t weight;                 /**< Beverage  weight */
+    uint8_t price;                  /**< Beverage  price */
 } product;
 
 /**

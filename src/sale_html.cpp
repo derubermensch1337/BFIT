@@ -29,19 +29,19 @@ void send_sale_html_graph(
     const char *bar_type,
     int bar_height
 ){
-    server.sendContent_P(SALE_BOX_ROOM_ID);
+    // Generates EXACT IDs:
+    // room1_green / room1_clasic
+    server.sendContent(F("<div id=\"room"));
     server.sendContent(String(room_number));
-    server.sendContent("_");
+    server.sendContent(F("_"));
     server.sendContent(bar_type);
-
-    server.sendContent_P(SALE_BOX_ROOM_CLASS_TYPE);
+    server.sendContent(F("\" class=\"sale_pole_"));
     server.sendContent(bar_type);
-
-    server.sendContent_P(SALE_BOX_ROOM_CLASS_HEIGHT);
+    server.sendContent(F("\" style=\"height:"));
     server.sendContent(String(bar_height));
-
-    server.sendContent_P(SALE_BOX_ROOM_END);
+    server.sendContent(F("px;\"></div>"));
 }
+
 
 void send_sale_html_page(
     ESP8266WebServer &server,
@@ -49,22 +49,23 @@ void send_sale_html_page(
     const int *greenHeight,
     const int *classicHeights
 ){
+    server.sendHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
+    server.sendHeader("Pragma", "no-cache");
+    server.sendHeader("Expires", "0");
+
     server.setContentLength(CONTENT_LENGTH_UNKNOWN);
     server.send(200, "text/html", "");
+
     server.sendContent_P(INDEX_HTML_HEAD);
     server.sendContent_P(SALE_BOX_START);
 
-    for (uint8_t room_number = 1; 
-        room_number <= room_count; 
-        room_number++
-    ){
+    for (uint8_t room = 1; room <= room_count; room++) {
         server.sendContent_P(SALE_BOX_ROOM_START);
-        send_sale_html_graph(server, room_number, "green", greenHeight[room_number-1]);
-        send_sale_html_graph(server, room_number, "clasic", classicHeights[room_number-1]);
+        send_sale_html_graph(server, room, "green",  greenHeight[room - 1]);
+        send_sale_html_graph(server, room, "clasic", classicHeights[room - 1]);
         server.sendContent_P(SALE_BOX_ROOM_STOP);
     }
 
     server.sendContent_P(SALE_BOX_STOP);
     server.sendContent_P(INDEX_HTML_FOOT);
-    server.client().stop();
 }
