@@ -17,9 +17,12 @@
 
 #include <Arduino.h>
 #include <HX711_ADC.h>
+#include <math.h> 
 
 // Constants
 #define BEER_WEIGHT 350
+#define SCALE_TOL 25 // this is an assumption
+
 // Pins
 #define HX711_DOUT 4   // GPIO4=D2
 #define HX711_SCK  5   // GPIO5=D1
@@ -37,7 +40,7 @@ float get_weight(void);
 void tare_scale(void);
 bool tare_complete(void);
 
-// Beer functions
-int get_beer_cans_taken(float referencWeight, float currentWeight);
+// Beer function
+int get_beer_cans_taken(float referencWeight,float currentWeight);
 
 #endif
