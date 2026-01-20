@@ -150,15 +150,13 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
     // Returns true if uid can be read, also saves the uid tag to array starting with *uidBuffer
     // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
 
-    rfid.PCD_DumpVersionToSerial();
-
     if (!rfid.PICC_IsNewCardPresent()){
-        Serial.println("There is no RFID card present.");
+        //Serial.println("There is no RFID card present.");
         return false;
     }
     // Verify if the NUID has been read
     if (!rfid.PICC_ReadCardSerial()){
-        Serial.println("NUID has not been read.");
+        //Serial.println("NUID has not been read.");
         return false;
     }
     for (byte i = 0; i < UID_LENGTH; i++) {

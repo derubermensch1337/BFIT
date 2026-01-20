@@ -102,10 +102,12 @@ void setup() {
 
 void loop() {
 
-  // For debugging
-  // print_status(is_box_closed(), doorUnlocked, activeCommand);
-  Serial.print("The loop is running");
-  delay(50);
+  //This fixes issues with opening and closing serial monitor
+  byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
+  if (v == 0x00 || v == 0xFF) {
+      Serial.println("Communication failure: initializing rfid?");
+      rfid.PCD_Init();
+  }
 
   //server.handleClient();
   // TODO: this should be moved inside a function
