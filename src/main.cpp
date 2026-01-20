@@ -133,6 +133,7 @@ void loop() {
         Serial.println("Access granted. Unlocking door.");
         unlock_door();
         doorUnlocked = true;
+        play_open();
       }
 
       // Start timer when door is closed
@@ -140,6 +141,8 @@ void loop() {
         Serial.println("Door is closed but not locked, starting timer");
         timer = millis();
       }
+
+      play_warning(timer);
 
       //Reset timer if door is opened
       if (!is_box_closed() && timer > 0) {
@@ -153,6 +156,7 @@ void loop() {
         lock_door();
         doorUnlocked = false;
         timer = 0;
+        play_close();
       }
 
       break;
