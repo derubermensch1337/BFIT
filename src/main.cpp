@@ -147,8 +147,8 @@ void loop() {
         timer = 0;
       }
 
-      //Close the door when 1000 ms has passed since door is closed
-      if (doorUnlocked && is_box_closed() && timer != 0 && (millis() - timer > 1000)) {
+      //Close the door when 5 seconds has passed since door is closed
+      if (doorUnlocked && is_box_closed() && timer != 0 && (millis() - timer > 5000)) {
         Serial.println("Door is closed. Locking door.");
         lock_door();
         doorUnlocked = false;
