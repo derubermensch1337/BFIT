@@ -88,6 +88,7 @@ bool add_user (MFRC522 &rfid){
     
     // Read tag
     while(!read_RFID_tag(rfid, uid)){
+        yield();
         // wait for tag
     }
     Serial.print("Received tag: ");
@@ -114,7 +115,7 @@ bool add_user (MFRC522 &rfid){
 }
 
 // ======================== CHECK IF SHOULD UNLOCK ================================
-bool validate_rfid(MFRC522 myRFID){
+bool validate_rfid(MFRC522 &myRFID){
     byte uid[UID_LENGTH];   //Maybe move to more global place?
     bool open = false;
     //If a tag can be read
@@ -148,17 +149,23 @@ bool compare_UID (byte *uid1, byte *uid2){
 bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
     // Returns true if uid can be read, also saves the uid tag to array starting with *uidBuffer
     // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
+
+    rfid.PCD_DumpVersionToSerial();
+
     if (!rfid.PICC_IsNewCardPresent()){
+        Serial.println("There is no RFID card present.");
         return false;
     }
     // Verify if the NUID has been read
     if (!rfid.PICC_ReadCardSerial()){
+        Serial.println("NUID has not been read.");
         return false;
     }
     for (byte i = 0; i < UID_LENGTH; i++) {
         uidBuffer[i] = rfid.uid.uidByte[i];
     }
     rfid.PICC_HaltA();
+    yield();
     return true;
 }
 

@@ -62,7 +62,7 @@ void display_commands_um();
 //Anssi
 void get_users_db(User* ptr);
 void user_management(RFIDcommand cmd, User* ptr, MFRC522 &rfid);
-bool validate_rfid(MFRC522 myRFID);
+bool validate_rfid(MFRC522 &myRFID);
 
 //Printing users
 void print_single_user(User* ptr, int idx);

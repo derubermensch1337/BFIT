@@ -104,6 +104,8 @@ void loop() {
 
   // For debugging
   // print_status(is_box_closed(), doorUnlocked, activeCommand);
+  Serial.print("The loop is running");
+  delay(50);
 
   //server.handleClient();
   // TODO: this should be moved inside a function
@@ -165,6 +167,7 @@ void loop() {
 
       break;
     }
+    yield();
 }
 
 void handleNotFound(){
