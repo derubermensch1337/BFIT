@@ -30,6 +30,7 @@
 
 // Global definition
 bool doorUnlocked = false;
+unsigned long timer = 0;
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 RFIDcommand activeCommand = CMD_NONE; // Initial command
@@ -43,6 +44,7 @@ void setup() {
   Serial.begin(115200);
   delay(200);
   
+  /*
   // Connect to WiFi network
   WiFi.begin("Baldur's A56", "MyPasskeyA56");  // add Wi-Fi networks you want to connect to
   // wifiMulti.addAP("Inteno-66C1", "069B55753B6C9A");  // add Wi-Fi networks you want to connect to
@@ -83,9 +85,13 @@ void setup() {
   // Start the server
   server.begin();
   Serial.println("Server started"); 
-
+*/
   // Initialize RFID reader
   setup_RFID_reader(rfid);
+  
+  // Get users from database
+  get_users_db(&users[0]);
+
   
   // Lock servo
   lock_ctrl_init();
@@ -95,7 +101,7 @@ void setup() {
 } 
 
 void loop() {
-  server.handleClient();
+  //server.handleClient();
   // TODO: this should be moved inside a function
   // If no command is active, check for a new one and latch
   if (activeCommand == CMD_NONE) {
@@ -104,12 +110,21 @@ void loop() {
       activeCommand = newCmd;
     }
   }
+  // Serial.print("Command before switch: ");
+  // Serial.println(activeCommand);
+
   // Execute active command
   switch (activeCommand) {
     case CMD_ADD_USER:
-      add_user(rfid);            // blocking by design
-      activeCommand = CMD_NONE; 
-      Serial.println("Ready for next command.");
+    case CMD_REMOVE_USER:
+      user_management(activeCommand, &users[0], rfid);
+      activeCommand = CMD_NONE;
+      display_commands();  
+      break;
+    case CMD_PRINT:
+      print_all_users(&users[0]);
+      activeCommand = CMD_NONE;
+      display_commands();  
       break;
     case CMD_NONE:
     default:
@@ -119,14 +134,27 @@ void loop() {
         unlock_door();
         doorUnlocked = true;
       }
-      break;
 
-      // Lock when door is closed
-      if (doorUnlocked && is_box_closed()) {
-        Serial.println("Closed door. Locking door.");
+      // Start timer when door is closed
+      if (doorUnlocked && is_box_closed() && timer == 0) {
+        Serial.println("Door is closed but not locked, starting timer");
+        timer = millis();
+      }
+
+      //Reset timer if door is opened
+      if (!is_box_closed() && timer > 0) {
+        Serial.println("Door is opened, resetting timer");
+        timer = 0;
+      }
+
+      //Close the door when 5 seconds has passed since door is closed
+      if (doorUnlocked && is_box_closed() && timer != 0 && (millis() - timer > 5000)) {
+        Serial.println("Door is closed. Locking door.");
         lock_door();
         doorUnlocked = false;
+        timer = 0;
       }
+
       break;
     }
 }
@@ -134,7 +162,6 @@ void loop() {
 void handleNotFound(){
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
 }
-
 
 // server.on("/LED", HTTP_POST, handleLED);
 // server.onNotFound(handleNotFound);
