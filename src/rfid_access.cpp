@@ -1,5 +1,5 @@
 /**
- * @file rfid_unlock.cpp
+ * @file rfid_access.cpp
  * @authors Amal Araweelo Almis
  * @brief 
  * @version 0.1
@@ -12,7 +12,7 @@
  * 
  * @copyright Copyright (c) 2026
  */
-#include "rfid/rfid_unlock.h"
+#include "rfid_access.h"
 
 // Definitions
 User users[MAX_ROOMS];
@@ -30,7 +30,17 @@ RFIDcommand check_command(){
         case 'a':
             return CMD_ADD_USER; 
             break;
+        case 'r':
+            return CMD_REMOVE_USER;
+            break;
+        case 'c':
+            return CMD_CONFIRM;
+            break;
+        case 'p':
+            return CMD_PRINT;
+            break;
         case 'n':
+            // This might be unnecessary
             return CMD_NONE;
             break;
         default:
@@ -48,22 +58,29 @@ void setup_RFID_reader(MFRC522 &rfid){
 }
 
 // ====================== Add user ===================================
-void add_user (MFRC522 &rfid){
+bool add_user (MFRC522 &rfid){
     if (userCount >= MAX_ROOMS) {
-        Serial.println("Database full.");
-        return;
+        Serial.println("Database full. Delete user before adding new one.");
+        return false;
     }   
+
+    int emptyIndex = find_empty_index(&users[0]);
+    Serial.print("Index ");
+    Serial.print(emptyIndex);
+    Serial.println(" is empty:");
+    print_single_user(&users[0], emptyIndex);
+    Serial.println("");
 
     // Prompt user for their room number
     Serial.println("Enter room number: ");
-    while(!Serial.available()){
-
-    };
-
-    // Parse room number
-    int roomNumber = Serial.parseInt();
+    int roomNumber = read_integer();
     Serial.print("Room number received: ");
     Serial.println(roomNumber);
+
+    if(roomNumber<=0){
+        Serial.println("Room number must be positive");
+        return false;
+    }
 
     // Prompt user to scan their RFID tag
     Serial.println("Scan your RFID tag.");
@@ -73,29 +90,53 @@ void add_user (MFRC522 &rfid){
     while(!read_RFID_tag(rfid, uid)){
         // wait for tag
     }
+    Serial.print("Received tag: ");
+    print_uid(&uid[0]);
+    Serial.println("");
 
     // Check if tag is already registered
-    for (int i = 0; i<userCount; i++){
-        if (compare_UID(uid, users[i].uid)){ // if match is found
-            Serial.println("Tag already registered in database.");
-            return; // skip the rest of the code
+    for (int i = 0; i < MAX_ROOMS; i++){
+        if ( users[i].roomNumber>0 && compare_UID(uid, users[i].uid)){ // if match is found
+            Serial.print("Tag already registered in database in index ");
+            Serial.println(i);
+            return false; // skip the rest of the code
         }
     }
 
     // Store new user
     for (int i = 0; i<UID_LENGTH;  i++){
-        users[userCount].uid[i]=uid[i]; // store the 4 bytes
+        users[emptyIndex].uid[i]=uid[i]; // store the 4 bytes
     }
-    users[userCount].roomNumber = roomNumber; // add room number
-    userCount++;
+    users[emptyIndex].roomNumber = roomNumber; // add room number
+    users[emptyIndex].balance = 0;
 
-    Serial.println("Successfully added new user.");
+    return true;
+}
+
+// ======================== CHECK IF SHOULD UNLOCK ================================
+bool validate_rfid(MFRC522 myRFID){
+    byte uid[UID_LENGTH];   //Maybe move to more global place?
+    bool open = false;
+    //If a tag can be read
+    if(read_RFID_tag(myRFID, uid)){
+        // Check if tag is registered
+        for (int i = 0; i<userCount; i++){
+            if (compare_UID(uid, users[i].uid)){ // if match is found
+                open = true; //
+            }
+        }
+
+    //Open door
+    Serial.println("Door will be opened!");
+    }
+
+    return open;
 }
 
 // ======================== HELPER FUNCTIONS ================================
 
-// Compares two uid tags and returns true if they are identical
 bool compare_UID (byte *uid1, byte *uid2){
+    // Compares two uid tags and returns true if they are identical
     for (int i=0; i<UID_LENGTH;i++){
         if (uid1[i] != uid2[i]){
             return false;
@@ -105,6 +146,7 @@ bool compare_UID (byte *uid1, byte *uid2){
 }
 
 bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
+    // Returns true if uid can be read, also saves the uid tag to array starting with *uidBuffer
     // Reset the loop if no new card present on the sensor/reader. This saves the entire process when idle.
     if (!rfid.PICC_IsNewCardPresent()){
         return false;
@@ -122,8 +164,18 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
 
 
 void display_commands(){
-    Serial.println("Press 'a' to add a user.");
+    Serial.println("Available commands:\n\t\
+        -'a' to add a user\n\t\
+        -'r' to remove users\n\t\
+        -'p' to print the array 'users'");
 }
 
+void display_commands_um(){
+    Serial.println("Available commands:\n\t\
+        -'a' to add a user\n\t\
+        -'r' to remove users\n\t\
+        -'p' to print the array 'users'\n\t\
+        -'c' to confirm changes");
+}
 
 
