@@ -19,7 +19,7 @@ static Servo lockServo;
 
 // Fixed 0 mechanically
 static const int UNLOCK_POS = 0;
-static const int LOCK_POS   = 15;
+static const int LOCK_POS   = 100;
 
 const int BUZZER = 2;   // Could be improved, issues with resets
 const double HIGH_TONE = 1000;

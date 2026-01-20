@@ -171,11 +171,40 @@ void display_commands(){
 }
 
 void display_commands_um(){
+    // For user management loop
     Serial.println("Available commands:\n\t\
         -'a' to add a user\n\t\
         -'r' to remove users\n\t\
         -'p' to print the array 'users'\n\t\
         -'c' to confirm changes");
 }
+
+void print_status(bool doorClosed, bool doorUnlocked, RFIDcommand cmd){
+    //Serial.println(millis());
+    int mod = millis()%1000;
+    //Serial.println(mod);
+
+    if(mod <= 36){
+
+        Serial.print("Door open status: ");
+        if (doorClosed){
+            Serial.println("closed");
+        } else{
+            Serial.println("open");
+        }
+
+        Serial.print("Door lock status: ");
+        if (doorUnlocked){
+            Serial.println("unlocked");
+        } else{
+            Serial.println("locked");
+        }
+
+        Serial.print("Current command: ");
+        Serial.println(cmd);
+        Serial.println("");
+    }
+}
+
 
 

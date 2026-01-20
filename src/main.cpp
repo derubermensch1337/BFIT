@@ -101,6 +101,10 @@ void setup() {
 } 
 
 void loop() {
+
+  // For debugging
+  // print_status(is_box_closed(), doorUnlocked, activeCommand);
+
   //server.handleClient();
   // TODO: this should be moved inside a function
   // If no command is active, check for a new one and latch

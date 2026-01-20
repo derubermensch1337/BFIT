@@ -74,5 +74,6 @@ int read_integer();
 bool read_confirmation();
 int find_empty_index(User* ptr);
 int count_rooms(User* ptr);
+void print_status(bool doorOpen, bool doorLocked, RFIDcommand cmd);
 
 #endif
