@@ -19,7 +19,7 @@
 #include <Servo.h>
 
 // Pins
-#define SERVO_PIN 5   // D1 = GPIO5
+#define SERVO_PIN 16   // D0 = GP16, D1 = GPIO5
 #define LIGHT_PIN A0 
 #define CLOSED_THRESHOLD 70   // darker than this = closed
 #define OPEN_THRESHOLD 100    // to avoid issues
@@ -33,5 +33,12 @@ void unlock_door();
 
 // Photosensor state
 bool is_box_closed();
+
+// Sound effects
+void play_warning(unsigned long t);
+void play_open();
+void play_close();
+
+
 
 #endif
