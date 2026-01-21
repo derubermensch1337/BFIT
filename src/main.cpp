@@ -20,14 +20,14 @@
 #include "init_users_and_sale.h"
 #include "weight_scale.h"
 #include "fridge_state.h"
+#include "graph_data.h"
 
-static constexpr uint8_t ROOM_COUNT = 18;
-static int greenHeight[ROOM_COUNT]   = {200, 0, 23,30,80,30,26,22,20,23,92,29,26,94,23,8,3,0};
-static int classicHeight[ROOM_COUNT] = {20,4,238,30,80,30,26,22,20,23,92,29,26,94,23,38,83,90};
-
-
+//static constexpr uint8_t ROOM_COUNT = 18;
 static const float CAL_FACTOR = 696.0f;      // <-- Replace with your calibrated value
 static const uint16_t START_BEER_QTY = 20;   // Keep <= 255 if current_quantity is uint8_t
+
+int greenHeight[ROOM_COUNT]   = {200, 0, 23,30,80,30,26,22,20,23,92,29,26,94,23,8,3,0};
+int classicHeight[ROOM_COUNT] = {20,4,238,30,80,30,26,22,20,23,92,29,26,94,23,38,83,90};
 
 // One demo product (single beer type)
 product demo_beer;
@@ -164,17 +164,6 @@ void setup() {
   perform_sale(&fridge);
   print_menu();
 
-  // Initialize RFID reader
-  setup_RFID_reader(rfid);
-  
-  // Get users from database
-  get_users_db(&users[0]);
-
-  // Lock servo
-  lock_ctrl_init();
-
-  // Display commands
-  display_commands(); 
 } 
 
 void loop() {
@@ -192,156 +181,6 @@ void loop() {
 
     char cmd = read_serial_char_nonblocking();
     if (cmd == '\0') {
-      return; // this is OK but see improvement below
-    }
-
-    switch (cmd) {
-        case 'w': {
-            // Ensure we have a fresh sample: call update a bit
-            for (int i = 0; i < 50; i++) {
-                update_scale();
-                delay(5);
-            }
-            float w = get_weight();
-            Serial.print("Current weight: ");
-            Serial.println(w);
-            break;
-        }
-
-        case 'b': {
-            // Baseline reference = current weight
-            for (int i = 0; i < 50; i++) {
-                update_scale();
-                delay(5);
-            }
-            float w = get_weight();
-            set_weight_reference(w);
-            Serial.print("Reference weight set to: ");
-            Serial.println(get_weight_reference());
-            break;
-        }
-
-        case 'p': {
-            // Process sale and update inventory
-            perform_sale(&fridge);
-            Serial.println("perform_sale executed.");
-            Serial.print("New reference weight: ");
-            Serial.println(get_weight_reference());
-            break;
-        }
-
-        case 'i': {
-            Serial.println("Inventory:");
-            inventory_print(&fridge);
-            break;
-        }
-
-        case 't': {
-            // Optional: tare the scale. Note this changes weight behavior.
-            tare_scale();
-            Serial.println("Tare started (non-blocking). Waiting for completion...");
-            while (!tare_complete()) {
-                update_scale();
-                delay(10);
-            }
-            Serial.println("Tare complete.");
-
-            // After tare, baseline must be reset because readings jump.
-            reset_weight_reference();
-            Serial.println("Reference reset. Press 'b' to set baseline again.");
-            break;
-        }
-
-        case 'm':
-        default:
-            print_menu();
-            break;
-
-  //server.handleClient();
-
-  // This fixes issues with opening and closing serial monitor
-  // If there is no connection to the RFID scanner, it is initialized
-  // Either DTR or RTS should also be unchecked in the serial monitor (can't remember which)
-  byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
-  if (v == 0x00 || v == 0xFF) { //These values are received if there is no connection
-      Serial.println("Communication failure: initializing rfid");
-      rfid.PCD_Init();
-  }
-
-  // TODO: this should be moved inside a function
-  // If no command is active, check for a new one and latch
-  if (activeCommand == CMD_NONE) {
-    RFIDcommand newCmd = check_command();
-    if (newCmd != activeCommand){
-      activeCommand = newCmd;
-    }
-  }
-
-  // For debugging
-  // Serial.print("Command before switch: ");
-  // Serial.println(activeCommand);
-
-  // Execute active command
-  switch (activeCommand) {
-    case CMD_ADD_USER:    // Same as CMD_REMOVE_USER
-    case CMD_REMOVE_USER:
-      user_management(activeCommand, &users[0], rfid);  // The function adds or removes user depending on command
-      activeCommand = CMD_NONE;
-      display_commands();
-      break;
-    case CMD_PRINT:
-      print_all_users(&users[0]);
-      activeCommand = CMD_NONE;
-      display_commands();  
-      break;
-    case CMD_LOCK:
-        Serial.println("Door is closed. Locking door.");
-        lock_door();
-        doorUnlocked = false;
-        timer = 0;
-        play_lock();
-        activeCommand = CMD_NONE;
-        display_commands();
-      break;
-
-    case CMD_NONE:
-    default:
-
-      // If there is no valid command, the RFID scanner is checked
-
-      // Check RFID only if door is locked
-      if (!doorUnlocked && validate_rfid(rfid)) {
-        Serial.println("Access granted. Unlocking door.");
-        unlock_door();
-        doorUnlocked = true;
-        play_unlock();
-        display_commands();  
-      }
-
-      // Start timer when door is closed
-      if (doorUnlocked && is_box_closed() && timer == 0) {
-        Serial.println("Door is closed but not locked, starting timer");
-        timer = millis();
-      }
-
-      play_warning(timer);
-
-      //Reset timer if door is opened
-      if (!is_box_closed() && timer > 0) {
-        Serial.println("Door is opened, resetting timer");
-        timer = 0;
-      }
-
-      //Close the door when 5 seconds has passed since door is closed
-      if (doorUnlocked && is_box_closed() && timer != 0 && (millis() - timer > 5000)) {
-        Serial.println("Door is closed. Locking door.");
-        lock_door();
-        doorUnlocked = false;
-        timer = 0;
-        play_lock();
-        display_commands();  
-      }
-      break;
     }
 
   bool selectNow = digitalRead(BTN_SELECT_PIN);

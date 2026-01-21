@@ -8,6 +8,7 @@
 #include <math.h>
 #include "weight_scale.h"
 #include "rfid_access.h"
+#include "graph_data.h"
 
 void init_users_and_products (
 ){
@@ -74,14 +75,22 @@ void perform_sale(inventory *fridge_inventory)
         return;
     }
 
+    uint8_t saleRoom = 0;
+
     for (int i = 0; i < MAX_ROOMS; i++) {
         if (users[i].roomNumber > 0 &&
             compare_UID(lastUid, users[i].uid)) {
 
+            saleRoom = users[i].roomNumber;  // <-- capture room
             Serial.print("Sale registered to room: ");
-            Serial.println(users[i].roomNumber);
+            Serial.println(saleRoom);
             break;
         }
+    }
+
+    if (saleRoom == 0) {
+        Serial.println("RFID did not match any room");
+        return;
     }
 
     if (fridge_inventory == nullptr) {
@@ -92,36 +101,33 @@ void perform_sale(inventory *fridge_inventory)
     if (!weight_reference_is_set()) {
         float ref = read_current_weight_blocking();
         set_weight_reference(ref);
-        return; // No sale on first call, we just establish baseline
+        return;
     }
 
-    // Read current weight
     float referenceWeight = get_weight_reference();
     float currentWeight   = read_current_weight_blocking();
 
-    // Compute how many beer cans were taken
     int cans_taken = get_beer_cans_taken(referenceWeight, currentWeight);
-    
     if (cans_taken <= 0) {
-        return;                 // if no cans where removed do noting
+        return;
     }
 
+    // --- inventory update (your existing logic) ---
     for (uint8_t index = 0; index < fridge_inventory->number_of_products_stocked; index++) {
-        
         products_stocked *beverage_in_inventory = &fridge_inventory->produckts_in_inventory[index];
 
-        if (beverage_in_inventory->beverage.beverage_variant != beer) { // find the beverage in the inventory that is beer.
-            continue;
-        }
-    
-        // remove the number of cans removed form the fridge inventory
+        if (beverage_in_inventory->beverage.beverage_variant != beer) continue;
+
         if (beverage_in_inventory->current_quantity >= cans_taken) {
             beverage_in_inventory->current_quantity -= cans_taken;
+        } else {
+            beverage_in_inventory->current_quantity = 0;
         }
-        else beverage_in_inventory->current_quantity = 0;
-        
         break;
     }
 
-    set_weight_reference(currentWeight);                // update the reference
+    // --- update graph arrays (example: +5 per can) ---
+    graph_add_to_room_green(saleRoom, cans_taken * 5);
+
+    set_weight_reference(currentWeight);
 }
