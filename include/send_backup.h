@@ -7,6 +7,8 @@
 #include <Arduino.h>
 #include <rfid_unlock.h> // The User struct is defined here, might be useful
 #include <PubSubClient.h>
+#include <ESP8266WiFi.h>
+#include <ESP8266HTTPClient.h>
 #include <WifiClient.h>
 
 
@@ -16,14 +18,14 @@ client.setServer("mqtt.freemqtt.com", 8883);;
 client.connect("arduinoClient");
 client.publish("test/topic", "Hello from Arduino");
 
-// Configure Authentication Information for Thingsboard
-char apitok = EroGpNUbvoa2aFe96dsz;
-char url = "http://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry"
+// Configure Authentication Information for Thingsboard (without our parameters/header)
+char url = "http://eu.thingsboard.cloud/api/v1/EroGpNUbvoa2aFe96dsz/telemetry"
 
 // Backup Function Definition
-void send_backup(String backup) {
+void send_backup(String* parameters) {
+	HTTPClient http;
+	char payload[60]
 	// Format Request
-	String request = String("PUSH ") + url + "--header" + "Host: " + push_bullet_host + "\r\n" + + "Accept: */*\r\n" + "Access-Token: "+ apitok +"\r\n\r\n";
 
 	if (httpCode > 0) {
 		Serial.println("Data sent!");

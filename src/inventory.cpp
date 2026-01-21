@@ -157,3 +157,25 @@ void inventory_print (
         Serial.println(produckts_in_inventory->original_quantity);
     }   
 }
+
+char inventory_backup_print(inventory *inventory;) {
+	// allocate memory for our output string
+	char backup[128];
+	// loop that individually formats the data for each room
+	for (uint8_t i = 0; i <= 18; i++) {
+		products_stocked *beers_taken = &inventory->produckts_in_inventory->current_quantity;
+		char temp[8];
+		char room[2];
+		char qty[5];
+		sprintf(room, '%d.', i);
+		sprintf(qty, '%d~', beers_taken);
+		strcpy(temp,room);
+		strcat(temp,qty);
+		if (i != 0) {
+			strcat(backup, temp);
+		} else {
+			strcpy(backup,temp);
+		}
+	}
+	return backup;
+}
