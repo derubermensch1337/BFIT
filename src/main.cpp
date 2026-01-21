@@ -27,11 +27,12 @@
 #include "ADMIN_HTML.h"
 #include "rfid_access.h"
 #include "lock_ctrl.h"
+// #include "user_management.h"
 #include "buzzer.h" 
 
 // Global definition
 bool doorUnlocked = false;
-unsigned long timer = 0;
+unsigned long timer = 0;  //started when door is closed but not locked
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 RFIDcommand activeCommand = CMD_NONE; // Initial command
@@ -105,7 +106,7 @@ void loop() {
 
   //server.handleClient();
 
-  //This fixes issues with opening and closing serial monitor
+  // This fixes issues with opening and closing serial monitor
   // If there is no connection to the RFID scanner, it is initialized
   // Either DTR or RTS should also be unchecked in the serial monitor (can't remember which)
   byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
@@ -140,8 +141,21 @@ void loop() {
       activeCommand = CMD_NONE;
       display_commands();  
       break;
+    case CMD_LOCK:
+        Serial.println("Door is closed. Locking door.");
+        lock_door();
+        doorUnlocked = false;
+        timer = 0;
+        play_lock();
+        activeCommand = CMD_NONE;
+        display_commands();
+      break;
+
     case CMD_NONE:
     default:
+
+      // If there is no valid command, the RFID scanner is checked
+
       // Check RFID only if door is locked
       if (!doorUnlocked && validate_rfid(rfid)) {
         Serial.println("Access granted. Unlocking door.");
@@ -172,6 +186,7 @@ void loop() {
         doorUnlocked = false;
         timer = 0;
         play_lock();
+        display_commands();  
       }
 
       break;

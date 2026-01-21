@@ -21,11 +21,8 @@ static Servo lockServo;
 static const int UNLOCK_POS = 0;
 static const int LOCK_POS   = 100;
 
-
-
 // Internal latched state
 static bool boxClosed = false;
-
 
 void lock_ctrl_init() {
     // EXACTLY like your working Arduino sketch
@@ -50,12 +47,6 @@ bool is_box_closed(){
 
     } else if (boxClosed && light > OPEN_THRESHOLD){
         boxClosed = false;
-    }
-
-    if(millis()%1000 == 0) {
-        //For debugging
-        //Serial.println(light);
-        //Serial.println(boxClosed);
     }
 
     return boxClosed;

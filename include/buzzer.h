@@ -4,6 +4,8 @@
 #define BUZZER_H
 
 // Sound effects
+
+// Plays short sound when door is closed and about to be locked
 void play_warning(unsigned long t);
 void play_unlock();
 void play_lock();
