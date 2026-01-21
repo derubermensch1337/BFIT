@@ -27,6 +27,7 @@
 #include "ADMIN_HTML.h"
 #include "rfid_access.h"
 #include "lock_ctrl.h"
+#include "buzzer.h" 
 
 // Global definition
 bool doorUnlocked = false;
@@ -102,14 +103,17 @@ void setup() {
 
 void loop() {
 
+  //server.handleClient();
+
   //This fixes issues with opening and closing serial monitor
+  // If there is no connection to the RFID scanner, it is initialized
+  // Either DTR or RTS should also be unchecked in the serial monitor (can't remember which)
   byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
-  if (v == 0x00 || v == 0xFF) {
-      Serial.println("Communication failure: initializing rfid?");
+  if (v == 0x00 || v == 0xFF) { //These values are received if there is no connection
+      Serial.println("Communication failure: initializing rfid");
       rfid.PCD_Init();
   }
 
-  //server.handleClient();
   // TODO: this should be moved inside a function
   // If no command is active, check for a new one and latch
   if (activeCommand == CMD_NONE) {
@@ -118,14 +122,16 @@ void loop() {
       activeCommand = newCmd;
     }
   }
+
+  // For debugging
   // Serial.print("Command before switch: ");
   // Serial.println(activeCommand);
 
   // Execute active command
   switch (activeCommand) {
-    case CMD_ADD_USER:
+    case CMD_ADD_USER:    // Same as CMD_REMOVE_USER
     case CMD_REMOVE_USER:
-      user_management(activeCommand, &users[0], rfid);
+      user_management(activeCommand, &users[0], rfid);  // The function adds or removes user depending on command
       activeCommand = CMD_NONE;
       display_commands();  
       break;
@@ -141,7 +147,8 @@ void loop() {
         Serial.println("Access granted. Unlocking door.");
         unlock_door();
         doorUnlocked = true;
-        play_open();
+        play_unlock();
+        display_commands();  
       }
 
       // Start timer when door is closed
@@ -164,7 +171,7 @@ void loop() {
         lock_door();
         doorUnlocked = false;
         timer = 0;
-        play_close();
+        play_lock();
       }
 
       break;

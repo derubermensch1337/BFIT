@@ -21,10 +21,7 @@ static Servo lockServo;
 static const int UNLOCK_POS = 0;
 static const int LOCK_POS   = 100;
 
-const int BUZZER = 2;   // Could be improved, issues with resets
-const double HIGH_TONE = 1000;
-const double LOW_TONE = 600;
-const unsigned long TONE_LENGTH = 200;
+
 
 // Internal latched state
 static bool boxClosed = false;
@@ -64,30 +61,3 @@ bool is_box_closed(){
     return boxClosed;
 }
 
-void play_warning(unsigned long t) {
-
-    switch(millis() - t){
-        case 1000 ... 1100:
-            tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-            break;
-        case 3000 ... 3100:
-            tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-            break;
-        default:
-        break;
-    }
-}
-
-void play_open(){
-    tone(BUZZER, LOW_TONE);
-    delay(TONE_LENGTH);
-    noTone(BUZZER);
-    tone(BUZZER, HIGH_TONE, 2*TONE_LENGTH);
-}
-
-void play_close(){
-    tone(BUZZER, HIGH_TONE);
-    delay(TONE_LENGTH);
-    noTone(BUZZER);
-    tone(BUZZER, LOW_TONE, 2*TONE_LENGTH);
-}

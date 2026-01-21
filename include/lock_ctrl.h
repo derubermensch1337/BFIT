@@ -34,11 +34,4 @@ void unlock_door();
 // Photosensor state
 bool is_box_closed();
 
-// Sound effects
-void play_warning(unsigned long t);
-void play_open();
-void play_close();
-
-
-
 #endif

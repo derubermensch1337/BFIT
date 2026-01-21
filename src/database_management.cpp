@@ -214,6 +214,7 @@ void print_uid(byte* ptr) {
 
 // ====================== Helper functions =====================================
 
+// Reads a nonzero integer from serial and asks for confirmation, returns the integer 
 int read_integer() {
 
   int myInteger = 0;  //Chars converted to string
@@ -239,7 +240,8 @@ int read_integer() {
     }
   } return myInteger;
 }
-//Ask user to press y for confirmation
+
+//Ask user to press y for confirmation, returns true if y is written to serial
 bool read_confirmation() {
   Serial.print("Confirm with 'y': ");
   while (Serial.available() == 0) {
@@ -253,9 +255,8 @@ bool read_confirmation() {
   }
 }
 
-
-int find_empty_index(User* ptr) {
 //Returns the first index for a room with 0 or negative room number
+int find_empty_index(User* ptr) {
   //returns -1 if all are full
   int foundIndex = -1;
   int numRoom = 0; //Temporary storage for number of the room
@@ -273,8 +274,8 @@ int find_empty_index(User* ptr) {
   return foundIndex;
 }
 
+// Counts the number of rooms in users[] with valid numbers
 int count_rooms(User* ptr) {
-    // Counts the number of rooms in users[] with valid numbers
     // Meaning, how many spots are taken
   int counter = 0;
   int numRoom = 0; //Temporary storage for number of the room
