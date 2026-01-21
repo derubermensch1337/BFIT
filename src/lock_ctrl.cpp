@@ -32,8 +32,8 @@ static bool boxClosed = false;
 
 void lock_ctrl_init() {
     // EXACTLY like your working Arduino sketch
-    lockServo.attach(SERVO_PIN, 500, 2500);
     lockServo.write(LOCK_POS);   // start locked
+    lockServo.attach(SERVO_PIN, 500, 2500);
 }
 
 void lock_door() {

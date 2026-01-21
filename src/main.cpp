@@ -92,7 +92,6 @@ void setup() {
   // Get users from database
   get_users_db(&users[0]);
 
-  
   // Lock servo
   lock_ctrl_init();
 
@@ -162,7 +161,6 @@ void loop() {
         timer = 0;
         play_close();
       }
-
       break;
     }
 }

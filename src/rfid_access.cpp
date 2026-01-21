@@ -89,6 +89,7 @@ bool add_user (MFRC522 &rfid){
     // Read tag
     while(!read_RFID_tag(rfid, uid)){
         // wait for tag
+        yield();
     }
     Serial.print("Received tag: ");
     print_uid(&uid[0]);
