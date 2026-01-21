@@ -76,6 +76,7 @@ void perform_sale(inventory *fridge_inventory)
     }
 
     uint8_t saleRoom = 0;
+    int saleIndex = -1;
 
     for (int i = 0; i < MAX_ROOMS; i++) {
         if (users[i].roomNumber > 0 &&
@@ -84,6 +85,8 @@ void perform_sale(inventory *fridge_inventory)
             saleRoom = users[i].roomNumber;  // <-- capture room
             Serial.print("Sale registered to room: ");
             Serial.println(saleRoom);
+            saleIndex = i;
+
             break;
         }
     }
@@ -111,6 +114,9 @@ void perform_sale(inventory *fridge_inventory)
     if (cans_taken <= 0) {
         return;
     }
+
+    //add cans taken to user array
+    users[saleIndex].balance += cans_taken;
 
     // --- inventory update (your existing logic) ---
     for (uint8_t index = 0; index < fridge_inventory->number_of_products_stocked; index++) {

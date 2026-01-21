@@ -174,9 +174,7 @@ void display_commands_um(){
 static byte lastUID[UID_LENGTH];
 static bool hasUID = false;
 
-bool rfid_get_last_uid(
-    byte *uidOut
-){
+bool rfid_get_last_uid(byte *uidOut){
     if (!hasUID || !uidOut) {
         return false;
     }
