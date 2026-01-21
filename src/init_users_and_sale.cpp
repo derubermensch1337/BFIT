@@ -10,7 +10,6 @@
 
 void init_users_and_products (
 ){
-    //inventory fridge;
     inventory room_1;
     inventory room_2;
     inventory room_3;
@@ -30,7 +29,6 @@ void init_users_and_products (
     inventory room_17;
     inventory room_18;
 
-    //inventory_init(&fridge);
     inventory_init(&room_1);
     inventory_init(&room_2);
     inventory_init(&room_3);
@@ -49,18 +47,6 @@ void init_users_and_products (
     inventory_init(&room_16);
     inventory_init(&room_17);
     inventory_init(&room_18);
-    
-    // product tuborg_clasic = inventory_make_product("Tuborg clasic", beer, 330, 8);
-    // product tuborg_green = inventory_make_product("Tuborg green", beer, 330, 8);
-    // product limfjord = inventory_make_product("Limfjords porter", limfjords_porter, 550, 9);
-    // product pepsi = inventory_make_product("Pepsi Max", soda, 330, 7);
-
-    // inventory_add_product(&fridge, tuborg_clasic, 550);
-    // inventory_add_product(&fridge, tuborg_green, 550);
-    // inventory_add_product(&fridge, limfjord, 90);
-    // inventory_add_product(&fridge, pepsi, 650);
-    
-    // inventory_print(&fridge);
 }
 
 static float read_current_weight_blocking(uint32_t timeoutMs = 1200)

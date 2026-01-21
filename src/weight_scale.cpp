@@ -26,18 +26,43 @@ bool weight_reference_is_set(void){
     return !isnan(g_referenceWeight);
 }
 
-void setup_scale(
-   float calFactor
-){
-   scale.begin();
-   scale.start(SCALE_DEFAULT_SETTLE_TIME_MS, true); // settling + tare
-   scale.setCalFactor(calFactor);
+// void setup_scale(
+//    float calFactor
+// ){
+//    scale.begin();
+//    scale.start(SCALE_DEFAULT_SETTLE_TIME_MS, true); // settling + tare
+//    scale.setCalFactor(calFactor);
 
-   // wait until tare is complete
-   while(!scale.getTareStatus()){
-      scale.update();
-      delay(5);
-   }
+//    // wait until tare is complete
+//    while(!scale.getTareStatus()){
+//       scale.update();
+//       delay(5);
+//    }
+// }
+
+
+void setup_scale(float calFactor)
+{
+    scale.begin();
+    scale.start(SCALE_DEFAULT_SETTLE_TIME_MS, true);
+    scale.setCalFactor(calFactor);
+
+    const uint32_t timeoutMs = 8000;
+    uint32_t startMs = millis();
+
+    while(!scale.getTareStatus()){
+        scale.update();
+        delay(5);
+
+        if (millis() - startMs > timeoutMs) {
+            Serial.println("ERROR: HX711 tare timeout (check DT/SCK wiring and power)");
+            break;
+        }
+    }
+
+    if (scale.getTareStatus()) {
+        Serial.println("HX711 tare complete");
+    }
 }
 
 bool update_scale(

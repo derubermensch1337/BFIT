@@ -29,15 +29,15 @@ static int classicHeight[ROOM_COUNT] = {20,4,238,30,80,30,26,22,20,23,92,29,26,9
 static const float CAL_FACTOR = 696.0f;      // <-- Replace with your calibrated value
 static const uint16_t START_BEER_QTY = 20;   // Keep <= 255 if current_quantity is uint8_t
 
-// inventory fridge;
-
 // One demo product (single beer type)
 product demo_beer;
 
 // Simple helper to read a line/char from serial
 static char read_serial_char_nonblocking() {
-    if (Serial.available() > 0) {
-        return (char)Serial.read();
+    while (Serial.available() > 0) {
+        char c = (char)Serial.read();
+        if (c == '\r' || c == '\n') continue;  // ignore line endings
+        return c;
     }
     return '\0';
 }
@@ -74,7 +74,6 @@ static void print_menu() {
 // const unsigned long debounceMs = 50;
 
 
-
 ESP8266WiFiMulti wifiMulti;
 ESP8266WebServer server(80);  // Create an instance of the server
 
@@ -86,7 +85,7 @@ void setup() {
 
   Serial.begin(115200);
   delay(200);                             // Delay to alow the board rate to be configure before continuing (stops standard boadloader print from messing up).
-
+  
   // Connect to WiFi network
   WiFi.begin("Baldur's A56", "MyPasskeyA56");
   while (WiFi.status() != WL_CONNECTED) {
@@ -147,10 +146,19 @@ void setup() {
   server.begin();
   Serial.println("Server started"); 
   
+  Serial.println("Server started");
+
+  Serial.println("Before setup_scale()");
   setup_scale(CAL_FACTOR);
+  Serial.println("After setup_scale()");
+
+  Serial.println("init the fridge inventory");
   inventory_init(&fridge);
+  
+  Serial.println("Define the beverage");
   demo_beer = inventory_make_product("Demo Beer", beer, 350, 10); // weight field used only as metadata here
   inventory_add_product(&fridge, demo_beer, START_BEER_QTY);
+  
   Serial.println("Initial inventory:");
   inventory_print(&fridge);
   perform_sale(&fridge);
@@ -163,9 +171,16 @@ void loop() {
 
   update_scale();
 
+  static uint32_t lastPrint = 0;
+  if (millis() - lastPrint > 1000) {
+      lastPrint = millis();
+      Serial.print("Weight (raw): ");
+      Serial.println(get_weight());
+  }
+
     char cmd = read_serial_char_nonblocking();
     if (cmd == '\0') {
-        return;
+      return; // this is OK but see improvement below
     }
 
     switch (cmd) {
