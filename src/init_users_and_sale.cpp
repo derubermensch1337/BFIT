@@ -7,6 +7,7 @@
 #include "init_users_and_sale.h"
 #include <math.h>
 #include "weight_scale.h"
+#include "rfid_access.h"
 
 void init_users_and_products (
 ){
@@ -66,6 +67,23 @@ static float read_current_weight_blocking(uint32_t timeoutMs = 1200)
 
 void perform_sale(inventory *fridge_inventory)
 {
+    byte lastUid[UID_LENGTH];
+
+    if (!rfid_get_last_uid(lastUid)) {
+        Serial.println("No last RFID available");
+        return;
+    }
+
+    for (int i = 0; i < MAX_ROOMS; i++) {
+        if (users[i].roomNumber > 0 &&
+            compare_UID(lastUid, users[i].uid)) {
+
+            Serial.print("Sale registered to room: ");
+            Serial.println(users[i].roomNumber);
+            break;
+        }
+    }
+
     if (fridge_inventory == nullptr) {
         return;
     }

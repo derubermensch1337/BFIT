@@ -18,8 +18,6 @@
 #define MAX_ROOMS 17
 #define UID_LENGTH 4
 
-
-
 // Commands
 enum RFIDcommand {
     CMD_NONE,
