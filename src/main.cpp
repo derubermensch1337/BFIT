@@ -134,7 +134,7 @@ void loop() {
     case CMD_REMOVE_USER:
       user_management(activeCommand, &users[0], rfid);  // The function adds or removes user depending on command
       activeCommand = CMD_NONE;
-      display_commands();  
+      display_commands();
       break;
     case CMD_PRINT:
       print_all_users(&users[0]);
