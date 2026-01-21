@@ -167,8 +167,8 @@ char inventory_backup_print(inventory *inventory;) {
 		char temp[8];
 		char room[2];
 		char qty[5];
-		sprintf(room, '%d.', i);
-		sprintf(qty, '%d~', beers_taken);
+		sprintf(room, "%d.", i);
+		sprintf(qty, "%d~", beers_taken);
 		strcpy(temp,room);
 		strcat(temp,qty);
 		if (i != 0) {
@@ -177,5 +177,5 @@ char inventory_backup_print(inventory *inventory;) {
 			strcpy(backup,temp);
 		}
 	}
-	return backup;
+	return backup; 
 }
