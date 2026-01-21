@@ -27,10 +27,12 @@
 #include "ADMIN_HTML.h"
 #include "rfid_access.h"
 #include "lock_ctrl.h"
+// #include "user_management.h"
+#include "buzzer.h" 
 
 // Global definition
 bool doorUnlocked = false;
-unsigned long timer = 0;
+unsigned long timer = 0;  //started when door is closed but not locked
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 RFIDcommand activeCommand = CMD_NONE; // Initial command
@@ -101,10 +103,17 @@ void setup() {
 
 void loop() {
 
-  // For debugging
-  // print_status(is_box_closed(), doorUnlocked, activeCommand);
-
   //server.handleClient();
+
+  // This fixes issues with opening and closing serial monitor
+  // If there is no connection to the RFID scanner, it is initialized
+  // Either DTR or RTS should also be unchecked in the serial monitor (can't remember which)
+  byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
+  if (v == 0x00 || v == 0xFF) { //These values are received if there is no connection
+      Serial.println("Communication failure: initializing rfid");
+      rfid.PCD_Init();
+  }
+
   // TODO: this should be moved inside a function
   // If no command is active, check for a new one and latch
   if (activeCommand == CMD_NONE) {
@@ -113,30 +122,46 @@ void loop() {
       activeCommand = newCmd;
     }
   }
+
+  // For debugging
   // Serial.print("Command before switch: ");
   // Serial.println(activeCommand);
 
   // Execute active command
   switch (activeCommand) {
-    case CMD_ADD_USER:
+    case CMD_ADD_USER:    // Same as CMD_REMOVE_USER
     case CMD_REMOVE_USER:
-      user_management(activeCommand, &users[0], rfid);
+      user_management(activeCommand, &users[0], rfid);  // The function adds or removes user depending on command
       activeCommand = CMD_NONE;
-      display_commands();  
+      display_commands();
       break;
     case CMD_PRINT:
       print_all_users(&users[0]);
       activeCommand = CMD_NONE;
       display_commands();  
       break;
+    case CMD_LOCK:
+        Serial.println("Door is closed. Locking door.");
+        lock_door();
+        doorUnlocked = false;
+        timer = 0;
+        play_lock();
+        activeCommand = CMD_NONE;
+        display_commands();
+      break;
+
     case CMD_NONE:
     default:
+
+      // If there is no valid command, the RFID scanner is checked
+
       // Check RFID only if door is locked
       if (!doorUnlocked && validate_rfid(rfid)) {
         Serial.println("Access granted. Unlocking door.");
         unlock_door();
         doorUnlocked = true;
-        play_open();
+        play_unlock();
+        display_commands();  
       }
 
       // Start timer when door is closed
@@ -159,10 +184,12 @@ void loop() {
         lock_door();
         doorUnlocked = false;
         timer = 0;
-        play_close();
+        play_lock();
+        display_commands();  
       }
       break;
     }
+    yield();
 }
 
 void handleNotFound(){
