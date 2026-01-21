@@ -158,17 +158,28 @@ static void setup_rfid_and_lock()
 }
 
 /* ---------------- setup() ---------------- */
-
 void setup()
 {
   Serial.begin(115200);
   delay(200);
 
+  Serial.println("\nBOOT");
+
   connect_wifi_and_start_mdns();
+  Serial.println("WIFI OK");
+
   setup_web_routes();
+  Serial.println("HTTP OK");   // if you never see this, setup_web_routes() never finishes
+
+  // Delay to prove the server is reachable even if later init hangs
+  Serial.println("Pause 3s - try opening the webpage now");
+  delay(3000);
 
   setup_inventory_and_scale();
+  Serial.println("SCALE+INV OK");
+
   setup_rfid_and_lock();
+  Serial.println("RFID+LOCK OK");
 }
 
 /* ---------------- loop() ---------------- */
@@ -182,6 +193,14 @@ void loop()
 
   // Keep scale updated
   update_scale();
+
+  // Print weight once per second (non-blocking)
+  static uint32_t lastWeightPrintMs = 0;
+  if (millis() - lastWeightPrintMs >= 1000) {
+    lastWeightPrintMs = millis();
+    Serial.print("Weight: ");
+    Serial.println(get_weight());
+  }
 
   // If MFRC522 got disconnected / serial monitor toggled: re-init
   byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
@@ -232,10 +251,6 @@ void loop()
         doorUnlocked = true;
         play_unlock();
         display_commands();
-
-        // Trigger a sale evaluation when access is granted
-        // (If you prefer, move this to "door closed then locked" instead.)
-        perform_sale(&fridge);
       }
 
       // Start timer when door is closed (but not locked)
@@ -260,9 +275,8 @@ void loop()
         doorCloseTimer = 0;
         play_lock();
         display_commands();
-
-        // Optionally run sale processing on close/lock instead:
-        // perform_sale(&fridge);
+        perform_sale(&fridge);
+        Serial.println("[SALE] Running perform_sale() after door close");
       }
 
       break;

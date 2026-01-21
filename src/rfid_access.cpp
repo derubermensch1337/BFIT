@@ -150,6 +150,7 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
     for (byte i = 0; i < UID_LENGTH; i++) {
         uidBuffer[i] = rfid.uid.uidByte[i];
     }
+    rfid_get_last_uid(uidBuffer);
     rfid.PICC_HaltA();
     return true;
 }

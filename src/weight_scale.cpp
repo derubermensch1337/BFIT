@@ -26,21 +26,6 @@ bool weight_reference_is_set(void){
     return !isnan(g_referenceWeight);
 }
 
-// void setup_scale(
-//    float calFactor
-// ){
-//    scale.begin();
-//    scale.start(SCALE_DEFAULT_SETTLE_TIME_MS, true); // settling + tare
-//    scale.setCalFactor(calFactor);
-
-//    // wait until tare is complete
-//    while(!scale.getTareStatus()){
-//       scale.update();
-//       delay(5);
-//    }
-// }
-
-
 void setup_scale(float calFactor)
 {
     scale.begin();
