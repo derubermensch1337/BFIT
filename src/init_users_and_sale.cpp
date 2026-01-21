@@ -62,7 +62,6 @@ static float read_current_weight_blocking(uint32_t timeoutMs = 1200)
         delay(5);
     }
 
-    // Timeout: return last known value
     return get_weight();
 }
 
@@ -75,33 +74,32 @@ void perform_sale(inventory *fridge_inventory)
         return;
     }
 
-    uint8_t saleRoom = 0;
-    int saleIndex = -1;
+uint8_t saleRoom = 0;
+int saleIndex = -1;
 
-    for (int i = 0; i < MAX_ROOMS; i++) {
-        if (users[i].roomNumber > 0 &&
-            compare_UID(lastUid, users[i].uid)) {
+for (int i = 0; i < MAX_ROOMS; i++) {
+    if (users[i].roomNumber > 0 &&
+        compare_UID(lastUid, users[i].uid)) {
 
-            saleRoom = users[i].roomNumber;  // <-- capture room
-            Serial.print("Sale registered to room: ");
-            Serial.println(saleRoom);
-            saleIndex = i;
+        saleIndex = i;
+        saleRoom  = users[i].roomNumber;
 
-            break;
-        }
+        Serial.print("Sale matched user index: ");
+        Serial.println(saleIndex);
+        Serial.print("Sale registered to room: ");
+        Serial.println(saleRoom);
+
+        break;
     }
+}
 
-    if (saleRoom == 0) {
-        Serial.println("RFID did not match any room");
+
+    if (saleIndex < 0) {
+        Serial.println("RFID did not match any user index");
         return;
     }
 
-    if (fridge_inventory == nullptr) {
-        Serial.println("fridge_inventory is null");
-        return;
-    }
-
-    // 1) Ensure reference weight exists
+    // Check if reference exists
     if (!weight_reference_is_set()) {
         Serial.println("Weight reference is not set");
         float ref = read_current_weight_blocking();
@@ -113,14 +111,27 @@ void perform_sale(inventory *fridge_inventory)
     float currentWeight   = read_current_weight_blocking();
 
     int cans_taken = get_beer_cans_taken(referenceWeight, currentWeight);
+
+    Serial.print("[SALE] ref = "); Serial.println(referenceWeight, 2);
+    Serial.print("[SALE] cur = "); Serial.println(currentWeight, 2);
+    Serial.print("[SALE] ref-cur = "); Serial.println(referenceWeight - currentWeight, 2);
+    Serial.print("[SALE] cans_taken = "); Serial.println(cans_taken);
+
+    // if (cans_taken <= 0) {
+    //     return;
+    // }
+
     if (cans_taken <= 0) {
+        Serial.println("[SALE] No cans detected -> exit");
         return;
     }
-
-    //add cans taken to user array
+    
     users[saleIndex].balance += cans_taken;
 
-    // --- inventory update (your existing logic) ---
+    Serial.println(cans_taken);
+    Serial.print(" cans sold");
+
+
     for (uint8_t index = 0; index < fridge_inventory->number_of_products_stocked; index++) {
         products_stocked *beverage_in_inventory = &fridge_inventory->produckts_in_inventory[index];
 
@@ -134,8 +145,21 @@ void perform_sale(inventory *fridge_inventory)
         break;
     }
 
-    // --- update graph arrays (example: +5 per can) ---
-    graph_add_to_room_green(saleRoom, cans_taken * 5);
+    if (saleIndex >= 0 && saleIndex < ROOM_COUNT) {
+        greenHeight[saleIndex] += (cans_taken * 5);
+        if (greenHeight[saleIndex] < 0) greenHeight[saleIndex] = 0;
+
+        Serial.print("Updated greenHeight[");
+        Serial.print(saleIndex);
+        Serial.print("] = ");
+        Serial.println(greenHeight[saleIndex]);
+    } else {
+        Serial.println("Sale index out of graph range (check ROOM_COUNT vs MAX_ROOMS)");
+    }
 
     set_weight_reference(currentWeight);
+
+    Serial.println("=== INVENTORY UPDATED ===");
+    inventory_print(fridge_inventory);
+    Serial.println("=========================");
 }

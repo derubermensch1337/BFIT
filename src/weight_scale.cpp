@@ -2,7 +2,6 @@
  * @file weight_scale.cpp
  * @brief 
  * @author Amal Araweelo Almis
- * @author Baldur G. Tofteegaard
 */
 
 #include "weight_scale.h"

@@ -4,8 +4,9 @@
  * @author Amal Araweelo Almis
  * @author Baldur G. Toftegaard
  */
+
 #ifndef RFID_ACCESS_H
-#define RFID_ASCESS_H  
+#define RFID_ACCESS_H  
 
 #include <SPI.h>
 #include <MFRC522.h>
@@ -69,7 +70,16 @@ int count_rooms(User* ptr);
 
 /**
  * @brief 
- * 
+ * @param uidOut 
+ * @return true 
+ * @return false 
+ */
+void rfid_set_last_uid(
+    const byte *uidIn
+);
+
+/**
+ * @brief 
  * @param uidOut 
  * @return true 
  * @return false 
@@ -77,5 +87,6 @@ int count_rooms(User* ptr);
 bool rfid_get_last_uid(
     byte *uidOut
 );
+
 
 #endif
