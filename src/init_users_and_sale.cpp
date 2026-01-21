@@ -97,11 +97,13 @@ void perform_sale(inventory *fridge_inventory)
     }
 
     if (fridge_inventory == nullptr) {
+        Serial.println("fridge_inventory is null");
         return;
     }
 
     // 1) Ensure reference weight exists
     if (!weight_reference_is_set()) {
+        Serial.println("Weight reference is not set");
         float ref = read_current_weight_blocking();
         set_weight_reference(ref);
         return;

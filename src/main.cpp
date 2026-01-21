@@ -32,7 +32,7 @@
 
 /* ---------------- Configuration ---------------- */
 
-static const float    CAL_FACTOR     = 696.0f;
+static const float    CAL_FACTOR     = 22.9f;
 static const uint16_t START_BEER_QTY  = 20;
 
 const char* WIFI_SSID = "Baldur's A56";
