@@ -32,7 +32,7 @@
 
 /* ---------------- Configuration ---------------- */
 
-static const float    CAL_FACTOR     = 696.0f;
+static const float    CAL_FACTOR     = 22.9f;
 static const uint16_t START_BEER_QTY  = 20;
 
 const char* WIFI_SSID = "Baldur's A56";
@@ -41,8 +41,23 @@ const char* WIFI_PASS = "MyPasskeyA56";
 /* ---------------- Global State ---------------- */
 
 // Graph data (used by sale_html + /saleHeights)
-int greenHeight[ROOM_COUNT]   = {200, 0, 23, 30, 80, 30, 26, 22, 20, 23, 92, 29, 26, 94, 23, 8, 3, 0};
-int classicHeight[ROOM_COUNT] = {20,  4, 238,30, 80, 30, 26, 22, 20, 23, 92, 29, 26, 94, 23,38,83,90};
+int greenHeight[ROOM_COUNT]   = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+int classicHeight[ROOM_COUNT] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+void print_graph_arrays(
+){
+    Serial.println("=== GRAPH DATA ===");
+    for (uint8_t i = 0; i < ROOM_COUNT; i++) {
+        Serial.print("Room ");
+        Serial.print(i + 1);
+        Serial.print(" | green = ");
+        Serial.print(greenHeight[i]);
+        Serial.print(" | classic = ");
+        Serial.println(classicHeight[i]);
+    }
+    Serial.println("==================");
+}
+
 
 // Demo inventory product
 product demo_beer;
@@ -251,6 +266,11 @@ void loop()
         doorUnlocked = true;
         play_unlock();
         display_commands();
+
+        float ref = get_weight();
+        set_weight_reference(ref);
+        Serial.print("[SALE] Reference set at unlock: ");
+        Serial.println(ref, 2);
       }
 
       // Start timer when door is closed (but not locked)
@@ -277,6 +297,7 @@ void loop()
         display_commands();
         perform_sale(&fridge);
         Serial.println("[SALE] Running perform_sale() after door close");
+        print_graph_arrays();
       }
 
       break;

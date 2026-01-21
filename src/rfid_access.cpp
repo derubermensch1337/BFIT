@@ -10,6 +10,9 @@
 User users[MAX_ROOMS];
 int userCount = 0;
 
+static byte lastUID[UID_LENGTH];
+static bool hasUID = false;
+
 // ====================== Check command =====================================
 RFIDcommand check_command(){
     if (!Serial.available()){
@@ -150,7 +153,13 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
     for (byte i = 0; i < UID_LENGTH; i++) {
         uidBuffer[i] = rfid.uid.uidByte[i];
     }
-    rfid_get_last_uid(uidBuffer);
+
+    rfid_set_last_uid(uidBuffer);
+
+    Serial.print("Stored UID: ");
+    print_uid(uidBuffer);
+    Serial.println();
+
     rfid.PICC_HaltA();
     return true;
 }
@@ -171,13 +180,20 @@ void display_commands_um(){
         -'c' to confirm changes");
 }
 
-static byte lastUID[UID_LENGTH];
-static bool hasUID = false;
+void rfid_set_last_uid(
+    const byte *uidIn
+){
+    if (!uidIn) return;
+    memcpy(lastUID, uidIn, UID_LENGTH);
+    hasUID = true;
+}
 
-bool rfid_get_last_uid(byte *uidOut){
-    if (!hasUID || !uidOut) {
+bool rfid_get_last_uid(byte *uidOut)
+{
+    if (!hasUID || uidOut == nullptr) {
         return false;
     }
+
     memcpy(uidOut, lastUID, UID_LENGTH);
     return true;
 }
