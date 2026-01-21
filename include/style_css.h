@@ -1,16 +1,7 @@
 /**
  * @file style_css.h
- * @authors Baldur G. Toftegaard
  * @brief 
- * @version 0.1
- * @date 13-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 13-01-2026 | Creaded file, implemented start and admin page, started general design  |
- * | 0.1     |            |                                                                         |
- * | 0.2     | 15-01-2026 | Implementing Dynamic Tables                                             |
- * @copyright Copyright (c) 2026
+ * @authors Baldur G. Toftegaard
 */
 
 #ifndef STYLE_CSS_H
@@ -231,6 +222,6 @@ th, td {                            // Define table header and the table row.
 	} /* min-width:32em */
 
 } /* grid only */ 
-rawliteral";
+)rawliteral";
 
 #endif

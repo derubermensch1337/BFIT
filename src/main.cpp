@@ -22,7 +22,7 @@
 #include "fridge_state.h"
 
 static constexpr uint8_t ROOM_COUNT = 18;
-static int greenHeight[ROOM_COUNT]   = {0, 0, 23,30,80,30,26,22,20,23,92,29,26,94,23,8,3,0};
+static int greenHeight[ROOM_COUNT]   = {200, 0, 23,30,80,30,26,22,20,23,92,29,26,94,23,8,3,0};
 static int classicHeight[ROOM_COUNT] = {20,4,238,30,80,30,26,22,20,23,92,29,26,94,23,38,83,90};
 
 
@@ -62,16 +62,16 @@ static void print_menu() {
 
 
 // // test code:
-// static uint8_t selectedRoom = 0;   // current index [0 .. ROOM_COUNT-1]
+static uint8_t selectedRoom = 0;   // current index [0 .. ROOM_COUNT-1]
 
-// const uint8_t BTN_SELECT_PIN = 4;  // D2
-// const uint8_t BTN_ADD_PIN    = 5;  // D1
+const uint8_t BTN_SELECT_PIN = 4;  // D2
+const uint8_t BTN_ADD_PIN    = 5;  // D1
 
-// bool lastSelect = HIGH;
-// bool lastAdd    = HIGH;
+bool lastSelect = HIGH;
+bool lastAdd    = HIGH;
 
-// unsigned long lastDebounceMs = 0;
-// const unsigned long debounceMs = 50;
+unsigned long lastDebounceMs = 0;
+const unsigned long debounceMs = 50;
 
 #include "rfid_access.h"
 #include "lock_ctrl.h"
@@ -91,8 +91,8 @@ ESP8266WebServer server(80);  // Create an instance of the server
 void handleNotFound();
 
 void setup() {
-  // pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
-  // pinMode(BTN_ADD_PIN, INPUT_PULLUP);
+  pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
+  pinMode(BTN_ADD_PIN, INPUT_PULLUP);
 
   Serial.begin(115200);
   delay(200);                             // Delay to alow the board rate to be configure before continuing (stops standard boadloader print from messing up).
@@ -174,7 +174,7 @@ void setup() {
   inventory_print(&fridge);
   perform_sale(&fridge);
   print_menu();
-*/
+
   // Initialize RFID reader
   setup_RFID_reader(rfid);
   
@@ -355,40 +355,40 @@ void loop() {
       break;
     }
 
-  // bool selectNow = digitalRead(BTN_SELECT_PIN);
-  // bool addNow    = digitalRead(BTN_ADD_PIN);
-  // unsigned long now = millis();
+  bool selectNow = digitalRead(BTN_SELECT_PIN);
+  bool addNow    = digitalRead(BTN_ADD_PIN);
+  unsigned long now = millis();
 
-  // if (now - lastDebounceMs > debounceMs) {
+  if (now - lastDebounceMs > debounceMs) {
 
-  //   // Button 1: select next room index
-  //   if (lastSelect == HIGH && selectNow == LOW) {
-  //     selectedRoom++;
-  //     if (selectedRoom >= ROOM_COUNT) {
-  //       selectedRoom = 0;   // wrap back to first
-  //     }
+    // Button 1: select next room index
+    if (lastSelect == HIGH && selectNow == LOW) {
+      selectedRoom++;
+      if (selectedRoom >= ROOM_COUNT) {
+        selectedRoom = 0;   // wrap back to first
+      }
 
-  //     Serial.print("Selected room: ");
-  //     Serial.println(selectedRoom + 1);
+      Serial.print("Selected room: ");
+      Serial.println(selectedRoom + 1);
 
-  //     lastDebounceMs = now;
-  //   }
+      lastDebounceMs = now;
+    }
 
-  //   // Button 2: add +5 to selected room
-  //   if (lastAdd == HIGH && addNow == LOW) {
-  //     greenHeight[selectedRoom] += 5;
+    // Button 2: add +5 to selected room
+    if (lastAdd == HIGH && addNow == LOW) {
+      greenHeight[selectedRoom] += 5;
 
-  //     Serial.print("Room ");
-  //     Serial.print(selectedRoom + 1);
-  //     Serial.print(" greenHeight = ");
-  //     Serial.println(greenHeight[selectedRoom]);
+      Serial.print("Room ");
+      Serial.print(selectedRoom + 1);
+      Serial.print(" greenHeight = ");
+      Serial.println(greenHeight[selectedRoom]);
 
-  //     lastDebounceMs = now;
-  //   }
-  // }
+      lastDebounceMs = now;
+    }
+  }
 
-  // lastSelect = selectNow;
-  // lastAdd    = addNow;
+  lastSelect = selectNow;
+  lastAdd    = addNow;
 }
 
     yield();
