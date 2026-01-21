@@ -1,17 +1,9 @@
 /**
  * @file rfid_access.cpp
- * @authors Amal Araweelo Almis
  * @brief 
- * @version 0.1
- * @date 15-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 15-01-2026 | Created file.                                                           |
- * |         |            |                                                                         |
- * 
- * @copyright Copyright (c) 2026
- */
+ * @author Amal Araweelo Almis
+ * @author Baldur G. Toftegaard
+*/
 #include "rfid_access.h"
 
 // Definitions
@@ -178,4 +170,15 @@ void display_commands_um(){
         -'c' to confirm changes");
 }
 
+static byte lastUID[UID_LENGTH];
+static bool hasUID = false;
 
+bool rfid_get_last_uid(
+    byte *uidOut
+){
+    if (!hasUID || !uidOut) {
+        return false;
+    }
+    memcpy(uidOut, lastUID, UID_LENGTH);
+    return true;
+}

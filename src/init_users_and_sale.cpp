@@ -5,14 +5,12 @@
 */
 
 #include "init_users_and_sale.h"
-#include "HX711.h"
 #include <math.h>
-
-#define scale_error = 15*2;
+#include "weight_scale.h"
 
 void init_users_and_products (
 ){
-    inventory fridge;
+    //inventory fridge;
     inventory room_1;
     inventory room_2;
     inventory room_3;
@@ -32,7 +30,7 @@ void init_users_and_products (
     inventory room_17;
     inventory room_18;
 
-    inventory_init(&fridge);
+    //inventory_init(&fridge);
     inventory_init(&room_1);
     inventory_init(&room_2);
     inventory_init(&room_3);
@@ -52,38 +50,74 @@ void init_users_and_products (
     inventory_init(&room_17);
     inventory_init(&room_18);
     
-    product tuborg_clasic = inventory_make_product("Tuborg clasic", beer, 330, 8);
-    product tuborg_green = inventory_make_product("Tuborg green", beer, 330, 8);
-    product limfjord = inventory_make_product("Limfjords porter", limfjords_porter, 550, 9);
-    product pepsi = inventory_make_product("Pepsi Max", soda, 330, 7);
+    // product tuborg_clasic = inventory_make_product("Tuborg clasic", beer, 330, 8);
+    // product tuborg_green = inventory_make_product("Tuborg green", beer, 330, 8);
+    // product limfjord = inventory_make_product("Limfjords porter", limfjords_porter, 550, 9);
+    // product pepsi = inventory_make_product("Pepsi Max", soda, 330, 7);
 
-    inventory_add_product(&fridge, tuborg_clasic, 550);
-    inventory_add_product(&fridge, tuborg_green, 550);
-    inventory_add_product(&fridge, limfjord, 90);
-    inventory_add_product(&fridge, pepsi, 650);
+    // inventory_add_product(&fridge, tuborg_clasic, 550);
+    // inventory_add_product(&fridge, tuborg_green, 550);
+    // inventory_add_product(&fridge, limfjord, 90);
+    // inventory_add_product(&fridge, pepsi, 650);
     
-    inventory_print(&fridge);
+    // inventory_print(&fridge);
 }
 
-void perform_sale(
-    uint16_t weight_removed,
-    char *type_sold,
-    uint16_t user_id,
-    inventory *fridge_inventory
-){
-    uint8_t product_number;
-    for (
-        uint8_t index = 0; 
-        index >= fridge_inventory->number_of_products_stocked; 
-        index++
-    ){  
-        if (strcmp(type_sold, fridge_inventory->produckts_in_inventory[index].beverage.name) == 0) {
-            product_number = index;
-            break;
+static float read_current_weight_blocking(uint32_t timeoutMs = 1200)
+{
+    uint32_t start = millis();
+
+    while (millis() - start < timeoutMs) {
+        if (update_scale()) {
+            return get_weight();
         }
+        delay(5);
     }
 
-    products_stocked *product_in_inventory = &fridge_inventory->produckts_in_inventory[product_number];
+    // Timeout: return last known value
+    return get_weight();
+}
 
-    // uint16_t number_of_products_sold = ... ;
+void perform_sale(inventory *fridge_inventory)
+{
+    if (fridge_inventory == nullptr) {
+        return;
+    }
+
+    // 1) Ensure reference weight exists
+    if (!weight_reference_is_set()) {
+        float ref = read_current_weight_blocking();
+        set_weight_reference(ref);
+        return; // No sale on first call, we just establish baseline
+    }
+
+    // Read current weight
+    float referenceWeight = get_weight_reference();
+    float currentWeight   = read_current_weight_blocking();
+
+    // Compute how many beer cans were taken
+    int cans_taken = get_beer_cans_taken(referenceWeight, currentWeight);
+    
+    if (cans_taken <= 0) {
+        return;                 // if no cans where removed do noting
+    }
+
+    for (uint8_t index = 0; index < fridge_inventory->number_of_products_stocked; index++) {
+        
+        products_stocked *beverage_in_inventory = &fridge_inventory->produckts_in_inventory[index];
+
+        if (beverage_in_inventory->beverage.beverage_variant != beer) { // find the beverage in the inventory that is beer.
+            continue;
+        }
+    
+        // remove the number of cans removed form the fridge inventory
+        if (beverage_in_inventory->current_quantity >= cans_taken) {
+            beverage_in_inventory->current_quantity -= cans_taken;
+        }
+        else beverage_in_inventory->current_quantity = 0;
+        
+        break;
+    }
+
+    set_weight_reference(currentWeight);                // update the reference
 }

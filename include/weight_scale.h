@@ -1,16 +1,7 @@
 /**
  * @file weight_scale.h
- * @authors Amal Araweelo Almis
- * @brief 
- * @version 0.1
- * @date 20-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 20-01-2026 | Created file.                                                           |
- * |         |            |                                                                         |
- * 
- * @copyright Copyright (c) 2026
+ * @author Amal Araweelo Almis
+ * @author Baldur G. Toftegaard
  */
 #ifndef WEIGHT_SCALE_H
 #define WEIGHT_SCALE_H  
@@ -18,6 +9,11 @@
 #include <Arduino.h>
 #include <HX711_ADC.h>
 #include <math.h> 
+
+float get_weight_reference(void);
+void  set_weight_reference(float value);
+void  reset_weight_reference(void);
+bool  weight_reference_is_set(void);
 
 // Constants
 #define BEER_WEIGHT 350
@@ -32,6 +28,14 @@
 
 // Globals
 extern HX711_ADC scale;
+
+/**
+ * @brief set up the action (input) the rfid_user_id_lattest takes
+ */
+enum weight_recall_action {
+    weight_change_store,
+    weight_change_recall
+};
 
 // General functions
 void setup_scale(float calFactor);

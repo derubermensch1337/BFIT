@@ -30,7 +30,7 @@ typedef enum {
 typedef struct {
     char name[20];                  /**< Beverage  name */              
     beverage_type beverage_variant; /**< Beverage  type */
-    uint8_t weight;                 /**< Beverage  weight */
+    uint16_t weight;                 /**< Beverage  weight */
     uint8_t price;                  /**< Beverage  price */
 } product;
 
@@ -86,10 +86,10 @@ product inventory_make_product(
  * @return true - the product was added to the inventory
  * @return false - there was an error adding the product
  */
-bool inventory_add_product(
-    inventory *inventory, 
-    product beverage, 
-    uint16_t quantity
+bool inventory_add_product (
+        inventory *inventory,
+        product product,
+        uint16_t quantity
 );
 
 /**

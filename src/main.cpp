@@ -16,26 +16,62 @@
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
-//#include "rfid/rfid_unlock.h"
 #include "inventory.h"
 #include "init_users_and_sale.h"
+#include "weight_scale.h"
+#include "fridge_state.h"
 
 static constexpr uint8_t ROOM_COUNT = 18;
 static int greenHeight[ROOM_COUNT]   = {0, 0, 23,30,80,30,26,22,20,23,92,29,26,94,23,8,3,0};
 static int classicHeight[ROOM_COUNT] = {20,4,238,30,80,30,26,22,20,23,92,29,26,94,23,38,83,90};
 
 
-// test code:
-static uint8_t selectedRoom = 0;   // current index [0 .. ROOM_COUNT-1]
+static const float CAL_FACTOR = 696.0f;      // <-- Replace with your calibrated value
+static const uint16_t START_BEER_QTY = 20;   // Keep <= 255 if current_quantity is uint8_t
 
-const uint8_t BTN_SELECT_PIN = 4;  // D2
-const uint8_t BTN_ADD_PIN    = 5;  // D1
+// inventory fridge;
 
-bool lastSelect = HIGH;
-bool lastAdd    = HIGH;
+// One demo product (single beer type)
+product demo_beer;
 
-unsigned long lastDebounceMs = 0;
-const unsigned long debounceMs = 50;
+// Simple helper to read a line/char from serial
+static char read_serial_char_nonblocking() {
+    if (Serial.available() > 0) {
+        return (char)Serial.read();
+    }
+    return '\0';
+}
+
+static void print_menu() {
+    Serial.println();
+    Serial.println("=== SALE TEST MENU ===");
+    Serial.println("w  : print current weight (requires scale update running)");
+    Serial.println("b  : set/refresh reference weight to current weight (baseline)");
+    Serial.println("p  : perform_sale(&fridge) (process removal since reference)");
+    Serial.println("i  : print inventory");
+    Serial.println("t  : tare scale (zero offset) - optional");
+    Serial.println("m  : show this menu");
+    Serial.println("======================");
+    Serial.println("Procedure for demo:");
+    Serial.println("1) Put beers on scale");
+    Serial.println("2) Press 'b' to set baseline reference");
+    Serial.println("3) Remove 1-2 beers");
+    Serial.println("4) Press 'p' to process sale; press 'i' to confirm inventory decreased");
+    Serial.println();
+}
+
+
+// // test code:
+// static uint8_t selectedRoom = 0;   // current index [0 .. ROOM_COUNT-1]
+
+// const uint8_t BTN_SELECT_PIN = 4;  // D2
+// const uint8_t BTN_ADD_PIN    = 5;  // D1
+
+// bool lastSelect = HIGH;
+// bool lastAdd    = HIGH;
+
+// unsigned long lastDebounceMs = 0;
+// const unsigned long debounceMs = 50;
 
 
 
@@ -45,8 +81,8 @@ ESP8266WebServer server(80);  // Create an instance of the server
 void handleNotFound();
 
 void setup() {
-  pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
-  pinMode(BTN_ADD_PIN, INPUT_PULLUP);
+  // pinMode(BTN_SELECT_PIN, INPUT_PULLUP);
+  // pinMode(BTN_ADD_PIN, INPUT_PULLUP);
 
   Serial.begin(115200);
   delay(200);                             // Delay to alow the board rate to be configure before continuing (stops standard boadloader print from messing up).
@@ -76,9 +112,8 @@ void setup() {
 
   server.on("/saleHeights", HTTP_GET, []() {
 
-  // --- IMPORTANT: disable caching ---
-  server.sendHeader("Cache-Control",
-                    "no-store, no-cache, must-revalidate, max-age=0");
+  // disable caching
+  server.sendHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
   server.sendHeader("Pragma", "no-cache");
   server.sendHeader("Expires", "0");
 
@@ -111,46 +146,125 @@ void setup() {
   // Start the server 
   server.begin();
   Serial.println("Server started"); 
+  
+  setup_scale(CAL_FACTOR);
+  inventory_init(&fridge);
+  demo_beer = inventory_make_product("Demo Beer", beer, 350, 10); // weight field used only as metadata here
+  inventory_add_product(&fridge, demo_beer, START_BEER_QTY);
+  Serial.println("Initial inventory:");
+  inventory_print(&fridge);
+  perform_sale(&fridge);
+  print_menu();
 } 
 
 void loop() {
   server.handleClient();
   yield();
 
-  bool selectNow = digitalRead(BTN_SELECT_PIN);
-  bool addNow    = digitalRead(BTN_ADD_PIN);
-  unsigned long now = millis();
+  update_scale();
 
-  if (now - lastDebounceMs > debounceMs) {
-
-    // Button 1: select next room index
-    if (lastSelect == HIGH && selectNow == LOW) {
-      selectedRoom++;
-      if (selectedRoom >= ROOM_COUNT) {
-        selectedRoom = 0;   // wrap back to first
-      }
-
-      Serial.print("Selected room: ");
-      Serial.println(selectedRoom + 1);
-
-      lastDebounceMs = now;
+    char cmd = read_serial_char_nonblocking();
+    if (cmd == '\0') {
+        return;
     }
 
-    // Button 2: add +5 to selected room
-    if (lastAdd == HIGH && addNow == LOW) {
-      greenHeight[selectedRoom] += 5;
+    switch (cmd) {
+        case 'w': {
+            // Ensure we have a fresh sample: call update a bit
+            for (int i = 0; i < 50; i++) {
+                update_scale();
+                delay(5);
+            }
+            float w = get_weight();
+            Serial.print("Current weight: ");
+            Serial.println(w);
+            break;
+        }
 
-      Serial.print("Room ");
-      Serial.print(selectedRoom + 1);
-      Serial.print(" greenHeight = ");
-      Serial.println(greenHeight[selectedRoom]);
+        case 'b': {
+            // Baseline reference = current weight
+            for (int i = 0; i < 50; i++) {
+                update_scale();
+                delay(5);
+            }
+            float w = get_weight();
+            set_weight_reference(w);
+            Serial.print("Reference weight set to: ");
+            Serial.println(get_weight_reference());
+            break;
+        }
 
-      lastDebounceMs = now;
+        case 'p': {
+            // Process sale and update inventory
+            perform_sale(&fridge);
+            Serial.println("perform_sale executed.");
+            Serial.print("New reference weight: ");
+            Serial.println(get_weight_reference());
+            break;
+        }
+
+        case 'i': {
+            Serial.println("Inventory:");
+            inventory_print(&fridge);
+            break;
+        }
+
+        case 't': {
+            // Optional: tare the scale. Note this changes weight behavior.
+            tare_scale();
+            Serial.println("Tare started (non-blocking). Waiting for completion...");
+            while (!tare_complete()) {
+                update_scale();
+                delay(10);
+            }
+            Serial.println("Tare complete.");
+
+            // After tare, baseline must be reset because readings jump.
+            reset_weight_reference();
+            Serial.println("Reference reset. Press 'b' to set baseline again.");
+            break;
+        }
+
+        case 'm':
+        default:
+            print_menu();
+            break;
     }
-  }
 
-  lastSelect = selectNow;
-  lastAdd    = addNow;
+  // bool selectNow = digitalRead(BTN_SELECT_PIN);
+  // bool addNow    = digitalRead(BTN_ADD_PIN);
+  // unsigned long now = millis();
+
+  // if (now - lastDebounceMs > debounceMs) {
+
+  //   // Button 1: select next room index
+  //   if (lastSelect == HIGH && selectNow == LOW) {
+  //     selectedRoom++;
+  //     if (selectedRoom >= ROOM_COUNT) {
+  //       selectedRoom = 0;   // wrap back to first
+  //     }
+
+  //     Serial.print("Selected room: ");
+  //     Serial.println(selectedRoom + 1);
+
+  //     lastDebounceMs = now;
+  //   }
+
+  //   // Button 2: add +5 to selected room
+  //   if (lastAdd == HIGH && addNow == LOW) {
+  //     greenHeight[selectedRoom] += 5;
+
+  //     Serial.print("Room ");
+  //     Serial.print(selectedRoom + 1);
+  //     Serial.print(" greenHeight = ");
+  //     Serial.println(greenHeight[selectedRoom]);
+
+  //     lastDebounceMs = now;
+  //   }
+  // }
+
+  // lastSelect = selectNow;
+  // lastAdd    = addNow;
 }
 
 

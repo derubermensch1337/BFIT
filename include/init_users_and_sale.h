@@ -22,8 +22,6 @@ void init_users_and_products();
  * @param fridge_inventory 
 */
 void perform_sale(
-    uint16_t weight,
-    uint16_t user_id,
     inventory *fridge_inventory
 );
 

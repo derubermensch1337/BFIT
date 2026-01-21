@@ -1,16 +1,8 @@
 /**
  * @file rfid_access.h
- * @authors Amal Araweelo Almis
  * @brief 
- * @version 0.1
- * @date 15-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 15-01-2026 | Created file.                                                           |
- * |         |            |                                                                         |
- * 
- * @copyright Copyright (c) 2026
+ * @author Amal Araweelo Almis
+ * @author Baldur G. Toftegaard
  */
 #ifndef RFID_ACCESS_H
 #define RFID_ASCESS_H  
@@ -25,6 +17,8 @@
 // Constants
 #define MAX_ROOMS 17
 #define UID_LENGTH 4
+
+
 
 // Commands
 enum RFIDcommand {
@@ -74,5 +68,16 @@ int read_integer();
 bool read_confirmation();
 int find_empty_index(User* ptr);
 int count_rooms(User* ptr);
+
+/**
+ * @brief 
+ * 
+ * @param uidOut 
+ * @return true 
+ * @return false 
+ */
+bool rfid_get_last_uid(
+    byte *uidOut
+);
 
 #endif

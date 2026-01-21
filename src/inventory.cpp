@@ -38,7 +38,7 @@ product inventory_make_product (
 bool inventory_add_product (
         inventory *inventory,
         product product,
-        uint8_t quantity
+        uint16_t quantity
 ){
     if (inventory->number_of_products_stocked >= INVENTORY_CAPACITY)     // check if the user has atempted to add more products than that suported by the code. If so return false. 
         return false;  
