@@ -74,20 +74,25 @@ void perform_sale(inventory *fridge_inventory)
         return;
     }
 
-    int saleIndex = -1;  
+uint8_t saleRoom = 0;
+int saleIndex = -1;
 
-    for (int i = 0; i < MAX_ROOMS; i++) {
-        if (users[i].roomNumber > 0 &&
-            compare_UID(lastUid, users[i].uid)) {
+for (int i = 0; i < MAX_ROOMS; i++) {
+    if (users[i].roomNumber > 0 &&
+        compare_UID(lastUid, users[i].uid)) {
 
-            saleIndex = i;   // <-- capture the index
-            Serial.print("Sale matched user index: ");
-            Serial.println(saleIndex);
-            Serial.print("User roomNumber field: ");
-            Serial.println(users[i].roomNumber);
-            break;
-        }
+        saleIndex = i;
+        saleRoom  = users[i].roomNumber;
+
+        Serial.print("Sale matched user index: ");
+        Serial.println(saleIndex);
+        Serial.print("Sale registered to room: ");
+        Serial.println(saleRoom);
+
+        break;
     }
+}
+
 
     if (saleIndex < 0) {
         Serial.println("RFID did not match any user index");
@@ -119,6 +124,8 @@ void perform_sale(inventory *fridge_inventory)
         Serial.println("[SALE] No cans detected -> exit");
         return;
     }
+    
+    users[saleIndex].balance += cans_taken;
 
     Serial.println(cans_taken);
     Serial.print(" cans sold");
