@@ -72,9 +72,6 @@ bool validate_rfid(MFRC522 &myRFID){
                 open = true; //
             }
         }
-
-    //Open door
-    Serial.println("Door will be opened!");
     }
 
     return open;
@@ -115,20 +112,20 @@ bool read_RFID_tag (MFRC522 &rfid, byte *uidBuffer){
 
 
 void display_commands(){
-    Serial.println("Available commands:\n\t\
-        -'a' to add a user\n\t\
-        -'r' to remove users\n\t\
-        -'p' to print the array 'users'\n\t\
-        -'l' to lock the door");
+    Serial.println("Available commands:\n"
+        " -'a' to add a user\n"
+        " -'r' to remove users\n"
+        " -'p' to print the array 'users'\n"
+        " -'l' to lock the door");
 }
 
 void display_commands_um(){
     // For user management loop
-    Serial.println("Available commands:\n\t\
-        -'a' to add a user\n\t\
-        -'r' to remove users\n\t\
-        -'p' to print the array 'users'\n\t\
-        -'c' to confirm changes");
+    Serial.println("Available commands:\n"
+        " -'a' to add a user\n"
+        " -'r' to remove users\n"
+        " -'p' to print the array 'users'\n"
+        " -'c' to confirm changes");
 }
 
 // ====================== Add and delete users =====================================
@@ -142,8 +139,10 @@ void user_management(RFIDcommand incomingCommand, User* ptr, MFRC522 &rfid){
     switch(localCmd) {
       case CMD_ADD_USER:
         // Try to add new user
+        Serial.println("Adding new user");
+
         if(add_user(rfid)){
-          Serial.println("User added succesfully.");
+          Serial.println("User added succesfully");
           wasChanged = true;
         } else {
           // If for example user count was full, or uid already in use
@@ -266,6 +265,8 @@ bool remove_user(){
   if (idxToDelete > 0) {
     Serial.println("Confirm the removal of following user:");
     print_single_user(&users[0], idxToDelete);
+    Serial.println("");
+
     if(read_confirmation()){
 
       //Sets all bytes for one user uid to a specified 'null' value
@@ -276,9 +277,9 @@ bool remove_user(){
       users[idxToDelete].balance = 0;
 
       return true;
-
     }
   }
+
   Serial.println("Removal cancelled");
   return false;
 }
@@ -318,6 +319,8 @@ void print_all_users(User* ptr) {
     print_single_user(ptr, i);
     Serial.println("");
   }
+    Serial.println("");
+
 }
 
 // ptr is pointer to the users[] array, idx is the index to print
