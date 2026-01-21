@@ -73,17 +73,6 @@ bool lastAdd    = HIGH;
 unsigned long lastDebounceMs = 0;
 const unsigned long debounceMs = 50;
 
-#include "rfid_access.h"
-#include "lock_ctrl.h"
-// #include "user_management.h"
-#include "buzzer.h" 
-
-// Global definition
-bool doorUnlocked = false;
-unsigned long timer = 0;  //started when door is closed but not locked
-
-MFRC522 rfid(SS_PIN, RST_PIN);
-RFIDcommand activeCommand = CMD_NONE; // Initial command
 
 ESP8266WiFiMulti wifiMulti;
 ESP8266WebServer server(80);  // Create an instance of the server
@@ -391,8 +380,6 @@ void loop() {
   lastAdd    = addNow;
 }
 
-    yield();
-}
 
 void handleNotFound(){
   server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request

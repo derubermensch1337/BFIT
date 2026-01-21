@@ -9,7 +9,6 @@
 
 #include <SPI.h>
 #include <MFRC522.h>
-#include <EEPROM.h>
 
 // Pins
 #define SS_PIN 15 // Use GPIO pins for HUZZAH instead of D8
@@ -42,22 +41,20 @@ extern User users[MAX_ROOMS];
 extern int userCount;
 
 // Function declarations
-// RFID functions
+RFIDcommand check_command(void);
 void setup_RFID_reader(MFRC522 &rfid);
+bool add_user(MFRC522 &rfid);
+bool remove_user();
 bool compare_UID(byte *uid1, byte *uid2);
 bool read_RFID_tag(MFRC522 &rfid, byte *uidBuffer);
-bool validate_rfid(MFRC522 &myRFID);
-
-// Related to commands
-RFIDcommand check_command(void);
 void display_commands(void);
 void display_commands_um();
 
-// Writing and reading EEPROM
+
+//Anssi
 void get_users_db(User* ptr);
 void user_management(RFIDcommand cmd, User* ptr, MFRC522 &rfid);
-bool add_user(MFRC522 &rfid);
-bool remove_user();
+bool validate_rfid(MFRC522 myRFID);
 
 //Printing users
 void print_single_user(User* ptr, int idx);
@@ -80,8 +77,5 @@ int count_rooms(User* ptr);
 bool rfid_get_last_uid(
     byte *uidOut
 );
-
-//For debugging
-void print_status(bool doorOpen, bool doorLocked, RFIDcommand cmd);
 
 #endif
