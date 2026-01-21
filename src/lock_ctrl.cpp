@@ -10,21 +10,15 @@ static Servo lockServo;
 
 // Fixed 0 mechanically
 static const int UNLOCK_POS = 0;
-static const int LOCK_POS   = 15;
-
-const int BUZZER = 2;   // Could be improved, issues with resets
-const double HIGH_TONE = 1000;
-const double LOW_TONE = 600;
-const unsigned long TONE_LENGTH = 200;
+static const int LOCK_POS   = 100;
 
 // Internal latched state
 static bool boxClosed = false;
 
-
 void lock_ctrl_init() {
     // EXACTLY like your working Arduino sketch
-    lockServo.attach(SERVO_PIN, 500, 2500);
     lockServo.write(LOCK_POS);   // start locked
+    lockServo.attach(SERVO_PIN, 500, 2500);
 }
 
 void lock_door() {
@@ -46,39 +40,6 @@ bool is_box_closed(){
         boxClosed = false;
     }
 
-    if(millis()%1000 == 0) {
-        //For debugging
-        //Serial.println(light);
-        //Serial.println(boxClosed);
-    }
-
     return boxClosed;
 }
 
-void play_warning(unsigned long t) {
-
-    switch(millis() - t){
-        case 1000 ... 1100:
-            tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-            break;
-        case 3000 ... 3100:
-            tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-            break;
-        default:
-        break;
-    }
-}
-
-void play_open(){
-    tone(BUZZER, LOW_TONE);
-    delay(TONE_LENGTH);
-    noTone(BUZZER);
-    tone(BUZZER, HIGH_TONE, 2*TONE_LENGTH);
-}
-
-void play_close(){
-    tone(BUZZER, HIGH_TONE);
-    delay(TONE_LENGTH);
-    noTone(BUZZER);
-    tone(BUZZER, LOW_TONE, 2*TONE_LENGTH);
-}
