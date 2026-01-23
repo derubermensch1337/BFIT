@@ -17,6 +17,19 @@ void \mbox{\hyperlink{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}{setup
 \begin{DoxyCompactList}\small\item\em Initializes SPI and the MFRC522 RFID reader. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c}{add\+\_\+user}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
 \begin{DoxyCompactList}\small\item\em Adds a new user by reading room number and scanning an RFID tag. \end{DoxyCompactList}\item 
+<<<<<<< HEAD
+bool \doxymbox{\hyperlink{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}{validate\+\_\+rfid}} (MFRC522 my\+RFID)
+\begin{DoxyCompactList}\small\item\em Validates an RFID tag against the registered user database. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\+\_\+\+UID}} (byte \texorpdfstring{$\ast$}{*}uid1, byte \texorpdfstring{$\ast$}{*}uid2)
+\begin{DoxyCompactList}\small\item\em Compares two RFID UIDs. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}{read\+\_\+\+RFID\+\_\+tag}} (MFRC522 \&\doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}, byte \texorpdfstring{$\ast$}{*}uid\+Buffer)
+\begin{DoxyCompactList}\small\item\em Reads an RFID tag UID from the MFRC522 reader. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}{display\+\_\+commands}} ()
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}{display\+\_\+commands\+\_\+um}} ()
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands for user-\/management mode. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}{rfid\+\_\+set\+\_\+last\+\_\+uid}} (const byte \texorpdfstring{$\ast$}{*}uid\+In)
+=======
 bool \mbox{\hyperlink{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}{validate\+\_\+rfid}} (MFRC522 my\+RFID)
 \begin{DoxyCompactList}\small\item\em Validates an RFID tag against the registered user database. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\+\_\+\+UID}} (byte $\ast$uid1, byte $\ast$uid2)
@@ -28,6 +41,7 @@ void \mbox{\hyperlink{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}{displ
 void \mbox{\hyperlink{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}{display\+\_\+commands\+\_\+um}} ()
 \begin{DoxyCompactList}\small\item\em Prints the available serial commands for user-\/management mode. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}{rfid\+\_\+set\+\_\+last\+\_\+uid}} (const byte $\ast$uid\+In)
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 \begin{DoxyCompactList}\small\item\em Function for storing the last used RFID. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}{rfid\+\_\+get\+\_\+last\+\_\+uid}} (byte $\ast$uid\+Out)
 \begin{DoxyCompactList}\small\item\em Function for restoring the last used RFID. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -97,6 +111,10 @@ RFIDcommand
 Compares two RFID UIDs. 
 
 
+
+Compares two RFID UIDs. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em uid1} & \\
 \hline
@@ -118,8 +136,12 @@ false
 
 Prints the available serial commands. 
 
+<<<<<<< HEAD
+\Hypertarget{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands\_um@{display\_commands\_um}}
+=======
 \mbox{\Hypertarget{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}\label{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}} 
 \index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands\_um@{display\_commands\_um}}
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 \index{display\_commands\_um@{display\_commands\_um}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{display\_commands\_um()}{display\_commands\_um()}}
 {\footnotesize\ttfamily void display\+\_\+commands\+\_\+um (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
@@ -128,11 +150,19 @@ Prints the available serial commands.
 
 Prints the available serial commands for user-\/management mode. 
 
+<<<<<<< HEAD
+\Hypertarget{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}\index{rfid\_access.cpp@{rfid\_access.cpp}!read\_RFID\_tag@{read\_RFID\_tag}}
+=======
 \mbox{\Hypertarget{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}\label{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}} 
 \index{rfid\_access.cpp@{rfid\_access.cpp}!read\_RFID\_tag@{read\_RFID\_tag}}
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 \index{read\_RFID\_tag@{read\_RFID\_tag}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{read\_RFID\_tag()}{read\_RFID\_tag()}}
 {\footnotesize\ttfamily bool read\+\_\+\+RFID\+\_\+tag (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid,  }\item[{byte $\ast$}]{uid\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Reads an RFID tag UID from the MFRC522 reader. 
 
 
 
@@ -210,6 +240,10 @@ Initializes SPI and the MFRC522 RFID reader.
 \index{validate\_rfid@{validate\_rfid}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{validate\_rfid()}{validate\_rfid()}}
 {\footnotesize\ttfamily bool validate\+\_\+rfid (\begin{DoxyParamCaption}\item[{MFRC522}]{my\+RFID }\end{DoxyParamCaption})}
+
+
+
+Validates an RFID tag against the registered user database. 
 
 
 

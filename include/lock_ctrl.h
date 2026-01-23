@@ -16,6 +16,9 @@
 /** Light threshold indicating a closed box */
 #define CLOSED_THRESHOLD 70
 
+/** GPIO pin connected to light detector */
+#define LIGHT_PIN A0
+
 /** Light threshold indicating an open box */
 #define OPEN_THRESHOLD 100    // to avoid issues
 

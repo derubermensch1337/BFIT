@@ -10,7 +10,7 @@
 #include <pgmspace.h>
 
 /**
- * @brief Sting used for the HTML header
+ * @brief Sting used for the HTML header, read by the compiler as a string
 */
 const char INDEX_HTML_HEAD[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ const char INDEX_HTML_HEAD[] PROGMEM = R"rawliteral(
 )rawliteral";
 
 /**
- * @brief String used for the HTML footer. This is responsible for updating the graphs.
+ * @brief String used for the HTML footer. This is responsible for updating the graphs. read by the compiler as a string
 */
 const char INDEX_HTML_FOOT[] PROGMEM = R"rawliteral(
         <script>
