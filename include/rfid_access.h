@@ -69,21 +69,21 @@ int find_empty_index(User* ptr);
 int count_rooms(User* ptr);
 
 /**
- * @brief 
+ * @brief Function for storing the last used RFID
  * @param uidOut 
  * @return true 
  * @return false 
- */
+*/
 void rfid_set_last_uid(
     const byte *uidIn
 );
 
 /**
- * @brief 
+ * @brief Function for restoring the last used RFID
  * @param uidOut 
  * @return true 
  * @return false 
- */
+*/
 bool rfid_get_last_uid(
     byte *uidOut
 );

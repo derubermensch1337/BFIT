@@ -1,17 +1,8 @@
 /**
  * @file lock_ctrl.h
- * @authors Amal Araweelo Almis
- * @brief 
- * @version 0.1
- * @date 16-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * | 0.1     | 16-01-2026 | Created file.                                                           |
- * |         |            |                                                                         |
- * 
- * @copyright Copyright (c) 2026
- */
+ * @brief
+ * @authors Amal Araweelo Almis 
+*/
  
 #ifndef LOCK_CTRL_H
 #define LOCK_CTRL_H
@@ -34,11 +25,21 @@ void unlock_door();
 // Photosensor state
 bool is_box_closed();
 
-// Sound effects
+/**
+ * @brief Play the warning sound effet
+ * 
+ * @param t 
+*/
 void play_warning(unsigned long t);
+
+/**
+ * @brief Play sound effect when door opens.
+*/
 void play_open();
+
+/**
+ * @brief Play sound effect when the door closes.
+*/
 void play_close();
-
-
 
 #endif

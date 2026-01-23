@@ -9,14 +9,50 @@
 #include <HX711_ADC.h>
 #include <math.h> 
 
-float get_weight_reference(void);
-void  set_weight_reference(float value);
-void  reset_weight_reference(void);
-bool  weight_reference_is_set(void);
+/**
+ * @brief FUnction to get the weight reference.
+ * 
+ * @return float 
+*/
+float get_weight_reference(
+    void
+);
 
-// Constants
+/**
+ * @brief Function to set the weight reference.
+ * 
+ * @param value 
+*/
+void  set_weight_reference(
+    float value
+);
+
+/**
+ * @brief Function to reset the weight reference.
+*/
+void  reset_weight_reference(
+    void
+);
+
+/**
+ * @brief Function to send cinfirmation that the weight reference is set.
+ * 
+ * @return true 
+ * @return false 
+ */
+bool  weight_reference_is_set(
+    void
+);
+
+/**
+ * @brief Define the weight of a beer.
+*/
 #define BEER_WEIGHT 350
-#define SCALE_TOL 25 // this is an assumption
+
+/**
+ * @brief Define the error of the weight mesurment.
+*/
+#define SCALE_TOL 25
 
 // Pins
 #define HX711_DOUT 4   // GPIO4=D2
@@ -88,6 +124,9 @@ bool tare_complete(
  * @param currentWeight 
  * @return int 
  */
-int get_beer_cans_taken(float referencWeight,float currentWeight);
+int get_beer_cans_taken(
+    float referencWeight,
+    float currentWeight
+);
 
 #endif

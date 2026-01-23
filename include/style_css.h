@@ -9,7 +9,7 @@
 #include <pgmspace.h>
 
 /**
- * @brief String containing the CSS styling of the webserver.
+ * @brief String containing the CSS styling of the webserver. is handled like a string by the compiler
  */
 const char STYLE_CSS[] PROGMEM = R"rawliteral(
 /* ---------- Global page styling ---------- */
