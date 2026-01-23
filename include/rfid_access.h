@@ -178,6 +178,7 @@ void print_single_user(
     User* ptr, 
     int idx
 );
+
 /**
  * @brief Prints all users in the database to the serial interface. 
  * 
