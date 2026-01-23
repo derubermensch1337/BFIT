@@ -1,8 +1,8 @@
 /**
  * @file lock_ctrl.h
- * @brief
- * @authors Amal Araweelo Almis 
-*/
+ * @brief Door lock control interface using a servo and light sensor.
+ * @author Amal Araweelo Almis
+ */
  
 #ifndef LOCK_CTRL_H
 #define LOCK_CTRL_H
@@ -10,31 +10,48 @@
 #include <Servo.h>
 
 // Pins
-#define SERVO_PIN 16   // D0 = GP16, D1 = GPIO5
-#define LIGHT_PIN A0 
-#define CLOSED_THRESHOLD 70   // darker than this = closed
+/** GPIO pin connected to the servo motor */
+#define SERVO_PIN 16
+
+/** Light threshold indicating a closed box */
+#define CLOSED_THRESHOLD 70
+
+/** Light threshold indicating an open box */
 #define OPEN_THRESHOLD 100    // to avoid issues
 
-// Only call once in setup()
+/**
+ * @brief Initializes the lock control module.
+ *
+ * Must be called once during system startup before any other
+ * lock control functions are used.
+ */
 void lock_ctrl_init();
 
 // Actions
+/**
+ * @brief Locks the door using the servo.
+ */
 void lock_door();
+
+/**
+ * @brief Unlocks the door using the servo.
+ */
 void unlock_door();
 
 // Photosensor state
+/**
+ * @brief Checks whether the box is closed.
+ *
+ * Uses the light sensor to determine door state.
+ *
+ * @return true  Box is closed.
+ * @return false Box is open.
+ */
 bool is_box_closed();
 
 /**
- * @brief Play the warning sound effet
- * 
- * @param t 
-*/
-void play_warning(unsigned long t);
-
-/**
- * @brief Play sound effect when door opens.
-*/
+ * @brief Plays the sound effect for door opening.
+ */
 void play_open();
 
 /**

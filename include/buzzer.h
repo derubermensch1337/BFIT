@@ -11,12 +11,12 @@
 void play_warning(unsigned long t);
 
 /**
- * @brief Play when the door is unlocked
+ * @brief Plays an ascending tone, when the door unlocks.
 */
 void play_unlock();
 
 /**
- * @brief Play when the door locks
+ * @brief Play a descending tone, when the door locks.
 */
 void play_lock();
 

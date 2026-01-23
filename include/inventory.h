@@ -11,12 +11,15 @@
 #include <stdbool.h>
 #include <Arduino.h>
 
+/**
+ * @brief Maximum number of products the inventory can hold.
+ */
 #define INVENTORY_CAPACITY 6
 
-/** 
- * @brief Types of beverages supported by the system. 
- * @enum enum docomentation ?
-*/
+/**
+ * @enum beverage_type
+ * @brief Types of beverages supported by the system.
+ */
 typedef enum {
     beer,                   /**< Beer */
     cider,                  /**< Cider */
@@ -25,128 +28,144 @@ typedef enum {
     other                   /**< Other */
 } beverage_type;
 
-/** 
- * @brief Struct holding the information for one item.
-*/
-typedef struct {
-    char name[20];                  /**< Beverage  name */              
-    beverage_type beverage_variant; /**< Beverage  type */
-    uint16_t weight;                /**< Beverage  weight */
-    uint8_t price;                  /**< Beverage  price */
-} product;
 
 /**
- * @brief Struckt for keeping track of the original and current quantity of a beverage.
-*/
-typedef struct {
-    product beverage;           /**< The beverage being tracked */
-    uint8_t original_quantity;  /**< The original quantity of the beverage in stock */
-    uint8_t current_quantity;   /**< The current quantity of the beverage in stock */
-} products_stocked;
-
-/**
- * @brief Strukt used for making the inventory
- * 
+ * @struct product
+ * @brief Describes a single beverage product.
  */
 typedef struct {
-    products_stocked produckts_in_inventory[INVENTORY_CAPACITY];    /**< The beverages being stocked */
-    uint8_t number_of_products_stocked;                             /**< Number of beverages stocked, prevents overflow */
-    uint8_t room_number;                                            /**< Not used in the current system */
-    /**< Store the FRID belonging to the spesific user, not implemented */
+    char name[20];                  /**< Display name of the beverage */
+    beverage_type beverage_variant; /**< Beverage type */
+    uint16_t weight;                /**< Weight of the beverage (e.g. grams) */
+    uint8_t price;                  /**< Price of the beverage */
+} product;
+
+
+/**
+ * @struct products_stocked
+ * @brief Tracks inventory quantities for a single product.
+ */
+typedef struct {
+    product beverage;           /**< Product being tracked */
+    uint8_t original_quantity;  /**< Initial stock quantity */
+    uint8_t current_quantity;   /**< Current stock quantity */
+} products_stocked;
+
+
+/**
+ * @struct inventory
+ * @brief Represents a user's beverage inventory.
+ */
+typedef struct {
+    products_stocked products_in_inventory[INVENTORY_CAPACITY];
+        /**< Products currently in inventory */
+
+    uint8_t number_of_products_stocked;
+        /**< Number of valid entries in products_in_inventory */
+
+    uint8_t room_number;
+        /**< Room number associated with the inventory (currently unused) */
+
+    /**< FRID of the user owning the inventory (not implemented) */
 } inventory;
 
 
 /**
- * @brief Function for initualicing the inventory
- * 
- * @param Inventory Inventory instance to initialize 
+ * @brief Initializes an inventory structure.
+ *
+ * Clears internal state and prepares the inventory for use.
+ *
+ * @param inventory Pointer to inventory instance to initialize.
  */
-void inventory_init(
-    inventory *inventory    /*< Inventory you cant to initialize, ensures that the memory space is empty */
-);
+void inventory_init(inventory *inventory);
+
 
 /**
- * @brief Function for making a new product.
- * 
- * @param name
- * @param type
- * @param weight 
- * @param price 
- * @return item created
+ * @brief Creates a new product instance.
+ *
+ * @param name Display name of the product.
+ * @param type Beverage type.
+ * @param weight Weight of the product.
+ * @param price Price of the product.
+ *
+ * @return Initialized product instance.
  */
 product inventory_make_product(
-    const char *name,               /**< Display name of product */
-    beverage_type type,             /**< What type of product it is, whuld allow to sort by product type */
-    uint16_t weight,                /**< Weight of the product, used for detecting how much of the product that was removed */
-    uint8_t price                   /**< Price of the product, this whuld make it posible to automaticaly calculate the bill for eatch user */
+    const char *name,
+    beverage_type type,
+    uint16_t weight,
+    uint8_t price
 );
 
 /**
- * @brief Function for adding product to inventory.
- * 
- * @param inventory 
- * @param beverage 
- * @param quantity 
- * @return true - the product was added to the inventory
- * @return false - there was an error adding the product
+ * @brief Adds a new product to the inventory.
+ *
+ * @param inventory Inventory to add the product to.
+ * @param product Product to add.
+ * @param quantity Initial quantity of the product.
+ *
+ * @return true Product successfully added.
+ * @return false Error occurred (inventory full or duplicate product).
  */
-bool inventory_add_product (
-        inventory *inventory,       /**< Inventory you want to add a product to */
-        product product,            /**< The product you want to add to the inventory */
-        uint16_t quantity           /**< The amount of the priduct you want to add to the inventory */
+bool inventory_add_product(
+    inventory *inventory,
+    product product,
+    uint16_t quantity
 );
 
+
 /**
- * @brief Function for removing product from inventory
- * 
- * @param inventory 
- * @param beverage 
- * @param quantity 
- * @return true - the product was removed from the inventory
- * @return false - there was an error removing the product
+ * @brief Removes a product entirely from the inventory.
+ *
+ * @param inventory Inventory to remove the product from.
+ * @param beverage Product to remove.
+ *
+ * @return true Product removed successfully.
+ * @return false Product not found.
  */
 bool inventory_remove_product(
-    inventory *inventory,           /**< Inventory you want to remove a product from */
-    product beverage                /**< Beverage you want to remove */
+    inventory *inventory,
+    product beverage
 );
 
+
 /**
- * @brief Function for adding to the amount of a beverage in an inventory
- * 
- * @param inventory 
- * @param beverage_type 
- * @param amount 
- * @return true - the beverage was added to the inventory
- * @return false - there was an error adding the beverage
+ * @brief Increases the quantity of a beverage in the inventory.
+ *
+ * @param inventory Inventory to modify.
+ * @param beverage Beverage to update.
+ * @param amount Quantity to add.
+ *
+ * @return true Quantity updated successfully.
+ * @return false Product not found or overflow.
  */
 bool inventory_add_beverage(
-    inventory *inventory,       /**< The inventory you want to add a beverage to */
-    product  beverage,          /**< The beverage you want to edit the amount of */
-    uint16_t amount             /**< The amount you want to add to the inventory */
+    inventory *inventory,
+    product beverage,
+    uint16_t amount
 );
 
 /**
- * @brief Function for removing from the amount of a beverage in an inventory
+ * @brief Function for removing from the amount of a beverage in an inventory.
  * 
- * @param inventory 
- * @param beverag 
- * @param amount 
- * @return true - the beverage was removed from the inventory
- * @return false - there was an error removing the beverage
+ * @param inventory Inventory to modify.
+ * @param beverage  Beverage to update.
+ * @param amount    Quantity to remove.
+ *
+ * @return true  Quantity updated successfully.
+ * @return false Product not found or insufficient stock.
  */
 bool inventory_remove_beverage(
-    inventory *inventory,       /**< The inventory you want to add a beverage to */
-    product beverag,            /**< The beverage you want to edit the amount of */ 
-    uint8_t amount              /**< The amount you want to remove from the inventory */
+    inventory *inventory,
+    product beverage,
+    uint8_t amount
 );
     
 /**
  * @brief Function to print a users inventory
- * 
- * @param inventory 
+ *
+ * @param inventory Inventory to print.
  */
-void inventory_print(
-    inventory *inventory    /**< Inventory you want to print the content of */
-);
+void inventory_print(inventory *inventory);
 
 #endif

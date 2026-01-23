@@ -56,20 +56,6 @@ bool is_box_closed(){
     return boxClosed;
 }
 
-// void play_warning(unsigned long t) {
-
-//     switch(millis() - t){
-//         case 1000 ... 1100:
-//             tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-//             break;
-//         case 3000 ... 3100:
-//             tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-//             break;
-//         default:
-//         break;
-//     }
-// }
-
 void play_open(){
     tone(BUZZER, LOW_TONE);
     delay(TONE_LENGTH);
