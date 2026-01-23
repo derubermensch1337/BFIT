@@ -59,7 +59,7 @@ extern const char SALE_BOX_STOP[] PROGMEM;
  * @param bar_height - Height of the bre operated on.
  */
 void send_sale_html_graph(
-    ESP8266WebServer &server,
+    ESP8266WebServer &server, /**< test */
     uint8_t room_number,
     const char *bar_type,
     int bar_height
