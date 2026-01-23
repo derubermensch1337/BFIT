@@ -1,7 +1,7 @@
 /**
  * @file lock_ctrl.cpp
  * @authors Amal Araweelo Almis
- * @brief 
+ * @brief Implements servo-based locking control and buzzer feedback for the fridge door.
 */
 
 #include "lock_ctrl.h"
