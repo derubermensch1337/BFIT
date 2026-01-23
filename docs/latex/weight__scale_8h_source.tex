@@ -1,0 +1,49 @@
+\doxysection{weight\+\_\+scale.\+h}
+\hypertarget{weight__scale_8h_source}{}\label{weight__scale_8h_source}\index{include/weight\_scale.h@{include/weight\_scale.h}}
+\doxymbox{\hyperlink{weight__scale_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ WEIGHT\_SCALE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ WEIGHT\_SCALE\_H\ \ }}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <HX711\_ADC.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <math.h>}\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39}{get\_weight\_reference}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{void}\ \ \doxymbox{\hyperlink{weight__scale_8h_ad54106645ba2b474709a603d36b798a3}{set\_weight\_reference}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{void}\ \ \doxymbox{\hyperlink{weight__scale_8h_a7047d1686ef43c502785c65254e71382}{reset\_weight\_reference}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{bool}\ \ \doxymbox{\hyperlink{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec}{weight\_reference\_is\_set}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ Constants}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ BEER\_WEIGHT\ 350}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ SCALE\_TOL\ 25\ }\textcolor{comment}{//\ this\ is\ an\ assumption}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{//\ Pins}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ HX711\_DOUT\ 4\ \ \ }\textcolor{comment}{//\ GPIO4=D2}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ HX711\_SCK\ \ 5\ \ \ }\textcolor{comment}{//\ GPIO5=D1}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ Config\ scale}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ SCALE\_DEFAULT\_SETTLE\_TIME\_MS\ 3000}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Globals}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{extern}\ HX711\_ADC\ \doxymbox{\hyperlink{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90}{scale}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{weight__scale_8h_a63441468c7de6e750482e4ec6636d038}{weight\_recall\_action}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{weight__scale_8h_a63441468c7de6e750482e4ec6636d038aa78a1ad767729e3315f4e8fe8b646898}{weight\_change\_store}},}
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{weight__scale_8h_a63441468c7de6e750482e4ec6636d038a362fe58e2a524e9cb971172c8ebf8453}{weight\_change\_recall}}}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//\ General\ functions}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61}{setup\_scale}}(\textcolor{keywordtype}{float}\ calFactor);}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce}{update\_scale}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{weight__scale_8h_a5cba95c421ad72336a98f705603cb239}{get\_weight}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{weight__scale_8h_a52c547ad0136e524ca4adef329451a92}{tare\_scale}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e}{tare\_complete}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{//\ Beer\ function}}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf}{get\_beer\_cans\_taken}}(\textcolor{keywordtype}{float}\ referencWeight,\textcolor{keywordtype}{float}\ currentWeight);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

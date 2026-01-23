@@ -1,0 +1,72 @@
+\doxysection{src/\+sale\+\_\+html.cpp File Reference}
+\hypertarget{sale__html_8cpp}{}\label{sale__html_8cpp}\index{src/sale\_html.cpp@{src/sale\_html.cpp}}
+{\ttfamily \+\#include "{}index\+\_\+html.\+h"{}}\newline
+{\ttfamily \+\#include "{}sale\+\_\+html.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{sale__html_8cpp_a765ff78b52fcc468640556f618934a52}{send\+\_\+sale\+\_\+html\+\_\+graph}} (ESP8266\+Web\+Server \&\doxymbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}}, uint8\+\_\+t room\+\_\+number, const char \texorpdfstring{$\ast$}{*}bar\+\_\+type, int bar\+\_\+height)
+\item 
+void \doxymbox{\hyperlink{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f}{send\+\_\+sale\+\_\+html\+\_\+page}} (ESP8266\+Web\+Server \&\doxymbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}}, uint8\+\_\+t room\+\_\+count, const int \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}}, const int \texorpdfstring{$\ast$}{*}classic\+Heights)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char SALE\+\_\+\+BOX\+\_\+\+START\+[$\,$]\+ \doxymbox{\hyperlink{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}} = R"{}rawliteral( $<$div class="{}sale\+\_\+box"{}$>$)rawliteral"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Baldur G. Toftegaard 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{sale__html_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{sale__html_8cpp_a765ff78b52fcc468640556f618934a52}\index{sale\_html.cpp@{sale\_html.cpp}!send\_sale\_html\_graph@{send\_sale\_html\_graph}}
+\index{send\_sale\_html\_graph@{send\_sale\_html\_graph}!sale\_html.cpp@{sale\_html.cpp}}
+\doxysubsubsection{\texorpdfstring{send\_sale\_html\_graph()}{send\_sale\_html\_graph()}}
+{\footnotesize\ttfamily \label{sale__html_8cpp_a765ff78b52fcc468640556f618934a52} 
+void send\+\_\+sale\+\_\+html\+\_\+graph (\begin{DoxyParamCaption}\item[{ESP8266\+Web\+Server \&}]{server}{, }\item[{uint8\+\_\+t}]{room\+\_\+number}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{bar\+\_\+type}{, }\item[{int}]{bar\+\_\+height}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} & \\
+\hline
+{\em room\+\_\+number} & \\
+\hline
+{\em bar\+\_\+type} & \\
+\hline
+{\em bar\+\_\+height} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f}\index{sale\_html.cpp@{sale\_html.cpp}!send\_sale\_html\_page@{send\_sale\_html\_page}}
+\index{send\_sale\_html\_page@{send\_sale\_html\_page}!sale\_html.cpp@{sale\_html.cpp}}
+\doxysubsubsection{\texorpdfstring{send\_sale\_html\_page()}{send\_sale\_html\_page()}}
+{\footnotesize\ttfamily \label{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f} 
+void send\+\_\+sale\+\_\+html\+\_\+page (\begin{DoxyParamCaption}\item[{ESP8266\+Web\+Server \&}]{server}{, }\item[{uint8\+\_\+t}]{room\+\_\+count}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{green\+Height}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{classic\+Heights}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} & \\
+\hline
+{\em room\+\_\+count} & \\
+\hline
+{\em \doxylink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} & \\
+\hline
+{\em classic\+Heights} & \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-var-members}
+\Hypertarget{sale__html_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9}\index{sale\_html.cpp@{sale\_html.cpp}!PROGMEM@{PROGMEM}}
+\index{PROGMEM@{PROGMEM}!sale\_html.cpp@{sale\_html.cpp}}
+\doxysubsubsection{\texorpdfstring{PROGMEM}{PROGMEM}}
+{\footnotesize\ttfamily \label{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9} 
+const char SALE\+\_\+\+BOX\+\_\+\+STOP \+[$\,$]\+ PROGMEM = R"{}rawliteral( $<$div class="{}sale\+\_\+box"{}$>$)rawliteral"{}}
+

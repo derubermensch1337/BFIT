@@ -10,45 +10,16 @@
 #include "rfid_access.h"
 #include "graph_data.h"
 
+
 void init_users_and_products (
 ){
-    inventory room_1;
-    inventory room_2;
-    inventory room_3;
-    inventory room_4;
-    inventory room_5;
-    inventory room_6;
-    inventory room_7;
-    inventory room_8;
-    inventory room_9;
-    inventory room_10;
-    inventory room_11;
-    inventory room_12;
-    inventory room_13;
-    inventory room_14;
-    inventory room_15;
-    inventory room_16;
-    inventory room_17;
-    inventory room_18;
+    // inventory room_1;
+    // inventory room_2;
+    // ...
 
-    inventory_init(&room_1);
-    inventory_init(&room_2);
-    inventory_init(&room_3);
-    inventory_init(&room_4);
-    inventory_init(&room_5);
-    inventory_init(&room_6);
-    inventory_init(&room_7);
-    inventory_init(&room_8);
-    inventory_init(&room_9);
-    inventory_init(&room_10);
-    inventory_init(&room_11);
-    inventory_init(&room_12);
-    inventory_init(&room_13);
-    inventory_init(&room_14);
-    inventory_init(&room_15);
-    inventory_init(&room_16);
-    inventory_init(&room_17);
-    inventory_init(&room_18);
+    // inventory_init(&room_1);
+    // inventory_init(&room_2);
+    // ...
 }
 
 static float read_current_weight_blocking(uint32_t timeoutMs = 1200)
@@ -74,25 +45,24 @@ void perform_sale(inventory *fridge_inventory)
         return;
     }
 
-uint8_t saleRoom = 0;
-int saleIndex = -1;
+    uint8_t saleRoom = 0;
+    int saleIndex = -1;
 
-for (int i = 0; i < MAX_ROOMS; i++) {
-    if (users[i].roomNumber > 0 &&
-        compare_UID(lastUid, users[i].uid)) {
+    for (int i = 0; i < MAX_ROOMS; i++) {
+        if (users[i].roomNumber > 0 &&
+            compare_UID(lastUid, users[i].uid)) {
 
-        saleIndex = i;
-        saleRoom  = users[i].roomNumber;
+            saleIndex = i;
+            saleRoom  = users[i].roomNumber;
 
-        Serial.print("Sale matched user index: ");
-        Serial.println(saleIndex);
-        Serial.print("Sale registered to room: ");
-        Serial.println(saleRoom);
+            Serial.print("Sale matched user index: ");
+            Serial.println(saleIndex);
+            Serial.print("Sale registered to room: ");
+            Serial.println(saleRoom);
 
-        break;
+            break;
+        }
     }
-}
-
 
     if (saleIndex < 0) {
         Serial.println("RFID did not match any user index");
@@ -116,11 +86,7 @@ for (int i = 0; i < MAX_ROOMS; i++) {
     Serial.print("[SALE] cur = "); Serial.println(currentWeight, 2);
     Serial.print("[SALE] ref-cur = "); Serial.println(referenceWeight - currentWeight, 2);
     Serial.print("[SALE] cans_taken = "); Serial.println(cans_taken);
-
-    // if (cans_taken <= 0) {
-    //     return;
-    // }
-
+  
     if (cans_taken <= 0) {
         Serial.println("[SALE] No cans detected -> exit");
         return;

@@ -41,8 +41,8 @@ const char* WIFI_PASS = "MyPasskeyA56";
 /* ---------------- Global State ---------------- */
 
 // Graph data (used by sale_html + /saleHeights)
-int greenHeight[ROOM_COUNT]   = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-int classicHeight[ROOM_COUNT] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+int greenHeight[ROOM_COUNT]   = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+int classicHeight[ROOM_COUNT] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
 void print_graph_arrays(
 ){
@@ -99,10 +99,8 @@ static void connect_wifi_and_start_mdns()
 static void setup_web_routes()
 {
   server.on("/", HTTP_GET, []() {
-    // If you want the graph page as the homepage:
+    // Sale graph
     send_sale_html_page(server, ROOM_COUNT, greenHeight, classicHeight);
-    // If you want your old index page instead, swap to:
-    // server.send_P(200, "text/html", INDEX_HTML);
   });
 
   server.on("/saleHeights", HTTP_GET, []() {

@@ -5,9 +5,12 @@
 
 #ifndef STYLE_CSS_H
 #define STYLE_CSS_H
-
 #include <pgmspace.h>
 
+/**
+ * @brief 
+ * 
+ */
 const char STYLE_CSS[] PROGMEM = R"rawliteral(
 /* ---------- Global page styling ---------- */
 body {
@@ -17,7 +20,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Bar on top of page for displaying message/path and log in */
+/** Bar on top of page for displaying message/path and log in */
 .topbar {
   display: flex;
   justify-content: space-between;
