@@ -53,10 +53,10 @@ extern const char SALE_BOX_STOP[] PROGMEM;
 
 /**
  * @brief Sends a single sales bar element to the client.
- * @param server - The server instance.
- * @param room_number - The room number operated on.
- * @param bar_type - Type of the bar operated on.
- * @param bar_height - Height of the bre operated on.
+ * @param server  The server instance.
+ * @param room_number  The room number operated on.
+ * @param bar_type  Type of the bar operated on.
+ * @param bar_height  Height of the bre operated on.
  */
 void send_sale_html_graph(
     ESP8266WebServer &server,
@@ -67,10 +67,10 @@ void send_sale_html_graph(
 
 /**
  * @brief Sends the complete sales graph page.
- * @param server - The server instance.
- * @param room_count  - Number of registered rooms.
- * @param greenHeight - The height of green bars.
- * @param classicHeights - The height of clasic bars.
+ * @param server  The server instance.
+ * @param room_count   Number of registered rooms.
+ * @param greenHeight  The height of green bars.
+ * @param classicHeights  The height of clasic bars.
 */
 void send_sale_html_page(
     ESP8266WebServer &server,

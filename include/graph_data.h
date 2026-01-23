@@ -28,8 +28,8 @@ extern int classicHeight[ROOM_COUNT];
 /**
  * @brief Adds a value to the green sales bar of a given room.
  * 
- * @param roomNumber - Room operated on.
- * @param delta - Incremental value used to update the bar height.
+ * @param roomNumber  Room operated on.
+ * @param delta  Incremental value used to update the bar height.
 */
 void graph_add_to_room_green(
     uint8_t roomNumber, 
@@ -39,8 +39,8 @@ void graph_add_to_room_green(
 /**
  * @brief Adds a value to the classic sales bar of a given room.
  * 
- * @param roomNumber - Room operated on.
- * @param delta - Incremental value used to update the bar height.
+ * @param roomNumber  Room operated on.
+ * @param delta  Incremental value used to update the bar height.
 */
 void graph_add_to_room_clasic(
     uint8_t roomNumber,
