@@ -1,7 +1,8 @@
 /**
  * @file weight_scale.h
  * @author Amal Araweelo Almis
- */
+*/
+
 #ifndef WEIGHT_SCALE_H
 #define WEIGHT_SCALE_H  
 
@@ -12,7 +13,7 @@
 /**
  * @brief Function to get the weight reference.
  * 
- * @return float 
+ * @return float - The weight reference.
 */
 float get_weight_reference(
     void
@@ -21,7 +22,7 @@ float get_weight_reference(
 /**
  * @brief Function to set the weight reference.
  * 
- * @param value 
+ * @param value - Reference value.
 */
 void  set_weight_reference(
     float value
@@ -37,8 +38,8 @@ void  reset_weight_reference(
 /**
  * @brief Function to send confirmation that the weight reference is set.
  * 
- * @return true 
- * @return false 
+ * @return true - Weight reference is set.
+ * @return false - Weight reference is not set.
  */
 bool  weight_reference_is_set(
     void
@@ -68,7 +69,7 @@ extern HX711_ADC scale;
 /**
  * @brief Function to seting up the scale, is called in the begining of the program.
  * 
- * @param calFactor 
+ * @param calFactor - The calibration factor.
  */
 void setup_scale(
     float calFactor
@@ -77,8 +78,8 @@ void setup_scale(
 /**
  * @brief Function for updating the scale value.
  * 
- * @return true 
- * @return false 
+ * @return true - Scale was updated.
+ * @return false - Scale was not updated.
  */
 bool update_scale(
     void
@@ -87,7 +88,7 @@ bool update_scale(
 /**
  * @brief Function to get the scale reading.
  * 
- * @return float 
+ * @return float - Value read from weight.
  */
 float get_weight(
     void
@@ -103,8 +104,8 @@ void tare_scale(
 /**
  * @brief Function to signal that the scale has been tared.
  * 
- * @return true 
- * @return false 
+ * @return true - The scale was tared.
+ * @return false - The scale was not tared.
 */
 bool tare_complete(
     void
@@ -113,9 +114,9 @@ bool tare_complete(
 /**
  * @brief Function to get the number of beer cans taken.
  * 
- * @param referencWeight 
- * @param currentWeight 
- * @return int 
+ * @param referencWeight - The set reference weight [g]
+ * @param currentWeight - The current mesured weight [g]
+ * @return int - number of cans taken
  */
 int get_beer_cans_taken(
     float referencWeight,

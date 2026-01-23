@@ -2,7 +2,7 @@
  * @file lock_ctrl.h
  * @brief Door lock control interface using a servo and light sensor.
  * @author Amal Araweelo Almis
- */
+*/
  
 #ifndef LOCK_CTRL_H
 #define LOCK_CTRL_H

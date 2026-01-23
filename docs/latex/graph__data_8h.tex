@@ -1,49 +1,50 @@
-\hypertarget{graph__data_8h}{}\doxysection{include/graph\+\_\+data.h File Reference}
-\label{graph__data_8h}\index{include/graph\_data.h@{include/graph\_data.h}}
-{\ttfamily \#include $<$stdint.\+h$>$}\newline
-Include dependency graph for graph\+\_\+data.\+h\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=199pt]{graph__data_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{graph__data_8h__dep__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Macros}
+\doxysection{include/\+graph\+\_\+data.h File Reference}
+\hypertarget{graph__data_8h}{}\label{graph__data_8h}\index{include/graph\_data.h@{include/graph\_data.h}}
+
+
+File used for setting up the graph section of the web server.  
+
+
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}~18
+\+\#define \doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}~18
 \begin{DoxyCompactList}\small\item\em Number of rooms supported by the sales graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{graph__data_8h_a76ce02f73cd88ff2fec783a40c4cb797}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green}} (uint8\+\_\+t room\+Number, int delta)
+void \doxymbox{\hyperlink{graph__data_8h_a76ce02f73cd88ff2fec783a40c4cb797}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green}} (uint8\+\_\+t room\+Number, int delta)
 \begin{DoxyCompactList}\small\item\em Adds a value to the green sales bar of a given room. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{graph__data_8h_a8faa2070ca493c37553a77d2f81ec41f}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic}} (uint8\+\_\+t room\+Number, int delta)
+void \doxymbox{\hyperlink{graph__data_8h_a8faa2070ca493c37553a77d2f81ec41f}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic}} (uint8\+\_\+t room\+Number, int delta)
 \begin{DoxyCompactList}\small\item\em Adds a value to the classic sales bar of a given room. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{graph__data_8h_aa65a64c2604100886e8172ebeb401924}{print\+\_\+graph\+\_\+arrays}} ()
+void \doxymbox{\hyperlink{graph__data_8h_aa65a64c2604100886e8172ebeb401924}{print\+\_\+graph\+\_\+arrays}} ()
 \begin{DoxyCompactList}\small\item\em Prints the current graph height arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}
+int \doxymbox{\hyperlink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+
 \begin{DoxyCompactList}\small\item\em Height values for green product sales per room. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{graph__data_8h_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}
+int \doxymbox{\hyperlink{graph__data_8h_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+
 \begin{DoxyCompactList}\small\item\em Height values for classic product sales per room. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+File used for setting up the graph section of the web server. 
+
+\begin{DoxyAuthor}{Author}
+Baldur G. Toftegaard 
+\end{DoxyAuthor}
+
+
+\label{doc-define-members}
+\Hypertarget{graph__data_8h_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}\label{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}} 
-\index{graph\_data.h@{graph\_data.h}!ROOM\_COUNT@{ROOM\_COUNT}}
+\Hypertarget{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}\index{graph\_data.h@{graph\_data.h}!ROOM\_COUNT@{ROOM\_COUNT}}
 \index{ROOM\_COUNT@{ROOM\_COUNT}!graph\_data.h@{graph\_data.h}}
 \doxysubsubsection{\texorpdfstring{ROOM\_COUNT}{ROOM\_COUNT}}
-{\footnotesize\ttfamily \#define ROOM\+\_\+\+COUNT~18}
+{\footnotesize\ttfamily \label{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86} 
+\+\#define ROOM\+\_\+\+COUNT~18}
 
 
 
@@ -51,12 +52,14 @@ Number of rooms supported by the sales graph.
 
 
 
+\label{doc-func-members}
+\Hypertarget{graph__data_8h_doc-func-members}
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{graph__data_8h_a8faa2070ca493c37553a77d2f81ec41f}\label{graph__data_8h_a8faa2070ca493c37553a77d2f81ec41f}} 
-\index{graph\_data.h@{graph\_data.h}!graph\_add\_to\_room\_clasic@{graph\_add\_to\_room\_clasic}}
+\Hypertarget{graph__data_8h_a8faa2070ca493c37553a77d2f81ec41f}\index{graph\_data.h@{graph\_data.h}!graph\_add\_to\_room\_clasic@{graph\_add\_to\_room\_clasic}}
 \index{graph\_add\_to\_room\_clasic@{graph\_add\_to\_room\_clasic}!graph\_data.h@{graph\_data.h}}
 \doxysubsubsection{\texorpdfstring{graph\_add\_to\_room\_clasic()}{graph\_add\_to\_room\_clasic()}}
-{\footnotesize\ttfamily void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{graph__data_8h_a8faa2070ca493c37553a77d2f81ec41f} 
+void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
 
 
 
@@ -64,16 +67,16 @@ Adds a value to the classic sales bar of a given room.
 
 
 \begin{DoxyParams}{Parameters}
-{\em room\+Number} & \\
+{\em room\+Number} & -\/ Room operated on. \\
 \hline
-{\em delta} & \\
+{\em delta} & -\/ Incremental value used to update the bar height. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{graph__data_8h_a76ce02f73cd88ff2fec783a40c4cb797}\label{graph__data_8h_a76ce02f73cd88ff2fec783a40c4cb797}} 
-\index{graph\_data.h@{graph\_data.h}!graph\_add\_to\_room\_green@{graph\_add\_to\_room\_green}}
+\Hypertarget{graph__data_8h_a76ce02f73cd88ff2fec783a40c4cb797}\index{graph\_data.h@{graph\_data.h}!graph\_add\_to\_room\_green@{graph\_add\_to\_room\_green}}
 \index{graph\_add\_to\_room\_green@{graph\_add\_to\_room\_green}!graph\_data.h@{graph\_data.h}}
 \doxysubsubsection{\texorpdfstring{graph\_add\_to\_room\_green()}{graph\_add\_to\_room\_green()}}
-{\footnotesize\ttfamily void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{graph__data_8h_a76ce02f73cd88ff2fec783a40c4cb797} 
+void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
 
 
 
@@ -81,16 +84,16 @@ Adds a value to the green sales bar of a given room.
 
 
 \begin{DoxyParams}{Parameters}
-{\em room\+Number} & \\
+{\em room\+Number} & -\/ Room operated on. \\
 \hline
-{\em delta} & \\
+{\em delta} & -\/ Incremental value used to update the bar height. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{graph__data_8h_aa65a64c2604100886e8172ebeb401924}\label{graph__data_8h_aa65a64c2604100886e8172ebeb401924}} 
-\index{graph\_data.h@{graph\_data.h}!print\_graph\_arrays@{print\_graph\_arrays}}
+\Hypertarget{graph__data_8h_aa65a64c2604100886e8172ebeb401924}\index{graph\_data.h@{graph\_data.h}!print\_graph\_arrays@{print\_graph\_arrays}}
 \index{print\_graph\_arrays@{print\_graph\_arrays}!graph\_data.h@{graph\_data.h}}
 \doxysubsubsection{\texorpdfstring{print\_graph\_arrays()}{print\_graph\_arrays()}}
-{\footnotesize\ttfamily void print\+\_\+graph\+\_\+arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{graph__data_8h_aa65a64c2604100886e8172ebeb401924} 
+void print\+\_\+graph\+\_\+arrays (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
@@ -98,12 +101,14 @@ Prints the current graph height arrays.
 
 
 
+\label{doc-var-members}
+\Hypertarget{graph__data_8h_doc-var-members}
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{graph__data_8h_a0a2ed5e0c246b8dc17e36e9c80fd6b84}\label{graph__data_8h_a0a2ed5e0c246b8dc17e36e9c80fd6b84}} 
-\index{graph\_data.h@{graph\_data.h}!classicHeight@{classicHeight}}
+\Hypertarget{graph__data_8h_a0a2ed5e0c246b8dc17e36e9c80fd6b84}\index{graph\_data.h@{graph\_data.h}!classicHeight@{classicHeight}}
 \index{classicHeight@{classicHeight}!graph\_data.h@{graph\_data.h}}
 \doxysubsubsection{\texorpdfstring{classicHeight}{classicHeight}}
-{\footnotesize\ttfamily int classic\+Height\mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+{\footnotesize\ttfamily \label{graph__data_8h_a0a2ed5e0c246b8dc17e36e9c80fd6b84} 
+int classic\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
@@ -111,11 +116,11 @@ Height values for classic product sales per room.
 
 Height values for classic product sales per room.
 
-Indexed by room number. Used by sale\+\_\+html and the /sale\+Heights endpoint. \mbox{\Hypertarget{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}\label{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}} 
-\index{graph\_data.h@{graph\_data.h}!greenHeight@{greenHeight}}
+Indexed by room number. Used by sale\+\_\+html and the /\+sale\+Heights endpoint. \Hypertarget{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}\index{graph\_data.h@{graph\_data.h}!greenHeight@{greenHeight}}
 \index{greenHeight@{greenHeight}!graph\_data.h@{graph\_data.h}}
 \doxysubsubsection{\texorpdfstring{greenHeight}{greenHeight}}
-{\footnotesize\ttfamily int green\+Height\mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+{\footnotesize\ttfamily \label{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f} 
+int green\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
@@ -123,4 +128,4 @@ Height values for green product sales per room.
 
 Height values for green product sales per room.
 
-Indexed by room number. Used by sale\+\_\+html and the /sale\+Heights endpoint. 
+Indexed by room number. Used by sale\+\_\+html and the /\+sale\+Heights endpoint. 
