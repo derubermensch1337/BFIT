@@ -190,8 +190,9 @@ void rfid_set_last_uid(
     hasUID = true;
 }
 
-bool rfid_get_last_uid(byte *uidOut)
-{
+bool rfid_get_last_uid(
+    byte *uidOut
+){
     if (!hasUID || uidOut == nullptr) {
         return false;
     }
