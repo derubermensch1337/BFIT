@@ -97,20 +97,27 @@ $(function(){initNavTree('rfid__access_8cpp.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4a66436c7fbab3185e8fe050312fcea6" id="r_a4a66436c7fbab3185e8fe050312fcea6"><td class="memItemLeft"><a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4a66436c7fbab3185e8fe050312fcea6">check_command</a> ()</td></tr>
+<tr class="memdesc:a4a66436c7fbab3185e8fe050312fcea6"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Reads a command from the serial interface and maps it to an <a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a>.  <br /></td></tr>
 <tr class="memitem:a8e4bb51959939a9527c2f592cb742f84" id="r_a8e4bb51959939a9527c2f592cb742f84"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8e4bb51959939a9527c2f592cb742f84">setup_RFID_reader</a> (MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
+<tr class="memdesc:a8e4bb51959939a9527c2f592cb742f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes SPI and the MFRC522 RFID reader.  <br /></td></tr>
 <tr class="memitem:abc2ed4592afe3616dfab8e42c9d3c99c" id="r_abc2ed4592afe3616dfab8e42c9d3c99c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abc2ed4592afe3616dfab8e42c9d3c99c">add_user</a> (MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
+<tr class="memdesc:abc2ed4592afe3616dfab8e42c9d3c99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new user by reading room number and scanning an RFID tag.  <br /></td></tr>
 <tr class="memitem:ad134e233e23721f4762373cf2e781a6d" id="r_ad134e233e23721f4762373cf2e781a6d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad134e233e23721f4762373cf2e781a6d">validate_rfid</a> (MFRC522 myRFID)</td></tr>
 <tr class="memitem:ab4c09e9a60679c0c9ade2946fbf583ad" id="r_ab4c09e9a60679c0c9ade2946fbf583ad"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab4c09e9a60679c0c9ade2946fbf583ad">compare_UID</a> (byte *uid1, byte *uid2)</td></tr>
 <tr class="memitem:a0add745e34488b9c793c8a45308228b3" id="r_a0add745e34488b9c793c8a45308228b3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0add745e34488b9c793c8a45308228b3">read_RFID_tag</a> (MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>, byte *uidBuffer)</td></tr>
 <tr class="memitem:adf824566d577c7c8088aa454c831f906" id="r_adf824566d577c7c8088aa454c831f906"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf824566d577c7c8088aa454c831f906">display_commands</a> ()</td></tr>
 <tr class="memitem:a301fdf0545d6da25fbe5ed4abcc6f075" id="r_a301fdf0545d6da25fbe5ed4abcc6f075"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a301fdf0545d6da25fbe5ed4abcc6f075">display_commands_um</a> ()</td></tr>
 <tr class="memitem:aee72324df2418506e4d0fb015d1500be" id="r_aee72324df2418506e4d0fb015d1500be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee72324df2418506e4d0fb015d1500be">rfid_set_last_uid</a> (const byte *uidIn)</td></tr>
+<tr class="memdesc:aee72324df2418506e4d0fb015d1500be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for storing the last used RFID.  <br /></td></tr>
 <tr class="memitem:a38522f06db7c720fa309716c24f5fb57" id="r_a38522f06db7c720fa309716c24f5fb57"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a38522f06db7c720fa309716c24f5fb57">rfid_get_last_uid</a> (byte *uidOut)</td></tr>
+<tr class="memdesc:a38522f06db7c720fa309716c24f5fb57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for restoring the last used RFID.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:ad1ade64ec1f94c9ff0835615a52a941a" id="r_ad1ade64ec1f94c9ff0835615a52a941a"><td class="memItemLeft"><a class="el" href="struct_user.html">User</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad1ade64ec1f94c9ff0835615a52a941a">users</a> [<a class="el" href="rfid__access_8h.html#a251d94cd24a2ca3369fc3f8eca8c19ae">MAX_ROOMS</a>]</td></tr>
+<tr class="memdesc:ad1ade64ec1f94c9ff0835615a52a941a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global user database array.  <br /></td></tr>
 <tr class="memitem:a23424c8ba4bf5c99fbb09f4d86787465" id="r_a23424c8ba4bf5c99fbb09f4d86787465"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a23424c8ba4bf5c99fbb09f4d86787465">userCount</a> = 0</td></tr>
+<tr class="memdesc:a23424c8ba4bf5c99fbb09f4d86787465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of currently registered users.  <br /></td></tr>
 <tr class="memitem:a742d4f0d334ff2a1eb3ccd9b99970bcf" id="r_a742d4f0d334ff2a1eb3ccd9b99970bcf"><td class="memItemLeft">static byte&#160;</td><td class="memItemRight"><a class="el" href="#a742d4f0d334ff2a1eb3ccd9b99970bcf">lastUID</a> [<a class="el" href="rfid__access_8h.html#a685be41cf665c6412e45be53ca20543f">UID_LENGTH</a>]</td></tr>
 <tr class="memitem:a17948a54fedc435a57c485ea53175ca0" id="r_a17948a54fedc435a57c485ea53175ca0"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a17948a54fedc435a57c485ea53175ca0">hasUID</a> = false</td></tr>
 </table>
@@ -134,6 +141,17 @@ Baldur G. Toftegaard </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>Adds a new user by reading room number and scanning an RFID tag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
 </div>
 </div>
 <a id="a4a66436c7fbab3185e8fe050312fcea6" name="a4a66436c7fbab3185e8fe050312fcea6"></a>
@@ -150,6 +168,9 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>brief Reads a command from the serial interface and maps it to an <a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a> </dd></dl>
 
 </div>
 </div>
@@ -171,6 +192,16 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uid1</td><td></td></tr>
+    <tr><td class="paramname">uid2</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
@@ -226,6 +257,16 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td></td></tr>
+    <tr><td class="paramname">uidBuffer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
@@ -243,6 +284,8 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function for restoring the last used RFID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uidOut</td><td></td></tr>
@@ -269,6 +312,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function for storing the last used RFID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uidOut</td><td></td></tr>
@@ -296,6 +341,14 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>Initializes SPI and the MFRC522 RFID reader. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad134e233e23721f4762373cf2e781a6d" name="ad134e233e23721f4762373cf2e781a6d"></a>
@@ -312,6 +365,15 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">myRFID</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
@@ -372,6 +434,8 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>Number of currently registered users. </p>
+
 </div>
 </div>
 <a id="ad1ade64ec1f94c9ff0835615a52a941a" name="ad1ade64ec1f94c9ff0835615a52a941a"></a>
@@ -385,6 +449,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Global user database array. </p>
 
 </div>
 </div>

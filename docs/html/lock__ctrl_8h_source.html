@@ -93,40 +93,39 @@ $(function(){initNavTree('lock__ctrl_8h_source.html','',''); });
 </div><!--header-->
 <div class="contents">
 <a href="lock__ctrl_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#ifndef LOCK_CTRL_H</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define LOCK_CTRL_H</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#ifndef LOCK_CTRL_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#define LOCK_CTRL_H</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;Servo.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Pins</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a5218f89aa292654356a48989319aafb1">   13</a></span><span class="preprocessor">#define SERVO_PIN 16   </span><span class="comment">// D0 = GP16, D1 = GPIO5</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a6ddfa85dd52c2aa1af587be3349cb467">   14</a></span><span class="preprocessor">#define LIGHT_PIN A0 </span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a5c6cfb21c3902ddd46bf2bea4b63ba52">   15</a></span><span class="preprocessor">#define CLOSED_THRESHOLD 70   </span><span class="comment">// darker than this = closed</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a95ae562e6521f4c71629109c11a93e7c">   16</a></span><span class="preprocessor">#define OPEN_THRESHOLD 100    </span><span class="comment">// to avoid issues</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Only call once in setup()</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a73f85ca7eef43ea76053c19cb6515a3f">lock_ctrl_init</a>();</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// Pins</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a5218f89aa292654356a48989319aafb1">   22</a></span><span class="preprocessor">#define SERVO_PIN 16   </span><span class="comment">// D0 = GP16, D1 = GPIO5</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a6ddfa85dd52c2aa1af587be3349cb467">   23</a></span><span class="preprocessor">#define LIGHT_PIN A0 </span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a5c6cfb21c3902ddd46bf2bea4b63ba52">   24</a></span><span class="preprocessor">#define CLOSED_THRESHOLD 70   </span><span class="comment">// darker than this = closed</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="lock__ctrl_8h.html#a95ae562e6521f4c71629109c11a93e7c">   25</a></span><span class="preprocessor">#define OPEN_THRESHOLD 100    </span><span class="comment">// to avoid issues</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// Only call once in setup()</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a73f85ca7eef43ea76053c19cb6515a3f">lock_ctrl_init</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">// Actions</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#acc746d35b26615d437e9c3df2ec0cdfc">lock_door</a>();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#ac3411e1e911a7479c9880084ef1c62eb">unlock_door</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// Photosensor state</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">bool</span> <a class="code hl_function" href="lock__ctrl_8h.html#ac854db649e8e27e6f2f34df2311c07ea">is_box_closed</a>();</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">// Sound effects</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a993aaefb682b242b95da53a7aed9b007">play_warning</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> t);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a31ffbd66baac0dcbd686e4e59e5d3c45">play_open</a>();</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a5d3b72f442ced251e4b9a4e6a869c55a">play_close</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="alock__ctrl_8h_html_a31ffbd66baac0dcbd686e4e59e5d3c45"><div class="ttname"><a href="lock__ctrl_8h.html#a31ffbd66baac0dcbd686e4e59e5d3c45">play_open</a></div><div class="ttdeci">void play_open()</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:73</div></div>
-<div class="ttc" id="alock__ctrl_8h_html_a5d3b72f442ced251e4b9a4e6a869c55a"><div class="ttname"><a href="lock__ctrl_8h.html#a5d3b72f442ced251e4b9a4e6a869c55a">play_close</a></div><div class="ttdeci">void play_close()</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:80</div></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">// Actions</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#acc746d35b26615d437e9c3df2ec0cdfc">lock_door</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#ac3411e1e911a7479c9880084ef1c62eb">unlock_door</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// Photosensor state</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">bool</span> <a class="code hl_function" href="lock__ctrl_8h.html#ac854db649e8e27e6f2f34df2311c07ea">is_box_closed</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a993aaefb682b242b95da53a7aed9b007">play_warning</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> t);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a31ffbd66baac0dcbd686e4e59e5d3c45">play_open</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="lock__ctrl_8h.html#a5d3b72f442ced251e4b9a4e6a869c55a">play_close</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="alock__ctrl_8h_html_a31ffbd66baac0dcbd686e4e59e5d3c45"><div class="ttname"><a href="lock__ctrl_8h.html#a31ffbd66baac0dcbd686e4e59e5d3c45">play_open</a></div><div class="ttdeci">void play_open()</div><div class="ttdoc">Play sound effect when door opens.</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:73</div></div>
+<div class="ttc" id="alock__ctrl_8h_html_a5d3b72f442ced251e4b9a4e6a869c55a"><div class="ttname"><a href="lock__ctrl_8h.html#a5d3b72f442ced251e4b9a4e6a869c55a">play_close</a></div><div class="ttdeci">void play_close()</div><div class="ttdoc">Play sound effect when the door closes.</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:80</div></div>
 <div class="ttc" id="alock__ctrl_8h_html_a73f85ca7eef43ea76053c19cb6515a3f"><div class="ttname"><a href="lock__ctrl_8h.html#a73f85ca7eef43ea76053c19cb6515a3f">lock_ctrl_init</a></div><div class="ttdeci">void lock_ctrl_init()</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:25</div></div>
-<div class="ttc" id="alock__ctrl_8h_html_a993aaefb682b242b95da53a7aed9b007"><div class="ttname"><a href="lock__ctrl_8h.html#a993aaefb682b242b95da53a7aed9b007">play_warning</a></div><div class="ttdeci">void play_warning(unsigned long t)</div><div class="ttdef"><b>Definition</b> buzzer.cpp:11</div></div>
+<div class="ttc" id="alock__ctrl_8h_html_a993aaefb682b242b95da53a7aed9b007"><div class="ttname"><a href="lock__ctrl_8h.html#a993aaefb682b242b95da53a7aed9b007">play_warning</a></div><div class="ttdeci">void play_warning(unsigned long t)</div><div class="ttdoc">Play the warning sound effet.</div><div class="ttdef"><b>Definition</b> buzzer.cpp:11</div></div>
 <div class="ttc" id="alock__ctrl_8h_html_ac3411e1e911a7479c9880084ef1c62eb"><div class="ttname"><a href="lock__ctrl_8h.html#ac3411e1e911a7479c9880084ef1c62eb">unlock_door</a></div><div class="ttdeci">void unlock_door()</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:35</div></div>
 <div class="ttc" id="alock__ctrl_8h_html_ac854db649e8e27e6f2f34df2311c07ea"><div class="ttname"><a href="lock__ctrl_8h.html#ac854db649e8e27e6f2f34df2311c07ea">is_box_closed</a></div><div class="ttdeci">bool is_box_closed()</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:40</div></div>
 <div class="ttc" id="alock__ctrl_8h_html_acc746d35b26615d437e9c3df2ec0cdfc"><div class="ttname"><a href="lock__ctrl_8h.html#acc746d35b26615d437e9c3df2ec0cdfc">lock_door</a></div><div class="ttdeci">void lock_door()</div><div class="ttdef"><b>Definition</b> lock_ctrl.cpp:31</div></div>

@@ -9,11 +9,11 @@
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{init__users__and__sale_8cpp_ad96e80125cecd9cd19e98c3735491dd4}{init\+\_\+users\+\_\+and\+\_\+products}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Not used in prototype, shuld be moved to \doxylink{inventory_8cpp}{inventory.\+cpp}. \end{DoxyCompactList}\item 
 static float \doxymbox{\hyperlink{init__users__and__sale_8cpp_ac161669f35b09fb35c44ac0d9304e211}{read\+\_\+current\+\_\+weight\+\_\+blocking}} (uint32\+\_\+t timeout\+Ms=1200)
 \item 
 void \doxymbox{\hyperlink{init__users__and__sale_8cpp_a2ee24f51473041ace506946c3daacd34}{perform\+\_\+sale}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}fridge\+\_\+inventory)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to actually performe a sale between a user and the fridge. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \label{doc-func-members}
@@ -25,11 +25,19 @@ void \doxymbox{\hyperlink{init__users__and__sale_8cpp_a2ee24f51473041ace506946c3
 {\footnotesize\ttfamily \label{init__users__and__sale_8cpp_ad96e80125cecd9cd19e98c3735491dd4} 
 void init\+\_\+users\+\_\+and\+\_\+products (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-\Hypertarget{init__users__and__sale_8cpp_a2ee24f51473041ace506946c3daacd34}\index{init\_users\_and\_sale.cpp@{init\_users\_and\_sale.cpp}!perform\_sale@{perform\_sale}}
+
+
+Not used in prototype, shuld be moved to \doxylink{inventory_8cpp}{inventory.\+cpp}. 
+
+Old function for initualicing users and products, shuld be moved to \doxylink{fridge__state_8h}{fridge\+\_\+state.\+h}. \Hypertarget{init__users__and__sale_8cpp_a2ee24f51473041ace506946c3daacd34}\index{init\_users\_and\_sale.cpp@{init\_users\_and\_sale.cpp}!perform\_sale@{perform\_sale}}
 \index{perform\_sale@{perform\_sale}!init\_users\_and\_sale.cpp@{init\_users\_and\_sale.cpp}}
 \doxysubsubsection{\texorpdfstring{perform\_sale()}{perform\_sale()}}
 {\footnotesize\ttfamily \label{init__users__and__sale_8cpp_a2ee24f51473041ace506946c3daacd34} 
 void perform\+\_\+sale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{fridge\+\_\+inventory}{}\end{DoxyParamCaption})}
+
+
+
+Function to actually performe a sale between a user and the fridge. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -38,6 +46,11 @@ void perform\+\_\+sale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{stru
 {\em user\+\_\+id} & \\
 \hline
 {\em fridge\+\_\+inventory} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fridge\+\_\+inventory} & Inventory that the sale shuld remove item from \\
 \hline
 \end{DoxyParams}
 \Hypertarget{init__users__and__sale_8cpp_ac161669f35b09fb35c44ac0d9304e211}\index{init\_users\_and\_sale.cpp@{init\_users\_and\_sale.cpp}!read\_current\_weight\_blocking@{read\_current\_weight\_blocking}}

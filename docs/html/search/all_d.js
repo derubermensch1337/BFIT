@@ -14,6 +14,7 @@ var searchData=
   ['rfid_5fset_5flast_5fuid_11',['rfid_set_last_uid',['../rfid__access_8h.html#aee72324df2418506e4d0fb015d1500be',1,'rfid_set_last_uid(const byte *uidIn):&#160;rfid_access.cpp'],['../rfid__access_8cpp.html#aee72324df2418506e4d0fb015d1500be',1,'rfid_set_last_uid(const byte *uidIn):&#160;rfid_access.cpp']]],
   ['rfidcommand_12',['RFIDcommand',['../rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4',1,'rfid_access.h']]],
   ['room_5fcount_13',['ROOM_COUNT',['../graph__data_8h.html#a42b2b0f20098ad8577decdc6aed0dd86',1,'graph_data.h']]],
-  ['roomnumber_14',['roomNumber',['../struct_user.html#ad2ab91c29844ac28a6c54f185e9e86a6',1,'User']]],
-  ['rst_5fpin_15',['RST_PIN',['../rfid__access_8h.html#a36932b0e869e0114f32e255f61306d6b',1,'rfid_access.h']]]
+  ['room_5fnumber_14',['room_number',['../structinventory.html#a48dc58331ed53dde37949f0b2b900cd0',1,'inventory']]],
+  ['roomnumber_15',['roomNumber',['../struct_user.html#ad2ab91c29844ac28a6c54f185e9e86a6',1,'User']]],
+  ['rst_5fpin_16',['RST_PIN',['../rfid__access_8h.html#a36932b0e869e0114f32e255f61306d6b',1,'rfid_access.h']]]
 ];

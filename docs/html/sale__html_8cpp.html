@@ -98,11 +98,14 @@ $(function(){initNavTree('sale__html_8cpp.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a765ff78b52fcc468640556f618934a52" id="r_a765ff78b52fcc468640556f618934a52"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a765ff78b52fcc468640556f618934a52">send_sale_html_graph</a> (ESP8266WebServer &amp;<a class="el" href="main_8cpp.html#a58141c4f251beaa1fee89b632d87152f">server</a>, uint8_t room_number, const char *bar_type, int bar_height)</td></tr>
+<tr class="memdesc:a765ff78b52fcc468640556f618934a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends a single sales bar element to the client.  <br /></td></tr>
 <tr class="memitem:ab009b9b9e097e104b4478d286fd58a9f" id="r_ab009b9b9e097e104b4478d286fd58a9f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab009b9b9e097e104b4478d286fd58a9f">send_sale_html_page</a> (ESP8266WebServer &amp;<a class="el" href="main_8cpp.html#a58141c4f251beaa1fee89b632d87152f">server</a>, uint8_t room_count, const int *<a class="el" href="graph__data_8h.html#a9ce470c42fa52a1e1348aaa5a745614f">greenHeight</a>, const int *classicHeights)</td></tr>
+<tr class="memdesc:ab009b9b9e097e104b4478d286fd58a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends the complete sales graph page.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a2e129e4ccc4f01ca773ac9354c0ee6c9" id="r_a2e129e4ccc4f01ca773ac9354c0ee6c9"><td class="memItemLeft">const char SALE_BOX_START[]&#160;</td><td class="memItemRight"><a class="el" href="#a2e129e4ccc4f01ca773ac9354c0ee6c9">PROGMEM</a> = R&quot;rawliteral( &lt;div class=&quot;sale_box&quot;&gt;)rawliteral&quot;</td></tr>
+<tr class="memdesc:a2e129e4ccc4f01ca773ac9354c0ee6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opening container for the sales graph.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Baldur G. Toftegaard </dd></dl>
@@ -135,12 +138,23 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sends a single sales bar element to the client. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="main_8cpp.html#a58141c4f251beaa1fee89b632d87152f">server</a></td><td></td></tr>
     <tr><td class="paramname">room_number</td><td></td></tr>
     <tr><td class="paramname">bar_type</td><td></td></tr>
     <tr><td class="paramname">bar_height</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a58141c4f251beaa1fee89b632d87152f">server</a></td><td>The server  </td></tr>
+    <tr><td class="paramname">room_number</td><td>Number of the relevant room  </td></tr>
+    <tr><td class="paramname">bar_type</td><td>The type of the bar graph  </td></tr>
+    <tr><td class="paramname">bar_height</td><td>The height of the bar graph </td></tr>
   </table>
   </dd>
 </dl>
@@ -175,12 +189,24 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Sends the complete sales graph page. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="main_8cpp.html#a58141c4f251beaa1fee89b632d87152f">server</a></td><td></td></tr>
-    <tr><td class="paramname">room_count</td><td></td></tr>
-    <tr><td class="paramname"><a class="el" href="graph__data_8h.html#a9ce470c42fa52a1e1348aaa5a745614f">greenHeight</a></td><td></td></tr>
+    <tr><td class="paramname">room_count</td><td><br  />
+ </td></tr>
+    <tr><td class="paramname"><a class="el" href="graph__data_8h.html#a9ce470c42fa52a1e1348aaa5a745614f" title="Height values for green product sales per room.">greenHeight</a></td><td></td></tr>
     <tr><td class="paramname">classicHeights</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a58141c4f251beaa1fee89b632d87152f">server</a></td><td>The server  </td></tr>
+    <tr><td class="paramname">room_count</td><td>The number of rooms  </td></tr>
+    <tr><td class="paramname"><a class="el" href="graph__data_8h.html#a9ce470c42fa52a1e1348aaa5a745614f" title="Height values for green product sales per room.">greenHeight</a></td><td>The hight of the green bar  </td></tr>
+    <tr><td class="paramname">classicHeights</td><td>The hight of the clasic bar (not used in prototype) </td></tr>
   </table>
   </dd>
 </dl>
@@ -199,6 +225,23 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Opening container for the sales graph. </p>
+<p>Closing container for the complete sales graph.</p>
+<p>Closing container for a single room graph.</p>
+<p>Closing fragment for a single sales bar.</p>
+<p>HTML fragment defining the height style of a bar.</p>
+<p>HTML fragment defining the CSS class type for a bar.</p>
+<p>HTML fragment for the room identifier.</p>
+<p>Opening container for a single room graph.</p>
+<p>Opening container for the sales graph.</p>
+<p>Opening container for the sales graph.</p>
+<p>String used for the HTML footer.</p>
+<p>This is responsible for updating the graphs.</p>
+<p>Opening container for the sales graph.</p>
+<p>Interperated as a string by the compiler.</p>
+<p>Opening container for the sales graph.</p>
+<p>is handled like a string by the compiler </p>
 
 </div>
 </div>

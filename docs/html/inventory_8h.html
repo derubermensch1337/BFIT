@@ -108,7 +108,7 @@ Classes</h2></td></tr>
 <tr class="memitem:products_5Fstocked" id="r_products_5Fstocked"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structproducts__stocked.html">products_stocked</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struckt for keeping track of the original and current quantity of a beverage.  <a href="structproducts__stocked.html#details">More...</a><br /></td></tr>
 <tr class="memitem:inventory" id="r_inventory"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structinventory.html">inventory</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struckt for holding the fridge inventory.  <a href="structinventory.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Strukt used for making the inventory.  <a href="structinventory.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -131,7 +131,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ab559445889f1c5e889a2dd4ab6630e17" id="r_ab559445889f1c5e889a2dd4ab6630e17"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab559445889f1c5e889a2dd4ab6630e17">inventory_init</a> (<a class="el" href="structinventory.html">inventory</a> *<a class="el" href="structinventory.html">inventory</a>)</td></tr>
 <tr class="memdesc:ab559445889f1c5e889a2dd4ab6630e17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for initualicing the inventory.  <br /></td></tr>
 <tr class="memitem:a2ffce751a37a02aabfc70f369f069d41" id="r_a2ffce751a37a02aabfc70f369f069d41"><td class="memItemLeft"><a class="el" href="structproduct.html">product</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2ffce751a37a02aabfc70f369f069d41">inventory_make_product</a> (const char *name, <a class="el" href="#a0e437d90616f9d65d643dc45852703a3">beverage_type</a> type, uint16_t weight, uint8_t price)</td></tr>
-<tr class="memdesc:a2ffce751a37a02aabfc70f369f069d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for defining a new item.  <br /></td></tr>
+<tr class="memdesc:a2ffce751a37a02aabfc70f369f069d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for making a new product.  <br /></td></tr>
 <tr class="memitem:af07da100070e5574587bd31559855ad5" id="r_af07da100070e5574587bd31559855ad5"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#af07da100070e5574587bd31559855ad5">inventory_add_product</a> (<a class="el" href="structinventory.html">inventory</a> *<a class="el" href="structinventory.html">inventory</a>, <a class="el" href="structproduct.html">product</a> <a class="el" href="structproduct.html">product</a>, uint16_t quantity)</td></tr>
 <tr class="memdesc:af07da100070e5574587bd31559855ad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for adding product to inventory.  <br /></td></tr>
 <tr class="memitem:a1dc5cc4c904ce439d0f288ffe81bdc8c" id="r_a1dc5cc4c904ce439d0f288ffe81bdc8c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a1dc5cc4c904ce439d0f288ffe81bdc8c">inventory_remove_product</a> (<a class="el" href="structinventory.html">inventory</a> *<a class="el" href="structinventory.html">inventory</a>, <a class="el" href="structproduct.html">product</a> beverage)</td></tr>
@@ -216,7 +216,7 @@ Functions</h2></td></tr>
 <p>Function for adding to the amount of a beverage in an inventory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Struckt for holding the fridge inventory.">inventory</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td></td></tr>
     <tr><td class="paramname"><a class="el" href="#a0e437d90616f9d65d643dc45852703a3">beverage_type</a></td><td></td></tr>
     <tr><td class="paramname">amount</td><td></td></tr>
   </table>
@@ -225,6 +225,14 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true - the beverage was added to the inventory </dd>
 <dd>
 false - there was an error adding the beverage </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td>The inventory you want to add a beverage to  </td></tr>
+    <tr><td class="paramname">beverage</td><td>The beverage you want to edit the amount of  </td></tr>
+    <tr><td class="paramname">amount</td><td>The amount you want to add to the inventory </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -255,7 +263,7 @@ false - there was an error adding the beverage </dd></dl>
 <p>Function for adding product to inventory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Struckt for holding the fridge inventory.">inventory</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td></td></tr>
     <tr><td class="paramname">beverage</td><td></td></tr>
     <tr><td class="paramname">quantity</td><td></td></tr>
   </table>
@@ -264,6 +272,14 @@ false - there was an error adding the beverage </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true - the product was added to the inventory </dd>
 <dd>
 false - there was an error adding the product </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td>Inventory you want to add a product to  </td></tr>
+    <tr><td class="paramname"><a class="el" href="structproduct.html" title="Struct holding the information for one item.">product</a></td><td>The product you want to add to the inventory  </td></tr>
+    <tr><td class="paramname">quantity</td><td>The amount of the priduct you want to add to the inventory </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -321,7 +337,7 @@ false - there was an error adding the product </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Function for defining a new item. </p>
+<p>Function for making a new product. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td></td></tr>
@@ -332,6 +348,15 @@ false - there was an error adding the product </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>item created </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Display name of product  </td></tr>
+    <tr><td class="paramname">type</td><td>What type of product it is, whuld allow to sort by product type  </td></tr>
+    <tr><td class="paramname">weight</td><td>Weight of the product, used for detecting how much of the product that was removed  </td></tr>
+    <tr><td class="paramname">price</td><td>Price of the product, this whuld make it posible to automaticaly calculate the bill for eatch user </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -353,7 +378,13 @@ false - there was an error adding the product </dd></dl>
 <p>Function to print a users inventory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Struckt for holding the fridge inventory.">inventory</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td>Inventory you want to print the content of </td></tr>
   </table>
   </dd>
 </dl>
@@ -387,7 +418,7 @@ false - there was an error adding the product </dd></dl>
 <p>Function for removing from the amount of a beverage in an inventory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Struckt for holding the fridge inventory.">inventory</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td></td></tr>
     <tr><td class="paramname">beverag</td><td></td></tr>
     <tr><td class="paramname">amount</td><td></td></tr>
   </table>
@@ -396,6 +427,14 @@ false - there was an error adding the product </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true - the beverage was removed from the inventory </dd>
 <dd>
 false - there was an error removing the beverage </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td>The inventory you want to add a beverage to  </td></tr>
+    <tr><td class="paramname">beverag</td><td>The beverage you want to edit the amount of  </td></tr>
+    <tr><td class="paramname">amount</td><td>The amount you want to remove from the inventory </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -421,7 +460,7 @@ false - there was an error removing the beverage </dd></dl>
 <p>Function for removing product from inventory. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Struckt for holding the fridge inventory.">inventory</a></td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td></td></tr>
     <tr><td class="paramname">beverage</td><td></td></tr>
     <tr><td class="paramname">quantity</td><td></td></tr>
   </table>
@@ -430,6 +469,13 @@ false - there was an error removing the beverage </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>true - the product was removed from the inventory </dd>
 <dd>
 false - there was an error removing the product </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="structinventory.html" title="Strukt used for making the inventory.">inventory</a></td><td>Inventory you want to remove a product from  </td></tr>
+    <tr><td class="paramname">beverage</td><td>Beverage you want to remove </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

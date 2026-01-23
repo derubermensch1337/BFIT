@@ -13,7 +13,7 @@ Functions responsible for keeping track of the fridge inventory.
 void \doxymbox{\hyperlink{inventory_8cpp_ab559445889f1c5e889a2dd4ab6630e17}{inventory\+\_\+init}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}})
 \begin{DoxyCompactList}\small\item\em Function for initualicing the inventory. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{inventory_8cpp_a39f1222be5f9082c18b1df2e2524018c}{inventory\+\_\+make\+\_\+product}} (const char \texorpdfstring{$\ast$}{*}product\+\_\+name, \doxymbox{\hyperlink{inventory_8h_a0e437d90616f9d65d643dc45852703a3}{beverage\+\_\+type}} type, uint16\+\_\+t weight, uint8\+\_\+t price)
-\begin{DoxyCompactList}\small\item\em Function for defining a new item. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Function for making a new product. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{inventory_8cpp_af07da100070e5574587bd31559855ad5}{inventory\+\_\+add\+\_\+product}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}}, \doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{structproduct}{product}}, uint16\+\_\+t quantity)
 \begin{DoxyCompactList}\small\item\em Function for adding product to inventory. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{inventory_8cpp_a1dc5cc4c904ce439d0f288ffe81bdc8c}{inventory\+\_\+remove\+\_\+product}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}}, \doxymbox{\hyperlink{structproduct}{product}} beverage)
@@ -67,6 +67,15 @@ true -\/ the product was added to the inventory
 
 false -\/ there was an error adding the product 
 \end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & Inventory you want to add a product to  \\
+\hline
+{\em \doxylink{structproduct}{product}} & The product you want to add to the inventory  \\
+\hline
+{\em quantity} & The amount of the priduct you want to add to the inventory \\
+\hline
+\end{DoxyParams}
 \Hypertarget{inventory_8cpp_ab559445889f1c5e889a2dd4ab6630e17}\index{inventory.cpp@{inventory.cpp}!inventory\_init@{inventory\_init}}
 \index{inventory\_init@{inventory\_init}!inventory.cpp@{inventory.cpp}}
 \doxysubsubsection{\texorpdfstring{inventory\_init()}{inventory\_init()}}
@@ -90,7 +99,7 @@ Function for initualicing the inventory.
 
 
 
-Function for defining a new item. 
+Function for making a new product. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -106,6 +115,17 @@ Function for defining a new item.
 \begin{DoxyReturn}{Returns}
 item created 
 \end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em product\+\_\+name} & Display name of product  \\
+\hline
+{\em type} & What type of product it is, whuld allow to sort by product type  \\
+\hline
+{\em weight} & Weight of the product, used for detecting how much of the product that was removed  \\
+\hline
+{\em price} & Price of the product, this whuld make it posible to automaticaly calculate the bill for eatch user \\
+\hline
+\end{DoxyParams}
 \Hypertarget{inventory_8cpp_ab6b232867fb3f65fbd4a4fb3cefb1ecb}\index{inventory.cpp@{inventory.cpp}!inventory\_print@{inventory\_print}}
 \index{inventory\_print@{inventory\_print}!inventory.cpp@{inventory.cpp}}
 \doxysubsubsection{\texorpdfstring{inventory\_print()}{inventory\_print()}}
@@ -119,6 +139,11 @@ Function to print a users inventory.
 
 \begin{DoxyParams}{Parameters}
 {\em \doxylink{structinventory}{inventory}} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & Inventory you want to print the content of \\
 \hline
 \end{DoxyParams}
 \Hypertarget{inventory_8cpp_a2977e5aa7103577ba60f292f51221d96}\index{inventory.cpp@{inventory.cpp}!inventory\_remove\_beverage@{inventory\_remove\_beverage}}
@@ -145,6 +170,15 @@ true -\/ the beverage was removed from the inventory
 
 false -\/ there was an error removing the beverage 
 \end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & The inventory you want to add a beverage to  \\
+\hline
+{\em beverag} & The beverage you want to edit the amount of  \\
+\hline
+{\em amount} & The amount you want to remove from the inventory \\
+\hline
+\end{DoxyParams}
 \Hypertarget{inventory_8cpp_a1dc5cc4c904ce439d0f288ffe81bdc8c}\index{inventory.cpp@{inventory.cpp}!inventory\_remove\_product@{inventory\_remove\_product}}
 \index{inventory\_remove\_product@{inventory\_remove\_product}!inventory.cpp@{inventory.cpp}}
 \doxysubsubsection{\texorpdfstring{inventory\_remove\_product()}{inventory\_remove\_product()}}
@@ -169,3 +203,10 @@ true -\/ the product was removed from the inventory
 
 false -\/ there was an error removing the product 
 \end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & Inventory you want to remove a product from  \\
+\hline
+{\em beverage} & Beverage you want to remove \\
+\hline
+\end{DoxyParams}

@@ -2,7 +2,7 @@
 \hypertarget{structinventory}{}\label{structinventory}\index{inventory@{inventory}}
 
 
-Struckt for holding the fridge inventory.  
+Strukt used for making the inventory.  
 
 
 
@@ -15,11 +15,13 @@ Struckt for holding the fridge inventory.
 \doxymbox{\hyperlink{structproducts__stocked}{products\+\_\+stocked}} \doxymbox{\hyperlink{structinventory_a9ae250b2ded34914cb13cdcc67274dd2}{produckts\+\_\+in\+\_\+inventory}} \+[\doxymbox{\hyperlink{inventory_8h_ace96e07dcfbce0348b898efd6e6d1956}{INVENTORY\+\_\+\+CAPACITY}}]\+
 \begin{DoxyCompactList}\small\item\em The beverages being stocked. \end{DoxyCompactList}\item 
 uint8\+\_\+t \doxymbox{\hyperlink{structinventory_a471aafb7fdba38a6f265809670a6fc88}{number\+\_\+of\+\_\+products\+\_\+stocked}}
-\begin{DoxyCompactList}\small\item\em Number of beverages stocked, prevents overflow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Number of beverages stocked, prevents overflow. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{structinventory_a48dc58331ed53dde37949f0b2b900cd0}{room\+\_\+number}}
+\begin{DoxyCompactList}\small\item\em Not used in the current system. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Struckt for holding the fridge inventory. 
+Strukt used for making the inventory. 
 
 \label{doc-variable-members}
 \Hypertarget{structinventory_doc-variable-members}
@@ -44,7 +46,17 @@ Number of beverages stocked, prevents overflow.
 
 The beverages being stocked. 
 
+\Hypertarget{structinventory_a48dc58331ed53dde37949f0b2b900cd0}\index{inventory@{inventory}!room\_number@{room\_number}}
+\index{room\_number@{room\_number}!inventory@{inventory}}
+\doxysubsubsection{\texorpdfstring{room\_number}{room\_number}}
+{\footnotesize\ttfamily \label{structinventory_a48dc58331ed53dde37949f0b2b900cd0} 
+uint8\+\_\+t inventory::\+room\+\_\+number}
 
+
+
+Not used in the current system. 
+
+Store the FRID belonging to the spesific user, not implemented 
 
 The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
 \item 

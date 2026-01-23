@@ -28,7 +28,7 @@ Combined:\+ Web server + Graph + Scale + RFID access + Lock control.
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{main_8cpp_aa65a64c2604100886e8172ebeb401924}{print\+\_\+graph\+\_\+arrays}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the current graph height arrays. \end{DoxyCompactList}\item 
 ESP8266\+Web\+Server \doxymbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} (80)
 \item 
 MFRC522 \doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} (\doxymbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{SS\+\_\+\+PIN}}, \doxymbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{RST\+\_\+\+PIN}})
@@ -57,9 +57,9 @@ const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a586c86c64e
 const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef}{WIFI\+\_\+\+PASS}} = "{}My\+Passkey\+A56"{}
 \item 
 int \doxymbox{\hyperlink{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}
-\item 
+\begin{DoxyCompactList}\small\item\em Height values for green product sales per room. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}
-\item 
+\begin{DoxyCompactList}\small\item\em Height values for classic product sales per room. \end{DoxyCompactList}\item 
 \doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{main_8cpp_a99baae5e41fb195569de36c593a70fc2}{demo\+\_\+beer}}
 \item 
 \doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \doxymbox{\hyperlink{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67}{active\+Command}} = \doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\+\_\+\+NONE}}
@@ -98,6 +98,10 @@ void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 \doxysubsubsection{\texorpdfstring{print\_graph\_arrays()}{print\_graph\_arrays()}}
 {\footnotesize\ttfamily \label{main_8cpp_aa65a64c2604100886e8172ebeb401924} 
 void print\+\_\+graph\+\_\+arrays (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Prints the current graph height arrays. 
 
 \Hypertarget{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}\index{main.cpp@{main.cpp}!rfid@{rfid}}
 \index{rfid@{rfid}!main.cpp@{main.cpp}}
@@ -158,6 +162,10 @@ const float CAL\+\_\+\+FACTOR = 22.\+9f\hspace{0.3cm}{\ttfamily [static]}}
 {\footnotesize\ttfamily \label{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84} 
 int classic\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}}
 
+
+
+Height values for classic product sales per room. 
+
 \Hypertarget{main_8cpp_a99baae5e41fb195569de36c593a70fc2}\index{main.cpp@{main.cpp}!demo\_beer@{demo\_beer}}
 \index{demo\_beer@{demo\_beer}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{demo\_beer}{demo\_beer}}
@@ -181,6 +189,10 @@ bool door\+Unlocked = false}
 \doxysubsubsection{\texorpdfstring{greenHeight}{greenHeight}}
 {\footnotesize\ttfamily \label{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f} 
 int green\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}}
+
+
+
+Height values for green product sales per room. 
 
 \Hypertarget{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb}\index{main.cpp@{main.cpp}!START\_BEER\_QTY@{START\_BEER\_QTY}}
 \index{START\_BEER\_QTY@{START\_BEER\_QTY}!main.cpp@{main.cpp}}
