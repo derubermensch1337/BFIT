@@ -17,7 +17,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/* Simple top bar (used by index page if present) */
+/* Bar on top of page for displaying message/path and log in */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -28,6 +28,7 @@ body {
   box-sizing: border-box;
 }
 
+/* message/path display box */
 .topbar .right a {
   color: #fff;
   text-decoration: none;
@@ -36,11 +37,12 @@ body {
   border-radius: 6px;
 }
 
+/* login button */
 .topbar .right a:hover {
   background: rgba(255,255,255,0.15);
 }
 
-/* ---------- Graph container ---------- */
+/* box for the graph to be placed inside */
 .sale_box {
   margin: 40px auto;
   width: calc(100% - 100px);
@@ -51,13 +53,13 @@ body {
   box-sizing: border-box;
 
   display: flex;
-  justify-content: center;   /* ← CENTER horizontally */
-  align-items: flex-end;     /* bars stick to bottom */
+  justify-content: space-evenly;
+  align-items: flex-end;
   padding: 15px;
-  gap: 12px;
+  gap: 0;
 }
 
-/* Each room = a pair of bars */
+/* graph box for eatch room */
 .sale_room {
   display: flex;
   align-items: flex-end;
@@ -66,15 +68,20 @@ body {
 }
 
 /* Bars */
-.sale_pole_green,
-.sale_pole_clasic {
-  width: 14px;
+.sale_pole_green {
+  width: 22px;
   border: 1px solid #000000;
   box-sizing: border-box;
 }
 
+.sale_pole_clasic {
+  width: 22px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
+
 .sale_pole_green { background-color: #2e7d32; }
-.sale_pole_clasic { background-color: #f9a825; }
+.sale_pole_clasic { background-color: #ffffff; }
 )rawliteral";
 
 #endif

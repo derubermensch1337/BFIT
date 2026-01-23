@@ -115,14 +115,15 @@ bool validate_rfid(MFRC522 myRFID){
     //If a tag can be read
     if(read_RFID_tag(myRFID, uid)){
         // Check if tag is registered
-        for (int i = 0; i<userCount; i++){
+        for (int i = 0; i<MAX_ROOMS; i++){
             if (compare_UID(uid, users[i].uid)){ // if match is found
                 open = true; //
+                Serial.println("Door will be opened!");
+
             }
         }
 
     //Open door
-    Serial.println("Door will be opened!");
     }
 
     return open;

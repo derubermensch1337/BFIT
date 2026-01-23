@@ -75,15 +75,6 @@ int get_beer_cans_taken(
    float currentWeight
 ){
    float diff = referenceWeight-currentWeight;
-    Serial.print("reference: ");
-    Serial.println(referenceWeight);
-    Serial.print("current: ");
-    Serial.println(currentWeight);
-
-
-    Serial.print("diff: ");
-    Serial.println(diff);
-
 
    // ignore small changes
    if (diff < SCALE_TOL){
@@ -92,9 +83,6 @@ int get_beer_cans_taken(
 
    // calculate number of cans removed
    int cans = (int) round(diff/BEER_WEIGHT);
-
-   Serial.print("cans: ");
-   Serial.println(cans);
 
    // error handling
    if (cans < 0) {

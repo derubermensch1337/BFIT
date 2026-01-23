@@ -213,8 +213,8 @@ void loop()
   static uint32_t lastWeightPrintMs = 0;
   if (millis() - lastWeightPrintMs >= 1000) {
     lastWeightPrintMs = millis();
-    Serial.print("Weight: ");
-    Serial.println(get_weight());
+    //Serial.print("Weight: ");
+    //Serial.println(get_weight());
   }
 
   // If MFRC522 got disconnected / serial monitor toggled: re-init

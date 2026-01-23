@@ -146,7 +146,7 @@ for (int i = 0; i < MAX_ROOMS; i++) {
     }
 
     if (saleIndex >= 0 && saleIndex < ROOM_COUNT) {
-        greenHeight[saleIndex] += (cans_taken * 5);
+        greenHeight[saleIndex] += (cans_taken * 50);
         if (greenHeight[saleIndex] < 0) greenHeight[saleIndex] = 0;
 
         Serial.print("Updated greenHeight[");

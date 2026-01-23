@@ -70,7 +70,6 @@ void user_management(RFIDcommand incomingCommand, User* ptr, MFRC522 &rfid){
         }
         localCmd = CMD_NONE;
         display_commands_um();
-        display_commands_um();
         break;
       case CMD_PRINT:
         print_all_users(&users[0]);
