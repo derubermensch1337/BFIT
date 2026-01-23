@@ -1,9 +1,23 @@
+
+/**
+ * @file buzzer.h
+ * @brief Implementation of buzzer sound effects.
+ * @author Anssi Sohlman
+ */
 #include "buzzer.h"
 
+/** GPIO pin connected to the buzzer */
 const int BUZZERPIN = 2;   // D4 = GPIO2. Could be improved, issues with resets
+
+/** Frequency (Hz) used for high-tone buzzer sound */
 const double HIGH_TONE = 1000;
+
+/** Frequency (Hz) used for low-tone buzzer sound */
 const double LOW_TONE = 600;
+
+/** Duration of buzzer tone in milliseconds */
 const unsigned long TONE_LENGTH = 200;
+
 
 // ====================== Buzzer functions =====================================
 

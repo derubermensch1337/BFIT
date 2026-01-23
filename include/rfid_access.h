@@ -3,7 +3,7 @@
  * @brief 
  * @author Amal Araweelo Almis
  * @author Baldur G. Toftegaard
- * @author Anssi K. Sohlman
+ * @author Anssi Sohlman
  */
 
 #ifndef RFID_ACCESS_H

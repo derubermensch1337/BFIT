@@ -2,14 +2,6 @@
  * @file database_management.cpp
  * @authors Anssi Sohlman,
  * @brief Used to read and write non-volatile memory on ESP8266 
- * @date 16-01-2026
- * @version 0.1
- * @par Revision history
- * | Version |    Date    | Description                       |
- * |---------|------------|-----------------------------------|
- * | 0.1     | 16-01-2026 | Initial version                   |                               |
- * 
- * @copyright Copyright (c) 2026
  * 
 */
 
