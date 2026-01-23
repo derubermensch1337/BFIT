@@ -6,27 +6,23 @@
 */
 
 /* 
-Notes on EEPROM:
+ * Notes on EEPROM:
+ * The non-volatile memory of ESP8266 has limited writes (about 10k) and unlimited reads. 
+ * 1 write can be saving multiple things. From what I can tell wearing it out doesn’t break other parts of the board, 
+ * but it’s probably a good idea to be mindful of writes. I propose the following:
+ * 
+ * - Write to EEPROM only when needed, not repeatedly in a loop
+ * - User id and room number are stored in EEPROM with balance of 0. These rarely need to be changed.
+ * - When device is reset, load data from EEPROM to users[]
+ * - Discard balance changes when power is reset, don't save to EEPROM (or have a specific command to bulk save if needed for testing)
+ * 
+ * Editing users:
+ * - Add/delete users to/from users[] array
+ * - When done, write users[] to EEPROM
+ * 
+ * Use commands from EEPROM.h library
+*/
 
-The non-volatile memory of ESP8266 has limited writes (about 10k) and unlimited reads. 
-1 write can be saving multiple things. From what I can tell wearing it out doesn’t break other parts of the board, 
-but it’s probably a good idea to be mindful of writes. I propose the following:
-
-- Write to EEPROM only when needed, not repeatedly in a loop
-- User id and room number are stored in EEPROM with balance of 0. These rarely need to be changed.
-- When device is reset, load data from EEPROM to users[]
-- Discard balance changes when power is reset, don't save to EEPROM (or have a specific command to bulk save if needed for testing)
-
-Editing users:
-- Add/delete users to/from users[] array
-- When done, write users[] to EEPROM
-
-Use commands from EEPROM.h library
-
- */
-
-
-//Is this needed here?
 #include "rfid_access.h"
 #include <EEPROM.h>
 
