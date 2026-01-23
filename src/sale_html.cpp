@@ -1,17 +1,18 @@
 /**
  * @file sale_html.cpp
- * @brief 
+ * @brief File for setting up the graph section of the web server
  * @author Baldur G. Toftegaard
 */
 
 #include "index_html.h"
 #include "sale_html.h"
 
+/* ---------- String segments used to set up the graph section of the HTML ---------- */
 const char SALE_BOX_START[] PROGMEM = R"rawliteral( <div class="sale_box">)rawliteral";
 const char SALE_BOX_ROOM_START[] PROGMEM = R"rawliteral( <div class="sale_room">)rawliteral";
-const char SALE_BOX_ROOM_ID[] PROGMEM = R"rawliteral(<div id="room)rawliteral"; // room number and type
-const char SALE_BOX_ROOM_CLASS_TYPE[] PROGMEM = R"rawliteral(" class="sale_pole_)rawliteral"; // type
-const char SALE_BOX_ROOM_CLASS_HEIGHT[] PROGMEM = R"rawliteral(" style="height:)rawliteral"; // height
+const char SALE_BOX_ROOM_ID[] PROGMEM = R"rawliteral(<div id="room)rawliteral";                 // Insert room number and type
+const char SALE_BOX_ROOM_CLASS_TYPE[] PROGMEM = R"rawliteral(" class="sale_pole_)rawliteral";   // Insert type
+const char SALE_BOX_ROOM_CLASS_HEIGHT[] PROGMEM = R"rawliteral(" style="height:)rawliteral";    // Insert height
 const char SALE_BOX_ROOM_END[] PROGMEM = R"rawliteral(px;"></div>)rawliteral";
 const char SALE_BOX_ROOM_STOP[] PROGMEM = R"rawliteral(</div>)rawliteral";
 const char SALE_BOX_STOP[] PROGMEM = R"rawliteral(</div>)rawliteral";

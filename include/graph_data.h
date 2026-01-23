@@ -1,3 +1,9 @@
+/**
+ * @file graph_data.h
+ * @brief File used for setting up the graph section of the web server
+ * @author Baldur G. Toftegaard
+*/
+
 #ifndef GRAPH_DATA_H
 #define GRAPH_DATA_H
 

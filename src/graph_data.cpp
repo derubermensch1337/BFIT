@@ -1,3 +1,9 @@
+/**
+ * @file graph_data.cpp
+ * @brief File used to set up the graph section in the web server
+ * @author Baldur G. Toftegaard
+*/
+
 #include "graph_data.h"
 
 extern int greenHeight[ROOM_COUNT];
