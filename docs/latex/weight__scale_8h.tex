@@ -1,62 +1,48 @@
-\hypertarget{weight__scale_8h}{}\doxysection{include/weight\+\_\+scale.h File Reference}
-\label{weight__scale_8h}\index{include/weight\_scale.h@{include/weight\_scale.h}}
-{\ttfamily \#include $<$Arduino.\+h$>$}\newline
-{\ttfamily \#include $<$HX711\+\_\+\+ADC.\+h$>$}\newline
-{\ttfamily \#include $<$math.\+h$>$}\newline
-Include dependency graph for weight\+\_\+scale.\+h\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=314pt]{weight__scale_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=350pt]{weight__scale_8h__dep__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Macros}
+\doxysection{include/\+weight\+\_\+scale.h File Reference}
+\hypertarget{weight__scale_8h}{}\label{weight__scale_8h}\index{include/weight\_scale.h@{include/weight\_scale.h}}
+{\ttfamily \+\#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \+\#include $<$HX711\+\_\+\+ADC.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{weight__scale_8h_a934197943a04118eb78d8986d6226e62}{BEER\+\_\+\+WEIGHT}}~350
+\+\#define \doxymbox{\hyperlink{weight__scale_8h_a934197943a04118eb78d8986d6226e62}{BEER\+\_\+\+WEIGHT}}~350
 \begin{DoxyCompactList}\small\item\em Define the weight of a beer. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{weight__scale_8h_aba45fa10c8771e9d695de9515e00a584}{SCALE\+\_\+\+TOL}}~25
+\+\#define \doxymbox{\hyperlink{weight__scale_8h_aba45fa10c8771e9d695de9515e00a584}{SCALE\+\_\+\+TOL}}~25
 \begin{DoxyCompactList}\small\item\em Define the uncertainty of the weight mesurment. \end{DoxyCompactList}\item 
-\#define \mbox{\hyperlink{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}{HX711\+\_\+\+DOUT}}~4
+\+\#define \doxymbox{\hyperlink{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}{HX711\+\_\+\+DOUT}}~4
 \item 
-\#define \mbox{\hyperlink{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}{HX711\+\_\+\+SCK}}~5
+\+\#define \doxymbox{\hyperlink{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}{HX711\+\_\+\+SCK}}~5
 \item 
-\#define \mbox{\hyperlink{weight__scale_8h_a3e82864e162c50e8b59442a71ee276e5}{SCALE\+\_\+\+DEFAULT\+\_\+\+SETTLE\+\_\+\+TIME\+\_\+\+MS}}~3000
+\+\#define \doxymbox{\hyperlink{weight__scale_8h_a3e82864e162c50e8b59442a71ee276e5}{SCALE\+\_\+\+DEFAULT\+\_\+\+SETTLE\+\_\+\+TIME\+\_\+\+MS}}~3000
 \end{DoxyCompactItemize}
-\doxysubsection*{Functions}
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-float \mbox{\hyperlink{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39}{get\+\_\+weight\+\_\+reference}} (void)
+float \doxymbox{\hyperlink{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39}{get\+\_\+weight\+\_\+reference}} (void)
 \begin{DoxyCompactList}\small\item\em Function to get the weight reference. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{weight__scale_8h_ad54106645ba2b474709a603d36b798a3}{set\+\_\+weight\+\_\+reference}} (float value)
+void \doxymbox{\hyperlink{weight__scale_8h_ad54106645ba2b474709a603d36b798a3}{set\+\_\+weight\+\_\+reference}} (float value)
 \begin{DoxyCompactList}\small\item\em Function to set the weight reference. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{weight__scale_8h_a7047d1686ef43c502785c65254e71382}{reset\+\_\+weight\+\_\+reference}} (void)
+void \doxymbox{\hyperlink{weight__scale_8h_a7047d1686ef43c502785c65254e71382}{reset\+\_\+weight\+\_\+reference}} (void)
 \begin{DoxyCompactList}\small\item\em Function to reset the weight reference. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec}{weight\+\_\+reference\+\_\+is\+\_\+set}} (void)
+bool \doxymbox{\hyperlink{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec}{weight\+\_\+reference\+\_\+is\+\_\+set}} (void)
 \begin{DoxyCompactList}\small\item\em Function to send confirmation that the weight reference is set. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61}{setup\+\_\+scale}} (float cal\+Factor)
+void \doxymbox{\hyperlink{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61}{setup\+\_\+scale}} (float cal\+Factor)
 \begin{DoxyCompactList}\small\item\em Function to seting up the scale, is called in the begining of the program. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce}{update\+\_\+scale}} (void)
+bool \doxymbox{\hyperlink{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce}{update\+\_\+scale}} (void)
 \begin{DoxyCompactList}\small\item\em Function for updating the scale value. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{weight__scale_8h_a5cba95c421ad72336a98f705603cb239}{get\+\_\+weight}} (void)
+float \doxymbox{\hyperlink{weight__scale_8h_a5cba95c421ad72336a98f705603cb239}{get\+\_\+weight}} (void)
 \begin{DoxyCompactList}\small\item\em Function to get the scale reading. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{weight__scale_8h_a52c547ad0136e524ca4adef329451a92}{tare\+\_\+scale}} (void)
+void \doxymbox{\hyperlink{weight__scale_8h_a52c547ad0136e524ca4adef329451a92}{tare\+\_\+scale}} (void)
 \begin{DoxyCompactList}\small\item\em Function to tare the scale. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e}{tare\+\_\+complete}} (void)
+bool \doxymbox{\hyperlink{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e}{tare\+\_\+complete}} (void)
 \begin{DoxyCompactList}\small\item\em Function to signal that the scale has been tared. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf}{get\+\_\+beer\+\_\+cans\+\_\+taken}} (float referenc\+Weight, float current\+Weight)
+int \doxymbox{\hyperlink{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf}{get\+\_\+beer\+\_\+cans\+\_\+taken}} (float referenc\+Weight, float current\+Weight)
 \begin{DoxyCompactList}\small\item\em Function to get the number of beer cans taken. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-HX711\+\_\+\+ADC \mbox{\hyperlink{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90}{scale}}
+HX711\+\_\+\+ADC \doxymbox{\hyperlink{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90}{scale}}
 \end{DoxyCompactItemize}
 
 
@@ -66,40 +52,42 @@ Amal Araweelo Almis
 \end{DoxyAuthor}
 
 
+\label{doc-define-members}
+\Hypertarget{weight__scale_8h_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{weight__scale_8h_a934197943a04118eb78d8986d6226e62}\label{weight__scale_8h_a934197943a04118eb78d8986d6226e62}} 
-\index{weight\_scale.h@{weight\_scale.h}!BEER\_WEIGHT@{BEER\_WEIGHT}}
+\Hypertarget{weight__scale_8h_a934197943a04118eb78d8986d6226e62}\index{weight\_scale.h@{weight\_scale.h}!BEER\_WEIGHT@{BEER\_WEIGHT}}
 \index{BEER\_WEIGHT@{BEER\_WEIGHT}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{BEER\_WEIGHT}{BEER\_WEIGHT}}
-{\footnotesize\ttfamily \#define BEER\+\_\+\+WEIGHT~350}
+{\footnotesize\ttfamily \label{weight__scale_8h_a934197943a04118eb78d8986d6226e62} 
+\+\#define BEER\+\_\+\+WEIGHT~350}
 
 
 
 Define the weight of a beer. 
 
-\mbox{\Hypertarget{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}\label{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}} 
-\index{weight\_scale.h@{weight\_scale.h}!HX711\_DOUT@{HX711\_DOUT}}
+\Hypertarget{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}\index{weight\_scale.h@{weight\_scale.h}!HX711\_DOUT@{HX711\_DOUT}}
 \index{HX711\_DOUT@{HX711\_DOUT}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{HX711\_DOUT}{HX711\_DOUT}}
-{\footnotesize\ttfamily \#define HX711\+\_\+\+DOUT~4}
+{\footnotesize\ttfamily \label{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a} 
+\+\#define HX711\+\_\+\+DOUT~4}
 
-\mbox{\Hypertarget{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}\label{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}} 
-\index{weight\_scale.h@{weight\_scale.h}!HX711\_SCK@{HX711\_SCK}}
+\Hypertarget{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}\index{weight\_scale.h@{weight\_scale.h}!HX711\_SCK@{HX711\_SCK}}
 \index{HX711\_SCK@{HX711\_SCK}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{HX711\_SCK}{HX711\_SCK}}
-{\footnotesize\ttfamily \#define HX711\+\_\+\+SCK~5}
+{\footnotesize\ttfamily \label{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3} 
+\+\#define HX711\+\_\+\+SCK~5}
 
-\mbox{\Hypertarget{weight__scale_8h_a3e82864e162c50e8b59442a71ee276e5}\label{weight__scale_8h_a3e82864e162c50e8b59442a71ee276e5}} 
-\index{weight\_scale.h@{weight\_scale.h}!SCALE\_DEFAULT\_SETTLE\_TIME\_MS@{SCALE\_DEFAULT\_SETTLE\_TIME\_MS}}
+\Hypertarget{weight__scale_8h_a3e82864e162c50e8b59442a71ee276e5}\index{weight\_scale.h@{weight\_scale.h}!SCALE\_DEFAULT\_SETTLE\_TIME\_MS@{SCALE\_DEFAULT\_SETTLE\_TIME\_MS}}
 \index{SCALE\_DEFAULT\_SETTLE\_TIME\_MS@{SCALE\_DEFAULT\_SETTLE\_TIME\_MS}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{SCALE\_DEFAULT\_SETTLE\_TIME\_MS}{SCALE\_DEFAULT\_SETTLE\_TIME\_MS}}
-{\footnotesize\ttfamily \#define SCALE\+\_\+\+DEFAULT\+\_\+\+SETTLE\+\_\+\+TIME\+\_\+\+MS~3000}
+{\footnotesize\ttfamily \label{weight__scale_8h_a3e82864e162c50e8b59442a71ee276e5} 
+\+\#define SCALE\+\_\+\+DEFAULT\+\_\+\+SETTLE\+\_\+\+TIME\+\_\+\+MS~3000}
 
-\mbox{\Hypertarget{weight__scale_8h_aba45fa10c8771e9d695de9515e00a584}\label{weight__scale_8h_aba45fa10c8771e9d695de9515e00a584}} 
-\index{weight\_scale.h@{weight\_scale.h}!SCALE\_TOL@{SCALE\_TOL}}
+\Hypertarget{weight__scale_8h_aba45fa10c8771e9d695de9515e00a584}\index{weight\_scale.h@{weight\_scale.h}!SCALE\_TOL@{SCALE\_TOL}}
 \index{SCALE\_TOL@{SCALE\_TOL}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{SCALE\_TOL}{SCALE\_TOL}}
-{\footnotesize\ttfamily \#define SCALE\+\_\+\+TOL~25}
+{\footnotesize\ttfamily \label{weight__scale_8h_aba45fa10c8771e9d695de9515e00a584} 
+\+\#define SCALE\+\_\+\+TOL~25}
 
 
 
@@ -107,12 +95,14 @@ Define the uncertainty of the weight mesurment.
 
 
 
+\label{doc-func-members}
+\Hypertarget{weight__scale_8h_doc-func-members}
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf}\label{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf}} 
-\index{weight\_scale.h@{weight\_scale.h}!get\_beer\_cans\_taken@{get\_beer\_cans\_taken}}
+\Hypertarget{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf}\index{weight\_scale.h@{weight\_scale.h}!get\_beer\_cans\_taken@{get\_beer\_cans\_taken}}
 \index{get\_beer\_cans\_taken@{get\_beer\_cans\_taken}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{get\_beer\_cans\_taken()}{get\_beer\_cans\_taken()}}
-{\footnotesize\ttfamily int get\+\_\+beer\+\_\+cans\+\_\+taken (\begin{DoxyParamCaption}\item[{float}]{referenc\+Weight,  }\item[{float}]{current\+Weight }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a44c775d39fd60f8215d99a683c6075cf} 
+int get\+\_\+beer\+\_\+cans\+\_\+taken (\begin{DoxyParamCaption}\item[{float}]{referenc\+Weight}{, }\item[{float}]{current\+Weight}{}\end{DoxyParamCaption})}
 
 
 
@@ -120,55 +110,55 @@ Function to get the number of beer cans taken.
 
 
 \begin{DoxyParams}{Parameters}
-{\em referenc\+Weight} & \\
+{\em referenc\+Weight} & -\/ The set reference weight \+[g]\+ \\
 \hline
-{\em current\+Weight} & \\
+{\em current\+Weight} & -\/ The current mesured weight \+[g]\+ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-int 
+int -\/ number of cans taken 
 \end{DoxyReturn}
-\mbox{\Hypertarget{weight__scale_8h_a5cba95c421ad72336a98f705603cb239}\label{weight__scale_8h_a5cba95c421ad72336a98f705603cb239}} 
-\index{weight\_scale.h@{weight\_scale.h}!get\_weight@{get\_weight}}
+\Hypertarget{weight__scale_8h_a5cba95c421ad72336a98f705603cb239}\index{weight\_scale.h@{weight\_scale.h}!get\_weight@{get\_weight}}
 \index{get\_weight@{get\_weight}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{get\_weight()}{get\_weight()}}
-{\footnotesize\ttfamily float get\+\_\+weight (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a5cba95c421ad72336a98f705603cb239} 
+float get\+\_\+weight (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function to get the scale reading. 
 
 \begin{DoxyReturn}{Returns}
-float 
+float -\/ Value read from weight. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39}\label{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39}} 
-\index{weight\_scale.h@{weight\_scale.h}!get\_weight\_reference@{get\_weight\_reference}}
+\Hypertarget{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39}\index{weight\_scale.h@{weight\_scale.h}!get\_weight\_reference@{get\_weight\_reference}}
 \index{get\_weight\_reference@{get\_weight\_reference}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{get\_weight\_reference()}{get\_weight\_reference()}}
-{\footnotesize\ttfamily float get\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a557e479341e40c8b97a97f7ab4723a39} 
+float get\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function to get the weight reference. 
 
 \begin{DoxyReturn}{Returns}
-float 
+float -\/ The weight reference. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{weight__scale_8h_a7047d1686ef43c502785c65254e71382}\label{weight__scale_8h_a7047d1686ef43c502785c65254e71382}} 
-\index{weight\_scale.h@{weight\_scale.h}!reset\_weight\_reference@{reset\_weight\_reference}}
+\Hypertarget{weight__scale_8h_a7047d1686ef43c502785c65254e71382}\index{weight\_scale.h@{weight\_scale.h}!reset\_weight\_reference@{reset\_weight\_reference}}
 \index{reset\_weight\_reference@{reset\_weight\_reference}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{reset\_weight\_reference()}{reset\_weight\_reference()}}
-{\footnotesize\ttfamily void reset\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a7047d1686ef43c502785c65254e71382} 
+void reset\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function to reset the weight reference. 
 
-\mbox{\Hypertarget{weight__scale_8h_ad54106645ba2b474709a603d36b798a3}\label{weight__scale_8h_ad54106645ba2b474709a603d36b798a3}} 
-\index{weight\_scale.h@{weight\_scale.h}!set\_weight\_reference@{set\_weight\_reference}}
+\Hypertarget{weight__scale_8h_ad54106645ba2b474709a603d36b798a3}\index{weight\_scale.h@{weight\_scale.h}!set\_weight\_reference@{set\_weight\_reference}}
 \index{set\_weight\_reference@{set\_weight\_reference}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{set\_weight\_reference()}{set\_weight\_reference()}}
-{\footnotesize\ttfamily void set\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_ad54106645ba2b474709a603d36b798a3} 
+void set\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})}
 
 
 
@@ -176,14 +166,14 @@ Function to set the weight reference.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & \\
+{\em value} & -\/ Reference value. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61}\label{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61}} 
-\index{weight\_scale.h@{weight\_scale.h}!setup\_scale@{setup\_scale}}
+\Hypertarget{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61}\index{weight\_scale.h@{weight\_scale.h}!setup\_scale@{setup\_scale}}
 \index{setup\_scale@{setup\_scale}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{setup\_scale()}{setup\_scale()}}
-{\footnotesize\ttfamily void setup\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{cal\+Factor }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a6935e95b7d94815d7d15b0954af4ac61} 
+void setup\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{cal\+Factor}{}\end{DoxyParamCaption})}
 
 
 
@@ -191,70 +181,72 @@ Function to seting up the scale, is called in the begining of the program.
 
 
 \begin{DoxyParams}{Parameters}
-{\em cal\+Factor} & \\
+{\em cal\+Factor} & -\/ The calibration factor. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e}\label{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e}} 
-\index{weight\_scale.h@{weight\_scale.h}!tare\_complete@{tare\_complete}}
+\Hypertarget{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e}\index{weight\_scale.h@{weight\_scale.h}!tare\_complete@{tare\_complete}}
 \index{tare\_complete@{tare\_complete}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{tare\_complete()}{tare\_complete()}}
-{\footnotesize\ttfamily bool tare\+\_\+complete (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a242bb0d35ef110b088452d6d87e7417e} 
+bool tare\+\_\+complete (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function to signal that the scale has been tared. 
 
 \begin{DoxyReturn}{Returns}
-true 
+true -\/ The scale was tared. 
 
-false 
+false -\/ The scale was not tared. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{weight__scale_8h_a52c547ad0136e524ca4adef329451a92}\label{weight__scale_8h_a52c547ad0136e524ca4adef329451a92}} 
-\index{weight\_scale.h@{weight\_scale.h}!tare\_scale@{tare\_scale}}
+\Hypertarget{weight__scale_8h_a52c547ad0136e524ca4adef329451a92}\index{weight\_scale.h@{weight\_scale.h}!tare\_scale@{tare\_scale}}
 \index{tare\_scale@{tare\_scale}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{tare\_scale()}{tare\_scale()}}
-{\footnotesize\ttfamily void tare\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a52c547ad0136e524ca4adef329451a92} 
+void tare\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function to tare the scale. 
 
-\mbox{\Hypertarget{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce}\label{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce}} 
-\index{weight\_scale.h@{weight\_scale.h}!update\_scale@{update\_scale}}
+\Hypertarget{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce}\index{weight\_scale.h@{weight\_scale.h}!update\_scale@{update\_scale}}
 \index{update\_scale@{update\_scale}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{update\_scale()}{update\_scale()}}
-{\footnotesize\ttfamily bool update\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_abce45e7f6f4bc0b0f8ea8e71b15583ce} 
+bool update\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function for updating the scale value. 
 
 \begin{DoxyReturn}{Returns}
-true 
+true -\/ Scale was updated. 
 
-false 
+false -\/ Scale was not updated. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec}\label{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec}} 
-\index{weight\_scale.h@{weight\_scale.h}!weight\_reference\_is\_set@{weight\_reference\_is\_set}}
+\Hypertarget{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec}\index{weight\_scale.h@{weight\_scale.h}!weight\_reference\_is\_set@{weight\_reference\_is\_set}}
 \index{weight\_reference\_is\_set@{weight\_reference\_is\_set}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{weight\_reference\_is\_set()}{weight\_reference\_is\_set()}}
-{\footnotesize\ttfamily bool weight\+\_\+reference\+\_\+is\+\_\+set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{weight__scale_8h_a226cdacd16622ac55e7060d380d0feec} 
+bool weight\+\_\+reference\+\_\+is\+\_\+set (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
 
 
 Function to send confirmation that the weight reference is set. 
 
 \begin{DoxyReturn}{Returns}
-true 
+true -\/ Weight reference is set. 
 
-false 
+false -\/ Weight reference is not set. 
 \end{DoxyReturn}
 
 
+\label{doc-var-members}
+\Hypertarget{weight__scale_8h_doc-var-members}
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90}\label{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90}} 
-\index{weight\_scale.h@{weight\_scale.h}!scale@{scale}}
+\Hypertarget{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90}\index{weight\_scale.h@{weight\_scale.h}!scale@{scale}}
 \index{scale@{scale}!weight\_scale.h@{weight\_scale.h}}
 \doxysubsubsection{\texorpdfstring{scale}{scale}}
-{\footnotesize\ttfamily HX711\+\_\+\+ADC scale\hspace{0.3cm}{\ttfamily [extern]}}
+{\footnotesize\ttfamily \label{weight__scale_8h_ae60876e815d0d3ca08c9d23601790f90} 
+HX711\+\_\+\+ADC scale\hspace{0.3cm}{\ttfamily [extern]}}
 

@@ -1,30 +1,16 @@
-\hypertarget{index__html_8h}{}\doxysection{include/index\+\_\+html.h File Reference}
-\label{index__html_8h}\index{include/index\_html.h@{include/index\_html.h}}
+\doxysection{include/\+index\+\_\+html.h File Reference}
+\hypertarget{index__html_8h}{}\label{index__html_8h}\index{include/index\_html.h@{include/index\_html.h}}
 
 
 HTML for the start page.  
 
 
-{\ttfamily \#include $<$pgmspace.\+h$>$}\newline
-Include dependency graph for index\+\_\+html.\+h\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=199pt]{index__html_8h__incl}
-\end{center}
-\end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=279pt]{index__html_8h__dep__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Variables}
+{\ttfamily \+\#include $<$pgmspace.\+h$>$}\newline
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const char INDEX\+\_\+\+HTML\+\_\+\+HEAD\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{index__html_8h_a92af15c18628c19c4d98263e428df3ca}{PROGMEM}}
-\begin{DoxyCompactList}\small\item\em Sting used for the HTML header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+const char INDEX\+\_\+\+HTML\+\_\+\+HEAD\+[$\,$]\+ \doxymbox{\hyperlink{index__html_8h_a92af15c18628c19c4d98263e428df3ca}{PROGMEM}}
+\begin{DoxyCompactList}\small\item\em Sting used for the HTML header, read by the compiler as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -35,37 +21,39 @@ Baldur G. Toftegaard
 \end{DoxyAuthor}
 
 
+\label{doc-var-members}
+\Hypertarget{index__html_8h_doc-var-members}
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{index__html_8h_a92af15c18628c19c4d98263e428df3ca}\label{index__html_8h_a92af15c18628c19c4d98263e428df3ca}} 
-\index{index\_html.h@{index\_html.h}!PROGMEM@{PROGMEM}}
+\Hypertarget{index__html_8h_a92af15c18628c19c4d98263e428df3ca}\index{index\_html.h@{index\_html.h}!PROGMEM@{PROGMEM}}
 \index{PROGMEM@{PROGMEM}!index\_html.h@{index\_html.h}}
 \doxysubsubsection{\texorpdfstring{PROGMEM}{PROGMEM}}
-{\footnotesize\ttfamily const char INDEX\+\_\+\+HTML\+\_\+\+FOOT \mbox{[}$\,$\mbox{]} PROGMEM}
+{\footnotesize\ttfamily \label{index__html_8h_a92af15c18628c19c4d98263e428df3ca} 
+const char INDEX\+\_\+\+HTML\+\_\+\+FOOT \+[$\,$]\+ PROGMEM}
 
-{\bfseries Initial value\+:}
+{\bfseries Initial value:\+}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{= R\textcolor{stringliteral}{"{}rawliteral(}}
-\DoxyCodeLine{\textcolor{stringliteral}{<!DOCTYPE html>}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ R\textcolor{stringliteral}{"{}rawliteral(}}
+\DoxyCodeLine{\textcolor{stringliteral}{<!DOCTYPE\ html>}}
 \DoxyCodeLine{\textcolor{stringliteral}{<html>}}
-\DoxyCodeLine{\textcolor{stringliteral}{  <head>}}
-\DoxyCodeLine{\textcolor{stringliteral}{    <meta charset="{}utf-\/8"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{    <title>Beer fridge online services</title>}}
-\DoxyCodeLine{\textcolor{stringliteral}{    <link rel="{}stylesheet"{} href="{}/style.css"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{  </head>}}
-\DoxyCodeLine{\textcolor{stringliteral}{  <body>}}
-\DoxyCodeLine{\textcolor{stringliteral}{    <div class="{}topbar"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{      <div class="{}left"{}>Welcome!</div>}}
-\DoxyCodeLine{\textcolor{stringliteral}{      <div class="{}right"{}><a href="{}/login"{}>Login</a></div>}}
-\DoxyCodeLine{\textcolor{stringliteral}{    </div>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ <head>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ <meta\ charset="{}utf-\/8"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ <title>Beer\ fridge\ online\ services</title>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ <link\ rel="{}stylesheet"{}\ href="{}/style.css"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ </head>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ <body>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ <div\ class="{}topbar"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ <div\ class="{}left"{}>Welcome!</div>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ <div\ class="{}right"{}><a\ href="{}/login"{}>Login</a></div>}}
+\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ </div>}}
 \DoxyCodeLine{\textcolor{stringliteral}{)rawliteral"{}}}
 
 \end{DoxyCode}
 
 
-Sting used for the HTML header. 
+Sting used for the HTML header, read by the compiler as a string. 
 
 Opening container for the sales graph.
 
 String used for the HTML footer.
 
-This is responsible for updating the graphs. 
+This is responsible for updating the graphs. read by the compiler as a string 

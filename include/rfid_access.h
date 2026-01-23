@@ -70,7 +70,7 @@ RFIDcommand check_command(
 /**
  * @brief Initializes SPI and the MFRC522 RFID reader.
  * 
- * @param rfid An instance of a MFRC522 object
+ * @param rfid - An instance of a MFRC522 object
 */
 void setup_RFID_reader(
     MFRC522 &rfid
@@ -79,9 +79,9 @@ void setup_RFID_reader(
 /**
  * @brief Adds a new user by reading room number and scanning an RFID tag.
  * 
- * @param rfid An instance of a MFRC522 object
- * @return true 
- * @return false 
+ * @param rfid - An instance of a MFRC522 object.
+ * @return true - User was added.
+ * @return false - User was not added.
 */
 bool add_user(
     MFRC522 &rfid
@@ -90,8 +90,8 @@ bool add_user(
 /**
  * @brief Removes a user from the database.
  * 
- * @return true 
- * @return false 
+ * @return true - User was removed.
+ * @return false - User was not removed.
 */
 bool remove_user(
 );
@@ -99,10 +99,10 @@ bool remove_user(
 /**
  * @brief Compares two RFID UIDs.
  * 
- * @param uid1 
- * @param uid2 
- * @return true 
- * @return false 
+ * @param uid1 - The first uid number.
+ * @param uid2 - The uid number we want to dompare it to.
+ * @return true - Numbers match.
+ * @return false - NUmbers do not match.
 */
 bool compare_UID(
     byte *uid1, 
@@ -114,8 +114,8 @@ bool compare_UID(
  * 
  * @param rfid An instance of a MFRC522 object
  * @param uidBuffer An array where the UID is saved to
- * @return true 
- * @return false 
+ * @return true - RFID tag was read.
+ * @return false - No RFID tag was read.
 */
 bool read_RFID_tag(
     MFRC522 &rfid, 
@@ -161,8 +161,8 @@ void user_management(
  * @brief Validates an RFID tag against the registered user database.
  * 
  * @param myRFID An instance of a MFRC522 object
- * @return true 
- * @return false 
+ * @return true - The RFID was a match.
+ * @return false - There was no matching RFID in the database.
 */
 bool validate_rfid(
     MFRC522 myRFID
@@ -200,7 +200,7 @@ void print_uid(
 /**
  * @brief Reads an integer from the serial interface.
  * 
- * @return int 
+ * @return int - Intiger read from serial interface.
 */
 int read_integer(
 );
@@ -208,8 +208,8 @@ int read_integer(
 /**
  * @brief Reads a confirmation input from the serial interface.
  * 
- * @return true 
- * @return false 
+ * @return true - Confirmed.
+ * @return false - Not confirmed.
 */
 bool read_confirmation(
 );
@@ -218,7 +218,7 @@ bool read_confirmation(
  * @brief brief Finds an empty slot in the user database.
  * 
  * @param ptr A pointer to the users[] array
- * @return int 
+ * @return int - The empty index.
 */
 int find_empty_index(
     User* ptr
@@ -228,7 +228,7 @@ int find_empty_index(
  * @brief brief Counts the number of occupied user entries in the database.
  * 
  * @param ptr A pointer to the users[] array
- * @return int 
+ * @return int - Number of rooms
 */
 int count_rooms(
     User* ptr
@@ -236,9 +236,9 @@ int count_rooms(
 
 /**
  * @brief Function for storing the last used RFID
- * @param uidIn 
- * @return true 
- * @return false 
+ * @param uidOut - Pointer to user it.
+ * @return true - Stored last used uid.
+ * @return false - Last uid was not stored
 */
 void rfid_set_last_uid(
     const byte *uidIn
@@ -246,9 +246,9 @@ void rfid_set_last_uid(
 
 /**
  * @brief Function for restoring the last used RFID
- * @param uidOut 
- * @return true 
- * @return false 
+ * @param uidOut - Pointer to user it.
+ * @return true - There was an last uid to retrive.
+ * @return false - No last uid was retrived.
 */
 bool rfid_get_last_uid( 
     byte *uidOut

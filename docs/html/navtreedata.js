@@ -56,5 +56,6 @@ var NAVTREEINDEX =
 "weight__scale_8h.html#a5cba95c421ad72336a98f705603cb239"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';

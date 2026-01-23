@@ -1,35 +1,43 @@
-\hypertarget{graph__data_8cpp}{}\doxysection{src/graph\+\_\+data.cpp File Reference}
-\label{graph__data_8cpp}\index{src/graph\_data.cpp@{src/graph\_data.cpp}}
-{\ttfamily \#include \char`\"{}graph\+\_\+data.\+h\char`\"{}}\newline
-Include dependency graph for graph\+\_\+data.\+cpp\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=189pt]{graph__data_8cpp__incl}
-\end{center}
-\end{figure}
-\doxysubsection*{Functions}
+\doxysection{src/\+graph\+\_\+data.cpp File Reference}
+\hypertarget{graph__data_8cpp}{}\label{graph__data_8cpp}\index{src/graph\_data.cpp@{src/graph\_data.cpp}}
+
+
+File used to set up the graph section in the web server.  
+
+
+{\ttfamily \+\#include "{}graph\+\_\+data.\+h"{}}\newline
+\doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{graph__data_8cpp_a76ce02f73cd88ff2fec783a40c4cb797}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green}} (uint8\+\_\+t room\+Number, int delta)
+void \doxymbox{\hyperlink{graph__data_8cpp_a76ce02f73cd88ff2fec783a40c4cb797}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green}} (uint8\+\_\+t room\+Number, int delta)
 \begin{DoxyCompactList}\small\item\em Adds a value to the green sales bar of a given room. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{graph__data_8cpp_a8faa2070ca493c37553a77d2f81ec41f}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic}} (uint8\+\_\+t room\+Number, int delta)
+void \doxymbox{\hyperlink{graph__data_8cpp_a8faa2070ca493c37553a77d2f81ec41f}{graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic}} (uint8\+\_\+t room\+Number, int delta)
 \begin{DoxyCompactList}\small\item\em Adds a value to the classic sales bar of a given room. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{graph__data_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}
+int \doxymbox{\hyperlink{graph__data_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+
 \begin{DoxyCompactList}\small\item\em Sales graph height data for green beer. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{graph__data_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}
+int \doxymbox{\hyperlink{graph__data_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+
 \begin{DoxyCompactList}\small\item\em Sales graph height data for classic beer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+File used to set up the graph section in the web server. 
+
+\begin{DoxyAuthor}{Author}
+Baldur G. Toftegaard 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{graph__data_8cpp_doc-func-members}
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{graph__data_8cpp_a8faa2070ca493c37553a77d2f81ec41f}\label{graph__data_8cpp_a8faa2070ca493c37553a77d2f81ec41f}} 
-\index{graph\_data.cpp@{graph\_data.cpp}!graph\_add\_to\_room\_clasic@{graph\_add\_to\_room\_clasic}}
+\Hypertarget{graph__data_8cpp_a8faa2070ca493c37553a77d2f81ec41f}\index{graph\_data.cpp@{graph\_data.cpp}!graph\_add\_to\_room\_clasic@{graph\_add\_to\_room\_clasic}}
 \index{graph\_add\_to\_room\_clasic@{graph\_add\_to\_room\_clasic}!graph\_data.cpp@{graph\_data.cpp}}
 \doxysubsubsection{\texorpdfstring{graph\_add\_to\_room\_clasic()}{graph\_add\_to\_room\_clasic()}}
-{\footnotesize\ttfamily void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{graph__data_8cpp_a8faa2070ca493c37553a77d2f81ec41f} 
+void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+clasic (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
 
 
 
@@ -37,16 +45,16 @@ Adds a value to the classic sales bar of a given room.
 
 
 \begin{DoxyParams}{Parameters}
-{\em room\+Number} & \\
+{\em room\+Number} & -\/ Room operated on. \\
 \hline
-{\em delta} & \\
+{\em delta} & -\/ Incremental value used to update the bar height. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{graph__data_8cpp_a76ce02f73cd88ff2fec783a40c4cb797}\label{graph__data_8cpp_a76ce02f73cd88ff2fec783a40c4cb797}} 
-\index{graph\_data.cpp@{graph\_data.cpp}!graph\_add\_to\_room\_green@{graph\_add\_to\_room\_green}}
+\Hypertarget{graph__data_8cpp_a76ce02f73cd88ff2fec783a40c4cb797}\index{graph\_data.cpp@{graph\_data.cpp}!graph\_add\_to\_room\_green@{graph\_add\_to\_room\_green}}
 \index{graph\_add\_to\_room\_green@{graph\_add\_to\_room\_green}!graph\_data.cpp@{graph\_data.cpp}}
 \doxysubsubsection{\texorpdfstring{graph\_add\_to\_room\_green()}{graph\_add\_to\_room\_green()}}
-{\footnotesize\ttfamily void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number,  }\item[{int}]{delta }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{graph__data_8cpp_a76ce02f73cd88ff2fec783a40c4cb797} 
+void graph\+\_\+add\+\_\+to\+\_\+room\+\_\+green (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{room\+Number}{, }\item[{int}]{delta}{}\end{DoxyParamCaption})}
 
 
 
@@ -54,19 +62,21 @@ Adds a value to the green sales bar of a given room.
 
 
 \begin{DoxyParams}{Parameters}
-{\em room\+Number} & \\
+{\em room\+Number} & -\/ Room operated on. \\
 \hline
-{\em delta} & \\
+{\em delta} & -\/ Incremental value used to update the bar height. \\
 \hline
 \end{DoxyParams}
 
 
+\label{doc-var-members}
+\Hypertarget{graph__data_8cpp_doc-var-members}
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{graph__data_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}\label{graph__data_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}} 
-\index{graph\_data.cpp@{graph\_data.cpp}!classicHeight@{classicHeight}}
+\Hypertarget{graph__data_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}\index{graph\_data.cpp@{graph\_data.cpp}!classicHeight@{classicHeight}}
 \index{classicHeight@{classicHeight}!graph\_data.cpp@{graph\_data.cpp}}
 \doxysubsubsection{\texorpdfstring{classicHeight}{classicHeight}}
-{\footnotesize\ttfamily int classic\+Height\mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+{\footnotesize\ttfamily \label{graph__data_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84} 
+int classic\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
@@ -74,11 +84,11 @@ Sales graph height data for classic beer.
 
 Height values for classic product sales per room.
 
-Indexed by room number. Used by sale\+\_\+html and the /sale\+Heights endpoint. \mbox{\Hypertarget{graph__data_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}\label{graph__data_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}} 
-\index{graph\_data.cpp@{graph\_data.cpp}!greenHeight@{greenHeight}}
+Indexed by room number. Used by sale\+\_\+html and the /\+sale\+Heights endpoint. \Hypertarget{graph__data_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}\index{graph\_data.cpp@{graph\_data.cpp}!greenHeight@{greenHeight}}
 \index{greenHeight@{greenHeight}!graph\_data.cpp@{graph\_data.cpp}}
 \doxysubsubsection{\texorpdfstring{greenHeight}{greenHeight}}
-{\footnotesize\ttfamily int green\+Height\mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+{\footnotesize\ttfamily \label{graph__data_8cpp_a9ce470c42fa52a1e1348aaa5a745614f} 
+int green\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+\hspace{0.3cm}{\ttfamily [extern]}}
 
 
 
@@ -86,4 +96,4 @@ Sales graph height data for green beer.
 
 Height values for green product sales per room.
 
-Indexed by room number. Used by sale\+\_\+html and the /sale\+Heights endpoint. 
+Indexed by room number. Used by sale\+\_\+html and the /\+sale\+Heights endpoint. 

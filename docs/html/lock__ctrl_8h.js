@@ -1,6 +1,7 @@
 var lock__ctrl_8h =
 [
     [ "CLOSED_THRESHOLD", "lock__ctrl_8h.html#a5c6cfb21c3902ddd46bf2bea4b63ba52", null ],
+    [ "LIGHT_PIN", "lock__ctrl_8h.html#a6ddfa85dd52c2aa1af587be3349cb467", null ],
     [ "OPEN_THRESHOLD", "lock__ctrl_8h.html#a95ae562e6521f4c71629109c11a93e7c", null ],
     [ "SERVO_PIN", "lock__ctrl_8h.html#a5218f89aa292654356a48989319aafb1", null ],
     [ "is_box_closed", "lock__ctrl_8h.html#ac854db649e8e27e6f2f34df2311c07ea", null ],

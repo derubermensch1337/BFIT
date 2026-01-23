@@ -4,6 +4,7 @@
  * @brief Implementation of buzzer sound effects.
  * @author Anssi Sohlman
  */
+
 #include "buzzer.h"
 
 /** GPIO pin connected to the buzzer */

@@ -17,9 +17,9 @@ void init_users_and_products();
 
 /**
  * @brief Performs a sale between a user and the fridge.
- * @param weight 
- * @param user_id 
- * @param fridge_inventory 
+ * @param weight - Read the value from the weight.
+ * @param user_id - The user the sale shuld be registered to.
+ * @param fridge_inventory - The inventory we wish to remove the beverage from.
 */
 void perform_sale(
     inventory *fridge_inventory /**< Inventory that the sale shuld remove item from */

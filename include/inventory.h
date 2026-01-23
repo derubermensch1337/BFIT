@@ -99,8 +99,8 @@ product inventory_make_product(
  * @param product Product to add.
  * @param quantity Initial quantity of the product.
  *
- * @return true Product successfully added.
- * @return false Error occurred (inventory full or duplicate product).
+ * @return true - Product successfully added.
+ * @return false - Error occurred (inventory full or duplicate product).
  */
 bool inventory_add_product(
     inventory *inventory,
@@ -115,8 +115,8 @@ bool inventory_add_product(
  * @param inventory Inventory to remove the product from.
  * @param beverage Product to remove.
  *
- * @return true Product removed successfully.
- * @return false Product not found.
+ * @return true - Product removed successfully.
+ * @return false - Product not found.
  */
 bool inventory_remove_product(
     inventory *inventory,
@@ -131,8 +131,8 @@ bool inventory_remove_product(
  * @param beverage Beverage to update.
  * @param amount Quantity to add.
  *
- * @return true Quantity updated successfully.
- * @return false Product not found or overflow.
+ * @return true - Quantity updated successfully.
+ * @return false - Product not found or overflow.
  */
 bool inventory_add_beverage(
     inventory *inventory,
@@ -147,8 +147,8 @@ bool inventory_add_beverage(
  * @param beverage  Beverage to update.
  * @param amount    Quantity to remove.
  *
- * @return true  Quantity updated successfully.
- * @return false Product not found or insufficient stock.
+ * @return true - Quantity updated successfully.
+ * @return false - Product not found or insufficient stock.
  */
 bool inventory_remove_beverage(
     inventory *inventory,
