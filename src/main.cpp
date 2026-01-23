@@ -167,6 +167,9 @@ static void setup_inventory_and_scale()
   perform_sale(&fridge);
 }
 
+/**
+ * @brief Call functions to setup RFID scanner, fetch users from EEPROM, lock the door and display commands
+ */
 static void setup_rfid_and_lock()
 {
   setup_RFID_reader(rfid);
@@ -178,6 +181,9 @@ static void setup_rfid_and_lock()
 }
 
 /* ---------------- setup() ---------------- */
+/**
+ * @brief Set up serial monitor, wifi connection, web server, scale, RFID and lock
+ */
 void setup()
 {
   Serial.begin(115200);
@@ -203,7 +209,9 @@ void setup()
 }
 
 /* ---------------- loop() ---------------- */
-
+/**
+ * @brief Update web server and scale, read and execute commands, read RFID tags, unlock and lock door
+ *  */
 void loop()
 {
   // Keep web server responsive
