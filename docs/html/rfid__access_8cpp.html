@@ -130,8 +130,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a17948a54fedc435a57c485ea53175ca0" id="r_a17948a54fedc435a57c485ea53175ca0"><td class="memItemLeft">static bool&#160;</td><td class="memItemRight"><a class="el" href="#a17948a54fedc435a57c485ea53175ca0">hasUID</a> = false</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>File used to setup the RFID. </p>
-<dl class="section author"><dt>Author</dt><dd>Amal Araweelo Almis </dd>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Amal Araweelo Almis </dd>
 <dd>
 Baldur G. Toftegaard </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -149,17 +148,15 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Adds a new user by reading room number and scanning an RFID tag. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>- An instance of a MFRC522 object. </td></tr>
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>An instance of a MFRC522 object. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was added. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was added. </dd>
 <dd>
-false - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not added. </dd></dl>
+false <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not added. </dd></dl>
 
 </div>
 </div>
@@ -177,8 +174,6 @@ false - <a class="el" href="struct_user.html" title="User record stored in the R
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Reads a command from the serial interface and maps it to an <a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a> </dd></dl>
 
 </div>
@@ -201,18 +196,16 @@ false - <a class="el" href="struct_user.html" title="User record stored in the R
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Compares two RFID UIDs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uid1</td><td>- The first uid number. </td></tr>
-    <tr><td class="paramname">uid2</td><td>- The uid number we want to dompare it to. </td></tr>
+    <tr><td class="paramname">uid1</td><td>The first uid number. </td></tr>
+    <tr><td class="paramname">uid2</td><td>The uid number we want to dompare it to. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - Numbers match. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Numbers match. </dd>
 <dd>
-false - NUmbers do not match. </dd></dl>
+false NUmbers do not match. </dd></dl>
 
 </div>
 </div>
@@ -231,8 +224,6 @@ false - NUmbers do not match. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Prints the available serial commands. </p>
-
 </div>
 </div>
 <a id="a301fdf0545d6da25fbe5ed4abcc6f075" name="a301fdf0545d6da25fbe5ed4abcc6f075"></a>
@@ -249,8 +240,6 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prints the available serial commands for user-management mode. </p>
 
 </div>
 </div>
@@ -272,8 +261,6 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reads an RFID tag UID from the MFRC522 reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>An instance of a MFRC522 object </td></tr>
@@ -281,9 +268,9 @@ false - NUmbers do not match. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - RFID tag was read. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true RFID tag was read. </dd>
 <dd>
-false - No RFID tag was read. </dd></dl>
+false No RFID tag was read. </dd></dl>
 
 </div>
 </div>
@@ -301,17 +288,15 @@ false - No RFID tag was read. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Function for restoring the last used RFID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uidOut</td><td>- Pointer to user it. </td></tr>
+    <tr><td class="paramname">uidOut</td><td>Pointer to user it. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - There was an last uid to retrive. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true There was an last uid to retrive. </dd>
 <dd>
-false - No last uid was retrived. </dd></dl>
+false No last uid was retrived. </dd></dl>
 
 </div>
 </div>
@@ -329,17 +314,15 @@ false - No last uid was retrived. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Function for storing the last used RFID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uidOut</td><td>- Pointer to user it. </td></tr>
+    <tr><td class="paramname">uidOut</td><td>Pointer to user it. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - Stored last used uid. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Stored last used uid. </dd>
 <dd>
-false - Last uid was not stored </dd></dl>
+false Last uid was not stored </dd></dl>
 
 </div>
 </div>
@@ -357,11 +340,9 @@ false - Last uid was not stored </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initializes SPI and the MFRC522 RFID reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>- An instance of a MFRC522 object </td></tr>
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>An instance of a MFRC522 object </td></tr>
   </table>
   </dd>
 </dl>
@@ -382,17 +363,15 @@ false - Last uid was not stored </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Validates an RFID tag against the registered user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">myRFID</td><td>An instance of a MFRC522 object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - The RFID was a match. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true The RFID was a match. </dd>
 <dd>
-false - There was no matching RFID in the database. </dd></dl>
+false There was no matching RFID in the database. </dd></dl>
 
 </div>
 </div>
@@ -453,8 +432,6 @@ false - There was no matching RFID in the database. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Number of currently registered users. </p>
-
 </div>
 </div>
 <a id="ad1ade64ec1f94c9ff0835615a52a941a" name="ad1ade64ec1f94c9ff0835615a52a941a"></a>
@@ -468,8 +445,6 @@ false - There was no matching RFID in the database. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Global user database array. </p>
 
 </div>
 </div>

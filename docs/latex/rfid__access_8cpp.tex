@@ -43,8 +43,6 @@ static bool \doxymbox{\hyperlink{rfid__access_8cpp_a17948a54fedc435a57c485ea5317
 
 
 \doxysubsection{Detailed Description}
-File used to setup the RFID. 
-
 \begin{DoxyAuthor}{Author}
 Amal Araweelo Almis 
 
@@ -62,28 +60,20 @@ Baldur G. Toftegaard
 bool add\+\_\+user (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{}\end{DoxyParamCaption})}
 
 
-
-Adds a new user by reading room number and scanning an RFID tag. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & -\/ An instance of a MFRC522 object. \\
+{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & An instance of a MFRC522 object. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true -\/ \doxylink{struct_user}{User} was added. 
+true \doxylink{struct_user}{User} was added. 
 
-false -\/ \doxylink{struct_user}{User} was not added. 
+false \doxylink{struct_user}{User} was not added. 
 \end{DoxyReturn}
 \Hypertarget{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6}\index{rfid\_access.cpp@{rfid\_access.cpp}!check\_command@{check\_command}}
 \index{check\_command@{check\_command}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{check\_command()}{check\_command()}}
 {\footnotesize\ttfamily \label{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6} 
 \doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} check\+\_\+command (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
-
-
-
-brief Reads a command from the serial interface and maps it to an \doxylink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}. 
 
 \begin{DoxyReturn}{Returns}
 \doxylink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand} 
@@ -95,20 +85,16 @@ brief Reads a command from the serial interface and maps it to an \doxylink{rfid
 bool compare\+\_\+\+UID (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{uid1}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{uid2}{}\end{DoxyParamCaption})}
 
 
-
-Compares two RFID UIDs. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em uid1} & -\/ The first uid number. \\
+{\em uid1} & The first uid number. \\
 \hline
-{\em uid2} & -\/ The uid number we want to dompare it to. \\
+{\em uid2} & The uid number we want to dompare it to. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true -\/ Numbers match. 
+true Numbers match. 
 
-false -\/ NUmbers do not match. 
+false NUmbers do not match. 
 \end{DoxyReturn}
 \Hypertarget{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands@{display\_commands}}
 \index{display\_commands@{display\_commands}!rfid\_access.cpp@{rfid\_access.cpp}}
@@ -116,29 +102,17 @@ false -\/ NUmbers do not match.
 {\footnotesize\ttfamily \label{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906} 
 void display\+\_\+commands (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Prints the available serial commands. 
-
 \Hypertarget{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands\_um@{display\_commands\_um}}
 \index{display\_commands\_um@{display\_commands\_um}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{display\_commands\_um()}{display\_commands\_um()}}
 {\footnotesize\ttfamily \label{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075} 
 void display\+\_\+commands\+\_\+um (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Prints the available serial commands for user-\/management mode. 
-
 \Hypertarget{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}\index{rfid\_access.cpp@{rfid\_access.cpp}!read\_RFID\_tag@{read\_RFID\_tag}}
 \index{read\_RFID\_tag@{read\_RFID\_tag}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{read\_RFID\_tag()}{read\_RFID\_tag()}}
 {\footnotesize\ttfamily \label{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3} 
 bool read\+\_\+\+RFID\+\_\+tag (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{uid\+Buffer}{}\end{DoxyParamCaption})}
-
-
-
-Reads an RFID tag UID from the MFRC522 reader. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -148,9 +122,9 @@ Reads an RFID tag UID from the MFRC522 reader.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true -\/ RFID tag was read. 
+true RFID tag was read. 
 
-false -\/ No RFID tag was read. 
+false No RFID tag was read. 
 \end{DoxyReturn}
 \Hypertarget{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}\index{rfid\_access.cpp@{rfid\_access.cpp}!rfid\_get\_last\_uid@{rfid\_get\_last\_uid}}
 \index{rfid\_get\_last\_uid@{rfid\_get\_last\_uid}!rfid\_access.cpp@{rfid\_access.cpp}}
@@ -159,18 +133,14 @@ false -\/ No RFID tag was read.
 bool rfid\+\_\+get\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{uid\+Out}{}\end{DoxyParamCaption})}
 
 
-
-Function for restoring the last used RFID. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em uid\+Out} & -\/ Pointer to user it. \\
+{\em uid\+Out} & Pointer to user it. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true -\/ There was an last uid to retrive. 
+true There was an last uid to retrive. 
 
-false -\/ No last uid was retrived. 
+false No last uid was retrived. 
 \end{DoxyReturn}
 \Hypertarget{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}\index{rfid\_access.cpp@{rfid\_access.cpp}!rfid\_set\_last\_uid@{rfid\_set\_last\_uid}}
 \index{rfid\_set\_last\_uid@{rfid\_set\_last\_uid}!rfid\_access.cpp@{rfid\_access.cpp}}
@@ -179,18 +149,14 @@ false -\/ No last uid was retrived.
 void rfid\+\_\+set\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{const byte \texorpdfstring{$\ast$}{*}}]{uid\+In}{}\end{DoxyParamCaption})}
 
 
-
-Function for storing the last used RFID. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em uid\+Out} & -\/ Pointer to user it. \\
+{\em uid\+Out} & Pointer to user it. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true -\/ Stored last used uid. 
+true Stored last used uid. 
 
-false -\/ Last uid was not stored 
+false Last uid was not stored 
 \end{DoxyReturn}
 \Hypertarget{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}\index{rfid\_access.cpp@{rfid\_access.cpp}!setup\_RFID\_reader@{setup\_RFID\_reader}}
 \index{setup\_RFID\_reader@{setup\_RFID\_reader}!rfid\_access.cpp@{rfid\_access.cpp}}
@@ -199,12 +165,8 @@ false -\/ Last uid was not stored
 void setup\+\_\+\+RFID\+\_\+reader (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{}\end{DoxyParamCaption})}
 
 
-
-Initializes SPI and the MFRC522 RFID reader. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & -\/ An instance of a MFRC522 object \\
+{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & An instance of a MFRC522 object \\
 \hline
 \end{DoxyParams}
 \Hypertarget{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}\index{rfid\_access.cpp@{rfid\_access.cpp}!validate\_rfid@{validate\_rfid}}
@@ -214,18 +176,14 @@ Initializes SPI and the MFRC522 RFID reader.
 bool validate\+\_\+rfid (\begin{DoxyParamCaption}\item[{MFRC522}]{my\+RFID}{}\end{DoxyParamCaption})}
 
 
-
-Validates an RFID tag against the registered user database. 
-
-
 \begin{DoxyParams}{Parameters}
 {\em my\+RFID} & An instance of a MFRC522 object \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-true -\/ The RFID was a match. 
+true The RFID was a match. 
 
-false -\/ There was no matching RFID in the database. 
+false There was no matching RFID in the database. 
 \end{DoxyReturn}
 
 
@@ -250,17 +208,9 @@ byte last\+UID\+[\doxymbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53c
 {\footnotesize\ttfamily \label{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465} 
 int user\+Count = 0}
 
-
-
-Number of currently registered users. 
-
 \Hypertarget{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a}\index{rfid\_access.cpp@{rfid\_access.cpp}!users@{users}}
 \index{users@{users}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{users}{users}}
 {\footnotesize\ttfamily \label{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a} 
 \doxymbox{\hyperlink{struct_user}{User}} users\+[\doxymbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}]\+}
-
-
-
-Global user database array. 
 

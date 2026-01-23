@@ -39,8 +39,6 @@ static float \doxymbox{\hyperlink{weight__scale_8cpp_a09709d94373e9c3e2ab1b81670
 
 
 \doxysubsection{Detailed Description}
-File used for setting up the scale. 
-
 \begin{DoxyAuthor}{Author}
 Amal Araweelo Almis 
 \end{DoxyAuthor}
@@ -56,18 +54,14 @@ Amal Araweelo Almis
 int get\+\_\+beer\+\_\+cans\+\_\+taken (\begin{DoxyParamCaption}\item[{float}]{referenc\+Weight}{, }\item[{float}]{current\+Weight}{}\end{DoxyParamCaption})}
 
 
-
-Function to get the number of beer cans taken. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em referenc\+Weight} & -\/ The set reference weight \+[g]\+ \\
+{\em referenc\+Weight} & The set reference weight \+[g]\+ \\
 \hline
-{\em current\+Weight} & -\/ The current mesured weight \+[g]\+ \\
+{\em current\+Weight} & The current mesured weight \+[g]\+ \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-int -\/ number of cans taken 
+int number of cans taken 
 \end{DoxyReturn}
 \Hypertarget{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952}\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_weight@{get\_weight}}
 \index{get\_weight@{get\_weight}!weight\_scale.cpp@{weight\_scale.cpp}}
@@ -75,12 +69,8 @@ int -\/ number of cans taken
 {\footnotesize\ttfamily \label{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952} 
 float get\+\_\+weight (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Function to get the scale reading. 
-
 \begin{DoxyReturn}{Returns}
-float -\/ Value read from weight. 
+float Value read from weight. 
 \end{DoxyReturn}
 \Hypertarget{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39}\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_weight\_reference@{get\_weight\_reference}}
 \index{get\_weight\_reference@{get\_weight\_reference}!weight\_scale.cpp@{weight\_scale.cpp}}
@@ -88,22 +78,14 @@ float -\/ Value read from weight.
 {\footnotesize\ttfamily \label{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39} 
 float get\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Function to get the weight reference. 
-
 \begin{DoxyReturn}{Returns}
-float -\/ The weight reference. 
+float The weight reference. 
 \end{DoxyReturn}
 \Hypertarget{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382}\index{weight\_scale.cpp@{weight\_scale.cpp}!reset\_weight\_reference@{reset\_weight\_reference}}
 \index{reset\_weight\_reference@{reset\_weight\_reference}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{reset\_weight\_reference()}{reset\_weight\_reference()}}
 {\footnotesize\ttfamily \label{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382} 
 void reset\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
-
-
-
-Function to reset the weight reference. 
 
 \Hypertarget{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f}\index{weight\_scale.cpp@{weight\_scale.cpp}!scale@{scale}}
 \index{scale@{scale}!weight\_scale.cpp@{weight\_scale.cpp}}
@@ -118,12 +100,8 @@ HX711\+\_\+\+ADC scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{weig
 void set\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})}
 
 
-
-Function to set the weight reference. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em value} & -\/ Reference value. \\
+{\em value} & Reference value. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61}\index{weight\_scale.cpp@{weight\_scale.cpp}!setup\_scale@{setup\_scale}}
@@ -133,12 +111,8 @@ Function to set the weight reference.
 void setup\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{cal\+Factor}{}\end{DoxyParamCaption})}
 
 
-
-Function to seting up the scale, is called in the begining of the program. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em cal\+Factor} & -\/ The calibration factor. \\
+{\em cal\+Factor} & The calibration factor. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f}\index{weight\_scale.cpp@{weight\_scale.cpp}!tare\_complete@{tare\_complete}}
@@ -147,14 +121,10 @@ Function to seting up the scale, is called in the begining of the program.
 {\footnotesize\ttfamily \label{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f} 
 bool tare\+\_\+complete (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Function to signal that the scale has been tared. 
-
 \begin{DoxyReturn}{Returns}
-true -\/ The scale was tared. 
+true The scale was tared. 
 
-false -\/ The scale was not tared. 
+false The scale was not tared. 
 \end{DoxyReturn}
 \Hypertarget{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f}\index{weight\_scale.cpp@{weight\_scale.cpp}!tare\_scale@{tare\_scale}}
 \index{tare\_scale@{tare\_scale}!weight\_scale.cpp@{weight\_scale.cpp}}
@@ -162,24 +132,16 @@ false -\/ The scale was not tared.
 {\footnotesize\ttfamily \label{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f} 
 void tare\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Function to tare the scale. 
-
 \Hypertarget{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862}\index{weight\_scale.cpp@{weight\_scale.cpp}!update\_scale@{update\_scale}}
 \index{update\_scale@{update\_scale}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{update\_scale()}{update\_scale()}}
 {\footnotesize\ttfamily \label{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862} 
 bool update\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Function for updating the scale value. 
-
 \begin{DoxyReturn}{Returns}
-true -\/ Scale was updated. 
+true Scale was updated. 
 
-false -\/ Scale was not updated. 
+false Scale was not updated. 
 \end{DoxyReturn}
 \Hypertarget{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec}\index{weight\_scale.cpp@{weight\_scale.cpp}!weight\_reference\_is\_set@{weight\_reference\_is\_set}}
 \index{weight\_reference\_is\_set@{weight\_reference\_is\_set}!weight\_scale.cpp@{weight\_scale.cpp}}
@@ -187,14 +149,10 @@ false -\/ Scale was not updated.
 {\footnotesize\ttfamily \label{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec} 
 bool weight\+\_\+reference\+\_\+is\+\_\+set (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
-
-
-Function to send confirmation that the weight reference is set. 
-
 \begin{DoxyReturn}{Returns}
-true -\/ Weight reference is set. 
+true Weight reference is set. 
 
-false -\/ Weight reference is not set. 
+false Weight reference is not set. 
 \end{DoxyReturn}
 
 

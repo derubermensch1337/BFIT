@@ -22,8 +22,6 @@ const char SALE\+\_\+\+BOX\+\_\+\+START\+[$\,$]\+ \doxymbox{\hyperlink{sale__htm
 
 
 \doxysubsection{Detailed Description}
-File for setting up the graph section of the web server. 
-
 \begin{DoxyAuthor}{Author}
 Baldur G. Toftegaard 
 \end{DoxyAuthor}
@@ -39,18 +37,14 @@ Baldur G. Toftegaard
 void send\+\_\+sale\+\_\+html\+\_\+graph (\begin{DoxyParamCaption}\item[{ESP8266\+Web\+Server \&}]{server}{, }\item[{uint8\+\_\+t}]{room\+\_\+number}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{bar\+\_\+type}{, }\item[{int}]{bar\+\_\+height}{}\end{DoxyParamCaption})}
 
 
-
-Sends a single sales bar element to the client. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} & -\/ The server instance. \\
+{\em \doxylink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} & The server instance. \\
 \hline
-{\em room\+\_\+number} & -\/ The room number operated on. \\
+{\em room\+\_\+number} & The room number operated on. \\
 \hline
-{\em bar\+\_\+type} & -\/ Type of the bar operated on. \\
+{\em bar\+\_\+type} & Type of the bar operated on. \\
 \hline
-{\em bar\+\_\+height} & -\/ Height of the bre operated on. \\
+{\em bar\+\_\+height} & Height of the bre operated on. \\
 \hline
 \end{DoxyParams}
 \Hypertarget{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f}\index{sale\_html.cpp@{sale\_html.cpp}!send\_sale\_html\_page@{send\_sale\_html\_page}}
@@ -60,18 +54,14 @@ Sends a single sales bar element to the client.
 void send\+\_\+sale\+\_\+html\+\_\+page (\begin{DoxyParamCaption}\item[{ESP8266\+Web\+Server \&}]{server}{, }\item[{uint8\+\_\+t}]{room\+\_\+count}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{green\+Height}{, }\item[{const int \texorpdfstring{$\ast$}{*}}]{classic\+Heights}{}\end{DoxyParamCaption})}
 
 
-
-Sends the complete sales graph page. 
-
-
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} & -\/ The server instance. \\
+{\em \doxylink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} & The server instance. \\
 \hline
-{\em room\+\_\+count} & -\/ Number of registered rooms. \\
+{\em room\+\_\+count} & Number of registered rooms. \\
 \hline
-{\em \doxylink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} & -\/ The height of green bars. \\
+{\em \doxylink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} & The height of green bars. \\
 \hline
-{\em classic\+Heights} & -\/ The height of clasic bars. \\
+{\em classic\+Heights} & The height of clasic bars. \\
 \hline
 \end{DoxyParams}
 
@@ -84,10 +74,6 @@ Sends the complete sales graph page.
 \doxysubsubsection{\texorpdfstring{PROGMEM}{PROGMEM}}
 {\footnotesize\ttfamily \label{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9} 
 const char SALE\+\_\+\+BOX\+\_\+\+STOP \+[$\,$]\+ PROGMEM = R"{}rawliteral( $<$div class="{}sale\+\_\+box"{}$>$)rawliteral"{}}
-
-
-
-Opening container for the sales graph. 
 
 Closing container for the complete sales graph.
 

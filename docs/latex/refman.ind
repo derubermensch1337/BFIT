@@ -1,31 +1,21 @@
 \begin{theindex}
 
   \item {activeCommand}
-<<<<<<< HEAD
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {add\_user}
-    \subitem {rfid\_access.cpp}, \hyperpage{72}
+    \subitem {rfid\_access.cpp}, \hyperpage{69}
     \subitem {rfid\_access.h}, \hyperpage{36}
   \item {admin\_html.h}
     \subitem {PROGMEM}, \hyperpage{15}
-=======
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {add\_user}
-    \subitem {rfid\_access.cpp}, \hyperpage{78}
-    \subitem {rfid\_access.h}, \hyperpage{37}
-  \item {admin\_html.h}
-    \subitem {PROGMEM}, \hyperpage{14}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 
   \indexspace
 
   \item {balance}
-<<<<<<< HEAD
     \subitem {User}, \hyperpage{14}
   \item {beer}
     \subitem {inventory.h}, \hyperpage{25}
   \item {BEER\_WEIGHT}
-    \subitem {weight\_scale.h}, \hyperpage{49}
+    \subitem {weight\_scale.h}, \hyperpage{48}
   \item {beverage}
     \subitem {products\_stocked}, \hyperpage{13}
   \item {beverage\_type}
@@ -34,17 +24,17 @@
     \subitem {product}, \hyperpage{12}
   \item {BFIT}, \hyperpage{1}
   \item {boxClosed}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
   \item {BUZZER}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
   \item {buzzer.cpp}
-    \subitem {BUZZERPIN}, \hyperpage{55}
-    \subitem {HIGH\_TONE}, \hyperpage{55}
-    \subitem {LOW\_TONE}, \hyperpage{55}
-    \subitem {play\_lock}, \hyperpage{55}
-    \subitem {play\_unlock}, \hyperpage{55}
-    \subitem {play\_warning}, \hyperpage{55}
-    \subitem {TONE\_LENGTH}, \hyperpage{55}
+    \subitem {BUZZERPIN}, \hyperpage{53}
+    \subitem {HIGH\_TONE}, \hyperpage{53}
+    \subitem {LOW\_TONE}, \hyperpage{53}
+    \subitem {play\_lock}, \hyperpage{52}
+    \subitem {play\_unlock}, \hyperpage{52}
+    \subitem {play\_warning}, \hyperpage{53}
+    \subitem {TONE\_LENGTH}, \hyperpage{53}
   \item {buzzer.h}
     \subitem {BUZZER\_H}, \hyperpage{17}
     \subitem {play\_lock}, \hyperpage{17}
@@ -53,806 +43,431 @@
   \item {BUZZER\_H}
     \subitem {buzzer.h}, \hyperpage{17}
   \item {BUZZERPIN}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-=======
-    \subitem {User}, \hyperpage{12}
-  \item {beer}
-    \subitem {inventory.h}, \hyperpage{26}
-  \item {BEER\_WEIGHT}
-    \subitem {weight\_scale.h}, \hyperpage{50}
-  \item {beverage}
-    \subitem {products\_stocked}, \hyperpage{11}
-  \item {beverage\_type}
-    \subitem {inventory.h}, \hyperpage{26}
-  \item {beverage\_variant}
-    \subitem {product}, \hyperpage{9}
-  \item {boxClosed}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{71}
-  \item {BUZZER}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{71}
-  \item {buzzer.cpp}
-    \subitem {BUZZERPIN}, \hyperpage{56}
-    \subitem {HIGH\_TONE}, \hyperpage{56}
-    \subitem {LOW\_TONE}, \hyperpage{56}
-    \subitem {play\_lock}, \hyperpage{55}
-    \subitem {play\_unlock}, \hyperpage{55}
-    \subitem {play\_warning}, \hyperpage{55}
-    \subitem {TONE\_LENGTH}, \hyperpage{56}
-  \item {buzzer.h}
-    \subitem {BUZZER\_H}, \hyperpage{15}
-    \subitem {play\_lock}, \hyperpage{15}
-    \subitem {play\_unlock}, \hyperpage{16}
-    \subitem {play\_warning}, \hyperpage{16}
-  \item {BUZZER\_H}
-    \subitem {buzzer.h}, \hyperpage{15}
-  \item {BUZZERPIN}
-    \subitem {buzzer.cpp}, \hyperpage{56}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {buzzer.cpp}, \hyperpage{53}
 
   \indexspace
 
   \item {CAL\_FACTOR}
-<<<<<<< HEAD
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {check\_command}
-    \subitem {rfid\_access.cpp}, \hyperpage{72}
+    \subitem {rfid\_access.cpp}, \hyperpage{69}
     \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {cider}
-    \subitem {inventory.h}, \hyperpage{25}
-  \item {classicHeight}
-    \subitem {graph\_data.cpp}, \hyperpage{61}
-    \subitem {graph\_data.h}, \hyperpage{20}
-    \subitem {main.cpp}, \hyperpage{70}
-  \item {CLOSED\_THRESHOLD}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
-  \item {CMD\_ADD\_USER}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {CMD\_CONFIRM}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {CMD\_LOCK}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {CMD\_NONE}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {CMD\_OPEN}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {CMD\_PRINT}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {CMD\_REMOVE\_USER}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {compare\_UID}
-    \subitem {rfid\_access.cpp}, \hyperpage{73}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {connect\_wifi\_and\_start\_mdns}
-    \subitem {main.cpp}, \hyperpage{69}
-  \item {count\_rooms}
-    \subitem {database\_management.cpp}, \hyperpage{57}
-    \subitem {rfid\_access.h}, \hyperpage{37}
-  \item {current\_quantity}
-    \subitem {products\_stocked}, \hyperpage{13}
-=======
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {check\_command}
-    \subitem {rfid\_access.cpp}, \hyperpage{79}
-    \subitem {rfid\_access.h}, \hyperpage{38}
   \item {cider}
     \subitem {inventory.h}, \hyperpage{26}
   \item {classicHeight}
-    \subitem {graph\_data.cpp}, \hyperpage{63}
+    \subitem {graph\_data.cpp}, \hyperpage{58}
     \subitem {graph\_data.h}, \hyperpage{20}
-    \subitem {main.cpp}, \hyperpage{76}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {CLOSED\_THRESHOLD}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
+    \subitem {lock\_ctrl.h}, \hyperpage{30}
   \item {CMD\_ADD\_USER}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {CMD\_CONFIRM}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {CMD\_LOCK}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {CMD\_NONE}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{35}
   \item {CMD\_OPEN}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {CMD\_PRINT}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {CMD\_REMOVE\_USER}
-    \subitem {rfid\_access.h}, \hyperpage{37}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {compare\_UID}
-    \subitem {rfid\_access.cpp}, \hyperpage{79}
-    \subitem {rfid\_access.h}, \hyperpage{38}
+    \subitem {rfid\_access.cpp}, \hyperpage{70}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {connect\_wifi\_and\_start\_mdns}
-    \subitem {main.cpp}, \hyperpage{74}
+    \subitem {main.cpp}, \hyperpage{66}
   \item {count\_rooms}
-    \subitem {database\_management.cpp}, \hyperpage{58}
-    \subitem {rfid\_access.h}, \hyperpage{38}
+    \subitem {database\_management.cpp}, \hyperpage{54}
+    \subitem {rfid\_access.h}, \hyperpage{36}
   \item {current\_quantity}
-    \subitem {products\_stocked}, \hyperpage{11}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {products\_stocked}, \hyperpage{13}
 
   \indexspace
 
   \item {database\_management.cpp}
-<<<<<<< HEAD
-    \subitem {count\_rooms}, \hyperpage{57}
-    \subitem {find\_empty\_index}, \hyperpage{57}
-    \subitem {get\_users\_db}, \hyperpage{57}
-    \subitem {print\_all\_users}, \hyperpage{57}
-    \subitem {print\_single\_user}, \hyperpage{58}
-    \subitem {print\_uid}, \hyperpage{58}
-    \subitem {read\_confirmation}, \hyperpage{58}
-    \subitem {read\_integer}, \hyperpage{58}
-    \subitem {remove\_user}, \hyperpage{59}
-    \subitem {user\_management}, \hyperpage{59}
+    \subitem {count\_rooms}, \hyperpage{54}
+    \subitem {find\_empty\_index}, \hyperpage{54}
+    \subitem {get\_users\_db}, \hyperpage{55}
+    \subitem {print\_all\_users}, \hyperpage{55}
+    \subitem {print\_single\_user}, \hyperpage{55}
+    \subitem {print\_uid}, \hyperpage{55}
+    \subitem {read\_confirmation}, \hyperpage{56}
+    \subitem {read\_integer}, \hyperpage{56}
+    \subitem {remove\_user}, \hyperpage{56}
+    \subitem {user\_management}, \hyperpage{56}
   \item {demo\_beer}
-    \subitem {main.cpp}, \hyperpage{71}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {display\_commands}
-    \subitem {rfid\_access.cpp}, \hyperpage{73}
+    \subitem {rfid\_access.cpp}, \hyperpage{70}
     \subitem {rfid\_access.h}, \hyperpage{37}
   \item {display\_commands\_um}
-    \subitem {rfid\_access.cpp}, \hyperpage{73}
+    \subitem {rfid\_access.cpp}, \hyperpage{70}
     \subitem {rfid\_access.h}, \hyperpage{37}
   \item {doorCloseTimer}
-    \subitem {main.cpp}, \hyperpage{71}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {doorUnlocked}
-    \subitem {main.cpp}, \hyperpage{71}
-=======
-    \subitem {count\_rooms}, \hyperpage{58}
-    \subitem {find\_empty\_index}, \hyperpage{58}
-    \subitem {get\_users\_db}, \hyperpage{58}
-    \subitem {print\_all\_users}, \hyperpage{59}
-    \subitem {print\_single\_user}, \hyperpage{59}
-    \subitem {print\_uid}, \hyperpage{59}
-    \subitem {read\_confirmation}, \hyperpage{60}
-    \subitem {read\_integer}, \hyperpage{60}
-    \subitem {remove\_user}, \hyperpage{60}
-    \subitem {user\_management}, \hyperpage{60}
-  \item {demo\_beer}
-    \subitem {main.cpp}, \hyperpage{76}
-  \item {display\_commands}
-    \subitem {rfid\_access.cpp}, \hyperpage{79}
-    \subitem {rfid\_access.h}, \hyperpage{39}
-  \item {display\_commands\_um}
-    \subitem {rfid\_access.cpp}, \hyperpage{80}
-    \subitem {rfid\_access.h}, \hyperpage{39}
-  \item {doorCloseTimer}
-    \subitem {main.cpp}, \hyperpage{76}
-  \item {doorUnlocked}
-    \subitem {main.cpp}, \hyperpage{76}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {main.cpp}, \hyperpage{68}
 
   \indexspace
 
   \item {find\_empty\_index}
-<<<<<<< HEAD
-    \subitem {database\_management.cpp}, \hyperpage{57}
+    \subitem {database\_management.cpp}, \hyperpage{54}
     \subitem {rfid\_access.h}, \hyperpage{37}
   \item {fridge}
-    \subitem {fridge\_state.cpp}, \hyperpage{60}
+    \subitem {fridge\_state.cpp}, \hyperpage{57}
     \subitem {fridge\_state.h}, \hyperpage{18}
   \item {fridge\_state.cpp}
-    \subitem {fridge}, \hyperpage{60}
-=======
-    \subitem {database\_management.cpp}, \hyperpage{58}
-    \subitem {rfid\_access.h}, \hyperpage{39}
-  \item {fridge}
-    \subitem {fridge\_state.cpp}, \hyperpage{61}
-    \subitem {fridge\_state.h}, \hyperpage{18}
-  \item {fridge\_state.cpp}
-    \subitem {fridge}, \hyperpage{61}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {fridge}, \hyperpage{57}
   \item {fridge\_state.h}
     \subitem {fridge}, \hyperpage{18}
 
   \indexspace
 
   \item {g\_referenceWeight}
-<<<<<<< HEAD
-    \subitem {weight\_scale.cpp}, \hyperpage{81}
+    \subitem {weight\_scale.cpp}, \hyperpage{77}
   \item {get\_beer\_cans\_taken}
-    \subitem {weight\_scale.cpp}, \hyperpage{78}
-    \subitem {weight\_scale.h}, \hyperpage{51}
+    \subitem {weight\_scale.cpp}, \hyperpage{75}
+    \subitem {weight\_scale.h}, \hyperpage{49}
   \item {get\_users\_db}
-    \subitem {database\_management.cpp}, \hyperpage{57}
-    \subitem {rfid\_access.h}, \hyperpage{38}
+    \subitem {database\_management.cpp}, \hyperpage{55}
+    \subitem {rfid\_access.h}, \hyperpage{37}
   \item {get\_weight}
-    \subitem {weight\_scale.cpp}, \hyperpage{79}
-    \subitem {weight\_scale.h}, \hyperpage{51}
+    \subitem {weight\_scale.cpp}, \hyperpage{76}
+    \subitem {weight\_scale.h}, \hyperpage{49}
   \item {get\_weight\_reference}
-    \subitem {weight\_scale.cpp}, \hyperpage{79}
-    \subitem {weight\_scale.h}, \hyperpage{51}
+    \subitem {weight\_scale.cpp}, \hyperpage{76}
+    \subitem {weight\_scale.h}, \hyperpage{49}
   \item {graph\_add\_to\_room\_clasic}
-    \subitem {graph\_data.cpp}, \hyperpage{60}
+    \subitem {graph\_data.cpp}, \hyperpage{58}
     \subitem {graph\_data.h}, \hyperpage{19}
   \item {graph\_add\_to\_room\_green}
-    \subitem {graph\_data.cpp}, \hyperpage{61}
+    \subitem {graph\_data.cpp}, \hyperpage{58}
     \subitem {graph\_data.h}, \hyperpage{19}
   \item {graph\_data.cpp}
-    \subitem {classicHeight}, \hyperpage{61}
-    \subitem {graph\_add\_to\_room\_clasic}, \hyperpage{60}
-    \subitem {graph\_add\_to\_room\_green}, \hyperpage{61}
-    \subitem {greenHeight}, \hyperpage{61}
-=======
-    \subitem {weight\_scale.cpp}, \hyperpage{89}
-  \item {get\_beer\_cans\_taken}
-    \subitem {weight\_scale.cpp}, \hyperpage{86}
-    \subitem {weight\_scale.h}, \hyperpage{51}
-  \item {get\_users\_db}
-    \subitem {database\_management.cpp}, \hyperpage{58}
-    \subitem {rfid\_access.h}, \hyperpage{39}
-  \item {get\_weight}
-    \subitem {weight\_scale.cpp}, \hyperpage{86}
-    \subitem {weight\_scale.h}, \hyperpage{51}
-  \item {get\_weight\_reference}
-    \subitem {weight\_scale.cpp}, \hyperpage{87}
-    \subitem {weight\_scale.h}, \hyperpage{52}
-  \item {graph\_add\_to\_room\_clasic}
-    \subitem {graph\_data.cpp}, \hyperpage{62}
-    \subitem {graph\_data.h}, \hyperpage{19}
-  \item {graph\_add\_to\_room\_green}
-    \subitem {graph\_data.cpp}, \hyperpage{63}
-    \subitem {graph\_data.h}, \hyperpage{19}
-  \item {graph\_data.cpp}
-    \subitem {classicHeight}, \hyperpage{63}
-    \subitem {graph\_add\_to\_room\_clasic}, \hyperpage{62}
-    \subitem {graph\_add\_to\_room\_green}, \hyperpage{63}
-    \subitem {greenHeight}, \hyperpage{63}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {classicHeight}, \hyperpage{58}
+    \subitem {graph\_add\_to\_room\_clasic}, \hyperpage{58}
+    \subitem {graph\_add\_to\_room\_green}, \hyperpage{58}
+    \subitem {greenHeight}, \hyperpage{58}
   \item {graph\_data.h}
     \subitem {classicHeight}, \hyperpage{20}
     \subitem {graph\_add\_to\_room\_clasic}, \hyperpage{19}
     \subitem {graph\_add\_to\_room\_green}, \hyperpage{19}
     \subitem {greenHeight}, \hyperpage{20}
-    \subitem {print\_graph\_arrays}, \hyperpage{20}
+    \subitem {print\_graph\_arrays}, \hyperpage{19}
     \subitem {ROOM\_COUNT}, \hyperpage{19}
   \item {greenHeight}
-<<<<<<< HEAD
-    \subitem {graph\_data.cpp}, \hyperpage{61}
+    \subitem {graph\_data.cpp}, \hyperpage{58}
     \subitem {graph\_data.h}, \hyperpage{20}
-    \subitem {main.cpp}, \hyperpage{71}
-=======
-    \subitem {graph\_data.cpp}, \hyperpage{63}
-    \subitem {graph\_data.h}, \hyperpage{20}
-    \subitem {main.cpp}, \hyperpage{76}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {main.cpp}, \hyperpage{68}
 
   \indexspace
 
   \item {hasUID}
-<<<<<<< HEAD
-    \subitem {rfid\_access.cpp}, \hyperpage{75}
+    \subitem {rfid\_access.cpp}, \hyperpage{72}
   \item {HIGH\_TONE}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{68}
+    \subitem {buzzer.cpp}, \hyperpage{53}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
   \item {HX711\_DOUT}
-    \subitem {weight\_scale.h}, \hyperpage{49}
+    \subitem {weight\_scale.h}, \hyperpage{48}
   \item {HX711\_SCK}
-    \subitem {weight\_scale.h}, \hyperpage{49}
+    \subitem {weight\_scale.h}, \hyperpage{48}
 
   \indexspace
 
   \item {include Directory Reference}, \hyperpage{9}
   \item {include/admin\_html.h}, \hyperpage{15, 16}
   \item {include/buzzer.h}, \hyperpage{16, 17}
-  \item {include/fridge\_state.h}, \hyperpage{18}
+  \item {include/fridge\_state.h}, \hyperpage{17, 18}
   \item {include/graph\_data.h}, \hyperpage{18}, \hyperpage{20}
-  \item {include/index\_html.h}, \hyperpage{20}, \hyperpage{22}
-  \item {include/init\_users\_and\_sale.h}, \hyperpage{22}, 
-		\hyperpage{24}
-  \item {include/inventory.h}, \hyperpage{24}, \hyperpage{29}
-  \item {include/lock\_ctrl.h}, \hyperpage{30}, \hyperpage{32}
+  \item {include/index\_html.h}, \hyperpage{20, 21}
+  \item {include/init\_users\_and\_sale.h}, \hyperpage{22, 23}
+  \item {include/inventory.h}, \hyperpage{23}, \hyperpage{28}
+  \item {include/lock\_ctrl.h}, \hyperpage{29}, \hyperpage{32}
   \item {include/login\_html.h}, \hyperpage{32, 33}
-  \item {include/rfid\_access.h}, \hyperpage{34}, \hyperpage{42}
-  \item {include/sale\_html.h}, \hyperpage{43}, \hyperpage{46}
-  \item {include/style\_css.h}, \hyperpage{46, 47}
-  \item {include/weight\_scale.h}, \hyperpage{48}, \hyperpage{53}
+  \item {include/rfid\_access.h}, \hyperpage{33}, \hyperpage{42}
+  \item {include/sale\_html.h}, \hyperpage{43}, \hyperpage{45}
+  \item {include/style\_css.h}, \hyperpage{46}
+  \item {include/weight\_scale.h}, \hyperpage{47}, \hyperpage{51}
   \item {index\_html.h}
     \subitem {PROGMEM}, \hyperpage{21}
   \item {init\_users\_and\_products}
-    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{62}
+    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{59}
     \subitem {init\_users\_and\_sale.h}, \hyperpage{23}
   \item {init\_users\_and\_sale.cpp}
-    \subitem {init\_users\_and\_products}, \hyperpage{62}
-    \subitem {perform\_sale}, \hyperpage{62}
-    \subitem {read\_current\_weight\_blocking}, \hyperpage{62}
+    \subitem {init\_users\_and\_products}, \hyperpage{59}
+    \subitem {perform\_sale}, \hyperpage{59}
+    \subitem {read\_current\_weight\_blocking}, \hyperpage{59}
   \item {init\_users\_and\_sale.h}
     \subitem {init\_users\_and\_products}, \hyperpage{23}
-    \subitem {number\_of\_users}, \hyperpage{23}
+    \subitem {number\_of\_users}, \hyperpage{22}
     \subitem {perform\_sale}, \hyperpage{23}
   \item {inventory}, \hyperpage{11}
     \subitem {number\_of\_products\_stocked}, \hyperpage{11}
-    \subitem {produckts\_in\_inventory}, \hyperpage{11}
+    \subitem {products\_in\_inventory}, \hyperpage{11}
     \subitem {room\_number}, \hyperpage{11}
   \item {inventory.cpp}
-    \subitem {inventory\_add\_beverage}, \hyperpage{63}
-    \subitem {inventory\_add\_product}, \hyperpage{63}
-    \subitem {inventory\_init}, \hyperpage{64}
-    \subitem {inventory\_make\_product}, \hyperpage{64}
-    \subitem {inventory\_print}, \hyperpage{65}
-    \subitem {inventory\_remove\_beverage}, \hyperpage{65}
-    \subitem {inventory\_remove\_product}, \hyperpage{65}
+    \subitem {inventory\_add\_beverage}, \hyperpage{60}
+    \subitem {inventory\_add\_product}, \hyperpage{60}
+    \subitem {inventory\_init}, \hyperpage{61}
+    \subitem {inventory\_make\_product}, \hyperpage{61}
+    \subitem {inventory\_print}, \hyperpage{61}
+    \subitem {inventory\_remove\_beverage}, \hyperpage{61}
+    \subitem {inventory\_remove\_product}, \hyperpage{62}
   \item {inventory.h}
     \subitem {beer}, \hyperpage{25}
     \subitem {beverage\_type}, \hyperpage{25}
-    \subitem {cider}, \hyperpage{25}
-    \subitem {inventory\_add\_beverage}, \hyperpage{26}
-    \subitem {inventory\_add\_product}, \hyperpage{26}
-    \subitem {INVENTORY\_CAPACITY}, \hyperpage{25}
-    \subitem {inventory\_init}, \hyperpage{27}
-    \subitem {inventory\_make\_product}, \hyperpage{27}
-    \subitem {inventory\_print}, \hyperpage{27}
-    \subitem {inventory\_remove\_beverage}, \hyperpage{28}
-    \subitem {inventory\_remove\_product}, \hyperpage{28}
-    \subitem {limfjords\_porter}, \hyperpage{25}
-    \subitem {other}, \hyperpage{25}
-    \subitem {soda}, \hyperpage{25}
-  \item {inventory\_add\_beverage}
-    \subitem {inventory.cpp}, \hyperpage{63}
-    \subitem {inventory.h}, \hyperpage{26}
-  \item {inventory\_add\_product}
-    \subitem {inventory.cpp}, \hyperpage{63}
-    \subitem {inventory.h}, \hyperpage{26}
-  \item {INVENTORY\_CAPACITY}
-    \subitem {inventory.h}, \hyperpage{25}
-  \item {inventory\_init}
-    \subitem {inventory.cpp}, \hyperpage{64}
-    \subitem {inventory.h}, \hyperpage{27}
-  \item {inventory\_make\_product}
-    \subitem {inventory.cpp}, \hyperpage{64}
-    \subitem {inventory.h}, \hyperpage{27}
-  \item {inventory\_print}
-    \subitem {inventory.cpp}, \hyperpage{65}
-    \subitem {inventory.h}, \hyperpage{27}
-  \item {inventory\_remove\_beverage}
-    \subitem {inventory.cpp}, \hyperpage{65}
-    \subitem {inventory.h}, \hyperpage{28}
-  \item {inventory\_remove\_product}
-    \subitem {inventory.cpp}, \hyperpage{65}
-    \subitem {inventory.h}, \hyperpage{28}
-  \item {is\_box\_closed}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
-=======
-    \subitem {rfid\_access.cpp}, \hyperpage{82}
-  \item {HIGH\_TONE}
-    \subitem {buzzer.cpp}, \hyperpage{56}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{72}
-  \item {HX711\_DOUT}
-    \subitem {weight\_scale.h}, \hyperpage{50}
-  \item {HX711\_SCK}
-    \subitem {weight\_scale.h}, \hyperpage{50}
-
-  \indexspace
-
-  \item {include/admin\_html.h}, \hyperpage{13}
-  \item {include/buzzer.h}, \hyperpage{14}
-  \item {include/fridge\_state.h}, \hyperpage{16}
-  \item {include/graph\_data.h}, \hyperpage{18}
-  \item {include/index\_html.h}, \hyperpage{21}
-  \item {include/init\_users\_and\_sale.h}, \hyperpage{22}
-  \item {include/inventory.h}, \hyperpage{24}
-  \item {include/lock\_ctrl.h}, \hyperpage{29}
-  \item {include/login\_html.h}, \hyperpage{33}
-  \item {include/rfid\_access.h}, \hyperpage{34}
-  \item {include/sale\_html.h}, \hyperpage{45}
-  \item {include/style\_css.h}, \hyperpage{48}
-  \item {include/weight\_scale.h}, \hyperpage{49}
-  \item {index\_html.h}
-    \subitem {PROGMEM}, \hyperpage{22}
-  \item {init\_users\_and\_products}
-    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{64}
-    \subitem {init\_users\_and\_sale.h}, \hyperpage{23}
-  \item {init\_users\_and\_sale.cpp}
-    \subitem {init\_users\_and\_products}, \hyperpage{64}
-    \subitem {perform\_sale}, \hyperpage{64}
-    \subitem {read\_current\_weight\_blocking}, \hyperpage{65}
-  \item {init\_users\_and\_sale.h}
-    \subitem {init\_users\_and\_products}, \hyperpage{23}
-    \subitem {number\_of\_users}, \hyperpage{23}
-    \subitem {perform\_sale}, \hyperpage{24}
-  \item {inventory}, \hyperpage{7}
-    \subitem {number\_of\_products\_stocked}, \hyperpage{8}
-    \subitem {products\_in\_inventory}, \hyperpage{8}
-    \subitem {room\_number}, \hyperpage{8}
-  \item {inventory.cpp}
-    \subitem {inventory\_add\_beverage}, \hyperpage{66}
-    \subitem {inventory\_add\_product}, \hyperpage{66}
-    \subitem {inventory\_init}, \hyperpage{67}
-    \subitem {inventory\_make\_product}, \hyperpage{67}
-    \subitem {inventory\_print}, \hyperpage{68}
-    \subitem {inventory\_remove\_beverage}, \hyperpage{68}
-    \subitem {inventory\_remove\_product}, \hyperpage{68}
-  \item {inventory.h}
-    \subitem {beer}, \hyperpage{26}
-    \subitem {beverage\_type}, \hyperpage{26}
     \subitem {cider}, \hyperpage{26}
     \subitem {inventory\_add\_beverage}, \hyperpage{26}
-    \subitem {inventory\_add\_product}, \hyperpage{27}
-    \subitem {INVENTORY\_CAPACITY}, \hyperpage{26}
-    \subitem {inventory\_init}, \hyperpage{27}
-    \subitem {inventory\_make\_product}, \hyperpage{28}
-    \subitem {inventory\_print}, \hyperpage{28}
-    \subitem {inventory\_remove\_beverage}, \hyperpage{28}
-    \subitem {inventory\_remove\_product}, \hyperpage{29}
+    \subitem {inventory\_add\_product}, \hyperpage{26}
+    \subitem {INVENTORY\_CAPACITY}, \hyperpage{24}
+    \subitem {inventory\_init}, \hyperpage{26}
+    \subitem {inventory\_make\_product}, \hyperpage{27}
+    \subitem {inventory\_print}, \hyperpage{27}
+    \subitem {inventory\_remove\_beverage}, \hyperpage{27}
+    \subitem {inventory\_remove\_product}, \hyperpage{28}
     \subitem {limfjords\_porter}, \hyperpage{26}
     \subitem {other}, \hyperpage{26}
     \subitem {soda}, \hyperpage{26}
   \item {inventory\_add\_beverage}
-    \subitem {inventory.cpp}, \hyperpage{66}
+    \subitem {inventory.cpp}, \hyperpage{60}
     \subitem {inventory.h}, \hyperpage{26}
   \item {inventory\_add\_product}
-    \subitem {inventory.cpp}, \hyperpage{66}
-    \subitem {inventory.h}, \hyperpage{27}
-  \item {INVENTORY\_CAPACITY}
+    \subitem {inventory.cpp}, \hyperpage{60}
     \subitem {inventory.h}, \hyperpage{26}
+  \item {INVENTORY\_CAPACITY}
+    \subitem {inventory.h}, \hyperpage{24}
   \item {inventory\_init}
-    \subitem {inventory.cpp}, \hyperpage{67}
-    \subitem {inventory.h}, \hyperpage{27}
+    \subitem {inventory.cpp}, \hyperpage{61}
+    \subitem {inventory.h}, \hyperpage{26}
   \item {inventory\_make\_product}
-    \subitem {inventory.cpp}, \hyperpage{67}
-    \subitem {inventory.h}, \hyperpage{28}
+    \subitem {inventory.cpp}, \hyperpage{61}
+    \subitem {inventory.h}, \hyperpage{27}
   \item {inventory\_print}
-    \subitem {inventory.cpp}, \hyperpage{68}
-    \subitem {inventory.h}, \hyperpage{28}
+    \subitem {inventory.cpp}, \hyperpage{61}
+    \subitem {inventory.h}, \hyperpage{27}
   \item {inventory\_remove\_beverage}
-    \subitem {inventory.cpp}, \hyperpage{68}
-    \subitem {inventory.h}, \hyperpage{28}
+    \subitem {inventory.cpp}, \hyperpage{61}
+    \subitem {inventory.h}, \hyperpage{27}
   \item {inventory\_remove\_product}
-    \subitem {inventory.cpp}, \hyperpage{68}
-    \subitem {inventory.h}, \hyperpage{29}
+    \subitem {inventory.cpp}, \hyperpage{62}
+    \subitem {inventory.h}, \hyperpage{28}
   \item {is\_box\_closed}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{70}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {lock\_ctrl.cpp}, \hyperpage{63}
     \subitem {lock\_ctrl.h}, \hyperpage{31}
 
   \indexspace
 
   \item {lastUID}
-<<<<<<< HEAD
-    \subitem {rfid\_access.cpp}, \hyperpage{75}
+    \subitem {rfid\_access.cpp}, \hyperpage{72}
   \item {LIGHT\_PIN}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
-  \item {limfjords\_porter}
-    \subitem {inventory.h}, \hyperpage{25}
-  \item {lock\_ctrl.cpp}
-    \subitem {boxClosed}, \hyperpage{67}
-    \subitem {BUZZER}, \hyperpage{67}
-    \subitem {HIGH\_TONE}, \hyperpage{68}
-    \subitem {is\_box\_closed}, \hyperpage{67}
-    \subitem {lock\_ctrl\_init}, \hyperpage{67}
-    \subitem {lock\_door}, \hyperpage{67}
-    \subitem {LOCK\_POS}, \hyperpage{68}
-    \subitem {lockServo}, \hyperpage{68}
-    \subitem {LOW\_TONE}, \hyperpage{68}
-    \subitem {play\_close}, \hyperpage{67}
-    \subitem {play\_open}, \hyperpage{67}
-    \subitem {TONE\_LENGTH}, \hyperpage{68}
-    \subitem {unlock\_door}, \hyperpage{67}
-    \subitem {UNLOCK\_POS}, \hyperpage{68}
-  \item {lock\_ctrl.h}
-    \subitem {CLOSED\_THRESHOLD}, \hyperpage{31}
-    \subitem {is\_box\_closed}, \hyperpage{31}
-    \subitem {LIGHT\_PIN}, \hyperpage{31}
-    \subitem {lock\_ctrl\_init}, \hyperpage{31}
-    \subitem {lock\_door}, \hyperpage{31}
-    \subitem {OPEN\_THRESHOLD}, \hyperpage{31}
-    \subitem {play\_close}, \hyperpage{31}
-    \subitem {play\_open}, \hyperpage{31}
-    \subitem {play\_warning}, \hyperpage{31}
-    \subitem {SERVO\_PIN}, \hyperpage{31}
-    \subitem {unlock\_door}, \hyperpage{32}
-  \item {lock\_ctrl\_init}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
-  \item {lock\_door}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
-  \item {LOCK\_POS}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{68}
-  \item {lockServo}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{68}
-  \item {login\_html.h}
-    \subitem {PROGMEM}, \hyperpage{33}
-  \item {loop}
-    \subitem {main.cpp}, \hyperpage{69}
-  \item {LOW\_TONE}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{68}
-=======
-    \subitem {rfid\_access.cpp}, \hyperpage{82}
+    \subitem {lock\_ctrl.h}, \hyperpage{30}
   \item {limfjords\_porter}
     \subitem {inventory.h}, \hyperpage{26}
   \item {lock\_ctrl.cpp}
-    \subitem {boxClosed}, \hyperpage{71}
-    \subitem {BUZZER}, \hyperpage{71}
-    \subitem {HIGH\_TONE}, \hyperpage{72}
-    \subitem {is\_box\_closed}, \hyperpage{70}
-    \subitem {lock\_ctrl\_init}, \hyperpage{70}
-    \subitem {lock\_door}, \hyperpage{70}
-    \subitem {LOCK\_POS}, \hyperpage{72}
-    \subitem {lockServo}, \hyperpage{72}
-    \subitem {LOW\_TONE}, \hyperpage{72}
-    \subitem {play\_close}, \hyperpage{71}
-    \subitem {play\_open}, \hyperpage{71}
-    \subitem {TONE\_LENGTH}, \hyperpage{72}
-    \subitem {unlock\_door}, \hyperpage{71}
-    \subitem {UNLOCK\_POS}, \hyperpage{72}
+    \subitem {boxClosed}, \hyperpage{64}
+    \subitem {BUZZER}, \hyperpage{64}
+    \subitem {HIGH\_TONE}, \hyperpage{64}
+    \subitem {is\_box\_closed}, \hyperpage{63}
+    \subitem {lock\_ctrl\_init}, \hyperpage{63}
+    \subitem {lock\_door}, \hyperpage{64}
+    \subitem {LOCK\_POS}, \hyperpage{64}
+    \subitem {lockServo}, \hyperpage{64}
+    \subitem {LOW\_TONE}, \hyperpage{65}
+    \subitem {play\_close}, \hyperpage{64}
+    \subitem {play\_open}, \hyperpage{64}
+    \subitem {TONE\_LENGTH}, \hyperpage{65}
+    \subitem {unlock\_door}, \hyperpage{64}
+    \subitem {UNLOCK\_POS}, \hyperpage{65}
   \item {lock\_ctrl.h}
-    \subitem {CLOSED\_THRESHOLD}, \hyperpage{31}
+    \subitem {CLOSED\_THRESHOLD}, \hyperpage{30}
     \subitem {is\_box\_closed}, \hyperpage{31}
-    \subitem {lock\_ctrl\_init}, \hyperpage{32}
-    \subitem {lock\_door}, \hyperpage{32}
-    \subitem {OPEN\_THRESHOLD}, \hyperpage{31}
-    \subitem {play\_close}, \hyperpage{32}
-    \subitem {play\_open}, \hyperpage{32}
-    \subitem {SERVO\_PIN}, \hyperpage{31}
-    \subitem {unlock\_door}, \hyperpage{32}
+    \subitem {LIGHT\_PIN}, \hyperpage{30}
+    \subitem {lock\_ctrl\_init}, \hyperpage{31}
+    \subitem {lock\_door}, \hyperpage{31}
+    \subitem {OPEN\_THRESHOLD}, \hyperpage{30}
+    \subitem {play\_close}, \hyperpage{31}
+    \subitem {play\_open}, \hyperpage{31}
+    \subitem {SERVO\_PIN}, \hyperpage{30}
+    \subitem {unlock\_door}, \hyperpage{31}
   \item {lock\_ctrl\_init}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{70}
-    \subitem {lock\_ctrl.h}, \hyperpage{32}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{63}
+    \subitem {lock\_ctrl.h}, \hyperpage{31}
   \item {lock\_door}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{70}
-    \subitem {lock\_ctrl.h}, \hyperpage{32}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
+    \subitem {lock\_ctrl.h}, \hyperpage{31}
   \item {LOCK\_POS}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{72}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
   \item {lockServo}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{72}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
   \item {login\_html.h}
-    \subitem {PROGMEM}, \hyperpage{33}
+    \subitem {PROGMEM}, \hyperpage{32}
   \item {loop}
-    \subitem {main.cpp}, \hyperpage{74}
+    \subitem {main.cpp}, \hyperpage{66}
   \item {LOW\_TONE}
-    \subitem {buzzer.cpp}, \hyperpage{56}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{72}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {buzzer.cpp}, \hyperpage{53}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{65}
 
   \indexspace
 
   \item {main.cpp}
-<<<<<<< HEAD
-    \subitem {activeCommand}, \hyperpage{70}
-    \subitem {CAL\_FACTOR}, \hyperpage{70}
-    \subitem {classicHeight}, \hyperpage{70}
-    \subitem {connect\_wifi\_and\_start\_mdns}, \hyperpage{69}
-    \subitem {demo\_beer}, \hyperpage{71}
-    \subitem {doorCloseTimer}, \hyperpage{71}
-    \subitem {doorUnlocked}, \hyperpage{71}
-    \subitem {greenHeight}, \hyperpage{71}
-    \subitem {loop}, \hyperpage{69}
-    \subitem {print\_graph\_arrays}, \hyperpage{69}
-    \subitem {rfid}, \hyperpage{70}
-    \subitem {server}, \hyperpage{70}
-    \subitem {setup}, \hyperpage{70}
-    \subitem {setup\_inventory\_and\_scale}, \hyperpage{70}
-    \subitem {setup\_rfid\_and\_lock}, \hyperpage{70}
-    \subitem {setup\_web\_routes}, \hyperpage{70}
-    \subitem {START\_BEER\_QTY}, \hyperpage{71}
-    \subitem {WIFI\_PASS}, \hyperpage{71}
-    \subitem {WIFI\_SSID}, \hyperpage{71}
+    \subitem {activeCommand}, \hyperpage{67}
+    \subitem {CAL\_FACTOR}, \hyperpage{67}
+    \subitem {classicHeight}, \hyperpage{67}
+    \subitem {connect\_wifi\_and\_start\_mdns}, \hyperpage{66}
+    \subitem {demo\_beer}, \hyperpage{67}
+    \subitem {doorCloseTimer}, \hyperpage{67}
+    \subitem {doorUnlocked}, \hyperpage{68}
+    \subitem {greenHeight}, \hyperpage{68}
+    \subitem {loop}, \hyperpage{66}
+    \subitem {rfid}, \hyperpage{66}
+    \subitem {server}, \hyperpage{66}
+    \subitem {setup}, \hyperpage{66}
+    \subitem {setup\_inventory\_and\_scale}, \hyperpage{67}
+    \subitem {setup\_rfid\_and\_lock}, \hyperpage{67}
+    \subitem {setup\_web\_routes}, \hyperpage{67}
+    \subitem {START\_BEER\_QTY}, \hyperpage{68}
+    \subitem {WIFI\_PASS}, \hyperpage{68}
+    \subitem {WIFI\_SSID}, \hyperpage{68}
   \item {MAX\_ROOMS}
     \subitem {rfid\_access.h}, \hyperpage{35}
-=======
-    \subitem {activeCommand}, \hyperpage{75}
-    \subitem {CAL\_FACTOR}, \hyperpage{75}
-    \subitem {classicHeight}, \hyperpage{76}
-    \subitem {connect\_wifi\_and\_start\_mdns}, \hyperpage{74}
-    \subitem {demo\_beer}, \hyperpage{76}
-    \subitem {doorCloseTimer}, \hyperpage{76}
-    \subitem {doorUnlocked}, \hyperpage{76}
-    \subitem {greenHeight}, \hyperpage{76}
-    \subitem {loop}, \hyperpage{74}
-    \subitem {print\_graph\_arrays}, \hyperpage{74}
-    \subitem {rfid}, \hyperpage{74}
-    \subitem {server}, \hyperpage{75}
-    \subitem {setup}, \hyperpage{75}
-    \subitem {setup\_inventory\_and\_scale}, \hyperpage{75}
-    \subitem {setup\_rfid\_and\_lock}, \hyperpage{75}
-    \subitem {setup\_web\_routes}, \hyperpage{75}
-    \subitem {START\_BEER\_QTY}, \hyperpage{76}
-    \subitem {WIFI\_PASS}, \hyperpage{77}
-    \subitem {WIFI\_SSID}, \hyperpage{77}
-  \item {MAX\_ROOMS}
-    \subitem {rfid\_access.h}, \hyperpage{36}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 
   \indexspace
 
   \item {name}
-<<<<<<< HEAD
     \subitem {product}, \hyperpage{12}
   \item {number\_of\_products\_stocked}
     \subitem {inventory}, \hyperpage{11}
-=======
-    \subitem {product}, \hyperpage{9}
-  \item {number\_of\_products\_stocked}
-    \subitem {inventory}, \hyperpage{8}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
   \item {number\_of\_users}
-    \subitem {init\_users\_and\_sale.h}, \hyperpage{23}
+    \subitem {init\_users\_and\_sale.h}, \hyperpage{22}
 
   \indexspace
 
   \item {OPEN\_THRESHOLD}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
+    \subitem {lock\_ctrl.h}, \hyperpage{30}
   \item {original\_quantity}
-<<<<<<< HEAD
-    \subitem {products\_stocked}, \hyperpage{14}
-  \item {other}
-    \subitem {inventory.h}, \hyperpage{25}
-=======
-    \subitem {products\_stocked}, \hyperpage{11}
+    \subitem {products\_stocked}, \hyperpage{13}
   \item {other}
     \subitem {inventory.h}, \hyperpage{26}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 
   \indexspace
 
   \item {perform\_sale}
-<<<<<<< HEAD
-    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{62}
+    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{59}
     \subitem {init\_users\_and\_sale.h}, \hyperpage{23}
   \item {play\_close}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
     \subitem {lock\_ctrl.h}, \hyperpage{31}
   \item {play\_lock}
-    \subitem {buzzer.cpp}, \hyperpage{55}
+    \subitem {buzzer.cpp}, \hyperpage{52}
     \subitem {buzzer.h}, \hyperpage{17}
   \item {play\_open}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
     \subitem {lock\_ctrl.h}, \hyperpage{31}
   \item {play\_unlock}
-    \subitem {buzzer.cpp}, \hyperpage{55}
+    \subitem {buzzer.cpp}, \hyperpage{52}
     \subitem {buzzer.h}, \hyperpage{17}
   \item {play\_warning}
-    \subitem {buzzer.cpp}, \hyperpage{55}
+    \subitem {buzzer.cpp}, \hyperpage{53}
     \subitem {buzzer.h}, \hyperpage{17}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
   \item {price}
     \subitem {product}, \hyperpage{12}
   \item {print\_all\_users}
-    \subitem {database\_management.cpp}, \hyperpage{57}
-    \subitem {rfid\_access.h}, \hyperpage{38}
+    \subitem {database\_management.cpp}, \hyperpage{55}
+    \subitem {rfid\_access.h}, \hyperpage{37}
   \item {print\_graph\_arrays}
-    \subitem {graph\_data.h}, \hyperpage{20}
-    \subitem {main.cpp}, \hyperpage{69}
+    \subitem {graph\_data.h}, \hyperpage{19}
   \item {print\_single\_user}
-    \subitem {database\_management.cpp}, \hyperpage{58}
+    \subitem {database\_management.cpp}, \hyperpage{55}
     \subitem {rfid\_access.h}, \hyperpage{38}
   \item {print\_uid}
-    \subitem {database\_management.cpp}, \hyperpage{58}
-    \subitem {rfid\_access.h}, \hyperpage{39}
-  \item {produckts\_in\_inventory}
-    \subitem {inventory}, \hyperpage{11}
+    \subitem {database\_management.cpp}, \hyperpage{55}
+    \subitem {rfid\_access.h}, \hyperpage{38}
   \item {product}, \hyperpage{12}
     \subitem {beverage\_variant}, \hyperpage{12}
     \subitem {name}, \hyperpage{12}
     \subitem {price}, \hyperpage{12}
-    \subitem {weight}, \hyperpage{13}
+    \subitem {weight}, \hyperpage{12}
+  \item {products\_in\_inventory}
+    \subitem {inventory}, \hyperpage{11}
   \item {products\_stocked}, \hyperpage{13}
     \subitem {beverage}, \hyperpage{13}
     \subitem {current\_quantity}, \hyperpage{13}
-    \subitem {original\_quantity}, \hyperpage{14}
+    \subitem {original\_quantity}, \hyperpage{13}
   \item {PROGMEM}
     \subitem {admin\_html.h}, \hyperpage{15}
     \subitem {index\_html.h}, \hyperpage{21}
-    \subitem {login\_html.h}, \hyperpage{33}
-    \subitem {sale\_html.cpp}, \hyperpage{77}
-    \subitem {sale\_html.h}, \hyperpage{45}
-    \subitem {style\_css.h}, \hyperpage{47}
-=======
-    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{64}
-    \subitem {init\_users\_and\_sale.h}, \hyperpage{24}
-  \item {play\_close}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{71}
-    \subitem {lock\_ctrl.h}, \hyperpage{32}
-  \item {play\_lock}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-    \subitem {buzzer.h}, \hyperpage{15}
-  \item {play\_open}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{71}
-    \subitem {lock\_ctrl.h}, \hyperpage{32}
-  \item {play\_unlock}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-    \subitem {buzzer.h}, \hyperpage{16}
-  \item {play\_warning}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-    \subitem {buzzer.h}, \hyperpage{16}
-  \item {price}
-    \subitem {product}, \hyperpage{9}
-  \item {print\_all\_users}
-    \subitem {database\_management.cpp}, \hyperpage{59}
-    \subitem {rfid\_access.h}, \hyperpage{41}
-  \item {print\_graph\_arrays}
-    \subitem {graph\_data.h}, \hyperpage{20}
-    \subitem {main.cpp}, \hyperpage{74}
-  \item {print\_single\_user}
-    \subitem {database\_management.cpp}, \hyperpage{59}
-    \subitem {rfid\_access.h}, \hyperpage{41}
-  \item {print\_uid}
-    \subitem {database\_management.cpp}, \hyperpage{59}
-    \subitem {rfid\_access.h}, \hyperpage{41}
-  \item {product}, \hyperpage{8}
-    \subitem {beverage\_variant}, \hyperpage{9}
-    \subitem {name}, \hyperpage{9}
-    \subitem {price}, \hyperpage{9}
-    \subitem {weight}, \hyperpage{9}
-  \item {products\_in\_inventory}
-    \subitem {inventory}, \hyperpage{8}
-  \item {products\_stocked}, \hyperpage{10}
-    \subitem {beverage}, \hyperpage{11}
-    \subitem {current\_quantity}, \hyperpage{11}
-    \subitem {original\_quantity}, \hyperpage{11}
-  \item {PROGMEM}
-    \subitem {admin\_html.h}, \hyperpage{14}
-    \subitem {index\_html.h}, \hyperpage{22}
-    \subitem {login\_html.h}, \hyperpage{33}
-    \subitem {sale\_html.cpp}, \hyperpage{84}
-    \subitem {sale\_html.h}, \hyperpage{47}
-    \subitem {style\_css.h}, \hyperpage{48}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {login\_html.h}, \hyperpage{32}
+    \subitem {sale\_html.cpp}, \hyperpage{74}
+    \subitem {sale\_html.h}, \hyperpage{44}
+    \subitem {style\_css.h}, \hyperpage{46}
 
   \indexspace
 
   \item {read\_confirmation}
-<<<<<<< HEAD
-    \subitem {database\_management.cpp}, \hyperpage{58}
-    \subitem {rfid\_access.h}, \hyperpage{39}
+    \subitem {database\_management.cpp}, \hyperpage{56}
+    \subitem {rfid\_access.h}, \hyperpage{38}
   \item {read\_current\_weight\_blocking}
-    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{62}
+    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{59}
   \item {read\_integer}
-    \subitem {database\_management.cpp}, \hyperpage{58}
-    \subitem {rfid\_access.h}, \hyperpage{39}
+    \subitem {database\_management.cpp}, \hyperpage{56}
+    \subitem {rfid\_access.h}, \hyperpage{38}
   \item {read\_RFID\_tag}
-    \subitem {rfid\_access.cpp}, \hyperpage{73}
-    \subitem {rfid\_access.h}, \hyperpage{39}
-  \item {README.md}, \hyperpage{54}
+    \subitem {rfid\_access.cpp}, \hyperpage{70}
+    \subitem {rfid\_access.h}, \hyperpage{38}
+  \item {README.md}, \hyperpage{52}
   \item {remove\_user}
-    \subitem {database\_management.cpp}, \hyperpage{59}
+    \subitem {database\_management.cpp}, \hyperpage{56}
     \subitem {rfid\_access.h}, \hyperpage{40}
   \item {reset\_weight\_reference}
-    \subitem {weight\_scale.cpp}, \hyperpage{79}
-    \subitem {weight\_scale.h}, \hyperpage{51}
+    \subitem {weight\_scale.cpp}, \hyperpage{76}
+    \subitem {weight\_scale.h}, \hyperpage{49}
   \item {rfid}
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{66}
   \item {rfid\_access.cpp}
-    \subitem {add\_user}, \hyperpage{72}
-    \subitem {check\_command}, \hyperpage{72}
-    \subitem {compare\_UID}, \hyperpage{73}
-    \subitem {display\_commands}, \hyperpage{73}
-    \subitem {display\_commands\_um}, \hyperpage{73}
-    \subitem {hasUID}, \hyperpage{75}
-    \subitem {lastUID}, \hyperpage{75}
-    \subitem {read\_RFID\_tag}, \hyperpage{73}
-    \subitem {rfid\_get\_last\_uid}, \hyperpage{74}
-    \subitem {rfid\_set\_last\_uid}, \hyperpage{74}
-    \subitem {setup\_RFID\_reader}, \hyperpage{74}
-    \subitem {userCount}, \hyperpage{75}
-    \subitem {users}, \hyperpage{75}
-    \subitem {validate\_rfid}, \hyperpage{74}
+    \subitem {add\_user}, \hyperpage{69}
+    \subitem {check\_command}, \hyperpage{69}
+    \subitem {compare\_UID}, \hyperpage{70}
+    \subitem {display\_commands}, \hyperpage{70}
+    \subitem {display\_commands\_um}, \hyperpage{70}
+    \subitem {hasUID}, \hyperpage{72}
+    \subitem {lastUID}, \hyperpage{72}
+    \subitem {read\_RFID\_tag}, \hyperpage{70}
+    \subitem {rfid\_get\_last\_uid}, \hyperpage{70}
+    \subitem {rfid\_set\_last\_uid}, \hyperpage{71}
+    \subitem {setup\_RFID\_reader}, \hyperpage{71}
+    \subitem {userCount}, \hyperpage{72}
+    \subitem {users}, \hyperpage{72}
+    \subitem {validate\_rfid}, \hyperpage{71}
   \item {rfid\_access.h}
     \subitem {add\_user}, \hyperpage{36}
     \subitem {check\_command}, \hyperpage{36}
     \subitem {CMD\_ADD\_USER}, \hyperpage{36}
     \subitem {CMD\_CONFIRM}, \hyperpage{36}
     \subitem {CMD\_LOCK}, \hyperpage{36}
-    \subitem {CMD\_NONE}, \hyperpage{36}
+    \subitem {CMD\_NONE}, \hyperpage{35}
     \subitem {CMD\_OPEN}, \hyperpage{36}
     \subitem {CMD\_PRINT}, \hyperpage{36}
     \subitem {CMD\_REMOVE\_USER}, \hyperpage{36}
     \subitem {compare\_UID}, \hyperpage{36}
-    \subitem {count\_rooms}, \hyperpage{37}
+    \subitem {count\_rooms}, \hyperpage{36}
     \subitem {display\_commands}, \hyperpage{37}
     \subitem {display\_commands\_um}, \hyperpage{37}
     \subitem {find\_empty\_index}, \hyperpage{37}
-    \subitem {get\_users\_db}, \hyperpage{38}
+    \subitem {get\_users\_db}, \hyperpage{37}
     \subitem {MAX\_ROOMS}, \hyperpage{35}
-    \subitem {print\_all\_users}, \hyperpage{38}
+    \subitem {print\_all\_users}, \hyperpage{37}
     \subitem {print\_single\_user}, \hyperpage{38}
-    \subitem {print\_uid}, \hyperpage{39}
-    \subitem {read\_confirmation}, \hyperpage{39}
-    \subitem {read\_integer}, \hyperpage{39}
-    \subitem {read\_RFID\_tag}, \hyperpage{39}
+    \subitem {print\_uid}, \hyperpage{38}
+    \subitem {read\_confirmation}, \hyperpage{38}
+    \subitem {read\_integer}, \hyperpage{38}
+    \subitem {read\_RFID\_tag}, \hyperpage{38}
     \subitem {remove\_user}, \hyperpage{40}
     \subitem {rfid\_get\_last\_uid}, \hyperpage{40}
     \subitem {rfid\_set\_last\_uid}, \hyperpage{40}
-    \subitem {RFIDcommand}, \hyperpage{36}
+    \subitem {RFIDcommand}, \hyperpage{35}
     \subitem {RST\_PIN}, \hyperpage{35}
     \subitem {setup\_RFID\_reader}, \hyperpage{40}
     \subitem {SS\_PIN}, \hyperpage{35}
@@ -862,13 +477,13 @@
     \subitem {users}, \hyperpage{41}
     \subitem {validate\_rfid}, \hyperpage{41}
   \item {rfid\_get\_last\_uid}
-    \subitem {rfid\_access.cpp}, \hyperpage{74}
+    \subitem {rfid\_access.cpp}, \hyperpage{70}
     \subitem {rfid\_access.h}, \hyperpage{40}
   \item {rfid\_set\_last\_uid}
-    \subitem {rfid\_access.cpp}, \hyperpage{74}
+    \subitem {rfid\_access.cpp}, \hyperpage{71}
     \subitem {rfid\_access.h}, \hyperpage{40}
   \item {RFIDcommand}
-    \subitem {rfid\_access.h}, \hyperpage{36}
+    \subitem {rfid\_access.h}, \hyperpage{35}
   \item {ROOM\_COUNT}
     \subitem {graph\_data.h}, \hyperpage{19}
   \item {room\_number}
@@ -877,401 +492,158 @@
     \subitem {User}, \hyperpage{14}
   \item {RST\_PIN}
     \subitem {rfid\_access.h}, \hyperpage{35}
-=======
-    \subitem {database\_management.cpp}, \hyperpage{60}
-    \subitem {rfid\_access.h}, \hyperpage{41}
-  \item {read\_current\_weight\_blocking}
-    \subitem {init\_users\_and\_sale.cpp}, \hyperpage{65}
-  \item {read\_integer}
-    \subitem {database\_management.cpp}, \hyperpage{60}
-    \subitem {rfid\_access.h}, \hyperpage{42}
-  \item {read\_RFID\_tag}
-    \subitem {rfid\_access.cpp}, \hyperpage{80}
-    \subitem {rfid\_access.h}, \hyperpage{42}
-  \item {README.md}, \hyperpage{54}
-  \item {remove\_user}
-    \subitem {database\_management.cpp}, \hyperpage{60}
-    \subitem {rfid\_access.h}, \hyperpage{42}
-  \item {reset\_weight\_reference}
-    \subitem {weight\_scale.cpp}, \hyperpage{87}
-    \subitem {weight\_scale.h}, \hyperpage{52}
-  \item {rfid}
-    \subitem {main.cpp}, \hyperpage{74}
-  \item {rfid\_access.cpp}
-    \subitem {add\_user}, \hyperpage{78}
-    \subitem {check\_command}, \hyperpage{79}
-    \subitem {compare\_UID}, \hyperpage{79}
-    \subitem {display\_commands}, \hyperpage{79}
-    \subitem {display\_commands\_um}, \hyperpage{80}
-    \subitem {hasUID}, \hyperpage{82}
-    \subitem {lastUID}, \hyperpage{82}
-    \subitem {read\_RFID\_tag}, \hyperpage{80}
-    \subitem {rfid\_get\_last\_uid}, \hyperpage{80}
-    \subitem {rfid\_set\_last\_uid}, \hyperpage{80}
-    \subitem {setup\_RFID\_reader}, \hyperpage{81}
-    \subitem {userCount}, \hyperpage{82}
-    \subitem {users}, \hyperpage{82}
-    \subitem {validate\_rfid}, \hyperpage{81}
-  \item {rfid\_access.h}
-    \subitem {add\_user}, \hyperpage{37}
-    \subitem {check\_command}, \hyperpage{38}
-    \subitem {CMD\_ADD\_USER}, \hyperpage{37}
-    \subitem {CMD\_CONFIRM}, \hyperpage{37}
-    \subitem {CMD\_LOCK}, \hyperpage{37}
-    \subitem {CMD\_NONE}, \hyperpage{37}
-    \subitem {CMD\_OPEN}, \hyperpage{37}
-    \subitem {CMD\_PRINT}, \hyperpage{37}
-    \subitem {CMD\_REMOVE\_USER}, \hyperpage{37}
-    \subitem {compare\_UID}, \hyperpage{38}
-    \subitem {count\_rooms}, \hyperpage{38}
-    \subitem {display\_commands}, \hyperpage{39}
-    \subitem {display\_commands\_um}, \hyperpage{39}
-    \subitem {find\_empty\_index}, \hyperpage{39}
-    \subitem {get\_users\_db}, \hyperpage{39}
-    \subitem {MAX\_ROOMS}, \hyperpage{36}
-    \subitem {print\_all\_users}, \hyperpage{41}
-    \subitem {print\_single\_user}, \hyperpage{41}
-    \subitem {print\_uid}, \hyperpage{41}
-    \subitem {read\_confirmation}, \hyperpage{41}
-    \subitem {read\_integer}, \hyperpage{42}
-    \subitem {read\_RFID\_tag}, \hyperpage{42}
-    \subitem {remove\_user}, \hyperpage{42}
-    \subitem {rfid\_get\_last\_uid}, \hyperpage{43}
-    \subitem {rfid\_set\_last\_uid}, \hyperpage{43}
-    \subitem {RFIDcommand}, \hyperpage{37}
-    \subitem {RST\_PIN}, \hyperpage{36}
-    \subitem {setup\_RFID\_reader}, \hyperpage{43}
-    \subitem {SS\_PIN}, \hyperpage{36}
-    \subitem {UID\_LENGTH}, \hyperpage{37}
-    \subitem {user\_management}, \hyperpage{44}
-    \subitem {userCount}, \hyperpage{44}
-    \subitem {users}, \hyperpage{44}
-    \subitem {validate\_rfid}, \hyperpage{44}
-  \item {rfid\_get\_last\_uid}
-    \subitem {rfid\_access.cpp}, \hyperpage{80}
-    \subitem {rfid\_access.h}, \hyperpage{43}
-  \item {rfid\_set\_last\_uid}
-    \subitem {rfid\_access.cpp}, \hyperpage{80}
-    \subitem {rfid\_access.h}, \hyperpage{43}
-  \item {RFIDcommand}
-    \subitem {rfid\_access.h}, \hyperpage{37}
-  \item {ROOM\_COUNT}
-    \subitem {graph\_data.h}, \hyperpage{19}
-  \item {room\_number}
-    \subitem {inventory}, \hyperpage{8}
-  \item {roomNumber}
-    \subitem {User}, \hyperpage{12}
-  \item {RST\_PIN}
-    \subitem {rfid\_access.h}, \hyperpage{36}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 
   \indexspace
 
   \item {sale\_html.cpp}
-<<<<<<< HEAD
-    \subitem {PROGMEM}, \hyperpage{77}
-    \subitem {send\_sale\_html\_graph}, \hyperpage{76}
-    \subitem {send\_sale\_html\_page}, \hyperpage{76}
+    \subitem {PROGMEM}, \hyperpage{74}
+    \subitem {send\_sale\_html\_graph}, \hyperpage{73}
+    \subitem {send\_sale\_html\_page}, \hyperpage{74}
   \item {sale\_html.h}
-    \subitem {PROGMEM}, \hyperpage{45}
+    \subitem {PROGMEM}, \hyperpage{44}
     \subitem {send\_sale\_html\_graph}, \hyperpage{44}
     \subitem {send\_sale\_html\_page}, \hyperpage{44}
   \item {scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{79}
-    \subitem {weight\_scale.h}, \hyperpage{53}
+    \subitem {weight\_scale.cpp}, \hyperpage{76}
+    \subitem {weight\_scale.h}, \hyperpage{51}
   \item {SCALE\_DEFAULT\_SETTLE\_TIME\_MS}
     \subitem {weight\_scale.h}, \hyperpage{49}
   \item {SCALE\_TOL}
     \subitem {weight\_scale.h}, \hyperpage{49}
   \item {send\_sale\_html\_graph}
-    \subitem {sale\_html.cpp}, \hyperpage{76}
+    \subitem {sale\_html.cpp}, \hyperpage{73}
     \subitem {sale\_html.h}, \hyperpage{44}
   \item {send\_sale\_html\_page}
-    \subitem {sale\_html.cpp}, \hyperpage{76}
+    \subitem {sale\_html.cpp}, \hyperpage{74}
     \subitem {sale\_html.h}, \hyperpage{44}
   \item {server}
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{66}
   \item {SERVO\_PIN}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
+    \subitem {lock\_ctrl.h}, \hyperpage{30}
   \item {set\_weight\_reference}
-    \subitem {weight\_scale.cpp}, \hyperpage{79}
-    \subitem {weight\_scale.h}, \hyperpage{52}
+    \subitem {weight\_scale.cpp}, \hyperpage{76}
+    \subitem {weight\_scale.h}, \hyperpage{50}
   \item {setup}
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{66}
   \item {setup\_inventory\_and\_scale}
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {setup\_rfid\_and\_lock}
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {setup\_RFID\_reader}
-    \subitem {rfid\_access.cpp}, \hyperpage{74}
+    \subitem {rfid\_access.cpp}, \hyperpage{71}
     \subitem {rfid\_access.h}, \hyperpage{40}
   \item {setup\_scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{80}
-    \subitem {weight\_scale.h}, \hyperpage{52}
+    \subitem {weight\_scale.cpp}, \hyperpage{76}
+    \subitem {weight\_scale.h}, \hyperpage{50}
   \item {setup\_web\_routes}
-    \subitem {main.cpp}, \hyperpage{70}
+    \subitem {main.cpp}, \hyperpage{67}
   \item {soda}
-    \subitem {inventory.h}, \hyperpage{25}
-  \item {src Directory Reference}, \hyperpage{9}
-  \item {src/buzzer.cpp}, \hyperpage{54}
-  \item {src/database\_management.cpp}, \hyperpage{56}
-  \item {src/fridge\_state.cpp}, \hyperpage{59}
-  \item {src/graph\_data.cpp}, \hyperpage{60}
-  \item {src/init\_users\_and\_sale.cpp}, \hyperpage{61}
-  \item {src/inventory.cpp}, \hyperpage{62}
-  \item {src/lock\_ctrl.cpp}, \hyperpage{66}
-  \item {src/main.cpp}, \hyperpage{68}
-  \item {src/rfid\_access.cpp}, \hyperpage{71}
-  \item {src/sale\_html.cpp}, \hyperpage{75}
-  \item {src/weight\_scale.cpp}, \hyperpage{78}
+    \subitem {inventory.h}, \hyperpage{26}
+  \item {src Directory Reference}, \hyperpage{10}
+  \item {src/buzzer.cpp}, \hyperpage{52}
+  \item {src/database\_management.cpp}, \hyperpage{53}
+  \item {src/fridge\_state.cpp}, \hyperpage{57}
+  \item {src/graph\_data.cpp}, \hyperpage{57}
+  \item {src/init\_users\_and\_sale.cpp}, \hyperpage{59}
+  \item {src/inventory.cpp}, \hyperpage{60}
+  \item {src/lock\_ctrl.cpp}, \hyperpage{62}
+  \item {src/main.cpp}, \hyperpage{65}
+  \item {src/rfid\_access.cpp}, \hyperpage{68}
+  \item {src/sale\_html.cpp}, \hyperpage{72}
+  \item {src/weight\_scale.cpp}, \hyperpage{75}
   \item {SS\_PIN}
     \subitem {rfid\_access.h}, \hyperpage{35}
   \item {START\_BEER\_QTY}
-    \subitem {main.cpp}, \hyperpage{71}
+    \subitem {main.cpp}, \hyperpage{68}
   \item {style\_css.h}
-    \subitem {PROGMEM}, \hyperpage{47}
-=======
-    \subitem {PROGMEM}, \hyperpage{84}
-    \subitem {send\_sale\_html\_graph}, \hyperpage{83}
-    \subitem {send\_sale\_html\_page}, \hyperpage{84}
-  \item {sale\_html.h}
-    \subitem {PROGMEM}, \hyperpage{47}
-    \subitem {send\_sale\_html\_graph}, \hyperpage{46}
-    \subitem {send\_sale\_html\_page}, \hyperpage{46}
-  \item {scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{87}
-    \subitem {weight\_scale.h}, \hyperpage{54}
-  \item {SCALE\_DEFAULT\_SETTLE\_TIME\_MS}
-    \subitem {weight\_scale.h}, \hyperpage{51}
-  \item {SCALE\_TOL}
-    \subitem {weight\_scale.h}, \hyperpage{51}
-  \item {send\_sale\_html\_graph}
-    \subitem {sale\_html.cpp}, \hyperpage{83}
-    \subitem {sale\_html.h}, \hyperpage{46}
-  \item {send\_sale\_html\_page}
-    \subitem {sale\_html.cpp}, \hyperpage{84}
-    \subitem {sale\_html.h}, \hyperpage{46}
-  \item {server}
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {SERVO\_PIN}
-    \subitem {lock\_ctrl.h}, \hyperpage{31}
-  \item {set\_weight\_reference}
-    \subitem {weight\_scale.cpp}, \hyperpage{87}
-    \subitem {weight\_scale.h}, \hyperpage{52}
-  \item {setup}
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {setup\_inventory\_and\_scale}
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {setup\_rfid\_and\_lock}
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {setup\_RFID\_reader}
-    \subitem {rfid\_access.cpp}, \hyperpage{81}
-    \subitem {rfid\_access.h}, \hyperpage{43}
-  \item {setup\_scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{88}
-    \subitem {weight\_scale.h}, \hyperpage{52}
-  \item {setup\_web\_routes}
-    \subitem {main.cpp}, \hyperpage{75}
-  \item {soda}
-    \subitem {inventory.h}, \hyperpage{26}
-  \item {src/buzzer.cpp}, \hyperpage{54}
-  \item {src/database\_management.cpp}, \hyperpage{57}
-  \item {src/fridge\_state.cpp}, \hyperpage{61}
-  \item {src/graph\_data.cpp}, \hyperpage{62}
-  \item {src/init\_users\_and\_sale.cpp}, \hyperpage{64}
-  \item {src/inventory.cpp}, \hyperpage{65}
-  \item {src/lock\_ctrl.cpp}, \hyperpage{69}
-  \item {src/main.cpp}, \hyperpage{73}
-  \item {src/rfid\_access.cpp}, \hyperpage{77}
-  \item {src/sale\_html.cpp}, \hyperpage{82}
-  \item {src/weight\_scale.cpp}, \hyperpage{85}
-  \item {SS\_PIN}
-    \subitem {rfid\_access.h}, \hyperpage{36}
-  \item {START\_BEER\_QTY}
-    \subitem {main.cpp}, \hyperpage{76}
-  \item {style\_css.h}
-    \subitem {PROGMEM}, \hyperpage{48}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {PROGMEM}, \hyperpage{46}
 
   \indexspace
 
   \item {tare\_complete}
-<<<<<<< HEAD
-    \subitem {weight\_scale.cpp}, \hyperpage{80}
-    \subitem {weight\_scale.h}, \hyperpage{52}
+    \subitem {weight\_scale.cpp}, \hyperpage{77}
+    \subitem {weight\_scale.h}, \hyperpage{50}
   \item {tare\_scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{80}
-    \subitem {weight\_scale.h}, \hyperpage{52}
+    \subitem {weight\_scale.cpp}, \hyperpage{77}
+    \subitem {weight\_scale.h}, \hyperpage{50}
   \item {TONE\_LENGTH}
-    \subitem {buzzer.cpp}, \hyperpage{55}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{68}
-=======
-    \subitem {weight\_scale.cpp}, \hyperpage{88}
-    \subitem {weight\_scale.h}, \hyperpage{53}
-  \item {tare\_scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{88}
-    \subitem {weight\_scale.h}, \hyperpage{53}
-  \item {TONE\_LENGTH}
-    \subitem {buzzer.cpp}, \hyperpage{56}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{72}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {buzzer.cpp}, \hyperpage{53}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{65}
 
   \indexspace
 
   \item {uid}
-<<<<<<< HEAD
     \subitem {User}, \hyperpage{14}
   \item {UID\_LENGTH}
     \subitem {rfid\_access.h}, \hyperpage{35}
   \item {unlock\_door}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{67}
-    \subitem {lock\_ctrl.h}, \hyperpage{32}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{64}
+    \subitem {lock\_ctrl.h}, \hyperpage{31}
   \item {UNLOCK\_POS}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{68}
+    \subitem {lock\_ctrl.cpp}, \hyperpage{65}
   \item {update\_scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{80}
-    \subitem {weight\_scale.h}, \hyperpage{52}
-  \item {User}, \hyperpage{14}
+    \subitem {weight\_scale.cpp}, \hyperpage{77}
+    \subitem {weight\_scale.h}, \hyperpage{50}
+  \item {User}, \hyperpage{13}
     \subitem {balance}, \hyperpage{14}
     \subitem {roomNumber}, \hyperpage{14}
     \subitem {uid}, \hyperpage{14}
   \item {user\_management}
-    \subitem {database\_management.cpp}, \hyperpage{59}
+    \subitem {database\_management.cpp}, \hyperpage{56}
     \subitem {rfid\_access.h}, \hyperpage{41}
   \item {userCount}
-    \subitem {rfid\_access.cpp}, \hyperpage{75}
+    \subitem {rfid\_access.cpp}, \hyperpage{72}
     \subitem {rfid\_access.h}, \hyperpage{41}
   \item {users}
-    \subitem {rfid\_access.cpp}, \hyperpage{75}
+    \subitem {rfid\_access.cpp}, \hyperpage{72}
     \subitem {rfid\_access.h}, \hyperpage{41}
-=======
-    \subitem {User}, \hyperpage{12}
-  \item {UID\_LENGTH}
-    \subitem {rfid\_access.h}, \hyperpage{37}
-  \item {unlock\_door}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{71}
-    \subitem {lock\_ctrl.h}, \hyperpage{32}
-  \item {UNLOCK\_POS}
-    \subitem {lock\_ctrl.cpp}, \hyperpage{72}
-  \item {update\_scale}
-    \subitem {weight\_scale.cpp}, \hyperpage{88}
-    \subitem {weight\_scale.h}, \hyperpage{53}
-  \item {User}, \hyperpage{11}
-    \subitem {balance}, \hyperpage{12}
-    \subitem {roomNumber}, \hyperpage{12}
-    \subitem {uid}, \hyperpage{12}
-  \item {user\_management}
-    \subitem {database\_management.cpp}, \hyperpage{60}
-    \subitem {rfid\_access.h}, \hyperpage{44}
-  \item {userCount}
-    \subitem {rfid\_access.cpp}, \hyperpage{82}
-    \subitem {rfid\_access.h}, \hyperpage{44}
-  \item {users}
-    \subitem {rfid\_access.cpp}, \hyperpage{82}
-    \subitem {rfid\_access.h}, \hyperpage{44}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 
   \indexspace
 
   \item {validate\_rfid}
-<<<<<<< HEAD
-    \subitem {rfid\_access.cpp}, \hyperpage{74}
+    \subitem {rfid\_access.cpp}, \hyperpage{71}
     \subitem {rfid\_access.h}, \hyperpage{41}
-=======
-    \subitem {rfid\_access.cpp}, \hyperpage{81}
-    \subitem {rfid\_access.h}, \hyperpage{44}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 
   \indexspace
 
   \item {weight}
-<<<<<<< HEAD
-    \subitem {product}, \hyperpage{13}
-  \item {weight\_change\_recall}
-    \subitem {weight\_scale.h}, \hyperpage{51}
-  \item {weight\_change\_store}
-    \subitem {weight\_scale.h}, \hyperpage{50}
-  \item {weight\_recall\_action}
-    \subitem {weight\_scale.h}, \hyperpage{50}
+    \subitem {product}, \hyperpage{12}
   \item {weight\_reference\_is\_set}
-    \subitem {weight\_scale.cpp}, \hyperpage{80}
-    \subitem {weight\_scale.h}, \hyperpage{53}
+    \subitem {weight\_scale.cpp}, \hyperpage{77}
+    \subitem {weight\_scale.h}, \hyperpage{50}
   \item {weight\_scale.cpp}
-    \subitem {g\_referenceWeight}, \hyperpage{81}
-    \subitem {get\_beer\_cans\_taken}, \hyperpage{78}
-    \subitem {get\_weight}, \hyperpage{79}
-    \subitem {get\_weight\_reference}, \hyperpage{79}
-    \subitem {reset\_weight\_reference}, \hyperpage{79}
-    \subitem {scale}, \hyperpage{79}
-    \subitem {set\_weight\_reference}, \hyperpage{79}
-    \subitem {setup\_scale}, \hyperpage{80}
-    \subitem {tare\_complete}, \hyperpage{80}
-    \subitem {tare\_scale}, \hyperpage{80}
-    \subitem {update\_scale}, \hyperpage{80}
-    \subitem {weight\_reference\_is\_set}, \hyperpage{80}
+    \subitem {g\_referenceWeight}, \hyperpage{77}
+    \subitem {get\_beer\_cans\_taken}, \hyperpage{75}
+    \subitem {get\_weight}, \hyperpage{76}
+    \subitem {get\_weight\_reference}, \hyperpage{76}
+    \subitem {reset\_weight\_reference}, \hyperpage{76}
+    \subitem {scale}, \hyperpage{76}
+    \subitem {set\_weight\_reference}, \hyperpage{76}
+    \subitem {setup\_scale}, \hyperpage{76}
+    \subitem {tare\_complete}, \hyperpage{77}
+    \subitem {tare\_scale}, \hyperpage{77}
+    \subitem {update\_scale}, \hyperpage{77}
+    \subitem {weight\_reference\_is\_set}, \hyperpage{77}
   \item {weight\_scale.h}
-    \subitem {BEER\_WEIGHT}, \hyperpage{49}
-    \subitem {get\_beer\_cans\_taken}, \hyperpage{51}
-    \subitem {get\_weight}, \hyperpage{51}
-    \subitem {get\_weight\_reference}, \hyperpage{51}
-    \subitem {HX711\_DOUT}, \hyperpage{49}
-    \subitem {HX711\_SCK}, \hyperpage{49}
-    \subitem {reset\_weight\_reference}, \hyperpage{51}
-    \subitem {scale}, \hyperpage{53}
+    \subitem {BEER\_WEIGHT}, \hyperpage{48}
+    \subitem {get\_beer\_cans\_taken}, \hyperpage{49}
+    \subitem {get\_weight}, \hyperpage{49}
+    \subitem {get\_weight\_reference}, \hyperpage{49}
+    \subitem {HX711\_DOUT}, \hyperpage{48}
+    \subitem {HX711\_SCK}, \hyperpage{48}
+    \subitem {reset\_weight\_reference}, \hyperpage{49}
+    \subitem {scale}, \hyperpage{51}
     \subitem {SCALE\_DEFAULT\_SETTLE\_TIME\_MS}, \hyperpage{49}
     \subitem {SCALE\_TOL}, \hyperpage{49}
-    \subitem {set\_weight\_reference}, \hyperpage{52}
-    \subitem {setup\_scale}, \hyperpage{52}
-    \subitem {tare\_complete}, \hyperpage{52}
-    \subitem {tare\_scale}, \hyperpage{52}
-    \subitem {update\_scale}, \hyperpage{52}
-    \subitem {weight\_change\_recall}, \hyperpage{51}
-    \subitem {weight\_change\_store}, \hyperpage{50}
-    \subitem {weight\_recall\_action}, \hyperpage{50}
-    \subitem {weight\_reference\_is\_set}, \hyperpage{53}
+    \subitem {set\_weight\_reference}, \hyperpage{50}
+    \subitem {setup\_scale}, \hyperpage{50}
+    \subitem {tare\_complete}, \hyperpage{50}
+    \subitem {tare\_scale}, \hyperpage{50}
+    \subitem {update\_scale}, \hyperpage{50}
+    \subitem {weight\_reference\_is\_set}, \hyperpage{50}
   \item {WIFI\_PASS}
-    \subitem {main.cpp}, \hyperpage{71}
+    \subitem {main.cpp}, \hyperpage{68}
   \item {WIFI\_SSID}
-    \subitem {main.cpp}, \hyperpage{71}
-=======
-    \subitem {product}, \hyperpage{9}
-  \item {weight\_reference\_is\_set}
-    \subitem {weight\_scale.cpp}, \hyperpage{88}
-    \subitem {weight\_scale.h}, \hyperpage{53}
-  \item {weight\_scale.cpp}
-    \subitem {g\_referenceWeight}, \hyperpage{89}
-    \subitem {get\_beer\_cans\_taken}, \hyperpage{86}
-    \subitem {get\_weight}, \hyperpage{86}
-    \subitem {get\_weight\_reference}, \hyperpage{87}
-    \subitem {reset\_weight\_reference}, \hyperpage{87}
-    \subitem {scale}, \hyperpage{87}
-    \subitem {set\_weight\_reference}, \hyperpage{87}
-    \subitem {setup\_scale}, \hyperpage{88}
-    \subitem {tare\_complete}, \hyperpage{88}
-    \subitem {tare\_scale}, \hyperpage{88}
-    \subitem {update\_scale}, \hyperpage{88}
-    \subitem {weight\_reference\_is\_set}, \hyperpage{88}
-  \item {weight\_scale.h}
-    \subitem {BEER\_WEIGHT}, \hyperpage{50}
-    \subitem {get\_beer\_cans\_taken}, \hyperpage{51}
-    \subitem {get\_weight}, \hyperpage{51}
-    \subitem {get\_weight\_reference}, \hyperpage{52}
-    \subitem {HX711\_DOUT}, \hyperpage{50}
-    \subitem {HX711\_SCK}, \hyperpage{50}
-    \subitem {reset\_weight\_reference}, \hyperpage{52}
-    \subitem {scale}, \hyperpage{54}
-    \subitem {SCALE\_DEFAULT\_SETTLE\_TIME\_MS}, \hyperpage{51}
-    \subitem {SCALE\_TOL}, \hyperpage{51}
-    \subitem {set\_weight\_reference}, \hyperpage{52}
-    \subitem {setup\_scale}, \hyperpage{52}
-    \subitem {tare\_complete}, \hyperpage{53}
-    \subitem {tare\_scale}, \hyperpage{53}
-    \subitem {update\_scale}, \hyperpage{53}
-    \subitem {weight\_reference\_is\_set}, \hyperpage{53}
-  \item {WIFI\_PASS}
-    \subitem {main.cpp}, \hyperpage{77}
-  \item {WIFI\_SSID}
-    \subitem {main.cpp}, \hyperpage{77}
->>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
+    \subitem {main.cpp}, \hyperpage{68}
 
 \end{theindex}

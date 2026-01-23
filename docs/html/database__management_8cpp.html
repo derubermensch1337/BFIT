@@ -122,8 +122,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:aee642965bad74cd187195f79bd5f291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Counts the number of occupied user entries in the database.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Functions for user management and read/write of non-volatile memory on ESP8266. </p>
-<dl class="section author"><dt>Authors</dt><dd>Anssi Sohlman,  </dd></dl>
+<div class="textblock"><dl class="section author"><dt>Authors</dt><dd>Anssi Sohlman,  </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="aee642965bad74cd187195f79bd5f291d" name="aee642965bad74cd187195f79bd5f291d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee642965bad74cd187195f79bd5f291d">&#9670;&#160;</a></span>count_rooms()</h2>
@@ -139,15 +138,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Counts the number of occupied user entries in the database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int - Number of rooms </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Number of rooms </dd></dl>
 
 </div>
 </div>
@@ -165,15 +162,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Finds an empty slot in the user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int - The empty index. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int The empty index. </dd></dl>
 
 </div>
 </div>
@@ -191,8 +186,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Copies the current user database to a provided buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
@@ -216,8 +209,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prints all users in the database to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
@@ -245,8 +236,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Prints a single user entry to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
@@ -271,8 +260,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prints a UID buffer to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to member of the users[] array </td></tr>
@@ -296,11 +283,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reads a confirmation input from the serial interface. </p>
-<dl class="section return"><dt>Returns</dt><dd>true - Confirmed. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Confirmed. </dd>
 <dd>
-false - Not confirmed. </dd></dl>
+false Not confirmed. </dd></dl>
 
 </div>
 </div>
@@ -318,9 +303,7 @@ false - Not confirmed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reads an integer from the serial interface. </p>
-<dl class="section return"><dt>Returns</dt><dd>int - Intiger read from serial interface. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Intiger read from serial interface. </dd></dl>
 
 </div>
 </div>
@@ -338,11 +321,9 @@ false - Not confirmed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Removes a user from the database. </p>
-<dl class="section return"><dt>Returns</dt><dd>true - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was removed. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was removed. </dd>
 <dd>
-false - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not removed. </dd></dl>
+false <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not removed. </dd></dl>
 
 </div>
 </div>
@@ -369,8 +350,6 @@ false - <a class="el" href="struct_user.html" title="User record stored in the R
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Executes user-management actions based on the provided command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cmd</td><td>The current <a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a> (add or remove user) </td></tr>
