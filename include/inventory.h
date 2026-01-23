@@ -57,16 +57,10 @@ typedef struct {
  * @brief Represents a user's beverage inventory.
  */
 typedef struct {
-    products_stocked products_in_inventory[INVENTORY_CAPACITY];
-        /**< Products currently in inventory */
-
-    uint8_t number_of_products_stocked;
-        /**< Number of valid entries in products_in_inventory */
-
-    uint8_t room_number;
-        /**< Room number associated with the inventory (currently unused) */
-
-    /**< FRID of the user owning the inventory (not implemented) */
+    products_stocked products_in_inventory[INVENTORY_CAPACITY]; /**< Products currently in inventory */
+    uint8_t number_of_products_stocked;                         /**< Number of valid entries in products_in_inventory */
+    uint8_t room_number;                                        /**< Room number associated with the inventory (currently unused) */
+                                                                /**< FRID of the user owning the inventory (not implemented) */
 } inventory;
 
 
@@ -77,8 +71,9 @@ typedef struct {
  *
  * @param inventory Pointer to inventory instance to initialize.
  */
-void inventory_init(inventory *inventory);
-
+void inventory_init(
+    inventory *inventory
+);
 
 /**
  * @brief Creates a new product instance.
@@ -89,16 +84,6 @@ void inventory_init(inventory *inventory);
  * @param price Price of the product.
  *
  * @return Initialized product instance.
- */
-
-/**
- * @brief 
- * 
- * @param name 
- * @param type 
- * @param weight 
- * @param price 
- * @return product 
  */
 product inventory_make_product(
     const char *name,
@@ -176,6 +161,8 @@ bool inventory_remove_beverage(
  *
  * @param inventory Inventory to print.
  */
-void inventory_print(inventory *inventory);
+void inventory_print(
+    inventory *inventory
+);
 
 #endif
