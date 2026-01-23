@@ -11,12 +11,12 @@
 #define number_of_users 18
 
 /**
- * @brief 
- */
+ * @brief Old function for initualicing users and products, shuld be moved to fridge_state.h
+*/
 void init_users_and_products();
 
 /**
- * @brief  
+ * @brief FUnction to actually performe a sale between a user and the fridge
  * @param weight 
  * @param user_id 
  * @param fridge_inventory 

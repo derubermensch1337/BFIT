@@ -9,6 +9,9 @@
 
 #include <pgmspace.h>
 
+/**
+ * @brief Sting used for the HTML header
+*/
 const char INDEX_HTML_HEAD[] PROGMEM = R"rawliteral(
 <!DOCTYPE html>
 <html>
@@ -24,8 +27,9 @@ const char INDEX_HTML_HEAD[] PROGMEM = R"rawliteral(
     </div>
 )rawliteral";
 
-
-        
+/**
+ * @brief String used for the HTML footer. This is responsible for updating the graphs.
+*/
 const char INDEX_HTML_FOOT[] PROGMEM = R"rawliteral(
         <script>
             async function refreshGraphs() {
