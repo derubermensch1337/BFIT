@@ -1,8 +1,11 @@
 /**
  * @file style_css.h
  * @brief CSS served at /style.css used for setting the style for the web server.
+ * 
  * The css is handled as a string by the compiler.
- */
+ * 
+ * @author Baldur G. Toftegaard 
+*/
 
 #ifndef STYLE_CSS_H
 #define STYLE_CSS_H

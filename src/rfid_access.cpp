@@ -1,6 +1,6 @@
 /**
  * @file rfid_access.cpp
- * @brief 
+ * @brief File used to setup the RFID
  * @author Amal Araweelo Almis
  * @author Baldur G. Toftegaard
  * @author Anssi Sohlman

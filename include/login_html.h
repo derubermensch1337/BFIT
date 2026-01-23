@@ -11,7 +11,7 @@
 
 /**
  * @brief HTML for the login page. Interpreted as a string by the compiler.
- */
+*/
 const char LOGIN_HTML[] PROGMEM = R"rawliteral(
     <!DOCTYPE html>
     <html>

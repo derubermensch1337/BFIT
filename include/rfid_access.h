@@ -2,8 +2,8 @@
  * @file rfid_access.h
  * @brief Declare functions related to RFID reading and user database
  * @author Amal Araweelo Almis
- * @author Baldur G. Toftegaard
  * @author Anssi Sohlman
+ * @author Baldur G. Toftegaard
  */
 
 #ifndef RFID_ACCESS_H

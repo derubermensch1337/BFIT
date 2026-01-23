@@ -1,7 +1,7 @@
 /**
  * @file sale_html.h
  * @brief Headerfile for displaying the graph of sales on the main page
- * @authors Baldur G. Toftegaard
+ * @author Baldur G. Toftegaard
 */
 
 #ifndef SALE_HTML_H
