@@ -1,6 +1,7 @@
 /**
  * @file style_css.h
- * @brief CSS served at /style.css
+ * @brief CSS served at /style.css used for setting the style for the web server.
+ * The css is handled as a string by the compiler.
  */
 
 #ifndef STYLE_CSS_H
@@ -8,8 +9,7 @@
 #include <pgmspace.h>
 
 /**
- * @brief 
- * 
+ * @brief String containing the CSS styling of the webserver.
  */
 const char STYLE_CSS[] PROGMEM = R"rawliteral(
 /* ---------- Global page styling ---------- */
@@ -20,7 +20,7 @@ body {
   background-color: #f0f0f0;
 }
 
-/** Bar on top of page for displaying message/path and log in */
+/* Bar on top of page for displaying message/path and log in */
 .topbar {
   display: flex;
   justify-content: space-between;

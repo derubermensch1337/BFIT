@@ -1,7 +1,6 @@
 /**
  * @file weight_scale.h
  * @author Amal Araweelo Almis
- * @author Baldur G. Toftegaard
  */
 #ifndef WEIGHT_SCALE_H
 #define WEIGHT_SCALE_H  
@@ -31,20 +30,64 @@ extern HX711_ADC scale;
 
 /**
  * @brief set up the action (input) the rfid_user_id_lattest takes
- */
+*/
 enum weight_recall_action {
     weight_change_store,
     weight_change_recall
 };
 
-// General functions
-void setup_scale(float calFactor);
-bool update_scale(void);
-float get_weight(void);
-void tare_scale(void);
-bool tare_complete(void);
+/**
+ * @brief Function to seting up the scale, is called in the begining of the program.
+ * 
+ * @param calFactor 
+ */
+void setup_scale(
+    float calFactor
+);
 
-// Beer function
+/**
+ * @brief Function for updating the scale value.
+ * 
+ * @return true 
+ * @return false 
+ */
+bool update_scale(
+    void
+);
+
+/**
+ * @brief Function to get the scale reading.
+ * 
+ * @return float 
+ */
+float get_weight(
+    void
+);
+
+/**
+ * @brief Function to tar the scale
+*/
+void tare_scale(
+    void
+);
+
+/**
+ * @brief Function to signal that the scale has been tarted.
+ * 
+ * @return true 
+ * @return false 
+*/
+bool tare_complete(
+    void
+);
+
+/**
+ * @brief Function to get the number of beer cans taken.
+ * 
+ * @param referencWeight 
+ * @param currentWeight 
+ * @return int 
+ */
 int get_beer_cans_taken(float referencWeight,float currentWeight);
 
 #endif

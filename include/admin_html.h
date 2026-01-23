@@ -9,6 +9,9 @@
 
 #include <pgmspace.h>
 
+/**
+ * @brief HTML for the admin page, is handled by the compiler as a string.
+*/
 const char ADMIN_HTML[] PROGMEM = R"rawliteral(
     <!DOCTYPE html>
     <html>
@@ -26,9 +29,7 @@ const char ADMIN_HTML[] PROGMEM = R"rawliteral(
                     <a href="/">Log Out</a>
                 </div>
             </div>
-
             <p> Verry inportant stuff goes here! </p>
-
         </body>
     </html>
 )rawliteral";
