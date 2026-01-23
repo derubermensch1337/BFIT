@@ -236,7 +236,7 @@ int count_rooms(
 
 /**
  * @brief Function for storing the last used RFID
- * @param uidOut 
+ * @param uidIn 
  * @return true 
  * @return false 
 */
