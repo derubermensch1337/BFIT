@@ -86,7 +86,42 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <div class="title">BFIT </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a>Beer Fridge Inventory Tracking (who takes, how much do they take, current drink information, statistics and so on and so forth.) </p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> Beer Fridge Inventory Tracking (BFIT) is a system that logs who takes drinks from a fridge, how much they consume, and provides statistics on current stock and usage. The project was developed as part of the DTU course <b>34338 – Telecommunication Programming Project with Arduino</b>.</p>
+<p>This repository contains the embedded code, server/backend logic, documentation, and supporting files for the project.</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Features</h1>
+<ul>
+<li>RFID-based user authentication</li>
+<li>Automatic detection of items removed using scale</li>
+<li>Servo-controlled locking mechanism</li>
+<li>Local web server displaying usage and inventory data</li>
+<li><a class="el" href="structUser.html" title="User record stored in the RFID user database.">User</a> and inventory database</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Repository structure</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Folder / File   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>src/</code>   </td><td class="markdownTableBodyNone">Source code    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>include/</code>   </td><td class="markdownTableBodyNone">Header files    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>docs/</code>   </td><td class="markdownTableBodyNone">Doxygen generated documentation    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>figs/</code>   </td><td class="markdownTableBodyNone">Schematics    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>parts/</code>   </td><td class="markdownTableBodyNone">3D drawings    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>platformio.ini</code>   </td><td class="markdownTableBodyNone">PlatformIO configuration    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Doxyfile</code>   </td><td class="markdownTableBodyNone">Doxygen documentation config    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>LICENSE</code>   </td><td class="markdownTableBodyNone">GPL-2.0 license   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Documentation</h1>
+<p>The Doxygen generated document is <code>final_doxygen_doc.pdf</code>. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

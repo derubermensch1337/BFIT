@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "BFIT", "index.html", [
+    [ "Features", "index.html#autotoc_md1", null ],
+    [ "Repository structure", "index.html#autotoc_md2", null ],
+    [ "Documentation", "index.html#autotoc_md3", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -50,7 +53,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "admin__html_8h.html",
-"weight__scale_8h.html#a934197943a04118eb78d8986d6226e62"
+"weight__scale_8h.html#a5cba95c421ad72336a98f705603cb239"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
