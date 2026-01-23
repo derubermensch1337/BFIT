@@ -1,3 +1,9 @@
+/**
+ * @file buzzer.h
+ * @brief Declaring functions to play sounds using a buzzer
+ * @author Anssi Sohlman
+*/
+
 #include <Arduino.h> //Tone functions don't work without this here
 
 #ifndef BUZZER_H
@@ -6,7 +12,7 @@
 /**
  * @brief Plays short sound when door is closed and about to be locked
  * 
- * @param t 
+ * @param t Time passed since door has been closed
  */
 void play_warning(unsigned long t);
 

@@ -1,7 +1,7 @@
 /**
  * @file database_management.cpp
  * @authors Anssi Sohlman,
- * @brief Used to read and write non-volatile memory on ESP8266 
+ * @brief Functions for user management and read/write of non-volatile memory on ESP8266 
  * 
 */
 

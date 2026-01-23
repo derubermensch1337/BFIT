@@ -1,6 +1,6 @@
 /**
  * @file rfid_access.h
- * @brief 
+ * @brief Declare functions related to RFID reading and user database
  * @author Amal Araweelo Almis
  * @author Baldur G. Toftegaard
  * @author Anssi Sohlman
@@ -70,7 +70,7 @@ RFIDcommand check_command(
 /**
  * @brief Initializes SPI and the MFRC522 RFID reader.
  * 
- * @param rfid 
+ * @param rfid An instance of a MFRC522 object
 */
 void setup_RFID_reader(
     MFRC522 &rfid
@@ -79,7 +79,7 @@ void setup_RFID_reader(
 /**
  * @brief Adds a new user by reading room number and scanning an RFID tag.
  * 
- * @param rfid 
+ * @param rfid An instance of a MFRC522 object
  * @return true 
  * @return false 
 */
@@ -112,8 +112,8 @@ bool compare_UID(
 /**
  * @brief Reads an RFID tag UID from the MFRC522 reader.
  * 
- * @param rfid 
- * @param uidBuffer 
+ * @param rfid An instance of a MFRC522 object
+ * @param uidBuffer An array where the UID is saved to
  * @return true 
  * @return false 
 */
@@ -138,7 +138,7 @@ void display_commands_um(
 /**
  * @brief Copies the current user database to a provided buffer.
  * 
- * @param ptr 
+ * @param ptr A pointer to the users[] array
 */
 void get_users_db(
     User* ptr
@@ -147,9 +147,9 @@ void get_users_db(
 /**
  * @brief Executes user-management actions based on the provided command.
  * 
- * @param cmd 
- * @param ptr 
- * @param rfid 
+ * @param cmd The current RFIDcommand (add or remove user)
+ * @param ptr A pointer to the users[] array
+ * @param rfid An instance of a MFRC522 object
 */
 void user_management(
     RFIDcommand cmd, 
@@ -160,7 +160,7 @@ void user_management(
 /**
  * @brief Validates an RFID tag against the registered user database.
  * 
- * @param myRFID 
+ * @param myRFID An instance of a MFRC522 object
  * @return true 
  * @return false 
 */
@@ -171,8 +171,8 @@ bool validate_rfid(
 /**
  * @brief brief Prints a single user entry to the serial interface.
  * 
- * @param ptr 
- * @param idx 
+ * @param ptr A pointer to the users[] array
+ * @param idx The index to be printed
 */
 void print_single_user(
     User* ptr, 
@@ -181,7 +181,7 @@ void print_single_user(
 /**
  * @brief Prints all users in the database to the serial interface. 
  * 
- * @param ptr 
+ * @param ptr A pointer to the users[] array
 */
 void print_all_users(
     User* ptr
@@ -190,7 +190,7 @@ void print_all_users(
 /**
  * @brief Prints a UID buffer to the serial interface.
  * 
- * @param ptr 
+ * @param ptr A pointer to member of the users[] array
 */
 void print_uid(
     byte* ptr
@@ -216,7 +216,7 @@ bool read_confirmation(
 /**
  * @brief brief Finds an empty slot in the user database.
  * 
- * @param ptr 
+ * @param ptr A pointer to the users[] array
  * @return int 
 */
 int find_empty_index(
@@ -226,7 +226,7 @@ int find_empty_index(
 /**
  * @brief brief Counts the number of occupied user entries in the database.
  * 
- * @param ptr 
+ * @param ptr A pointer to the users[] array
  * @return int 
 */
 int count_rooms(

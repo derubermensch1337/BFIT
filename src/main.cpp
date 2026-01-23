@@ -2,6 +2,7 @@
  * @file    main.cpp
  * @brief   Combined: Web server + Graph + Scale + RFID access + Lock control
  * @author  Baldur G. Toftegaard
+ * @author Anssi Sohlman
  */
 
 #include <Arduino.h>
