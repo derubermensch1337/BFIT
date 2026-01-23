@@ -1,6 +1,6 @@
 /**
  * @file weight_scale.cpp
- * @brief 
+ * @brief File used for setting up the scale 
  * @author Amal Araweelo Almis
 */
 
