@@ -5,10 +5,6 @@ var weight__scale_8h =
     [ "HX711_SCK", "weight__scale_8h.html#abe70cd5dadcba3419a490760c63898d3", null ],
     [ "SCALE_DEFAULT_SETTLE_TIME_MS", "weight__scale_8h.html#a3e82864e162c50e8b59442a71ee276e5", null ],
     [ "SCALE_TOL", "weight__scale_8h.html#aba45fa10c8771e9d695de9515e00a584", null ],
-    [ "weight_recall_action", "weight__scale_8h.html#a63441468c7de6e750482e4ec6636d038", [
-      [ "weight_change_store", "weight__scale_8h.html#a63441468c7de6e750482e4ec6636d038aa78a1ad767729e3315f4e8fe8b646898", null ],
-      [ "weight_change_recall", "weight__scale_8h.html#a63441468c7de6e750482e4ec6636d038a362fe58e2a524e9cb971172c8ebf8453", null ]
-    ] ],
     [ "get_beer_cans_taken", "weight__scale_8h.html#a44c775d39fd60f8215d99a683c6075cf", null ],
     [ "get_weight", "weight__scale_8h.html#a5cba95c421ad72336a98f705603cb239", null ],
     [ "get_weight_reference", "weight__scale_8h.html#a557e479341e40c8b97a97f7ab4723a39", null ],

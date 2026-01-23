@@ -1,46 +1,45 @@
-\doxysection{sale\+\_\+html.\+h}
-\hypertarget{sale__html_8h_source}{}\label{sale__html_8h_source}\index{include/sale\_html.h@{include/sale\_html.h}}
-\doxymbox{\hyperlink{sale__html_8h}{Go to the documentation of this file.}}
+\hypertarget{sale__html_8h_source}{}\doxysection{sale\+\_\+html.\+h}
+\label{sale__html_8h_source}\index{include/sale\_html.h@{include/sale\_html.h}}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ SALE\_HTML\_H}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ SALE\_HTML\_H}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <Arduino.h>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <ESP8266WebServer.h>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <pgmspace.h>}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_START[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00022\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_ROOM\_START[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00027\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_ROOM\_ID[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_ROOM\_CLASS\_TYPE[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00037\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_ROOM\_CLASS\_HEIGHT[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00042\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_ROOM\_END[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00047\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_ROOM\_STOP[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00052\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ SALE\_BOX\_STOP[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{sale__html_8h_a765ff78b52fcc468640556f618934a52}{send\_sale\_html\_graph}}(}
-\DoxyCodeLine{00062\ \ \ \ \ ESP8266WebServer\ \&\doxymbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}},\ \ \ \ \ \ \ }
-\DoxyCodeLine{00063\ \ \ \ \ uint8\_t\ room\_number,\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *bar\_type,\ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ bar\_height\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00066\ );}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{sale__html_8h_ab009b9b9e097e104b4478d286fd58a9f}{send\_sale\_html\_page}}(}
-\DoxyCodeLine{00076\ \ \ \ \ ESP8266WebServer\ \&\doxymbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}},\ \ \ \ \ \ \ }
-\DoxyCodeLine{00077\ \ \ \ \ uint8\_t\ room\_count,\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ *\doxymbox{\hyperlink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{greenHeight}},\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ *classicHeights\ \ \ \ \ \ \ }
-\DoxyCodeLine{00080\ );}
-\DoxyCodeLine{00081\ }
-\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#ifndef SALE\_HTML\_H}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#define SALE\_HTML\_H}}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include <ESP8266WebServer.h>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include <pgmspace.h>}}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00017 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_START[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{sale__html_8h_source_l00022}\mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{00022}} \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_ROOM\_START[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00027 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_ROOM\_ID[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00032 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_ROOM\_CLASS\_TYPE[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00033 }
+\DoxyCodeLine{00037 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_ROOM\_CLASS\_HEIGHT[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00038 }
+\DoxyCodeLine{00042 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_ROOM\_END[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00047 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_ROOM\_STOP[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00048 }
+\DoxyCodeLine{00052 \textcolor{keyword}{extern} \textcolor{keyword}{const} \textcolor{keywordtype}{char} SALE\_BOX\_STOP[] \mbox{\hyperlink{sale__html_8h_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}};}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00061 \textcolor{keywordtype}{void} \mbox{\hyperlink{sale__html_8h_a765ff78b52fcc468640556f618934a52}{send\_sale\_html\_graph}}(}
+\DoxyCodeLine{00062     ESP8266WebServer \&\mbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}},       }
+\DoxyCodeLine{00063     uint8\_t room\_number,            }
+\DoxyCodeLine{00064     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *bar\_type,           }
+\DoxyCodeLine{00065     \textcolor{keywordtype}{int} bar\_height                  }
+\DoxyCodeLine{00066 );}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00075 \textcolor{keywordtype}{void} \mbox{\hyperlink{sale__html_8h_ab009b9b9e097e104b4478d286fd58a9f}{send\_sale\_html\_page}}(}
+\DoxyCodeLine{00076     ESP8266WebServer \&\mbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}},       }
+\DoxyCodeLine{00077     uint8\_t room\_count,             }
+\DoxyCodeLine{00078     \textcolor{keyword}{const} \textcolor{keywordtype}{int} *\mbox{\hyperlink{graph__data_8h_a9ce470c42fa52a1e1348aaa5a745614f}{greenHeight}},         }
+\DoxyCodeLine{00079     \textcolor{keyword}{const} \textcolor{keywordtype}{int} *classicHeights       }
+\DoxyCodeLine{00080 );}
+\DoxyCodeLine{00081 }
+\DoxyCodeLine{00082 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

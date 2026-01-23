@@ -32,17 +32,38 @@
 
 /* ---------------- Configuration ---------------- */
 
-static const float    CAL_FACTOR     = 22.9f;
-static const uint16_t START_BEER_QTY  = 20;
+/** @brief Calibration factor used for weight or sensor calculations. */
+static const float CAL_FACTOR = 22.9f;
 
+/** @brief Initial quantity of beer available at system startup. */
+static const uint16_t START_BEER_QTY = 20;
+
+/** @brief Wi-Fi network SSID used by the device. */
 const char* WIFI_SSID = "Baldur's A56";
+
+/** @brief Wi-Fi network password used by the device. */
 const char* WIFI_PASS = "MyPasskeyA56";
 
 /* ---------------- Global State ---------------- */
 
 // Graph data (used by sale_html + /saleHeights)
-int greenHeight[ROOM_COUNT]   = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-int classicHeight[ROOM_COUNT] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+/**
+ * @brief Sales graph height data for green beer.
+ *
+ * Indexed by room number. Used by sale_html and the /saleHeights endpoint.
+ */
+int greenHeight[ROOM_COUNT] = {
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+};
+
+/**
+ * @brief Sales graph height data for classic beer.
+ *
+ * Indexed by room number. Used by sale_html and the /saleHeights endpoint.
+ */
+int classicHeight[ROOM_COUNT] = {
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+};
 
 void print_graph_arrays(
 ){

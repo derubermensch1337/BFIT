@@ -10,7 +10,7 @@
 #include <pgmspace.h>
 
 /**
- * @brief HTML for the login page. Interperated as a string by the compiler.
+ * @brief HTML for the login page. Interpreted as a string by the compiler.
  */
 const char LOGIN_HTML[] PROGMEM = R"rawliteral(
     <!DOCTYPE html>

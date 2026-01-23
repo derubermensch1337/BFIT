@@ -1,35 +1,42 @@
-\doxysection{src/\+weight\+\_\+scale.cpp File Reference}
-\hypertarget{weight__scale_8cpp}{}\label{weight__scale_8cpp}\index{src/weight\_scale.cpp@{src/weight\_scale.cpp}}
-{\ttfamily \+\#include "{}weight\+\_\+scale.\+h"{}}\newline
-\doxysubsubsection*{Functions}
+\hypertarget{weight__scale_8cpp}{}\doxysection{src/weight\+\_\+scale.cpp File Reference}
+\label{weight__scale_8cpp}\index{src/weight\_scale.cpp@{src/weight\_scale.cpp}}
+{\ttfamily \#include \char`\"{}weight\+\_\+scale.\+h\char`\"{}}\newline
+Include dependency graph for weight\+\_\+scale.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{weight__scale_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-HX711\+\_\+\+ADC \doxymbox{\hyperlink{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f}{scale}} (\doxymbox{\hyperlink{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}{HX711\+\_\+\+DOUT}}, \doxymbox{\hyperlink{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}{HX711\+\_\+\+SCK}})
+HX711\+\_\+\+ADC \mbox{\hyperlink{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f}{scale}} (\mbox{\hyperlink{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}{HX711\+\_\+\+DOUT}}, \mbox{\hyperlink{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}{HX711\+\_\+\+SCK}})
 \item 
-float \doxymbox{\hyperlink{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39}{get\+\_\+weight\+\_\+reference}} (void)
-\begin{DoxyCompactList}\small\item\em FUnction to get the weight reference. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{weight__scale_8cpp_ad54106645ba2b474709a603d36b798a3}{set\+\_\+weight\+\_\+reference}} (float value)
+float \mbox{\hyperlink{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39}{get\+\_\+weight\+\_\+reference}} (void)
+\begin{DoxyCompactList}\small\item\em Function to get the weight reference. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weight__scale_8cpp_ad54106645ba2b474709a603d36b798a3}{set\+\_\+weight\+\_\+reference}} (float value)
 \begin{DoxyCompactList}\small\item\em Function to set the weight reference. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382}{reset\+\_\+weight\+\_\+reference}} (void)
+void \mbox{\hyperlink{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382}{reset\+\_\+weight\+\_\+reference}} (void)
 \begin{DoxyCompactList}\small\item\em Function to reset the weight reference. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec}{weight\+\_\+reference\+\_\+is\+\_\+set}} (void)
-\begin{DoxyCompactList}\small\item\em Function to send cinfirmation that the weight reference is set. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61}{setup\+\_\+scale}} (float cal\+Factor)
+bool \mbox{\hyperlink{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec}{weight\+\_\+reference\+\_\+is\+\_\+set}} (void)
+\begin{DoxyCompactList}\small\item\em Function to send confirmation that the weight reference is set. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61}{setup\+\_\+scale}} (float cal\+Factor)
 \begin{DoxyCompactList}\small\item\em Function to seting up the scale, is called in the begining of the program. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862}{update\+\_\+scale}} ()
+bool \mbox{\hyperlink{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862}{update\+\_\+scale}} ()
 \begin{DoxyCompactList}\small\item\em Function for updating the scale value. \end{DoxyCompactList}\item 
-float \doxymbox{\hyperlink{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952}{get\+\_\+weight}} ()
+float \mbox{\hyperlink{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952}{get\+\_\+weight}} ()
 \begin{DoxyCompactList}\small\item\em Function to get the scale reading. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f}{tare\+\_\+scale}} ()
-\begin{DoxyCompactList}\small\item\em Function to tar the scale. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f}{tare\+\_\+complete}} ()
-\begin{DoxyCompactList}\small\item\em Function to signal that the scale has been tarted. \end{DoxyCompactList}\item 
-int \doxymbox{\hyperlink{weight__scale_8cpp_a136d3f93684eda3e4f539c1ae528bac0}{get\+\_\+beer\+\_\+cans\+\_\+taken}} (float reference\+Weight, float current\+Weight)
+void \mbox{\hyperlink{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f}{tare\+\_\+scale}} ()
+\begin{DoxyCompactList}\small\item\em Function to tare the scale. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f}{tare\+\_\+complete}} ()
+\begin{DoxyCompactList}\small\item\em Function to signal that the scale has been tared. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{weight__scale_8cpp_a136d3f93684eda3e4f539c1ae528bac0}{get\+\_\+beer\+\_\+cans\+\_\+taken}} (float reference\+Weight, float current\+Weight)
 \begin{DoxyCompactList}\small\item\em Function to get the number of beer cans taken. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-static float \doxymbox{\hyperlink{weight__scale_8cpp_a09709d94373e9c3e2ab1b816708b31b9}{g\+\_\+reference\+Weight}} = NAN
+static float \mbox{\hyperlink{weight__scale_8cpp_a09709d94373e9c3e2ab1b816708b31b9}{g\+\_\+reference\+Weight}} = NAN
 \end{DoxyCompactItemize}
 
 
@@ -39,14 +46,12 @@ Amal Araweelo Almis
 \end{DoxyAuthor}
 
 
-\label{doc-func-members}
-\Hypertarget{weight__scale_8cpp_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{weight__scale_8cpp_a136d3f93684eda3e4f539c1ae528bac0}\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_beer\_cans\_taken@{get\_beer\_cans\_taken}}
+\mbox{\Hypertarget{weight__scale_8cpp_a136d3f93684eda3e4f539c1ae528bac0}\label{weight__scale_8cpp_a136d3f93684eda3e4f539c1ae528bac0}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_beer\_cans\_taken@{get\_beer\_cans\_taken}}
 \index{get\_beer\_cans\_taken@{get\_beer\_cans\_taken}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{get\_beer\_cans\_taken()}{get\_beer\_cans\_taken()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a136d3f93684eda3e4f539c1ae528bac0} 
-int get\+\_\+beer\+\_\+cans\+\_\+taken (\begin{DoxyParamCaption}\item[{float}]{referenc\+Weight}{, }\item[{float}]{current\+Weight}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int get\+\_\+beer\+\_\+cans\+\_\+taken (\begin{DoxyParamCaption}\item[{float}]{referenc\+Weight,  }\item[{float}]{current\+Weight }\end{DoxyParamCaption})}
 
 
 
@@ -62,11 +67,11 @@ Function to get the number of beer cans taken.
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-\Hypertarget{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952}\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_weight@{get\_weight}}
+\mbox{\Hypertarget{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952}\label{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_weight@{get\_weight}}
 \index{get\_weight@{get\_weight}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{get\_weight()}{get\_weight()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a27be4fbcd11dfdf453fdb87660cc9952} 
-float get\+\_\+weight (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float get\+\_\+weight (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -75,40 +80,40 @@ Function to get the scale reading.
 \begin{DoxyReturn}{Returns}
 float 
 \end{DoxyReturn}
-\Hypertarget{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39}\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_weight\_reference@{get\_weight\_reference}}
+\mbox{\Hypertarget{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39}\label{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!get\_weight\_reference@{get\_weight\_reference}}
 \index{get\_weight\_reference@{get\_weight\_reference}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{get\_weight\_reference()}{get\_weight\_reference()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a557e479341e40c8b97a97f7ab4723a39} 
-float get\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily float get\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-FUnction to get the weight reference. 
+Function to get the weight reference. 
 
 \begin{DoxyReturn}{Returns}
 float 
 \end{DoxyReturn}
-\Hypertarget{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382}\index{weight\_scale.cpp@{weight\_scale.cpp}!reset\_weight\_reference@{reset\_weight\_reference}}
+\mbox{\Hypertarget{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382}\label{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!reset\_weight\_reference@{reset\_weight\_reference}}
 \index{reset\_weight\_reference@{reset\_weight\_reference}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{reset\_weight\_reference()}{reset\_weight\_reference()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a7047d1686ef43c502785c65254e71382} 
-void reset\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void reset\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
 Function to reset the weight reference. 
 
-\Hypertarget{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f}\index{weight\_scale.cpp@{weight\_scale.cpp}!scale@{scale}}
+\mbox{\Hypertarget{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f}\label{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!scale@{scale}}
 \index{scale@{scale}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{scale()}{scale()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_aaca7f8d37c4fa949adee1e45fde8113f} 
-HX711\+\_\+\+ADC scale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}{HX711\+\_\+\+DOUT}}}]{}{, }\item[{\doxymbox{\hyperlink{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}{HX711\+\_\+\+SCK}}}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily HX711\+\_\+\+ADC scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{weight__scale_8h_a3e34bd73915f7600db98d6712eafe42a}{HX711\+\_\+\+DOUT}}}]{,  }\item[{\mbox{\hyperlink{weight__scale_8h_abe70cd5dadcba3419a490760c63898d3}{HX711\+\_\+\+SCK}}}]{ }\end{DoxyParamCaption})}
 
-\Hypertarget{weight__scale_8cpp_ad54106645ba2b474709a603d36b798a3}\index{weight\_scale.cpp@{weight\_scale.cpp}!set\_weight\_reference@{set\_weight\_reference}}
+\mbox{\Hypertarget{weight__scale_8cpp_ad54106645ba2b474709a603d36b798a3}\label{weight__scale_8cpp_ad54106645ba2b474709a603d36b798a3}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!set\_weight\_reference@{set\_weight\_reference}}
 \index{set\_weight\_reference@{set\_weight\_reference}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{set\_weight\_reference()}{set\_weight\_reference()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_ad54106645ba2b474709a603d36b798a3} 
-void set\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{float}]{value}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void set\+\_\+weight\+\_\+reference (\begin{DoxyParamCaption}\item[{float}]{value }\end{DoxyParamCaption})}
 
 
 
@@ -119,11 +124,11 @@ Function to set the weight reference.
 {\em value} & \\
 \hline
 \end{DoxyParams}
-\Hypertarget{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61}\index{weight\_scale.cpp@{weight\_scale.cpp}!setup\_scale@{setup\_scale}}
+\mbox{\Hypertarget{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61}\label{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!setup\_scale@{setup\_scale}}
 \index{setup\_scale@{setup\_scale}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{setup\_scale()}{setup\_scale()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a6935e95b7d94815d7d15b0954af4ac61} 
-void setup\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{cal\+Factor}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void setup\+\_\+scale (\begin{DoxyParamCaption}\item[{float}]{cal\+Factor }\end{DoxyParamCaption})}
 
 
 
@@ -134,36 +139,36 @@ Function to seting up the scale, is called in the begining of the program.
 {\em cal\+Factor} & \\
 \hline
 \end{DoxyParams}
-\Hypertarget{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f}\index{weight\_scale.cpp@{weight\_scale.cpp}!tare\_complete@{tare\_complete}}
+\mbox{\Hypertarget{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f}\label{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!tare\_complete@{tare\_complete}}
 \index{tare\_complete@{tare\_complete}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{tare\_complete()}{tare\_complete()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_ae04997fe809eac2918e9f24bff1a603f} 
-bool tare\+\_\+complete (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool tare\+\_\+complete (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Function to signal that the scale has been tarted. 
+Function to signal that the scale has been tared. 
 
 \begin{DoxyReturn}{Returns}
 true 
 
 false 
 \end{DoxyReturn}
-\Hypertarget{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f}\index{weight\_scale.cpp@{weight\_scale.cpp}!tare\_scale@{tare\_scale}}
+\mbox{\Hypertarget{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f}\label{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!tare\_scale@{tare\_scale}}
 \index{tare\_scale@{tare\_scale}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{tare\_scale()}{tare\_scale()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_afe578a4a8dc7c6863781ac09e21b8d0f} 
-void tare\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void tare\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Function to tar the scale. 
+Function to tare the scale. 
 
-\Hypertarget{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862}\index{weight\_scale.cpp@{weight\_scale.cpp}!update\_scale@{update\_scale}}
+\mbox{\Hypertarget{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862}\label{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!update\_scale@{update\_scale}}
 \index{update\_scale@{update\_scale}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{update\_scale()}{update\_scale()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a95228b17221cd8e7a20ea4a363318862} 
-bool update\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool update\+\_\+scale (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
@@ -174,15 +179,15 @@ true
 
 false 
 \end{DoxyReturn}
-\Hypertarget{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec}\index{weight\_scale.cpp@{weight\_scale.cpp}!weight\_reference\_is\_set@{weight\_reference\_is\_set}}
+\mbox{\Hypertarget{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec}\label{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!weight\_reference\_is\_set@{weight\_reference\_is\_set}}
 \index{weight\_reference\_is\_set@{weight\_reference\_is\_set}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{weight\_reference\_is\_set()}{weight\_reference\_is\_set()}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a226cdacd16622ac55e7060d380d0feec} 
-bool weight\+\_\+reference\+\_\+is\+\_\+set (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool weight\+\_\+reference\+\_\+is\+\_\+set (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-Function to send cinfirmation that the weight reference is set. 
+Function to send confirmation that the weight reference is set. 
 
 \begin{DoxyReturn}{Returns}
 true 
@@ -191,12 +196,10 @@ false
 \end{DoxyReturn}
 
 
-\label{doc-var-members}
-\Hypertarget{weight__scale_8cpp_doc-var-members}
 \doxysubsection{Variable Documentation}
-\Hypertarget{weight__scale_8cpp_a09709d94373e9c3e2ab1b816708b31b9}\index{weight\_scale.cpp@{weight\_scale.cpp}!g\_referenceWeight@{g\_referenceWeight}}
+\mbox{\Hypertarget{weight__scale_8cpp_a09709d94373e9c3e2ab1b816708b31b9}\label{weight__scale_8cpp_a09709d94373e9c3e2ab1b816708b31b9}} 
+\index{weight\_scale.cpp@{weight\_scale.cpp}!g\_referenceWeight@{g\_referenceWeight}}
 \index{g\_referenceWeight@{g\_referenceWeight}!weight\_scale.cpp@{weight\_scale.cpp}}
 \doxysubsubsection{\texorpdfstring{g\_referenceWeight}{g\_referenceWeight}}
-{\footnotesize\ttfamily \label{weight__scale_8cpp_a09709d94373e9c3e2ab1b816708b31b9} 
-float g\+\_\+reference\+Weight = NAN\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily float g\+\_\+reference\+Weight = NAN\hspace{0.3cm}{\ttfamily [static]}}
 

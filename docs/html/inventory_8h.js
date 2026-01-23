@@ -16,6 +16,6 @@ var inventory_8h =
     [ "inventory_init", "inventory_8h.html#ab559445889f1c5e889a2dd4ab6630e17", null ],
     [ "inventory_make_product", "inventory_8h.html#a2ffce751a37a02aabfc70f369f069d41", null ],
     [ "inventory_print", "inventory_8h.html#ab6b232867fb3f65fbd4a4fb3cefb1ecb", null ],
-    [ "inventory_remove_beverage", "inventory_8h.html#a2977e5aa7103577ba60f292f51221d96", null ],
+    [ "inventory_remove_beverage", "inventory_8h.html#aaa6df4253e919697e663e3edc61b05bf", null ],
     [ "inventory_remove_product", "inventory_8h.html#a1dc5cc4c904ce439d0f288ffe81bdc8c", null ]
 ];

@@ -1,16 +1,23 @@
-\doxysection{include/\+admin\+\_\+html.h File Reference}
-\hypertarget{admin__html_8h}{}\label{admin__html_8h}\index{include/admin\_html.h@{include/admin\_html.h}}
+\hypertarget{admin__html_8h}{}\doxysection{include/admin\+\_\+html.h File Reference}
+\label{admin__html_8h}\index{include/admin\_html.h@{include/admin\_html.h}}
 
 
 HTML for the admin page.  
 
 
-{\ttfamily \+\#include $<$pgmspace.\+h$>$}\newline
-\doxysubsubsection*{Variables}
+{\ttfamily \#include $<$pgmspace.\+h$>$}\newline
+Include dependency graph for admin\+\_\+html.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{admin__html_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-const char ADMIN\+\_\+\+HTML\+[$\,$]\+ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}}
-\begin{DoxyCompactList}\small\item\em HTML for the admin page, is handled by the compiler as a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+const char ADMIN\+\_\+\+HTML\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}}
+\begin{DoxyCompactList}\small\item\em HTML content for the admin web page. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -21,42 +28,40 @@ Baldur G. Toftegaard
 \end{DoxyAuthor}
 
 
-\label{doc-var-members}
-\Hypertarget{admin__html_8h_doc-var-members}
 \doxysubsection{Variable Documentation}
-\Hypertarget{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}\index{admin\_html.h@{admin\_html.h}!PROGMEM@{PROGMEM}}
+\mbox{\Hypertarget{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}\label{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}} 
+\index{admin\_html.h@{admin\_html.h}!PROGMEM@{PROGMEM}}
 \index{PROGMEM@{PROGMEM}!admin\_html.h@{admin\_html.h}}
 \doxysubsubsection{\texorpdfstring{PROGMEM}{PROGMEM}}
-{\footnotesize\ttfamily \label{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252} 
-const char ADMIN\+\_\+\+HTML \+[$\,$]\+ PROGMEM}
+{\footnotesize\ttfamily const char ADMIN\+\_\+\+HTML \mbox{[}$\,$\mbox{]} PROGMEM}
 
-{\bfseries Initial value:\+}
+{\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ R\textcolor{stringliteral}{"{}rawliteral(}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ <!DOCTYPE\ html>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ <html>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ <head>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <meta\ charset="{}utf-\/8"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <title>Beer\ fridge\ online\ services</title>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <link\ rel="{}stylesheet"{}\ href="{}/style.css"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ </head>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ <body>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}topbar"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}left"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Start\ -\/>\ Admin}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <div\ class="{}right"{}>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <a\ href="{}/"{}>Log\ Out</a>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ </div>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ </div>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ \ \ \ \ <p>\ Verry\ inportant\ stuff\ goes\ here!\ </p>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ \ \ \ \ </body>}}
-\DoxyCodeLine{\textcolor{stringliteral}{\ \ \ \ </html>}}
+\DoxyCodeLine{= R\textcolor{stringliteral}{"{}rawliteral(}}
+\DoxyCodeLine{\textcolor{stringliteral}{    <!DOCTYPE html>}}
+\DoxyCodeLine{\textcolor{stringliteral}{    <html>}}
+\DoxyCodeLine{\textcolor{stringliteral}{        <head>}}
+\DoxyCodeLine{\textcolor{stringliteral}{            <meta charset="{}utf-\/8"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{            <title>Beer fridge online services</title>}}
+\DoxyCodeLine{\textcolor{stringliteral}{            <link rel="{}stylesheet"{} href="{}/style.css"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{        </head>}}
+\DoxyCodeLine{\textcolor{stringliteral}{        <body>}}
+\DoxyCodeLine{\textcolor{stringliteral}{            <div class="{}topbar"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{                <div class="{}left"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{                    Start -\/> Admin}}
+\DoxyCodeLine{\textcolor{stringliteral}{                </div>}}
+\DoxyCodeLine{\textcolor{stringliteral}{                <div class="{}right"{}>}}
+\DoxyCodeLine{\textcolor{stringliteral}{                    <a href="{}/"{}>Log Out</a>}}
+\DoxyCodeLine{\textcolor{stringliteral}{                </div>}}
+\DoxyCodeLine{\textcolor{stringliteral}{            </div>}}
+\DoxyCodeLine{\textcolor{stringliteral}{            <p> Verry inportant stuff goes here! </p>}}
+\DoxyCodeLine{\textcolor{stringliteral}{        </body>}}
+\DoxyCodeLine{\textcolor{stringliteral}{    </html>}}
 \DoxyCodeLine{\textcolor{stringliteral}{)rawliteral"{}}}
 
 \end{DoxyCode}
 
 
-HTML for the admin page, is handled by the compiler as a string. 
+HTML content for the admin web page. 
 
 Opening container for the sales graph. 

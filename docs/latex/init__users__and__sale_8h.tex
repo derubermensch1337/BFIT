@@ -1,23 +1,37 @@
-\doxysection{include/\+init\+\_\+users\+\_\+and\+\_\+sale.h File Reference}
-\hypertarget{init__users__and__sale_8h}{}\label{init__users__and__sale_8h}\index{include/init\_users\_and\_sale.h@{include/init\_users\_and\_sale.h}}
+\hypertarget{init__users__and__sale_8h}{}\doxysection{include/init\+\_\+users\+\_\+and\+\_\+sale.h File Reference}
+\label{init__users__and__sale_8h}\index{include/init\_users\_and\_sale.h@{include/init\_users\_and\_sale.h}}
 
 
 Function used for declearing the system users and products.  
 
 
-{\ttfamily \+\#include "{}inventory.\+h"{}}\newline
-\doxysubsubsection*{Macros}
+{\ttfamily \#include \char`\"{}inventory.\+h\char`\"{}}\newline
+Include dependency graph for init\+\_\+users\+\_\+and\+\_\+sale.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{init__users__and__sale_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{init__users__and__sale_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\+\#define \doxymbox{\hyperlink{init__users__and__sale_8h_addb6ddda38b57f068b76824c9335ce51}{number\+\_\+of\+\_\+users}}~18
+\#define \mbox{\hyperlink{init__users__and__sale_8h_addb6ddda38b57f068b76824c9335ce51}{number\+\_\+of\+\_\+users}}~18
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Functions}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \doxymbox{\hyperlink{init__users__and__sale_8h_ad96e80125cecd9cd19e98c3735491dd4}{init\+\_\+users\+\_\+and\+\_\+products}} ()
-\begin{DoxyCompactList}\small\item\em Old function for initualicing users and products, shuld be moved to \doxylink{fridge__state_8h}{fridge\+\_\+state.\+h}. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{init__users__and__sale_8h_a2ee24f51473041ace506946c3daacd34}{perform\+\_\+sale}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}fridge\+\_\+inventory)
-\begin{DoxyCompactList}\small\item\em Function to actually performe a sale between a user and the fridge. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{init__users__and__sale_8h_ad96e80125cecd9cd19e98c3735491dd4}{init\+\_\+users\+\_\+and\+\_\+products}} ()
+\begin{DoxyCompactList}\small\item\em Old function for initializing users and products. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{init__users__and__sale_8h_a2ee24f51473041ace506946c3daacd34}{perform\+\_\+sale}} (\mbox{\hyperlink{structinventory}{inventory}} $\ast$fridge\+\_\+inventory)
+\begin{DoxyCompactList}\small\item\em Performs a sale between a user and the fridge. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -28,39 +42,35 @@ Baldur G. Toftegaard
 \end{DoxyAuthor}
 
 
-\label{doc-define-members}
-\Hypertarget{init__users__and__sale_8h_doc-define-members}
 \doxysubsection{Macro Definition Documentation}
-\Hypertarget{init__users__and__sale_8h_addb6ddda38b57f068b76824c9335ce51}\index{init\_users\_and\_sale.h@{init\_users\_and\_sale.h}!number\_of\_users@{number\_of\_users}}
+\mbox{\Hypertarget{init__users__and__sale_8h_addb6ddda38b57f068b76824c9335ce51}\label{init__users__and__sale_8h_addb6ddda38b57f068b76824c9335ce51}} 
+\index{init\_users\_and\_sale.h@{init\_users\_and\_sale.h}!number\_of\_users@{number\_of\_users}}
 \index{number\_of\_users@{number\_of\_users}!init\_users\_and\_sale.h@{init\_users\_and\_sale.h}}
 \doxysubsubsection{\texorpdfstring{number\_of\_users}{number\_of\_users}}
-{\footnotesize\ttfamily \label{init__users__and__sale_8h_addb6ddda38b57f068b76824c9335ce51} 
-\+\#define number\+\_\+of\+\_\+users~18}
+{\footnotesize\ttfamily \#define number\+\_\+of\+\_\+users~18}
 
 
 
-\label{doc-func-members}
-\Hypertarget{init__users__and__sale_8h_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{init__users__and__sale_8h_ad96e80125cecd9cd19e98c3735491dd4}\index{init\_users\_and\_sale.h@{init\_users\_and\_sale.h}!init\_users\_and\_products@{init\_users\_and\_products}}
+\mbox{\Hypertarget{init__users__and__sale_8h_ad96e80125cecd9cd19e98c3735491dd4}\label{init__users__and__sale_8h_ad96e80125cecd9cd19e98c3735491dd4}} 
+\index{init\_users\_and\_sale.h@{init\_users\_and\_sale.h}!init\_users\_and\_products@{init\_users\_and\_products}}
 \index{init\_users\_and\_products@{init\_users\_and\_products}!init\_users\_and\_sale.h@{init\_users\_and\_sale.h}}
 \doxysubsubsection{\texorpdfstring{init\_users\_and\_products()}{init\_users\_and\_products()}}
-{\footnotesize\ttfamily \label{init__users__and__sale_8h_ad96e80125cecd9cd19e98c3735491dd4} 
-void init\+\_\+users\+\_\+and\+\_\+products (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void init\+\_\+users\+\_\+and\+\_\+products (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Old function for initualicing users and products, shuld be moved to \doxylink{fridge__state_8h}{fridge\+\_\+state.\+h}. 
+Old function for initializing users and products. 
 
-Old function for initualicing users and products, shuld be moved to \doxylink{fridge__state_8h}{fridge\+\_\+state.\+h}. \Hypertarget{init__users__and__sale_8h_a2ee24f51473041ace506946c3daacd34}\index{init\_users\_and\_sale.h@{init\_users\_and\_sale.h}!perform\_sale@{perform\_sale}}
+Old function for initializing users and products. \mbox{\Hypertarget{init__users__and__sale_8h_a2ee24f51473041ace506946c3daacd34}\label{init__users__and__sale_8h_a2ee24f51473041ace506946c3daacd34}} 
+\index{init\_users\_and\_sale.h@{init\_users\_and\_sale.h}!perform\_sale@{perform\_sale}}
 \index{perform\_sale@{perform\_sale}!init\_users\_and\_sale.h@{init\_users\_and\_sale.h}}
 \doxysubsubsection{\texorpdfstring{perform\_sale()}{perform\_sale()}}
-{\footnotesize\ttfamily \label{init__users__and__sale_8h_a2ee24f51473041ace506946c3daacd34} 
-void perform\+\_\+sale (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{fridge\+\_\+inventory}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void perform\+\_\+sale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinventory}{inventory}} $\ast$}]{fridge\+\_\+inventory }\end{DoxyParamCaption})}
 
 
 
-Function to actually performe a sale between a user and the fridge. 
+Performs a sale between a user and the fridge. 
 
 
 \begin{DoxyParams}{Parameters}

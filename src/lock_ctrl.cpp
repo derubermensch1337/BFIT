@@ -1,7 +1,7 @@
 /**
  * @file lock_ctrl.cpp
  * @authors Amal Araweelo Almis
- * @brief 
+ * @brief Implements servo-based locking control and buzzer feedback for the fridge door.
 */
 
 #include "lock_ctrl.h"
@@ -9,16 +9,28 @@
 
 static Servo lockServo;
 
-// Fixed 0 mechanically
+/** @brief Servo position corresponding to the unlocked state (mechanically fixed). */
 static const int UNLOCK_POS = 0;
-static const int LOCK_POS   = 100;
 
-const int BUZZER = 2;   // Could be improved, issues with resets
+/** @brief Servo position corresponding to the locked state. */
+static const int LOCK_POS = 100;
+
+/** @brief GPIO pin connected to the buzzer.
+ *
+ * @note This pin choice may cause reset issues on some boards.
+ */
+const int BUZZER = 2;
+
+/** @brief Frequency (Hz) used for the high-tone buzzer sound. */
 const double HIGH_TONE = 1000;
+
+/** @brief Frequency (Hz) used for the low-tone buzzer sound. */
 const double LOW_TONE = 600;
+
+/** @brief Duration of buzzer tone in milliseconds. */
 const unsigned long TONE_LENGTH = 200;
 
-// Internal latched state
+/** @brief Internal latched state indicating whether the box is closed. */
 static bool boxClosed = false;
 
 
@@ -55,20 +67,6 @@ bool is_box_closed(){
 
     return boxClosed;
 }
-
-// void play_warning(unsigned long t) {
-
-//     switch(millis() - t){
-//         case 1000 ... 1100:
-//             tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-//             break;
-//         case 3000 ... 3100:
-//             tone(BUZZER, HIGH_TONE, TONE_LENGTH);
-//             break;
-//         default:
-//         break;
-//     }
-// }
 
 void play_open(){
     tone(BUZZER, LOW_TONE);

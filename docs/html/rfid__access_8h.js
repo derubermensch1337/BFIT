@@ -1,6 +1,6 @@
 var rfid__access_8h =
 [
-    [ "User", "struct_user.html", "struct_user" ],
+    [ "User", "structUser.html", "structUser" ],
     [ "MAX_ROOMS", "rfid__access_8h.html#a251d94cd24a2ca3369fc3f8eca8c19ae", null ],
     [ "RST_PIN", "rfid__access_8h.html#a36932b0e869e0114f32e255f61306d6b", null ],
     [ "SS_PIN", "rfid__access_8h.html#a86fac98c9b4c98a3e50fc45440878391", null ],

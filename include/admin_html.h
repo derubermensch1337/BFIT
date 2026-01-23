@@ -10,7 +10,7 @@
 #include <pgmspace.h>
 
 /**
- * @brief HTML for the admin page, is handled by the compiler as a string.
+ * @brief HTML content for the admin web page.
 */
 const char ADMIN_HTML[] PROGMEM = R"rawliteral(
     <!DOCTYPE html>

@@ -1,214 +1,251 @@
-\doxysection{src/\+main.cpp File Reference}
-\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
 
 
-Combined:\+ Web server + Graph + Scale + RFID access + Lock control.  
+Combined\+: Web server + Graph + Scale + RFID access + Lock control.  
 
 
-{\ttfamily \+\#include $<$Arduino.\+h$>$}\newline
-{\ttfamily \+\#include $<$ESP8266\+Wi\+Fi.\+h$>$}\newline
-{\ttfamily \+\#include $<$Wi\+Fi\+Client.\+h$>$}\newline
-{\ttfamily \+\#include $<$ESP8266\+Web\+Server.\+h$>$}\newline
-{\ttfamily \+\#include $<$ESP8266m\+DNS.\+h$>$}\newline
-{\ttfamily \+\#include $<$ESP8266\+Wi\+Fi\+Multi.\+h$>$}\newline
-{\ttfamily \+\#include "{}index\+\_\+html.\+h"{}}\newline
-{\ttfamily \+\#include "{}sale\+\_\+html.\+h"{}}\newline
-{\ttfamily \+\#include "{}STYLE\+\_\+\+CSS.\+h"{}}\newline
-{\ttfamily \+\#include "{}LOGIN\+\_\+\+HTML.\+h"{}}\newline
-{\ttfamily \+\#include "{}ADMIN\+\_\+\+HTML.\+h"{}}\newline
-{\ttfamily \+\#include "{}graph\+\_\+data.\+h"{}}\newline
-{\ttfamily \+\#include "{}inventory.\+h"{}}\newline
-{\ttfamily \+\#include "{}init\+\_\+users\+\_\+and\+\_\+sale.\+h"{}}\newline
-{\ttfamily \+\#include "{}weight\+\_\+scale.\+h"{}}\newline
-{\ttfamily \+\#include "{}fridge\+\_\+state.\+h"{}}\newline
-{\ttfamily \+\#include "{}rfid\+\_\+access.\+h"{}}\newline
-{\ttfamily \+\#include "{}lock\+\_\+ctrl.\+h"{}}\newline
-{\ttfamily \+\#include "{}buzzer.\+h"{}}\newline
-\doxysubsubsection*{Functions}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$ESP8266\+Wi\+Fi.\+h$>$}\newline
+{\ttfamily \#include $<$Wi\+Fi\+Client.\+h$>$}\newline
+{\ttfamily \#include $<$ESP8266\+Web\+Server.\+h$>$}\newline
+{\ttfamily \#include $<$ESP8266m\+DNS.\+h$>$}\newline
+{\ttfamily \#include $<$ESP8266\+Wi\+Fi\+Multi.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}index\+\_\+html.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sale\+\_\+html.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}STYLE\+\_\+\+CSS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}LOGIN\+\_\+\+HTML.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ADMIN\+\_\+\+HTML.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graph\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}inventory.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init\+\_\+users\+\_\+and\+\_\+sale.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}weight\+\_\+scale.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fridge\+\_\+state.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rfid\+\_\+access.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lock\+\_\+ctrl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}buzzer.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \doxymbox{\hyperlink{main_8cpp_aa65a64c2604100886e8172ebeb401924}{print\+\_\+graph\+\_\+arrays}} ()
+void \mbox{\hyperlink{main_8cpp_aa65a64c2604100886e8172ebeb401924}{print\+\_\+graph\+\_\+arrays}} ()
 \begin{DoxyCompactList}\small\item\em Prints the current graph height arrays. \end{DoxyCompactList}\item 
-ESP8266\+Web\+Server \doxymbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} (80)
+ESP8266\+Web\+Server \mbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}} (80)
 \item 
-MFRC522 \doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} (\doxymbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{SS\+\_\+\+PIN}}, \doxymbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{RST\+\_\+\+PIN}})
+MFRC522 \mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} (\mbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{SS\+\_\+\+PIN}}, \mbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{RST\+\_\+\+PIN}})
 \item 
-static void \doxymbox{\hyperlink{main_8cpp_a7d1c7e74180d5bb62322f92c777ccc00}{connect\+\_\+wifi\+\_\+and\+\_\+start\+\_\+mdns}} ()
+static void \mbox{\hyperlink{main_8cpp_a7d1c7e74180d5bb62322f92c777ccc00}{connect\+\_\+wifi\+\_\+and\+\_\+start\+\_\+mdns}} ()
 \item 
-static void \doxymbox{\hyperlink{main_8cpp_af6c0132f4a2ff52caa0ffb42b25533cd}{setup\+\_\+web\+\_\+routes}} ()
+static void \mbox{\hyperlink{main_8cpp_af6c0132f4a2ff52caa0ffb42b25533cd}{setup\+\_\+web\+\_\+routes}} ()
 \item 
-static void \doxymbox{\hyperlink{main_8cpp_aa0c1b0b6f469345b37624d1060ba3ace}{setup\+\_\+inventory\+\_\+and\+\_\+scale}} ()
+static void \mbox{\hyperlink{main_8cpp_aa0c1b0b6f469345b37624d1060ba3ace}{setup\+\_\+inventory\+\_\+and\+\_\+scale}} ()
 \item 
-static void \doxymbox{\hyperlink{main_8cpp_a641a82f1a8f215fa5114af320e0d4a68}{setup\+\_\+rfid\+\_\+and\+\_\+lock}} ()
+static void \mbox{\hyperlink{main_8cpp_a641a82f1a8f215fa5114af320e0d4a68}{setup\+\_\+rfid\+\_\+and\+\_\+lock}} ()
 \item 
-void \doxymbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
+void \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup}} ()
 \item 
-void \doxymbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+void \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-static const float \doxymbox{\hyperlink{main_8cpp_a1c060e14b0596aa609edfff3e4e4a72d}{CAL\+\_\+\+FACTOR}} = 22.\+9f
+static const float \mbox{\hyperlink{main_8cpp_a1c060e14b0596aa609edfff3e4e4a72d}{CAL\+\_\+\+FACTOR}} = 22.\+9f
+\begin{DoxyCompactList}\small\item\em Calibration factor used for weight or sensor calculations. \end{DoxyCompactList}\item 
+static const uint16\+\_\+t \mbox{\hyperlink{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb}{START\+\_\+\+BEER\+\_\+\+QTY}} = 20
+\begin{DoxyCompactList}\small\item\em Initial quantity of beer available at system startup. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{main_8cpp_a586c86c64e7d30517aeee0fe47a25ae4}{WIFI\+\_\+\+SSID}} = \char`\"{}Baldur\textquotesingle{}s A56\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wi-\/\+Fi network SSID used by the device. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef}{WIFI\+\_\+\+PASS}} = \char`\"{}My\+Passkey\+A56\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wi-\/\+Fi network password used by the device. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Sales graph height data for green beer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Sales graph height data for classic beer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structproduct}{product}} \mbox{\hyperlink{main_8cpp_a99baae5e41fb195569de36c593a70fc2}{demo\+\_\+beer}}
 \item 
-static const uint16\+\_\+t \doxymbox{\hyperlink{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb}{START\+\_\+\+BEER\+\_\+\+QTY}} = 20
+\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \mbox{\hyperlink{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67}{active\+Command}} = \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\+\_\+\+NONE}}
 \item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_a586c86c64e7d30517aeee0fe47a25ae4}{WIFI\+\_\+\+SSID}} = "{}Baldur\textquotesingle{}s A56"{}
+bool \mbox{\hyperlink{main_8cpp_a7be31ff1610796febb6bcdcd8ed37a55}{door\+Unlocked}} = false
 \item 
-const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef}{WIFI\+\_\+\+PASS}} = "{}My\+Passkey\+A56"{}
-\item 
-int \doxymbox{\hyperlink{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}
-\begin{DoxyCompactList}\small\item\em Height values for green product sales per room. \end{DoxyCompactList}\item 
-int \doxymbox{\hyperlink{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}{classic\+Height}} \+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}
-\begin{DoxyCompactList}\small\item\em Height values for classic product sales per room. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{main_8cpp_a99baae5e41fb195569de36c593a70fc2}{demo\+\_\+beer}}
-\item 
-\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \doxymbox{\hyperlink{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67}{active\+Command}} = \doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\+\_\+\+NONE}}
-\item 
-bool \doxymbox{\hyperlink{main_8cpp_a7be31ff1610796febb6bcdcd8ed37a55}{door\+Unlocked}} = false
-\item 
-unsigned long \doxymbox{\hyperlink{main_8cpp_ad8ff60585715f8403a5b8638069226a6}{door\+Close\+Timer}} = 0
+unsigned long \mbox{\hyperlink{main_8cpp_ad8ff60585715f8403a5b8638069226a6}{door\+Close\+Timer}} = 0
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Combined:\+ Web server + Graph + Scale + RFID access + Lock control. 
+Combined\+: Web server + Graph + Scale + RFID access + Lock control. 
 
 \begin{DoxyAuthor}{Author}
 Baldur G. Toftegaard 
 \end{DoxyAuthor}
 
 
-\label{doc-func-members}
-\Hypertarget{main_8cpp_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{main_8cpp_a7d1c7e74180d5bb62322f92c777ccc00}\index{main.cpp@{main.cpp}!connect\_wifi\_and\_start\_mdns@{connect\_wifi\_and\_start\_mdns}}
+\mbox{\Hypertarget{main_8cpp_a7d1c7e74180d5bb62322f92c777ccc00}\label{main_8cpp_a7d1c7e74180d5bb62322f92c777ccc00}} 
+\index{main.cpp@{main.cpp}!connect\_wifi\_and\_start\_mdns@{connect\_wifi\_and\_start\_mdns}}
 \index{connect\_wifi\_and\_start\_mdns@{connect\_wifi\_and\_start\_mdns}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{connect\_wifi\_and\_start\_mdns()}{connect\_wifi\_and\_start\_mdns()}}
-{\footnotesize\ttfamily \label{main_8cpp_a7d1c7e74180d5bb62322f92c777ccc00} 
-void connect\+\_\+wifi\+\_\+and\+\_\+start\+\_\+mdns (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void connect\+\_\+wifi\+\_\+and\+\_\+start\+\_\+mdns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\index{main.cpp@{main.cpp}!loop@{loop}}
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+\index{main.cpp@{main.cpp}!loop@{loop}}
 \index{loop@{loop}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{loop()}{loop()}}
-{\footnotesize\ttfamily \label{main_8cpp_afe461d27b9c48d5921c00d521181f12f} 
-void loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{main_8cpp_aa65a64c2604100886e8172ebeb401924}\index{main.cpp@{main.cpp}!print\_graph\_arrays@{print\_graph\_arrays}}
+\mbox{\Hypertarget{main_8cpp_aa65a64c2604100886e8172ebeb401924}\label{main_8cpp_aa65a64c2604100886e8172ebeb401924}} 
+\index{main.cpp@{main.cpp}!print\_graph\_arrays@{print\_graph\_arrays}}
 \index{print\_graph\_arrays@{print\_graph\_arrays}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{print\_graph\_arrays()}{print\_graph\_arrays()}}
-{\footnotesize\ttfamily \label{main_8cpp_aa65a64c2604100886e8172ebeb401924} 
-void print\+\_\+graph\+\_\+arrays (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void print\+\_\+graph\+\_\+arrays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Prints the current graph height arrays. 
 
-\Hypertarget{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}\index{main.cpp@{main.cpp}!rfid@{rfid}}
+\mbox{\Hypertarget{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}\label{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}} 
+\index{main.cpp@{main.cpp}!rfid@{rfid}}
 \index{rfid@{rfid}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{rfid()}{rfid()}}
-{\footnotesize\ttfamily \label{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63} 
-MFRC522 rfid (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{SS\+\_\+\+PIN}}}]{}{, }\item[{\doxymbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{RST\+\_\+\+PIN}}}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily MFRC522 rfid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{SS\+\_\+\+PIN}}}]{,  }\item[{\mbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{RST\+\_\+\+PIN}}}]{ }\end{DoxyParamCaption})}
 
-\Hypertarget{main_8cpp_a58141c4f251beaa1fee89b632d87152f}\index{main.cpp@{main.cpp}!server@{server}}
+\mbox{\Hypertarget{main_8cpp_a58141c4f251beaa1fee89b632d87152f}\label{main_8cpp_a58141c4f251beaa1fee89b632d87152f}} 
+\index{main.cpp@{main.cpp}!server@{server}}
 \index{server@{server}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{server()}{server()}}
-{\footnotesize\ttfamily \label{main_8cpp_a58141c4f251beaa1fee89b632d87152f} 
-ESP8266\+Web\+Server server (\begin{DoxyParamCaption}\item[{80}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ESP8266\+Web\+Server server (\begin{DoxyParamCaption}\item[{80}]{ }\end{DoxyParamCaption})}
 
-\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\index{main.cpp@{main.cpp}!setup@{setup}}
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+\index{main.cpp@{main.cpp}!setup@{setup}}
 \index{setup@{setup}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{setup()}{setup()}}
-{\footnotesize\ttfamily \label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d} 
-void setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{main_8cpp_aa0c1b0b6f469345b37624d1060ba3ace}\index{main.cpp@{main.cpp}!setup\_inventory\_and\_scale@{setup\_inventory\_and\_scale}}
+\mbox{\Hypertarget{main_8cpp_aa0c1b0b6f469345b37624d1060ba3ace}\label{main_8cpp_aa0c1b0b6f469345b37624d1060ba3ace}} 
+\index{main.cpp@{main.cpp}!setup\_inventory\_and\_scale@{setup\_inventory\_and\_scale}}
 \index{setup\_inventory\_and\_scale@{setup\_inventory\_and\_scale}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{setup\_inventory\_and\_scale()}{setup\_inventory\_and\_scale()}}
-{\footnotesize\ttfamily \label{main_8cpp_aa0c1b0b6f469345b37624d1060ba3ace} 
-void setup\+\_\+inventory\+\_\+and\+\_\+scale (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void setup\+\_\+inventory\+\_\+and\+\_\+scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{main_8cpp_a641a82f1a8f215fa5114af320e0d4a68}\index{main.cpp@{main.cpp}!setup\_rfid\_and\_lock@{setup\_rfid\_and\_lock}}
+\mbox{\Hypertarget{main_8cpp_a641a82f1a8f215fa5114af320e0d4a68}\label{main_8cpp_a641a82f1a8f215fa5114af320e0d4a68}} 
+\index{main.cpp@{main.cpp}!setup\_rfid\_and\_lock@{setup\_rfid\_and\_lock}}
 \index{setup\_rfid\_and\_lock@{setup\_rfid\_and\_lock}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{setup\_rfid\_and\_lock()}{setup\_rfid\_and\_lock()}}
-{\footnotesize\ttfamily \label{main_8cpp_a641a82f1a8f215fa5114af320e0d4a68} 
-void setup\+\_\+rfid\+\_\+and\+\_\+lock (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void setup\+\_\+rfid\+\_\+and\+\_\+lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{main_8cpp_af6c0132f4a2ff52caa0ffb42b25533cd}\index{main.cpp@{main.cpp}!setup\_web\_routes@{setup\_web\_routes}}
+\mbox{\Hypertarget{main_8cpp_af6c0132f4a2ff52caa0ffb42b25533cd}\label{main_8cpp_af6c0132f4a2ff52caa0ffb42b25533cd}} 
+\index{main.cpp@{main.cpp}!setup\_web\_routes@{setup\_web\_routes}}
 \index{setup\_web\_routes@{setup\_web\_routes}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{setup\_web\_routes()}{setup\_web\_routes()}}
-{\footnotesize\ttfamily \label{main_8cpp_af6c0132f4a2ff52caa0ffb42b25533cd} 
-void setup\+\_\+web\+\_\+routes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void setup\+\_\+web\+\_\+routes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-\label{doc-var-members}
-\Hypertarget{main_8cpp_doc-var-members}
 \doxysubsection{Variable Documentation}
-\Hypertarget{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67}\index{main.cpp@{main.cpp}!activeCommand@{activeCommand}}
+\mbox{\Hypertarget{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67}\label{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67}} 
+\index{main.cpp@{main.cpp}!activeCommand@{activeCommand}}
 \index{activeCommand@{activeCommand}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{activeCommand}{activeCommand}}
-{\footnotesize\ttfamily \label{main_8cpp_a3c3c0b5fe8d28967a33072d052bb1e67} 
-\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} active\+Command = \doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\+\_\+\+NONE}}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} active\+Command = \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\+\_\+\+NONE}}}
 
-\Hypertarget{main_8cpp_a1c060e14b0596aa609edfff3e4e4a72d}\index{main.cpp@{main.cpp}!CAL\_FACTOR@{CAL\_FACTOR}}
+\mbox{\Hypertarget{main_8cpp_a1c060e14b0596aa609edfff3e4e4a72d}\label{main_8cpp_a1c060e14b0596aa609edfff3e4e4a72d}} 
+\index{main.cpp@{main.cpp}!CAL\_FACTOR@{CAL\_FACTOR}}
 \index{CAL\_FACTOR@{CAL\_FACTOR}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{CAL\_FACTOR}{CAL\_FACTOR}}
-{\footnotesize\ttfamily \label{main_8cpp_a1c060e14b0596aa609edfff3e4e4a72d} 
-const float CAL\+\_\+\+FACTOR = 22.\+9f\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const float CAL\+\_\+\+FACTOR = 22.\+9f\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}\index{main.cpp@{main.cpp}!classicHeight@{classicHeight}}
+
+
+Calibration factor used for weight or sensor calculations. 
+
+\mbox{\Hypertarget{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}\label{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84}} 
+\index{main.cpp@{main.cpp}!classicHeight@{classicHeight}}
 \index{classicHeight@{classicHeight}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{classicHeight}{classicHeight}}
-{\footnotesize\ttfamily \label{main_8cpp_a0a2ed5e0c246b8dc17e36e9c80fd6b84} 
-int classic\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}}
+{\footnotesize\ttfamily int classic\+Height\mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
 
 
+Sales graph height data for classic beer. 
 
-Height values for classic product sales per room. 
+Height values for classic product sales per room.
 
-\Hypertarget{main_8cpp_a99baae5e41fb195569de36c593a70fc2}\index{main.cpp@{main.cpp}!demo\_beer@{demo\_beer}}
+Indexed by room number. Used by sale\+\_\+html and the /sale\+Heights endpoint. \mbox{\Hypertarget{main_8cpp_a99baae5e41fb195569de36c593a70fc2}\label{main_8cpp_a99baae5e41fb195569de36c593a70fc2}} 
+\index{main.cpp@{main.cpp}!demo\_beer@{demo\_beer}}
 \index{demo\_beer@{demo\_beer}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{demo\_beer}{demo\_beer}}
-{\footnotesize\ttfamily \label{main_8cpp_a99baae5e41fb195569de36c593a70fc2} 
-\doxymbox{\hyperlink{structproduct}{product}} demo\+\_\+beer}
+{\footnotesize\ttfamily \mbox{\hyperlink{structproduct}{product}} demo\+\_\+beer}
 
-\Hypertarget{main_8cpp_ad8ff60585715f8403a5b8638069226a6}\index{main.cpp@{main.cpp}!doorCloseTimer@{doorCloseTimer}}
+\mbox{\Hypertarget{main_8cpp_ad8ff60585715f8403a5b8638069226a6}\label{main_8cpp_ad8ff60585715f8403a5b8638069226a6}} 
+\index{main.cpp@{main.cpp}!doorCloseTimer@{doorCloseTimer}}
 \index{doorCloseTimer@{doorCloseTimer}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{doorCloseTimer}{doorCloseTimer}}
-{\footnotesize\ttfamily \label{main_8cpp_ad8ff60585715f8403a5b8638069226a6} 
-unsigned long door\+Close\+Timer = 0}
+{\footnotesize\ttfamily unsigned long door\+Close\+Timer = 0}
 
-\Hypertarget{main_8cpp_a7be31ff1610796febb6bcdcd8ed37a55}\index{main.cpp@{main.cpp}!doorUnlocked@{doorUnlocked}}
+\mbox{\Hypertarget{main_8cpp_a7be31ff1610796febb6bcdcd8ed37a55}\label{main_8cpp_a7be31ff1610796febb6bcdcd8ed37a55}} 
+\index{main.cpp@{main.cpp}!doorUnlocked@{doorUnlocked}}
 \index{doorUnlocked@{doorUnlocked}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{doorUnlocked}{doorUnlocked}}
-{\footnotesize\ttfamily \label{main_8cpp_a7be31ff1610796febb6bcdcd8ed37a55} 
-bool door\+Unlocked = false}
+{\footnotesize\ttfamily bool door\+Unlocked = false}
 
-\Hypertarget{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}\index{main.cpp@{main.cpp}!greenHeight@{greenHeight}}
+\mbox{\Hypertarget{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}\label{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}} 
+\index{main.cpp@{main.cpp}!greenHeight@{greenHeight}}
 \index{greenHeight@{greenHeight}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{greenHeight}{greenHeight}}
-{\footnotesize\ttfamily \label{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f} 
-int green\+Height\+[\doxymbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}]\+ = \{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1\}}
+{\footnotesize\ttfamily int green\+Height\mbox{[}\mbox{\hyperlink{graph__data_8h_a42b2b0f20098ad8577decdc6aed0dd86}{ROOM\+\_\+\+COUNT}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
 
 
+Sales graph height data for green beer. 
 
-Height values for green product sales per room. 
+Height values for green product sales per room.
 
-\Hypertarget{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb}\index{main.cpp@{main.cpp}!START\_BEER\_QTY@{START\_BEER\_QTY}}
+Indexed by room number. Used by sale\+\_\+html and the /sale\+Heights endpoint. \mbox{\Hypertarget{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb}\label{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb}} 
+\index{main.cpp@{main.cpp}!START\_BEER\_QTY@{START\_BEER\_QTY}}
 \index{START\_BEER\_QTY@{START\_BEER\_QTY}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{START\_BEER\_QTY}{START\_BEER\_QTY}}
-{\footnotesize\ttfamily \label{main_8cpp_a9ef268666ef0d3c87f59582d7782c1bb} 
-const uint16\+\_\+t START\+\_\+\+BEER\+\_\+\+QTY = 20\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily const uint16\+\_\+t START\+\_\+\+BEER\+\_\+\+QTY = 20\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef}\index{main.cpp@{main.cpp}!WIFI\_PASS@{WIFI\_PASS}}
+
+
+Initial quantity of beer available at system startup. 
+
+\mbox{\Hypertarget{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef}\label{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef}} 
+\index{main.cpp@{main.cpp}!WIFI\_PASS@{WIFI\_PASS}}
 \index{WIFI\_PASS@{WIFI\_PASS}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{WIFI\_PASS}{WIFI\_PASS}}
-{\footnotesize\ttfamily \label{main_8cpp_aa0d894a281cd4525d1dad48b1a7161ef} 
-const char\texorpdfstring{$\ast$}{*} WIFI\+\_\+\+PASS = "{}My\+Passkey\+A56"{}}
+{\footnotesize\ttfamily const char$\ast$ WIFI\+\_\+\+PASS = \char`\"{}My\+Passkey\+A56\char`\"{}}
 
-\Hypertarget{main_8cpp_a586c86c64e7d30517aeee0fe47a25ae4}\index{main.cpp@{main.cpp}!WIFI\_SSID@{WIFI\_SSID}}
+
+
+Wi-\/\+Fi network password used by the device. 
+
+\mbox{\Hypertarget{main_8cpp_a586c86c64e7d30517aeee0fe47a25ae4}\label{main_8cpp_a586c86c64e7d30517aeee0fe47a25ae4}} 
+\index{main.cpp@{main.cpp}!WIFI\_SSID@{WIFI\_SSID}}
 \index{WIFI\_SSID@{WIFI\_SSID}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{WIFI\_SSID}{WIFI\_SSID}}
-{\footnotesize\ttfamily \label{main_8cpp_a586c86c64e7d30517aeee0fe47a25ae4} 
-const char\texorpdfstring{$\ast$}{*} WIFI\+\_\+\+SSID = "{}Baldur\textquotesingle{}s A56"{}}
+{\footnotesize\ttfamily const char$\ast$ WIFI\+\_\+\+SSID = \char`\"{}Baldur\textquotesingle{}s A56\char`\"{}}
+
+
+
+Wi-\/\+Fi network SSID used by the device. 
 

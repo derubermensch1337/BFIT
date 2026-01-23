@@ -3,6 +3,7 @@
  * @brief 
  * @author Amal Araweelo Almis
  * @author Baldur G. Toftegaard
+ * @author Anssi Sohlman
  */
 
 #ifndef RFID_ACCESS_H
@@ -12,11 +13,17 @@
 #include <MFRC522.h>
 
 // Pins
+/** GPIO pin connected to SS */
 #define SS_PIN 15 // Use GPIO pins for HUZZAH instead of D8
+
+/** GPIO pin connected to RST */
 #define RST_PIN 0 // Instead of D3
 
 // Constants
+/** Maximum number of rooms supported by the system */
 #define MAX_ROOMS 17
+
+/** Length of an RFID UID in bytes */
 #define UID_LENGTH 4
 
 /**

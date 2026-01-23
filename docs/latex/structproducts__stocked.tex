@@ -1,63 +1,70 @@
-\doxysection{products\+\_\+stocked Struct Reference}
-\hypertarget{structproducts__stocked}{}\label{structproducts__stocked}\index{products\_stocked@{products\_stocked}}
+\hypertarget{structproducts__stocked}{}\doxysection{products\+\_\+stocked Struct Reference}
+\label{structproducts__stocked}\index{products\_stocked@{products\_stocked}}
 
 
-Struckt for keeping track of the original and current quantity of a beverage.  
+Tracks inventory quantities for a single product.  
 
 
 
 
-{\ttfamily \+\#include $<$inventory.\+h$>$}
+{\ttfamily \#include $<$inventory.\+h$>$}
 
-\doxysubsubsection*{Public Attributes}
+
+
+Collaboration diagram for products\+\_\+stocked\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{structproducts__stocked__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{structproducts__stocked_ae46ca5877400af2c3a1cfa0989f534a7}{beverage}}
-\begin{DoxyCompactList}\small\item\em The beverage being tracked. \end{DoxyCompactList}\item 
-uint8\+\_\+t \doxymbox{\hyperlink{structproducts__stocked_af79f7dc778ba4440a712e5054d1b441a}{original\+\_\+quantity}}
-\begin{DoxyCompactList}\small\item\em The original quantity of the beverage in stock. \end{DoxyCompactList}\item 
-uint8\+\_\+t \doxymbox{\hyperlink{structproducts__stocked_aaba071550c1f03cc9df94e4e619f5f23}{current\+\_\+quantity}}
-\begin{DoxyCompactList}\small\item\em The current quantity of the beverage in stock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\hyperlink{structproduct}{product}} \mbox{\hyperlink{structproducts__stocked_ae46ca5877400af2c3a1cfa0989f534a7}{beverage}}
+\begin{DoxyCompactList}\small\item\em Product being tracked. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structproducts__stocked_af79f7dc778ba4440a712e5054d1b441a}{original\+\_\+quantity}}
+\begin{DoxyCompactList}\small\item\em Initial stock quantity. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structproducts__stocked_aaba071550c1f03cc9df94e4e619f5f23}{current\+\_\+quantity}}
+\begin{DoxyCompactList}\small\item\em Current stock quantity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Struckt for keeping track of the original and current quantity of a beverage. 
+Tracks inventory quantities for a single product. 
 
-\label{doc-variable-members}
-\Hypertarget{structproducts__stocked_doc-variable-members}
 \doxysubsection{Member Data Documentation}
-\Hypertarget{structproducts__stocked_ae46ca5877400af2c3a1cfa0989f534a7}\index{products\_stocked@{products\_stocked}!beverage@{beverage}}
+\mbox{\Hypertarget{structproducts__stocked_ae46ca5877400af2c3a1cfa0989f534a7}\label{structproducts__stocked_ae46ca5877400af2c3a1cfa0989f534a7}} 
+\index{products\_stocked@{products\_stocked}!beverage@{beverage}}
 \index{beverage@{beverage}!products\_stocked@{products\_stocked}}
 \doxysubsubsection{\texorpdfstring{beverage}{beverage}}
-{\footnotesize\ttfamily \label{structproducts__stocked_ae46ca5877400af2c3a1cfa0989f534a7} 
-\doxymbox{\hyperlink{structproduct}{product}} products\+\_\+stocked::\+beverage}
+{\footnotesize\ttfamily \mbox{\hyperlink{structproduct}{product}} products\+\_\+stocked\+::beverage}
 
 
 
-The beverage being tracked. 
+Product being tracked. 
 
-\Hypertarget{structproducts__stocked_aaba071550c1f03cc9df94e4e619f5f23}\index{products\_stocked@{products\_stocked}!current\_quantity@{current\_quantity}}
+\mbox{\Hypertarget{structproducts__stocked_aaba071550c1f03cc9df94e4e619f5f23}\label{structproducts__stocked_aaba071550c1f03cc9df94e4e619f5f23}} 
+\index{products\_stocked@{products\_stocked}!current\_quantity@{current\_quantity}}
 \index{current\_quantity@{current\_quantity}!products\_stocked@{products\_stocked}}
 \doxysubsubsection{\texorpdfstring{current\_quantity}{current\_quantity}}
-{\footnotesize\ttfamily \label{structproducts__stocked_aaba071550c1f03cc9df94e4e619f5f23} 
-uint8\+\_\+t products\+\_\+stocked::\+current\+\_\+quantity}
+{\footnotesize\ttfamily uint8\+\_\+t products\+\_\+stocked\+::current\+\_\+quantity}
 
 
 
-The current quantity of the beverage in stock. 
+Current stock quantity. 
 
-\Hypertarget{structproducts__stocked_af79f7dc778ba4440a712e5054d1b441a}\index{products\_stocked@{products\_stocked}!original\_quantity@{original\_quantity}}
+\mbox{\Hypertarget{structproducts__stocked_af79f7dc778ba4440a712e5054d1b441a}\label{structproducts__stocked_af79f7dc778ba4440a712e5054d1b441a}} 
+\index{products\_stocked@{products\_stocked}!original\_quantity@{original\_quantity}}
 \index{original\_quantity@{original\_quantity}!products\_stocked@{products\_stocked}}
 \doxysubsubsection{\texorpdfstring{original\_quantity}{original\_quantity}}
-{\footnotesize\ttfamily \label{structproducts__stocked_af79f7dc778ba4440a712e5054d1b441a} 
-uint8\+\_\+t products\+\_\+stocked::\+original\+\_\+quantity}
+{\footnotesize\ttfamily uint8\+\_\+t products\+\_\+stocked\+::original\+\_\+quantity}
 
 
 
-The original quantity of the beverage in stock. 
+Initial stock quantity. 
 
 
 
-The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-include/\+\doxymbox{\hyperlink{inventory_8h}{inventory.\+h}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{inventory_8h}{inventory.\+h}}\end{DoxyCompactItemize}

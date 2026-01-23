@@ -10,7 +10,7 @@
 #include <math.h> 
 
 /**
- * @brief FUnction to get the weight reference.
+ * @brief Function to get the weight reference.
  * 
  * @return float 
 */
@@ -35,7 +35,7 @@ void  reset_weight_reference(
 );
 
 /**
- * @brief Function to send cinfirmation that the weight reference is set.
+ * @brief Function to send confirmation that the weight reference is set.
  * 
  * @return true 
  * @return false 
@@ -50,7 +50,7 @@ bool  weight_reference_is_set(
 #define BEER_WEIGHT 350
 
 /**
- * @brief Define the error of the weight mesurment.
+ * @brief Define the uncertainty of the weight mesurment.
 */
 #define SCALE_TOL 25
 
@@ -64,13 +64,6 @@ bool  weight_reference_is_set(
 // Globals
 extern HX711_ADC scale;
 
-/**
- * @brief set up the action (input) the rfid_user_id_lattest takes
-*/
-enum weight_recall_action {
-    weight_change_store,
-    weight_change_recall
-};
 
 /**
  * @brief Function to seting up the scale, is called in the begining of the program.
@@ -101,14 +94,14 @@ float get_weight(
 );
 
 /**
- * @brief Function to tar the scale
+ * @brief Function to tare the scale.
 */
 void tare_scale(
     void
 );
 
 /**
- * @brief Function to signal that the scale has been tarted.
+ * @brief Function to signal that the scale has been tared.
  * 
  * @return true 
  * @return false 

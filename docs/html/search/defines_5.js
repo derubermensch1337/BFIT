@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5frooms_0',['MAX_ROOMS',['../rfid__access_8h.html#a251d94cd24a2ca3369fc3f8eca8c19ae',1,'rfid_access.h']]]
+  ['number_5fof_5fusers_315',['number_of_users',['../init__users__and__sale_8h.html#addb6ddda38b57f068b76824c9335ce51',1,'init_users_and_sale.h']]]
 ];

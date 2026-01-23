@@ -1,15 +1,23 @@
-\doxysection{src/\+rfid\+\_\+access.cpp File Reference}
-\hypertarget{rfid__access_8cpp}{}\label{rfid__access_8cpp}\index{src/rfid\_access.cpp@{src/rfid\_access.cpp}}
-{\ttfamily \+\#include "{}rfid\+\_\+access.\+h"{}}\newline
-\doxysubsubsection*{Functions}
+\hypertarget{rfid__access_8cpp}{}\doxysection{src/rfid\+\_\+access.cpp File Reference}
+\label{rfid__access_8cpp}\index{src/rfid\_access.cpp@{src/rfid\_access.cpp}}
+{\ttfamily \#include \char`\"{}rfid\+\_\+access.\+h\char`\"{}}\newline
+Include dependency graph for rfid\+\_\+access.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{rfid__access_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \doxymbox{\hyperlink{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6}{check\+\_\+command}} ()
-\begin{DoxyCompactList}\small\item\em brief Reads a command from the serial interface and maps it to an \doxylink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}. \end{DoxyCompactList}\item 
-void \doxymbox{\hyperlink{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}{setup\+\_\+\+RFID\+\_\+reader}} (MFRC522 \&\doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
+\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \mbox{\hyperlink{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6}{check\+\_\+command}} ()
+\begin{DoxyCompactList}\small\item\em brief Reads a command from the serial interface and maps it to an RFIDcommand. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}{setup\+\_\+\+RFID\+\_\+reader}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
 \begin{DoxyCompactList}\small\item\em Initializes SPI and the MFRC522 RFID reader. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c}{add\+\_\+user}} (MFRC522 \&\doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
+bool \mbox{\hyperlink{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c}{add\+\_\+user}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
 \begin{DoxyCompactList}\small\item\em Adds a new user by reading room number and scanning an RFID tag. \end{DoxyCompactList}\item 
+<<<<<<< HEAD
 bool \doxymbox{\hyperlink{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}{validate\+\_\+rfid}} (MFRC522 my\+RFID)
 \begin{DoxyCompactList}\small\item\em Validates an RFID tag against the registered user database. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\+\_\+\+UID}} (byte \texorpdfstring{$\ast$}{*}uid1, byte \texorpdfstring{$\ast$}{*}uid2)
@@ -21,19 +29,32 @@ void \doxymbox{\hyperlink{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}{d
 void \doxymbox{\hyperlink{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}{display\+\_\+commands\+\_\+um}} ()
 \begin{DoxyCompactList}\small\item\em Prints the available serial commands for user-\/management mode. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}{rfid\+\_\+set\+\_\+last\+\_\+uid}} (const byte \texorpdfstring{$\ast$}{*}uid\+In)
+=======
+bool \mbox{\hyperlink{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}{validate\+\_\+rfid}} (MFRC522 my\+RFID)
+\begin{DoxyCompactList}\small\item\em Validates an RFID tag against the registered user database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\+\_\+\+UID}} (byte $\ast$uid1, byte $\ast$uid2)
+\begin{DoxyCompactList}\small\item\em Compares two RFID UIDs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}{read\+\_\+\+RFID\+\_\+tag}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}, byte $\ast$uid\+Buffer)
+\begin{DoxyCompactList}\small\item\em Reads an RFID tag UID from the MFRC522 reader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}{display\+\_\+commands}} ()
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}{display\+\_\+commands\+\_\+um}} ()
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands for user-\/management mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}{rfid\+\_\+set\+\_\+last\+\_\+uid}} (const byte $\ast$uid\+In)
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 \begin{DoxyCompactList}\small\item\em Function for storing the last used RFID. \end{DoxyCompactList}\item 
-bool \doxymbox{\hyperlink{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}{rfid\+\_\+get\+\_\+last\+\_\+uid}} (byte \texorpdfstring{$\ast$}{*}uid\+Out)
+bool \mbox{\hyperlink{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}{rfid\+\_\+get\+\_\+last\+\_\+uid}} (byte $\ast$uid\+Out)
 \begin{DoxyCompactList}\small\item\em Function for restoring the last used RFID. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Variables}
+\doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\doxymbox{\hyperlink{struct_user}{User}} \doxymbox{\hyperlink{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a}{users}} \+[\doxymbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}]\+
+\mbox{\hyperlink{structUser}{User}} \mbox{\hyperlink{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a}{users}} \mbox{[}\mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em Global user database array. \end{DoxyCompactList}\item 
-int \doxymbox{\hyperlink{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465}{user\+Count}} = 0
+int \mbox{\hyperlink{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465}{user\+Count}} = 0
 \begin{DoxyCompactList}\small\item\em Number of currently registered users. \end{DoxyCompactList}\item 
-static byte \doxymbox{\hyperlink{rfid__access_8cpp_a742d4f0d334ff2a1eb3ccd9b99970bcf}{last\+UID}} \+[\doxymbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{UID\+\_\+\+LENGTH}}]\+
+static byte \mbox{\hyperlink{rfid__access_8cpp_a742d4f0d334ff2a1eb3ccd9b99970bcf}{last\+UID}} \mbox{[}\mbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{UID\+\_\+\+LENGTH}}\mbox{]}
 \item 
-static bool \doxymbox{\hyperlink{rfid__access_8cpp_a17948a54fedc435a57c485ea53175ca0}{has\+UID}} = false
+static bool \mbox{\hyperlink{rfid__access_8cpp_a17948a54fedc435a57c485ea53175ca0}{has\+UID}} = false
 \end{DoxyCompactItemize}
 
 
@@ -45,14 +66,12 @@ Baldur G. Toftegaard
 \end{DoxyAuthor}
 
 
-\label{doc-func-members}
-\Hypertarget{rfid__access_8cpp_doc-func-members}
 \doxysubsection{Function Documentation}
-\Hypertarget{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c}\index{rfid\_access.cpp@{rfid\_access.cpp}!add\_user@{add\_user}}
+\mbox{\Hypertarget{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c}\label{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!add\_user@{add\_user}}
 \index{add\_user@{add\_user}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{add\_user()}{add\_user()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_abc2ed4592afe3616dfab8e42c9d3c99c} 
-bool add\+\_\+user (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool add\+\_\+user (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid }\end{DoxyParamCaption})}
 
 
 
@@ -60,7 +79,7 @@ Adds a new user by reading room number and scanning an RFID tag.
 
 
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & \\
+{\em rfid} & \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -68,24 +87,28 @@ true
 
 false 
 \end{DoxyReturn}
-\Hypertarget{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6}\index{rfid\_access.cpp@{rfid\_access.cpp}!check\_command@{check\_command}}
+\mbox{\Hypertarget{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6}\label{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!check\_command@{check\_command}}
 \index{check\_command@{check\_command}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{check\_command()}{check\_command()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a4a66436c7fbab3185e8fe050312fcea6} 
-\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} check\+\_\+command (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} check\+\_\+command (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
-brief Reads a command from the serial interface and maps it to an \doxylink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}. 
+brief Reads a command from the serial interface and maps it to an RFIDcommand. 
 
 \begin{DoxyReturn}{Returns}
-\doxylink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand} 
+RFIDcommand 
 \end{DoxyReturn}
-\Hypertarget{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}\index{rfid\_access.cpp@{rfid\_access.cpp}!compare\_UID@{compare\_UID}}
+\mbox{\Hypertarget{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}\label{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!compare\_UID@{compare\_UID}}
 \index{compare\_UID@{compare\_UID}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{compare\_UID()}{compare\_UID()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_ab4c09e9a60679c0c9ade2946fbf583ad} 
-bool compare\+\_\+\+UID (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{uid1}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{uid2}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool compare\+\_\+\+UID (\begin{DoxyParamCaption}\item[{byte $\ast$}]{uid1,  }\item[{byte $\ast$}]{uid2 }\end{DoxyParamCaption})}
+
+
+
+Compares two RFID UIDs. 
 
 
 
@@ -103,31 +126,43 @@ true
 
 false 
 \end{DoxyReturn}
-\Hypertarget{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands@{display\_commands}}
+\mbox{\Hypertarget{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}\label{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands@{display\_commands}}
 \index{display\_commands@{display\_commands}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{display\_commands()}{display\_commands()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_adf824566d577c7c8088aa454c831f906} 
-void display\+\_\+commands (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void display\+\_\+commands (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
 
 
 Prints the available serial commands. 
 
+<<<<<<< HEAD
 \Hypertarget{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands\_um@{display\_commands\_um}}
+=======
+\mbox{\Hypertarget{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}\label{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!display\_commands\_um@{display\_commands\_um}}
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 \index{display\_commands\_um@{display\_commands\_um}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{display\_commands\_um()}{display\_commands\_um()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a301fdf0545d6da25fbe5ed4abcc6f075} 
-void display\+\_\+commands\+\_\+um (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void display\+\_\+commands\+\_\+um (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Prints the available serial commands for user-\/management mode. 
 
+<<<<<<< HEAD
 \Hypertarget{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}\index{rfid\_access.cpp@{rfid\_access.cpp}!read\_RFID\_tag@{read\_RFID\_tag}}
+=======
+\mbox{\Hypertarget{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}\label{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!read\_RFID\_tag@{read\_RFID\_tag}}
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 \index{read\_RFID\_tag@{read\_RFID\_tag}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{read\_RFID\_tag()}{read\_RFID\_tag()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a0add745e34488b9c793c8a45308228b3} 
-bool read\+\_\+\+RFID\+\_\+tag (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{uid\+Buffer}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool read\+\_\+\+RFID\+\_\+tag (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid,  }\item[{byte $\ast$}]{uid\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Reads an RFID tag UID from the MFRC522 reader. 
 
 
 
@@ -135,7 +170,7 @@ Reads an RFID tag UID from the MFRC522 reader.
 
 
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & \\
+{\em rfid} & \\
 \hline
 {\em uid\+Buffer} & \\
 \hline
@@ -145,11 +180,11 @@ true
 
 false 
 \end{DoxyReturn}
-\Hypertarget{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}\index{rfid\_access.cpp@{rfid\_access.cpp}!rfid\_get\_last\_uid@{rfid\_get\_last\_uid}}
+\mbox{\Hypertarget{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}\label{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!rfid\_get\_last\_uid@{rfid\_get\_last\_uid}}
 \index{rfid\_get\_last\_uid@{rfid\_get\_last\_uid}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{rfid\_get\_last\_uid()}{rfid\_get\_last\_uid()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a38522f06db7c720fa309716c24f5fb57} 
-bool rfid\+\_\+get\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{uid\+Out}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool rfid\+\_\+get\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{byte $\ast$}]{uid\+Out }\end{DoxyParamCaption})}
 
 
 
@@ -165,11 +200,11 @@ true
 
 false 
 \end{DoxyReturn}
-\Hypertarget{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}\index{rfid\_access.cpp@{rfid\_access.cpp}!rfid\_set\_last\_uid@{rfid\_set\_last\_uid}}
+\mbox{\Hypertarget{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}\label{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!rfid\_set\_last\_uid@{rfid\_set\_last\_uid}}
 \index{rfid\_set\_last\_uid@{rfid\_set\_last\_uid}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{rfid\_set\_last\_uid()}{rfid\_set\_last\_uid()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_aee72324df2418506e4d0fb015d1500be} 
-void rfid\+\_\+set\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{const byte \texorpdfstring{$\ast$}{*}}]{uid\+In}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void rfid\+\_\+set\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{const byte $\ast$}]{uid\+In }\end{DoxyParamCaption})}
 
 
 
@@ -185,11 +220,11 @@ true
 
 false 
 \end{DoxyReturn}
-\Hypertarget{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}\index{rfid\_access.cpp@{rfid\_access.cpp}!setup\_RFID\_reader@{setup\_RFID\_reader}}
+\mbox{\Hypertarget{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}\label{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!setup\_RFID\_reader@{setup\_RFID\_reader}}
 \index{setup\_RFID\_reader@{setup\_RFID\_reader}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{setup\_RFID\_reader()}{setup\_RFID\_reader()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a8e4bb51959939a9527c2f592cb742f84} 
-void setup\+\_\+\+RFID\+\_\+reader (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void setup\+\_\+\+RFID\+\_\+reader (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid }\end{DoxyParamCaption})}
 
 
 
@@ -197,14 +232,18 @@ Initializes SPI and the MFRC522 RFID reader.
 
 
 \begin{DoxyParams}{Parameters}
-{\em \doxylink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}} & \\
+{\em rfid} & \\
 \hline
 \end{DoxyParams}
-\Hypertarget{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}\index{rfid\_access.cpp@{rfid\_access.cpp}!validate\_rfid@{validate\_rfid}}
+\mbox{\Hypertarget{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}\label{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!validate\_rfid@{validate\_rfid}}
 \index{validate\_rfid@{validate\_rfid}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{validate\_rfid()}{validate\_rfid()}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_ad134e233e23721f4762373cf2e781a6d} 
-bool validate\+\_\+rfid (\begin{DoxyParamCaption}\item[{MFRC522}]{my\+RFID}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool validate\+\_\+rfid (\begin{DoxyParamCaption}\item[{MFRC522}]{my\+RFID }\end{DoxyParamCaption})}
+
+
+
+Validates an RFID tag against the registered user database. 
 
 
 
@@ -222,36 +261,34 @@ false
 \end{DoxyReturn}
 
 
-\label{doc-var-members}
-\Hypertarget{rfid__access_8cpp_doc-var-members}
 \doxysubsection{Variable Documentation}
-\Hypertarget{rfid__access_8cpp_a17948a54fedc435a57c485ea53175ca0}\index{rfid\_access.cpp@{rfid\_access.cpp}!hasUID@{hasUID}}
+\mbox{\Hypertarget{rfid__access_8cpp_a17948a54fedc435a57c485ea53175ca0}\label{rfid__access_8cpp_a17948a54fedc435a57c485ea53175ca0}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!hasUID@{hasUID}}
 \index{hasUID@{hasUID}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{hasUID}{hasUID}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a17948a54fedc435a57c485ea53175ca0} 
-bool has\+UID = false\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily bool has\+UID = false\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{rfid__access_8cpp_a742d4f0d334ff2a1eb3ccd9b99970bcf}\index{rfid\_access.cpp@{rfid\_access.cpp}!lastUID@{lastUID}}
+\mbox{\Hypertarget{rfid__access_8cpp_a742d4f0d334ff2a1eb3ccd9b99970bcf}\label{rfid__access_8cpp_a742d4f0d334ff2a1eb3ccd9b99970bcf}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!lastUID@{lastUID}}
 \index{lastUID@{lastUID}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{lastUID}{lastUID}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a742d4f0d334ff2a1eb3ccd9b99970bcf} 
-byte last\+UID\+[\doxymbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{UID\+\_\+\+LENGTH}}]\+\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily byte last\+UID\mbox{[}\mbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{UID\+\_\+\+LENGTH}}\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
 
-\Hypertarget{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465}\index{rfid\_access.cpp@{rfid\_access.cpp}!userCount@{userCount}}
+\mbox{\Hypertarget{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465}\label{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!userCount@{userCount}}
 \index{userCount@{userCount}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{userCount}{userCount}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_a23424c8ba4bf5c99fbb09f4d86787465} 
-int user\+Count = 0}
+{\footnotesize\ttfamily int user\+Count = 0}
 
 
 
 Number of currently registered users. 
 
-\Hypertarget{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a}\index{rfid\_access.cpp@{rfid\_access.cpp}!users@{users}}
+\mbox{\Hypertarget{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a}\label{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a}} 
+\index{rfid\_access.cpp@{rfid\_access.cpp}!users@{users}}
 \index{users@{users}!rfid\_access.cpp@{rfid\_access.cpp}}
 \doxysubsubsection{\texorpdfstring{users}{users}}
-{\footnotesize\ttfamily \label{rfid__access_8cpp_ad1ade64ec1f94c9ff0835615a52a941a} 
-\doxymbox{\hyperlink{struct_user}{User}} users\+[\doxymbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}]\+}
+{\footnotesize\ttfamily \mbox{\hyperlink{structUser}{User}} users\mbox{[}\mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}\mbox{]}}
 
 
 
