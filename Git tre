@@ -1,0 +1,305 @@
+C:\Users\baldu\Documents\arduino_esp8266>git log --oneline --graph --decorate --all
+* efec0d1 (HEAD -> baldur, BFIT/baldur) now the final commit
+* 27dd5ba final commit?
+* bf30225 documentation
+* 5f7df45 documentation
+* 93e7a35 commentary
+* 722a9b3 commentary
+* 9af5dd4 commentary
+* 61f7de8 commentary
+* b50a173 added commentary
+*   fabb103 (BFIT/main, BFIT/HEAD) Merge branch 'main' of https://github.com/derubermensch1337/BFIT
+|\
+| *   6b4bb24 Merge pull request #8 from derubermensch1337/baldur
+| |\
+| | * 79f912d commentary
+| | * 6c6371f setback
+| | * ef7dba6 commentary
+| | *   a8bfa44 comments
+| | |\
+| | |/
+| |/|
+| | * b516ef5 updated documentation
+* | | 0cb6f5e comments for doxygen
+|/ /
+* | 39895d3 update brief
+* | ce45843 regenerated doxygen doc
+* | 66a98c1 Update README.md
+* | d7ff1bf Update README.md
+* | 5ccbdf5 moved doxygen document to root
+* | 6e56a8d doxygen comments for .cpp files
+* | 7e20755 clean doxy comments
+* | a77b0fa Merge pull request #7 from derubermensch1337/baldur
+|\|
+| * a77f9ea updated commentary
+* | b02c985 Merge pull request #6 from derubermensch1337/baldur
+|\|
+| * c9ec3e3 commentary
+* | 6eec7a6 Merge pull request #5 from derubermensch1337/baldur
+|\|
+| * 35f3fe5 updated commentary
+* | addc5a1 Merge pull request #4 from derubermensch1337/baldur
+:
+* efec0d1 (HEAD -> baldur, BFIT/baldur) now the final commit
+* 27dd5ba final commit?
+* bf30225 documentation
+* 5f7df45 documentation
+* 93e7a35 commentary
+* 722a9b3 commentary
+* 9af5dd4 commentary
+* 61f7de8 commentary
+* b50a173 added commentary
+*   fabb103 (BFIT/main, BFIT/HEAD) Merge branch 'main' of https://github.com/derubermensch1337/BFIT
+|\
+| *   6b4bb24 Merge pull request #8 from derubermensch1337/baldur
+| |\
+| | * 79f912d commentary
+| | * 6c6371f setback
+| | * ef7dba6 commentary
+| | *   a8bfa44 comments
+| | |\
+| | |/
+| |/|
+| | * b516ef5 updated documentation
+* | | 0cb6f5e comments for doxygen
+|/ /
+* | 39895d3 update brief
+* | ce45843 regenerated doxygen doc
+* | 66a98c1 Update README.md
+* | d7ff1bf Update README.md
+* | 5ccbdf5 moved doxygen document to root
+* | 6e56a8d doxygen comments for .cpp files
+* | 7e20755 clean doxy comments
+* | a77b0fa Merge pull request #7 from derubermensch1337/baldur
+|\|
+| * a77f9ea updated commentary
+* | b02c985 Merge pull request #6 from derubermensch1337/baldur
+|\|
+| * c9ec3e3 commentary
+* | 6eec7a6 Merge pull request #5 from derubermensch1337/baldur
+|\|
+| * 35f3fe5 updated commentary
+* | addc5a1 Merge pull request #4 from derubermensch1337/baldur
+:
+* efec0d1 (HEAD -> baldur, BFIT/baldur) now the final commit
+* 27dd5ba final commit?
+* bf30225 documentation
+* 5f7df45 documentation
+* 93e7a35 commentary
+* 722a9b3 commentary
+* 9af5dd4 commentary
+* 61f7de8 commentary
+* b50a173 added commentary
+*   fabb103 (BFIT/main, BFIT/HEAD) Merge branch 'main' of https://github.com/derubermensch1337/BFIT
+|\
+| *   6b4bb24 Merge pull request #8 from derubermensch1337/baldur
+| |\
+| | * 79f912d commentary
+| | * 6c6371f setback
+| | * ef7dba6 commentary
+| | *   a8bfa44 comments
+| | |\
+| | |/
+| |/|
+| | * b516ef5 updated documentation
+* | | 0cb6f5e comments for doxygen
+|/ /
+* | 39895d3 update brief
+* | ce45843 regenerated doxygen doc
+* | 66a98c1 Update README.md
+* | d7ff1bf Update README.md
+* | 5ccbdf5 moved doxygen document to root
+* | 6e56a8d doxygen comments for .cpp files
+* | 7e20755 clean doxy comments
+* | a77b0fa Merge pull request #7 from derubermensch1337/baldur
+|\|
+| * a77f9ea updated commentary
+* | b02c985 Merge pull request #6 from derubermensch1337/baldur
+|\|
+| * c9ec3e3 commentary
+* | 6eec7a6 Merge pull request #5 from derubermensch1337/baldur
+|\|
+| * 35f3fe5 updated commentary
+* | addc5a1 Merge pull request #4 from derubermensch1337/baldur
+|\|
+| * 8331249 Added commentary
+| *   37586ea Merge branch 'main' of https://github.com/derubermensch1337/BFIT into baldur
+| |\
+| |/
+|/|
+* |   456a9b8 Merge pull request #3 from derubermensch1337/baldur
+|\ \
+* \ \   4000626 Merge pull request #2 from derubermensch1337/baldur
+|\ \ \
+| | | * 9ba20ca Added commentary sale_html.h
+| | | * 6c1a1b1 Added commentary weight_scale.h
+| | | * 4a2713c Added commentary
+| | |/
+| | * 6038959 Added commentary graph_data.h
+| | * 95452a2 Added commentary weight_scale.h
+| | * 62022aa Added commentary
+| | * a82a449 Added commentary
+| | * 1b9793f Added commentary
+| |/
+| *   dd87358 Merge branch 'baldur' of https://github.com/derubermensch1337/BFIT into baldur
+| |\
+| | * 5b62156 Added commentary
+| * | 17eae3e fixes for presentation
+| * | c7b9ea2 Merge branch 'baldur' of https://github.com/derubermensch1337/BFIT into baldur
+| |\|
+| | * 2ac1a0c going to merch with rfid
+| | * 24228bd update
+| * | b614cd9 Added prints
+| |/
+| * 8e62365 add cans to users[]
+| * dc85fa0 web working, rfid workin, weight working, sale not working
+| * fbe14e1 going to merch with rfid
+| * 8ea2d0c going to atempt to merch with rfid branch
+| *   ff5fd8c Merge rfid_unlock into baldur
+| |\
+| | * 86401f8 (BFIT/rfid_unlock) fix schematic
+| * | 44303d0 added functionality to update graph from sale
+| * | 950f0d9 trying to fix some brokes stuf
+| * | 56b269a trying to fix some brokes stuf
+| * | 9728b0b Revert "Merge remote-tracking branch 'BFIT/main' into baldur"
+| * |   01870ef merched with the Saar branch
+| |\ \
+| | * | 66a1f08 (BFIT/sar) Adding placeholder values to be changed once sales tracking is established
+| | * | 57e45bd Attempt at implementing webpage functionality
+| * | |   a089e6f merched with the rfid branch
+| |\ \ \
+| | | |/
+| | |/|
+| | * |   cde086a Merge branch 'rfid_unlock' of github.com:derubermensch1337/BFIT into rfid_unlock
+| | |\ \
+| | | * | a9c9a13 fixed bug in validate_rfid
+| | | * | 72e8120 clean output to serial
+| | | * | 85f48d3 Moved database functions to rfid_access, added door lock command
+| | | * | f4cf7fe Moved buzzer functions to separate files, comments
+| | | * |   bbad34c Merge branch 'rfid_unlock' of https://github.com/derubermensch1337/BFIT into rfid_unlock
+| | | |\ \
+| | | * | | e432284 fixed issue with serial monitor
+| | | * | | 0328d5b tried to fix issue with serial monitor
+| | * | | | c3c1ae9 renaming
+| | | |/ /
+| | |/| |
+| | * | | 17a3672 schematics
+| | |\| |
+| | | * | 0c002c1 print status function for debugging, fixed servo position
+| | * | | 8ac4831 schematics
+| * | | |   a722833 Merge remote-tracking branch 'BFIT/main' into baldur
+| |\ \ \ \
+| |/ / / /
+|/| | | |
+* | | | | 4f71f48 Added left/right turning function for lock
+* | | | | 24f683f added load sensor library
+* | | | |   352a823 Merge pull request #1 from derubermensch1337/baldur
+|\ \ \ \ \
+| |_|_|_|/
+|/| | | |
+| | * | | 9b9efc7 adding more for the sale system, need testing if i get the right RFIDs
+| | * | | 1322184 included suport for edeting fridge inventory based on scale
+| | * | | 35466c9 included suport for edeting fridge inventory based on scale
+| | * | |   09313e9 Merge branch 'BFIT/rfid_unlock' into baldur
+| | |\ \ \
+| | | | |/
+| | | |/|
+| | | * | 4762ea0 Changed servo pin to D0
+| | | * | d1838ca Merge branch 'rfid_unlock' of https://github.com/derubermensch1337/BFIT into rfid_unlock
+| | | |\|
+| | | | * 08c74d2 weight scale c file is done
+| | | * | ff9aed5 Added Buzzer
+| | | |/
+| | | * 67dd42a init weight scale header
+| | | *   92fbbac .
+| | | |\
+| | | | * 870d5ea increased timer
+| | | | * cd189e2 working door open by rfid scan
+| | | | * 8475621  timer to door lock
+| | | | * b97982a cleaned code, added messages to user
+| | | | *   4fc2608 Merge branch 'rfid_unlock' of https://github.com/derubermensch1337/BFIT into rfid_unlock
+| | | | |\
+| | | | * | ecb3ed3 add print command
+| | | * | | 635fb53 init weight measuing
+| | | | |/
+| | | |/|
+| | | * | 87ea125 Merge branch 'rfid_unlock' of github.com:derubermensch1337/BFIT into rfid_unlock
+| | | |\|
+| | | | * 8830ddf working user management
+| | | * | 2a0e0b4 lock ctrl logic done and implemented in main. have not tested -- only built
+| | | |/
+| | | * da90942 validate rfid chip, incomplete
+| | | | * ed66faf (BFIT/backupprotocol) inventory_backup_print() now works
+| | | | * b9f544e Added Inventory print function, some kinks need working out
+| | | | * fa5b919 Laying out framework for data backup, VERY WIP
+| | | | * 6609ccc Added left/right turning function for lock
+| | | | * 29c2a3d added load sensor library
+| | | |/
+| | |/|
+| | * | efbf90e Small fikses and inklutions, startet working on the sytem for moving inventory from on to another
+| | * | d3400dc Updated the sale display to be induvidualy abressable via user for induvidual beverages
+| | * | 4060173 Small ajustments to ensure code compiles and operates as expected
+| | * | 8dbb9d9 Added what I think are the last missing functions for the inventory system
+| | * | 52fb1c7 Stop tracking generated build and VS Code files
+| | |\|
+| | | * 76b8fca Balance field to user
+| | | * 248878c Changed dependencies to my own
+| | | * cac3581 Comments
+| | | * 98cd579 Comments
+| | | * caef76d include EEPROM
+| | | * 903050d Helper functions for databases
+| | | * 7cb3a7e Database delete function
+| | | * cdf08c1 improved print functions
+| | | * 3df4a0b Int reading function
+| | | * cbad85a  2 database functions
+| | | * 230e381 Function declarations for database
+| | | * 2f60e80 read rfid tag pass
+| | | * 2e8ee58 .
+| | | * 8cea2fd builds with no warnings
+| | | * 82128c2 added commands
+| | | * 0057c78 init rfid system function
+| | | * f83f070 add new user done
+| | | * 0ccdcc4 outline for add_room_number
+| | | * 7b32838 init header
+| |_|/
+|/| |
+| | * 553871a fixed local git
+| | * ac70519 WIP: local changes
+| | * 6db80a8 Atemted download of rest of git
+| | * 45efbeb Added more code for inventory tracking, started integration with RFID
+| | * 2456abc Add RFID unlock module files
+| | * 8327b71 Fixed naming and comments
+| | * 9e84bfa Added doxygen documentation. Corrected som doxygen documentation.
+| | * e2464d8 Update to inventory tracking
+| |/
+| * 0223811 Updated the inventory code
+| * b81cb4f Updated the graphing code, added more code for making the inventory system
+| * 50fc1ed Upload of latest branch version
+|/
+* 85b50dd doxyfile
+* 4ca13ff Update index_html.h
+* 067543a Update login_html.h
+* b4eed42 Update inventory.h
+* 0b97f70 Update admin_html.h
+* 486a37f Update style_css.h
+* 4eec106 Update inventory.cpp
+* 86cb4b0 Update main.cpp
+* a468d1a Add files via upload
+* 9941bd2 Add files via upload
+* 44baa8b Add files via upload
+* 9055664 Add files via upload
+* b46bef4 Rename .pio/build/libFrameworkArduino.a to .pio/build/huzzah/libFrameworkArduino.a
+* 31cf59f Rename .pio/build/firmware.elf to .pio/build/huzzah/firmware.elf
+* b3c993d Rename .pio/build/libFrameworkArduinoVariant.a to .pio/build/huzzah/libFrameworkArduinoVariant.a
+* 64a28ef Rename .pio/build/firmware.bin to .pio/build/huzzah/firmware.bin
+* c1f472f Add files via upload
+* 3e2cf54 Rename project.checksum to .pio/build/project.checksum
+* b7b38c6 Add files via upload
+* 1ebad51 Rename launch.json to .vscode/launch.json
+* d0b4631 Rename extensions.json to .vscode/extensions.json
+* 87af93d Rename c_cpp_properties.json to .vscode/c_cpp_properties.json
+* 7704fdf Add files via upload
+* 694ddb6 Add files via upload
+* f3f076e Initial commit
+* 0935784 (master, add) Added displaying a graph to the main page
+(
