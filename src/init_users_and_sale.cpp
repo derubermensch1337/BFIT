@@ -1,0 +1,131 @@
+/**
+ * @file init_user_and_sale.cpp
+ * @brief used to initualice the users and products 
+ * @author Baldur G. Toftegaard
+*/
+
+#include "init_users_and_sale.h"
+#include <math.h>
+#include "weight_scale.h"
+#include "rfid_access.h"
+#include "graph_data.h"
+
+
+void init_users_and_products (
+){
+    // inventory room_1;
+    // inventory room_2;
+    // ...
+
+    // inventory_init(&room_1);
+    // inventory_init(&room_2);
+    // ...
+}
+
+static float read_current_weight_blocking(uint32_t timeoutMs = 1200)
+{
+    uint32_t start = millis();
+
+    while (millis() - start < timeoutMs) {
+        if (update_scale()) {
+            return get_weight();
+        }
+        delay(5);
+    }
+
+    return get_weight();
+}
+
+void perform_sale(inventory *fridge_inventory)
+{
+    byte lastUid[UID_LENGTH];
+
+    if (!rfid_get_last_uid(lastUid)) {
+        Serial.println("No last RFID available");
+        return;
+    }
+
+    uint8_t saleRoom = 0;
+    int saleIndex = -1;
+
+    for (int i = 0; i < MAX_ROOMS; i++) {
+        if (users[i].roomNumber > 0 &&
+            compare_UID(lastUid, users[i].uid)) {
+
+            saleIndex = i;
+            saleRoom  = users[i].roomNumber;
+
+            Serial.print("Sale matched user index: ");
+            Serial.println(saleIndex);
+            Serial.print("Sale registered to room: ");
+            Serial.println(saleRoom);
+
+            break;
+        }
+    }
+
+    if (saleIndex < 0) {
+        Serial.println("RFID did not match any user index");
+        return;
+    }
+
+    // Check if reference exists
+    if (!weight_reference_is_set()) {
+        Serial.println("Weight reference is not set");
+        float ref = read_current_weight_blocking();
+        set_weight_reference(ref);
+        return;
+    }
+
+    float referenceWeight = get_weight_reference();
+    float currentWeight   = read_current_weight_blocking();
+
+    int cans_taken = get_beer_cans_taken(referenceWeight, currentWeight);
+
+    Serial.print("[SALE] ref = "); Serial.println(referenceWeight, 2);
+    Serial.print("[SALE] cur = "); Serial.println(currentWeight, 2);
+    Serial.print("[SALE] ref-cur = "); Serial.println(referenceWeight - currentWeight, 2);
+    Serial.print("[SALE] cans_taken = "); Serial.println(cans_taken);
+  
+    if (cans_taken <= 0) {
+        Serial.println("[SALE] No cans detected -> exit");
+        return;
+    }
+    
+    users[saleIndex].balance += cans_taken;
+
+    Serial.println(cans_taken);
+    Serial.print(" cans sold");
+
+
+    for (uint8_t index = 0; index < fridge_inventory->number_of_products_stocked; index++) {
+        products_stocked *beverage_in_inventory = &fridge_inventory->produckts_in_inventory[index];
+
+        if (beverage_in_inventory->beverage.beverage_variant != beer) continue;
+
+        if (beverage_in_inventory->current_quantity >= cans_taken) {
+            beverage_in_inventory->current_quantity -= cans_taken;
+        } else {
+            beverage_in_inventory->current_quantity = 0;
+        }
+        break;
+    }
+
+    if (saleIndex >= 0 && saleIndex < ROOM_COUNT) {
+        greenHeight[saleIndex] += (cans_taken * 50);
+        if (greenHeight[saleIndex] < 0) greenHeight[saleIndex] = 0;
+
+        Serial.print("Updated greenHeight[");
+        Serial.print(saleIndex);
+        Serial.print("] = ");
+        Serial.println(greenHeight[saleIndex]);
+    } else {
+        Serial.println("Sale index out of graph range (check ROOM_COUNT vs MAX_ROOMS)");
+    }
+
+    set_weight_reference(currentWeight);
+
+    Serial.println("=== INVENTORY UPDATED ===");
+    inventory_print(fridge_inventory);
+    Serial.println("=========================");
+}

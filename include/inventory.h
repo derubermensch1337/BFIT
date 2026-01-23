@@ -1,50 +1,151 @@
 /**
- * @file inventory.h
- * @authors Baldur G. Toftegaard,
- * @brief  
- * @date 14-01-2026
- * @version 0.1
- * @par Revision history
- * | Version |    Date    | Description                                             |
- * |---------|------------|---------------------------------------------------------|
- * | 0.1     | 14-01-2026 | Create file                                             |
- * | 0.2     | 15-01-2026 | Added data type for beverages, products and invenntory  |
- *
- * @copyright Copyright (c) 2026
- * 
+ * @file    inventory.h
+ * @brief   Inventory system for tracking the inventory of both the fridge and the induvidual users
+ * @author  Baldur G. Toftegaard
 */
 
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
-#include "Arduino.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include <Arduino.h>
 
-typedef enum {                  // Create the different types of beverages.
-    beer, 
-    cider,
-    soda,
-    limfjords_porter,
-    other
-} item_type;
+#define INVENTORY_CAPACITY 6
 
-typedef struct {                // create different types of products.
-    char name[20];
-    item_type item;
-    uint8_t weight;
-    uint8_t price; 
-} item;
+/** 
+ * @brief Types of beverages supported by the system. 
+ * @enum enum docomentation ?
+*/
+typedef enum {
+    beer,                   /**< Beer */
+    cider,                  /**< Cider */
+    soda,                   /**< Soda */
+    limfjords_porter,       /**< Limfjords porter */
+    other                   /**< Other */
+} beverage_type;
 
-typedef struct {                // Keep track of one type of product.
-    item product;
-    uint8_t original_qty;
-    uint8_t current_qty;
-} product_stock;
+/** 
+ * @brief Struct holding the information for one item.
+*/
+typedef struct {
+    char name[20];                  /**< Beverage  name */              
+    beverage_type beverage_variant; /**< Beverage  type */
+    uint16_t weight;                 /**< Beverage  weight */
+    uint8_t price;                  /**< Beverage  price */
+} product;
 
-typedef struct {                // type to keep track of all products.
-    product_stock fridge[6];    // the different products being stocked in the fridge.
-    uint8_t product_stocked;    // used to keep track if there are items out of stock.
+/**
+ * @brief Struckt for keeping track of the original and current quantity of a beverage.
+*/
+typedef struct {
+    product beverage;           /**< The beverage being tracked */
+    uint8_t original_quantity;  /**< The original quantity of the beverage in stock */
+    uint8_t current_quantity;   /**< The current quantity of the beverage in stock */
+} products_stocked;
+
+/**
+ * @brief Struckt for holding the fridge inventory.
+*/
+typedef struct {
+    products_stocked produckts_in_inventory[INVENTORY_CAPACITY];    /**< The beverages being stocked */
+    uint8_t number_of_products_stocked;                             /**< Number of beverages stocked, prevents overflow */
+    uint8_t room_number;                                            /**<Not used in the current system */
+    /**< Store the FRID belonging to the spesific user, not implemented */
 } inventory;
 
-item make_item(const char *name, item_type type, uint8_t weight, uint8_t price);
+
+/**
+ * @brief Function for initualicing the inventory
+ * 
+ * @param Inventory Inventory instance to initialize 
+ */
+void inventory_init(
+    inventory *inventory
+);
+
+/**
+ * @brief Function for defining a new item.
+ * 
+ * @param name 
+ * @param type 
+ * @param weight 
+ * @param price 
+ * @return item created
+ */
+product inventory_make_product(
+    const char *name, 
+    beverage_type type, 
+    uint16_t weight, 
+    uint8_t price
+);
+
+/**
+ * @brief Function for adding product to inventory.
+ * 
+ * @param inventory 
+ * @param beverage 
+ * @param quantity 
+ * @return true - the product was added to the inventory
+ * @return false - there was an error adding the product
+ */
+bool inventory_add_product (
+        inventory *inventory,
+        product product,
+        uint16_t quantity
+);
+
+/**
+ * @brief Function for removing product from inventory
+ * 
+ * @param inventory 
+ * @param beverage 
+ * @param quantity 
+ * @return true - the product was removed from the inventory
+ * @return false - there was an error removing the product
+ */
+bool inventory_remove_product(
+    inventory *inventory, 
+    product beverage
+);
+
+/**
+ * @brief Function for adding to the amount of a beverage in an inventory
+ * 
+ * @param inventory 
+ * @param beverage_type 
+ * @param amount 
+ * @return true - the beverage was added to the inventory
+ * @return false - there was an error adding the beverage
+ */
+bool inventory_add_beverage(
+    inventory *inventory,
+    product  beverage,
+    uint16_t amount
+);
+
+/**
+ * @brief Function for removing from the amount of a beverage in an inventory
+ * 
+ * @param inventory 
+ * @param beverag 
+ * @param amount 
+ * @return true - the beverage was removed from the inventory
+ * @return false - there was an error removing the beverage
+ */
+bool inventory_remove_beverage(
+    inventory *inventory, 
+    product beverag, 
+    uint8_t amount
+);
+    
+/**
+ * @brief Function to print a users inventory
+ * 
+ * @param inventory 
+ */
+void inventory_print(
+    inventory *inventory
+);
 
 #endif

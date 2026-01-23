@@ -1,0 +1,171 @@
+\doxysection{src/\+inventory.cpp File Reference}
+\hypertarget{inventory_8cpp}{}\label{inventory_8cpp}\index{src/inventory.cpp@{src/inventory.cpp}}
+
+
+Functions responsible for keeping track of the fridge inventory.  
+
+
+{\ttfamily \+\#include "{}inventory.\+h"{}}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{inventory_8cpp_ab559445889f1c5e889a2dd4ab6630e17}{inventory\+\_\+init}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}})
+\begin{DoxyCompactList}\small\item\em Function for initualicing the inventory. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{inventory_8cpp_a39f1222be5f9082c18b1df2e2524018c}{inventory\+\_\+make\+\_\+product}} (const char \texorpdfstring{$\ast$}{*}product\+\_\+name, \doxymbox{\hyperlink{inventory_8h_a0e437d90616f9d65d643dc45852703a3}{beverage\+\_\+type}} type, uint16\+\_\+t weight, uint8\+\_\+t price)
+\begin{DoxyCompactList}\small\item\em Function for defining a new item. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{inventory_8cpp_af07da100070e5574587bd31559855ad5}{inventory\+\_\+add\+\_\+product}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}}, \doxymbox{\hyperlink{structproduct}{product}} \doxymbox{\hyperlink{structproduct}{product}}, uint16\+\_\+t quantity)
+\begin{DoxyCompactList}\small\item\em Function for adding product to inventory. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{inventory_8cpp_a1dc5cc4c904ce439d0f288ffe81bdc8c}{inventory\+\_\+remove\+\_\+product}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}}, \doxymbox{\hyperlink{structproduct}{product}} beverage)
+\begin{DoxyCompactList}\small\item\em Function for removing product from inventory. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{inventory_8cpp_a420e739a279ac169676f3bf086fd57eb}{inventory\+\_\+add\+\_\+beverage}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}}, \doxymbox{\hyperlink{structproduct}{product}} beverag, uint8\+\_\+t amount)
+\item 
+bool \doxymbox{\hyperlink{inventory_8cpp_a2977e5aa7103577ba60f292f51221d96}{inventory\+\_\+remove\+\_\+beverage}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}}, \doxymbox{\hyperlink{structproduct}{product}} beverag, uint8\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Function for removing from the amount of a beverage in an inventory. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{inventory_8cpp_ab6b232867fb3f65fbd4a4fb3cefb1ecb}{inventory\+\_\+print}} (\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}\doxymbox{\hyperlink{structinventory}{inventory}})
+\begin{DoxyCompactList}\small\item\em Function to print a users inventory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions responsible for keeping track of the fridge inventory. 
+
+\begin{DoxyAuthor}{Author}
+Baldur G. Toftegaard 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{inventory_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{inventory_8cpp_a420e739a279ac169676f3bf086fd57eb}\index{inventory.cpp@{inventory.cpp}!inventory\_add\_beverage@{inventory\_add\_beverage}}
+\index{inventory\_add\_beverage@{inventory\_add\_beverage}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_add\_beverage()}{inventory\_add\_beverage()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_a420e739a279ac169676f3bf086fd57eb} 
+bool inventory\+\_\+add\+\_\+beverage (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{inventory}{, }\item[{\doxymbox{\hyperlink{structproduct}{product}}}]{beverag}{, }\item[{uint8\+\_\+t}]{amount}{}\end{DoxyParamCaption})}
+
+\Hypertarget{inventory_8cpp_af07da100070e5574587bd31559855ad5}\index{inventory.cpp@{inventory.cpp}!inventory\_add\_product@{inventory\_add\_product}}
+\index{inventory\_add\_product@{inventory\_add\_product}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_add\_product()}{inventory\_add\_product()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_af07da100070e5574587bd31559855ad5} 
+bool inventory\+\_\+add\+\_\+product (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{inventory}{, }\item[{\doxymbox{\hyperlink{structproduct}{product}}}]{product}{, }\item[{uint16\+\_\+t}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Function for adding product to inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & \\
+\hline
+{\em beverage} & \\
+\hline
+{\em quantity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ the product was added to the inventory 
+
+false -\/ there was an error adding the product 
+\end{DoxyReturn}
+\Hypertarget{inventory_8cpp_ab559445889f1c5e889a2dd4ab6630e17}\index{inventory.cpp@{inventory.cpp}!inventory\_init@{inventory\_init}}
+\index{inventory\_init@{inventory\_init}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_init()}{inventory\_init()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_ab559445889f1c5e889a2dd4ab6630e17} 
+void inventory\+\_\+init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{inventory}{}\end{DoxyParamCaption})}
+
+
+
+Function for initualicing the inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Inventory} & Inventory instance to initialize \\
+\hline
+\end{DoxyParams}
+\Hypertarget{inventory_8cpp_a39f1222be5f9082c18b1df2e2524018c}\index{inventory.cpp@{inventory.cpp}!inventory\_make\_product@{inventory\_make\_product}}
+\index{inventory\_make\_product@{inventory\_make\_product}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_make\_product()}{inventory\_make\_product()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_a39f1222be5f9082c18b1df2e2524018c} 
+\doxymbox{\hyperlink{structproduct}{product}} inventory\+\_\+make\+\_\+product (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\doxymbox{\hyperlink{inventory_8h_a0e437d90616f9d65d643dc45852703a3}{beverage\+\_\+type}}}]{type}{, }\item[{uint16\+\_\+t}]{weight}{, }\item[{uint8\+\_\+t}]{price}{}\end{DoxyParamCaption})}
+
+
+
+Function for defining a new item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em type} & \\
+\hline
+{\em weight} & \\
+\hline
+{\em price} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+item created 
+\end{DoxyReturn}
+\Hypertarget{inventory_8cpp_ab6b232867fb3f65fbd4a4fb3cefb1ecb}\index{inventory.cpp@{inventory.cpp}!inventory\_print@{inventory\_print}}
+\index{inventory\_print@{inventory\_print}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_print()}{inventory\_print()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_ab6b232867fb3f65fbd4a4fb3cefb1ecb} 
+void inventory\+\_\+print (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{inventory}{}\end{DoxyParamCaption})}
+
+
+
+Function to print a users inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{inventory_8cpp_a2977e5aa7103577ba60f292f51221d96}\index{inventory.cpp@{inventory.cpp}!inventory\_remove\_beverage@{inventory\_remove\_beverage}}
+\index{inventory\_remove\_beverage@{inventory\_remove\_beverage}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_remove\_beverage()}{inventory\_remove\_beverage()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_a2977e5aa7103577ba60f292f51221d96} 
+bool inventory\+\_\+remove\+\_\+beverage (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{inventory}{, }\item[{\doxymbox{\hyperlink{structproduct}{product}}}]{beverag}{, }\item[{uint8\+\_\+t}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Function for removing from the amount of a beverage in an inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & \\
+\hline
+{\em beverag} & \\
+\hline
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ the beverage was removed from the inventory 
+
+false -\/ there was an error removing the beverage 
+\end{DoxyReturn}
+\Hypertarget{inventory_8cpp_a1dc5cc4c904ce439d0f288ffe81bdc8c}\index{inventory.cpp@{inventory.cpp}!inventory\_remove\_product@{inventory\_remove\_product}}
+\index{inventory\_remove\_product@{inventory\_remove\_product}!inventory.cpp@{inventory.cpp}}
+\doxysubsubsection{\texorpdfstring{inventory\_remove\_product()}{inventory\_remove\_product()}}
+{\footnotesize\ttfamily \label{inventory_8cpp_a1dc5cc4c904ce439d0f288ffe81bdc8c} 
+bool inventory\+\_\+remove\+\_\+product (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structinventory}{inventory}} \texorpdfstring{$\ast$}{*}}]{inventory}{, }\item[{\doxymbox{\hyperlink{structproduct}{product}}}]{beverage}{}\end{DoxyParamCaption})}
+
+
+
+Function for removing product from inventory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structinventory}{inventory}} & \\
+\hline
+{\em beverage} & \\
+\hline
+{\em quantity} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ the product was removed from the inventory 
+
+false -\/ there was an error removing the product 
+\end{DoxyReturn}

@@ -1,0 +1,93 @@
+\doxysection{style\+\_\+css.\+h}
+\hypertarget{style__css_8h_source}{}\label{style__css_8h_source}\index{include/style\_css.h@{include/style\_css.h}}
+\doxymbox{\hyperlink{style__css_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ STYLE\_CSS\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ STYLE\_CSS\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <pgmspace.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ STYLE\_CSS[]\ \doxymbox{\hyperlink{admin__html_8h_abd0ee36707d12ea3bab500c5e31cb252}{PROGMEM}}\ =\ R\textcolor{stringliteral}{"{}rawliteral(}}
+\DoxyCodeLine{00015\ \textcolor{stringliteral}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ Global\ page\ styling\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00016\ \textcolor{stringliteral}{body\ \{}}
+\DoxyCodeLine{00017\ \textcolor{stringliteral}{\ \ margin:\ 0;}}
+\DoxyCodeLine{00018\ \textcolor{stringliteral}{\ \ padding:\ 0;}}
+\DoxyCodeLine{00019\ \textcolor{stringliteral}{\ \ font-\/family:\ Arial,\ Helvetica,\ sans-\/serif;}}
+\DoxyCodeLine{00020\ \textcolor{stringliteral}{\ \ background-\/color:\ \#f0f0f0;}}
+\DoxyCodeLine{00021\ \textcolor{stringliteral}{\}}}
+\DoxyCodeLine{00022\ \textcolor{stringliteral}{/*}}
+\DoxyCodeLine{00023\ \textcolor{stringliteral}{*\ @param\ test}}
+\DoxyCodeLine{00024\ \textcolor{stringliteral}{*/}}
+\DoxyCodeLine{00025\ \textcolor{stringliteral}{}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ .topbar\ \{}
+\DoxyCodeLine{00032\ \ \ display:\ flex;}
+\DoxyCodeLine{00033\ \ \ justify-\/content:\ space-\/between;}
+\DoxyCodeLine{00034\ \ \ align-\/items:\ center;}
+\DoxyCodeLine{00035\ \ \ background-\/color:\ \#2c3e50;}
+\DoxyCodeLine{00036\ \ \ color:\ \#fff;}
+\DoxyCodeLine{00037\ \ \ padding:\ 12px\ 16px;}
+\DoxyCodeLine{00038\ \ \ box-\/sizing:\ border-\/box;}
+\DoxyCodeLine{00039\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ /*\ message/path\ display\ box\ */}
+\DoxyCodeLine{00042\ .topbar\ .right\ a\ \{}
+\DoxyCodeLine{00043\ \ \ color:\ \#fff;}
+\DoxyCodeLine{00044\ \ \ text-\/decoration:\ none;}
+\DoxyCodeLine{00045\ \ \ border:\ 1px\ solid\ rgba(255,255,255,0.5);}
+\DoxyCodeLine{00046\ \ \ padding:\ 6px\ 10px;}
+\DoxyCodeLine{00047\ \ \ border-\/radius:\ 6px;}
+\DoxyCodeLine{00048\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ /*\ login\ button\ */}
+\DoxyCodeLine{00051\ .topbar\ .right\ a:hover\ \{}
+\DoxyCodeLine{00052\ \ \ background:\ rgba(255,255,255,0.15);}
+\DoxyCodeLine{00053\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ /*\ box\ for\ the\ graph\ to\ be\ placed\ inside\ */}
+\DoxyCodeLine{00056\ .sale\_box\ \{}
+\DoxyCodeLine{00057\ \ \ margin:\ 40px\ auto;}
+\DoxyCodeLine{00058\ \ \ width:\ calc(100\%\ -\/\ 100px);}
+\DoxyCodeLine{00059\ \ \ height:\ 500px;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ background-\/color:\ \#ffffff;}
+\DoxyCodeLine{00062\ \ \ border:\ 2px\ solid\ \#000000;}
+\DoxyCodeLine{00063\ \ \ box-\/sizing:\ border-\/box;}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ display:\ flex;}
+\DoxyCodeLine{00066\ \ \ justify-\/content:\ space-\/evenly;}
+\DoxyCodeLine{00067\ \ \ align-\/items:\ flex-\/end;}
+\DoxyCodeLine{00068\ \ \ padding:\ 15px;}
+\DoxyCodeLine{00069\ \ \ gap:\ 0;}
+\DoxyCodeLine{00070\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ /*\ graph\ box\ for\ eatch\ room\ */}
+\DoxyCodeLine{00073\ .sale\_room\ \{}
+\DoxyCodeLine{00074\ \ \ display:\ flex;}
+\DoxyCodeLine{00075\ \ \ align-\/items:\ flex-\/end;}
+\DoxyCodeLine{00076\ \ \ gap:\ 4px;}
+\DoxyCodeLine{00077\ \ \ height:\ 100\%;}
+\DoxyCodeLine{00078\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ /*\ Bars\ */}
+\DoxyCodeLine{00081\ .sale\_pole\_green\ \{}
+\DoxyCodeLine{00082\ \ \ width:\ 22px;}
+\DoxyCodeLine{00083\ \ \ border:\ 1px\ solid\ \#000000;}
+\DoxyCodeLine{00084\ \ \ box-\/sizing:\ border-\/box;}
+\DoxyCodeLine{00085\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ .sale\_pole\_clasic\ \{}
+\DoxyCodeLine{00088\ \ \ width:\ 22px;}
+\DoxyCodeLine{00089\ \ \ border:\ 1px\ solid\ \#ffffff;}
+\DoxyCodeLine{00090\ \ \ box-\/sizing:\ border-\/box;}
+\DoxyCodeLine{00091\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ .sale\_pole\_green\ \{\ background-\/color:\ \#2e7d32;\ \}}
+\DoxyCodeLine{00094\ .sale\_pole\_clasic\ \{\ background-\/color:\ \#ffffff;\ \}}
+\DoxyCodeLine{00095\ )rawliteral"{};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

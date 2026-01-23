@@ -1,107 +1,90 @@
 /**
  * @file style_css.h
- * @authors Baldur G. Toftegaard
- * @brief 
- * @version 0.1
- * @date 13-01-2026
- * @par Revision history
- * | Version |    Date    | Description                                                             |
- * |---------|------------|-------------------------------------------------------------------------|
- * |   0.1   | 13-01-2026 | Creaded file, implemented start and admin page, started general design  |
- * |   0.2   | 15-01-2026 | Added base graph for displaying sales                                   |
- * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement          |
- * 
- * @copyright Copyright (c) 2026
-*/
+ * @brief CSS served at /style.css
+ */
 
 #ifndef STYLE_CSS_H
 #define STYLE_CSS_H
-
 #include <pgmspace.h>
 
+/**
+ * @brief 
+ * 
+ */
 const char STYLE_CSS[] PROGMEM = R"rawliteral(
+/* ---------- Global page styling ---------- */
 body {
-        background-color: #dbdbdb;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0;
+}
 
-    .login_box {
-        width: fit-content;
-        margin: 80px auto;
-    }
-    
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        border: 2px solid #000000;
-    }
+/** Bar on top of page for displaying message/path and log in */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 12px 16px;
+  box-sizing: border-box;
+}
 
-    th, td {
-        border: 1px solid #000000;
-        padding: 6px;
-        text-align: left;
-    }
+/* message/path display box */
+.topbar .right a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
 
-    .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+/* login button */
+.topbar .right a:hover {
+  background: rgba(255,255,255,0.15);
+}
 
-        padding: 10px 16px;
-        background-color: #ffffff;
-        border-bottom: 2px solid #000000;
-        box-sizing: border-box;
-    }
+/* box for the graph to be placed inside */
+.sale_box {
+  margin: 40px auto;
+  width: calc(100% - 100px);
+  height: 500px;
 
-    .topbar .left {
-        font-size: 18px;
-        font-weight: bold;
-    }
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-sizing: border-box;
 
-    .topbar .right a {
-        text-decoration: none;
-        color: #000000;
-        font-size: 16px;
-    }
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 15px;
+  gap: 0;
+}
 
-    .topbar .right a:hover {
-        text-decoration: underline;
-    }
-    
-    .sale_box {
-        background-color: #ffffff;
-        width: 1500px;
-        height: 600px;
-        margin: 20px auto;
-        border: 2px solid #000000;
-        box-sizing: border-box;
+/* graph box for eatch room */
+.sale_room {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 100%;
+}
 
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-end;
-        padding: 0px;
-    }
+/* Bars */
+.sale_pole_green {
+  width: 22px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
 
-    .sale_room {
-        display: flex;
-        flex-direction: column-reverse; 
-        align-items: stretch;
+.sale_pole_clasic {
+  width: 22px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+}
 
-        width: 50px;
-        box-sizing: border-box;
-    }
-
-    .sale_pole_green {
-        height: 50px;
-        width: 50px;
-        background: #4fc908;
-    }
-
-    .sale_pole_clasic {
-        width: 50px;
-        background: #efe33a;
-    }
+.sale_pole_green { background-color: #2e7d32; }
+.sale_pole_clasic { background-color: #ffffff; }
 )rawliteral";
 
 #endif

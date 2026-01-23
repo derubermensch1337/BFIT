@@ -1,91 +1,123 @@
 /**
- * @file main.cpp
- * @authors Baldur G. Toftegaard,
- * @brief Main, used to establish a webs server. 
- * @date 13-01-2026
- * @version 0.1
- * @par Revision history
- * | Version |    Date    | Description                           |
- * |---------|------------|---------------------------------------|
- * |   0.1   | 13-01-2026 | Add creating a web server             |
- * |   0.2   | 15-01-2026 | Added base graph for displaying sales |
- * |   0.3   | 15-01-2026 | Exented grap functionality to multiple graphs, fixed placement          |
- * 
- * 
- * @copyright Copyright (c) 2026
- * 
-*/
-
-#include <ESP8266WiFi.h>
-#include <WiFiClient.h>
-#include <ESP8266WiFiMulti.h>   // Include the Wi-Fi-Multi library
-#include <ESP8266WebServer.h>   // Include the WebServer library
-#include <ESP8266mDNS.h>        // Include the mDNS library
+ * @file    main.cpp
+ * @brief   Combined: Web server + Graph + Scale + RFID access + Lock control
+ * @author  Baldur G. Toftegaard
+ */
 
 #include <Arduino.h>
-#include "INDEX_HTML.h"
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>
+#include <ESP8266WebServer.h>
+#include <ESP8266mDNS.h>
+#include <ESP8266WiFiMulti.h>
+
+/* --- Web UI / Graph --- */
+#include "index_html.h"
+#include "sale_html.h"
 #include "STYLE_CSS.h"
 #include "LOGIN_HTML.h"
 #include "ADMIN_HTML.h"
+#include "graph_data.h"
 
-int salePoleClassicHight = 30;
+/* --- Inventory / Sale / Scale --- */
+#include "inventory.h"
+#include "init_users_and_sale.h"
+#include "weight_scale.h"
+#include "fridge_state.h"
 
-const int BUTTON_1_PIN = 4;   // D2 (GPIO4)
-const int BUTTON_2_PIN = 5;   // D1 (GPIO5)
+/* --- RFID / Lock / Buzzer --- */
+#include "rfid_access.h"
+#include "lock_ctrl.h"
+#include "buzzer.h"
 
-bool lastB1 = HIGH;
-bool lastB2 = HIGH;
+/* ---------------- Configuration ---------------- */
 
-unsigned long lastChangeMs = 0;
-const unsigned long debounceMs = 50;
+static const float    CAL_FACTOR     = 22.9f;
+static const uint16_t START_BEER_QTY  = 20;
 
-ESP8266WiFiMulti wifiMulti;
-ESP8266WebServer server(80);  // Create an instance of the server
+const char* WIFI_SSID = "Baldur's A56";
+const char* WIFI_PASS = "MyPasskeyA56";
 
-void handleNotFound();
+/* ---------------- Global State ---------------- */
 
-void setup() {
-  Serial.begin(115200);
-  delay(200);                             // Delay to alow the board rate to be configure before continuing (stops standard boadloader print from messing up).
+// Graph data (used by sale_html + /saleHeights)
+int greenHeight[ROOM_COUNT]   = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+int classicHeight[ROOM_COUNT] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
-  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
-  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
+void print_graph_arrays(
+){
+    Serial.println("=== GRAPH DATA ===");
+    for (uint8_t i = 0; i < ROOM_COUNT; i++) {
+        Serial.print("Room ");
+        Serial.print(i + 1);
+        Serial.print(" | green = ");
+        Serial.print(greenHeight[i]);
+        Serial.print(" | classic = ");
+        Serial.println(classicHeight[i]);
+    }
+    Serial.println("==================");
+}
 
-  // Connect to WiFi network
-  WiFi.begin("Baldur's A56", "MyPasskeyA56");  // add Wi-Fi networks you want to connect to
-  // wifiMulti.addAP("Inteno-66C1", "069B55753B6C9A");  // add Wi-Fi networks you want to connect to
-  Serial.print("Connecting ...");
- 
-  while (wifiMulti.run() != WL_CONNECTED) {
+
+// Demo inventory product
+product demo_beer;
+
+// Web server
+ESP8266WebServer server(80);
+
+// RFID + door control
+MFRC522 rfid(SS_PIN, RST_PIN);
+RFIDcommand activeCommand = CMD_NONE;
+
+bool doorUnlocked = false;
+unsigned long doorCloseTimer = 0; // starts when door is closed but not locked
+
+/* ---------------- Helpers ---------------- */
+
+static void connect_wifi_and_start_mdns()
+{
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
+    yield();
   }
-  Serial.println("");
-  Serial.println("WiFi connected to ");
+
+  Serial.println();
+  Serial.print("WiFi connected to ");
   Serial.println(WiFi.SSID());
-  Serial.println("IP address: ");
+  Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
 
-  if (MDNS.begin("iot")) {              // Start the mDNS responder for esp8266.local
-    Serial.println("mDNS responder started");
+  if (MDNS.begin("iot")) {
+    Serial.println("mDNS responder started (iot.local)");
   } else {
     Serial.println("Error setting up MDNS responder!");
   }
+}
 
-  /*
+static void setup_web_routes()
+{
   server.on("/", HTTP_GET, []() {
-    server.send_P(200, "text/html", INDEX_HTML);
+    // Sale graph
+    send_sale_html_page(server, ROOM_COUNT, greenHeight, classicHeight);
   });
-  */
 
-  server.on("/", HTTP_GET, []() {
-    String page = FPSTR(INDEX_HTML);
-    page.replace("%SALE_HIGHT%", String(salePoleClassicHight));
-    server.send(200, "text/html", page);
-  });
-  
-  server.on("/saleHight", HTTP_GET, []() {
-    server.send(200, "text/plain", String(salePoleClassicHight));
+  server.on("/saleHeights", HTTP_GET, []() {
+    server.sendHeader("Cache-Control", "no-store, no-cache, must-revalidate, max-age=0");
+    server.sendHeader("Pragma", "no-cache");
+    server.sendHeader("Expires", "0");
+
+    String json = "{";
+    for (uint8_t i = 0; i < ROOM_COUNT; i++) {
+      json += "\"room" + String(i + 1) + "\":{";
+      json += "\"green\":"  + String(greenHeight[i]) + ",";
+      json += "\"clasic\":" + String(classicHeight[i]) + "}";
+      if (i < ROOM_COUNT - 1) json += ",";
+    }
+    json += "}";
+
+    server.send(200, "application/json", json);
   });
 
   server.on("/style.css", HTTP_GET, []() {
@@ -100,50 +132,174 @@ void setup() {
     server.send_P(200, "text/html", ADMIN_HTML);
   });
 
-  // Start the server
+  server.onNotFound([]() {
+    server.send(404, "text/plain", "404: Not found");
+  });
+
   server.begin();
-  Serial.println("Server started"); 
-} 
+  Serial.println("HTTP server started");
+}
 
-void loop() {
+static void setup_inventory_and_scale()
+{
+  Serial.println("Before setup_scale()");
+  setup_scale(CAL_FACTOR);
+  Serial.println("After setup_scale()");
+
+  Serial.println("Init the fridge inventory");
+  inventory_init(&fridge);
+
+  Serial.println("Define the beverage");
+  demo_beer = inventory_make_product("Demo Beer", beer, 350, 10);
+  inventory_add_product(&fridge, demo_beer, START_BEER_QTY);
+
+  Serial.println("Initial inventory:");
+  inventory_print(&fridge);
+
+  // Establish baseline reference (your perform_sale() does this on first call)
+  perform_sale(&fridge);
+}
+
+static void setup_rfid_and_lock()
+{
+  setup_RFID_reader(rfid);
+  get_users_db(&users[0]);
+
+  lock_ctrl_init();
+
+  display_commands();
+}
+
+/* ---------------- setup() ---------------- */
+void setup()
+{
+  Serial.begin(115200);
+  delay(200);
+
+  Serial.println("\nBOOT");
+
+  connect_wifi_and_start_mdns();
+  Serial.println("WIFI OK");
+
+  setup_web_routes();
+  Serial.println("HTTP OK");   // if you never see this, setup_web_routes() never finishes
+
+  // Delay to prove the server is reachable even if later init hangs
+  Serial.println("Pause 3s - try opening the webpage now");
+  delay(3000);
+
+  setup_inventory_and_scale();
+  Serial.println("SCALE+INV OK");
+
+  setup_rfid_and_lock();
+  Serial.println("RFID+LOCK OK");
+}
+
+/* ---------------- loop() ---------------- */
+
+void loop()
+{
+  // Keep web server responsive
   server.handleClient();
+  MDNS.update();
   yield();
-  bool b1 = digitalRead(BUTTON_1_PIN);
-  bool b2 = digitalRead(BUTTON_2_PIN);
 
-  unsigned long now = millis();
+  // Keep scale updated
+  update_scale();
 
-  // debounce window shared (simple + effective)
-  if (now - lastChangeMs > debounceMs) {
-    // detect falling edge (HIGH -> LOW) == press
-    if (lastB1 == HIGH && b1 == LOW) {
-      salePoleClassicHight += 30;
-       lastChangeMs = now;
-    }
-    if (lastB2 == HIGH && b2 == LOW) {
-      salePoleClassicHight -= 30;
-      lastChangeMs = now;
+  // Print weight once per second (non-blocking)
+  static uint32_t lastWeightPrintMs = 0;
+  if (millis() - lastWeightPrintMs >= 1000) {
+    lastWeightPrintMs = millis();
+    //Serial.print("Weight: ");
+    //Serial.println(get_weight());
+  }
+
+  // If MFRC522 got disconnected / serial monitor toggled: re-init
+  byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
+  if (v == 0x00 || v == 0xFF) {
+    Serial.println("RFID communication failure: initializing rfid");
+    rfid.PCD_Init();
+  }
+
+  // If no command active, latch a new command
+  if (activeCommand == CMD_NONE) {
+    RFIDcommand newCmd = check_command();
+    if (newCmd != activeCommand) {
+      activeCommand = newCmd;
     }
   }
 
-  lastB1 = b1;
-  lastB2 = b2;
+  // Execute active command
+  switch (activeCommand) {
+    case CMD_ADD_USER:
+    case CMD_REMOVE_USER:
+      user_management(activeCommand, &users[0], rfid);
+      activeCommand = CMD_NONE;
+      display_commands();
+      break;
+
+    case CMD_PRINT:
+      print_all_users(&users[0]);
+      activeCommand = CMD_NONE;
+      display_commands();
+      break;
+
+    case CMD_LOCK:
+      Serial.println("Door is closed. Locking door.");
+      lock_door();
+      doorUnlocked = false;
+      doorCloseTimer = 0;
+      play_lock();
+      activeCommand = CMD_NONE;
+      display_commands();
+      break;
+
+    case CMD_NONE:
+    default:
+      // Normal mode: check RFID only if door is locked
+      if (!doorUnlocked && validate_rfid(rfid)) {
+        Serial.println("Access granted. Unlocking door.");
+        unlock_door();
+        doorUnlocked = true;
+        play_unlock();
+        display_commands();
+
+        float ref = get_weight();
+        set_weight_reference(ref);
+        Serial.print("[SALE] Reference set at unlock: ");
+        Serial.println(ref, 2);
+      }
+
+      // Start timer when door is closed (but not locked)
+      if (doorUnlocked && is_box_closed() && doorCloseTimer == 0) {
+        Serial.println("Door is closed but not locked, starting timer");
+        doorCloseTimer = millis();
+      }
+
+      play_warning(doorCloseTimer);
+
+      // Reset timer if door is opened
+      if (!is_box_closed() && doorCloseTimer > 0) {
+        Serial.println("Door is opened, resetting timer");
+        doorCloseTimer = 0;
+      }
+
+      // Auto-lock after 5 seconds of being closed
+      if (doorUnlocked && is_box_closed() && doorCloseTimer != 0 && (millis() - doorCloseTimer > 5000)) {
+        Serial.println("Door is closed. Locking door.");
+        lock_door();
+        doorUnlocked = false;
+        doorCloseTimer = 0;
+        play_lock();
+        display_commands();
+        perform_sale(&fridge);
+        Serial.println("[SALE] Running perform_sale() after door close");
+        print_graph_arrays();
+      }
+
+      break;
+  }
+
+  yield();
 }
-
-
-void handleNotFound(){
-  server.send(404, "text/plain", "404: Not found"); // Send HTTP status 404 (Not Found) when there's no handler for the URI in the request
-}
-
-
-// server.on("/LED", HTTP_POST, handleLED);
-// server.onNotFound(handleNotFound);
-
-// void handleLED() {                          // If a POST request is made to URI /LED
-//   digitalWrite(led,!digitalRead(led));      // Change the state of the LED
-//   server.sendHeader("Location","/");        // Add a header to respond with a new location for the browser to go to the home page again
-//   server.send(303);                         // Send it back to the browser with an HTTP status 303 (See Other) to redirect
-// }
-
-
-
