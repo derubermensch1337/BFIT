@@ -2,7 +2,8 @@
  * @file    main.cpp
  * @brief   Combined: Web server + Graph + Scale + RFID access + Lock control
  * @author  Baldur G. Toftegaard
- * @author Anssi Sohlman
+ * @author  Anssi Sohlman
+ * @author  Amal Araweelo Almis
  */
 
 #include <Arduino.h>
@@ -80,7 +81,9 @@ bool doorUnlocked = false;
 unsigned long doorCloseTimer = 0; // starts when door is closed but not locked
 
 /* ---------------- Helpers ---------------- */
-
+/**
+ * @brief Connect to a wifi and setup mDNS
+ */
 static void connect_wifi_and_start_mdns()
 {
   WiFi.begin(WIFI_SSID, WIFI_PASS);
@@ -103,6 +106,9 @@ static void connect_wifi_and_start_mdns()
   }
 }
 
+/**
+ * @brief Setup HHTP web server
+ */
 static void setup_web_routes()
 {
   server.on("/", HTTP_GET, []() {
@@ -147,6 +153,9 @@ static void setup_web_routes()
   Serial.println("HTTP server started");
 }
 
+/**
+ * @brief Call functions to setup the scale and inventory
+ */
 static void setup_inventory_and_scale()
 {
   Serial.println("Before setup_scale()");
