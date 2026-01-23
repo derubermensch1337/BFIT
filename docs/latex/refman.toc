@@ -1,0 +1,299 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}BFIT}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}inventory Struct Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Member Data Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}number\_of\_products\_stocked}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}products\_in\_inventory}{8}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}room\_number}{8}{subsubsection.4.1.2.3}%
+\contentsline {section}{\numberline {4.2}product Struct Reference}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{9}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Member Data Documentation}{9}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}beverage\_variant}{9}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}name}{9}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}price}{9}{subsubsection.4.2.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.2.4}weight}{10}{subsubsection.4.2.2.4}%
+\contentsline {section}{\numberline {4.3}products\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}stocked Struct Reference}{10}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{10}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Member Data Documentation}{11}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}beverage}{11}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}current\_quantity}{11}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}original\_quantity}{11}{subsubsection.4.3.2.3}%
+\contentsline {section}{\numberline {4.4}User Struct Reference}{11}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{11}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Member Data Documentation}{12}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}balance}{12}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}roomNumber}{12}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}uid}{12}{subsubsection.4.4.2.3}%
+\contentsline {chapter}{\numberline {5}File Documentation}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}include/admin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{13}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{13}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Variable Documentation}{14}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}PROGMEM}{14}{subsubsection.5.1.2.1}%
+\contentsline {section}{\numberline {5.2}include/buzzer.h File Reference}{14}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{15}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Macro Definition Documentation}{15}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}BUZZER\_H}{15}{subsubsection.5.2.2.1}%
+\contentsline {subsection}{\numberline {5.2.3}Function Documentation}{15}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}play\_lock()}{16}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}play\_unlock()}{16}{subsubsection.5.2.3.2}%
+\contentsline {subsubsection}{\numberline {5.2.3.3}play\_warning()}{16}{subsubsection.5.2.3.3}%
+\contentsline {section}{\numberline {5.3}include/fridge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.h File Reference}{16}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{17}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Variable Documentation}{18}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}fridge}{18}{subsubsection.5.3.2.1}%
+\contentsline {section}{\numberline {5.4}include/graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.h File Reference}{18}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Macro Definition Documentation}{19}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}ROOM\_COUNT}{19}{subsubsection.5.4.1.1}%
+\contentsline {subsection}{\numberline {5.4.2}Function Documentation}{19}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}graph\_add\_to\_room\_clasic()}{19}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}graph\_add\_to\_room\_green()}{20}{subsubsection.5.4.2.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}print\_graph\_arrays()}{20}{subsubsection.5.4.2.3}%
+\contentsline {subsection}{\numberline {5.4.3}Variable Documentation}{20}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}classicHeight}{20}{subsubsection.5.4.3.1}%
+\contentsline {subsubsection}{\numberline {5.4.3.2}greenHeight}{20}{subsubsection.5.4.3.2}%
+\contentsline {section}{\numberline {5.5}include/index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{21}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{21}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Variable Documentation}{22}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}PROGMEM}{22}{subsubsection.5.5.2.1}%
+\contentsline {section}{\numberline {5.6}include/init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale.h File Reference}{22}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{23}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Macro Definition Documentation}{23}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}number\_of\_users}{23}{subsubsection.5.6.2.1}%
+\contentsline {subsection}{\numberline {5.6.3}Function Documentation}{23}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}init\_users\_and\_products()}{24}{subsubsection.5.6.3.1}%
+\contentsline {subsubsection}{\numberline {5.6.3.2}perform\_sale()}{24}{subsubsection.5.6.3.2}%
+\contentsline {section}{\numberline {5.7}include/inventory.h File Reference}{24}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{26}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Macro Definition Documentation}{26}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}INVENTORY\_CAPACITY}{26}{subsubsection.5.7.2.1}%
+\contentsline {subsection}{\numberline {5.7.3}Enumeration Type Documentation}{26}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}beverage\_type}{26}{subsubsection.5.7.3.1}%
+\contentsline {subsection}{\numberline {5.7.4}Function Documentation}{26}{subsection.5.7.4}%
+\contentsline {subsubsection}{\numberline {5.7.4.1}inventory\_add\_beverage()}{26}{subsubsection.5.7.4.1}%
+\contentsline {subsubsection}{\numberline {5.7.4.2}inventory\_add\_product()}{27}{subsubsection.5.7.4.2}%
+\contentsline {subsubsection}{\numberline {5.7.4.3}inventory\_init()}{27}{subsubsection.5.7.4.3}%
+\contentsline {subsubsection}{\numberline {5.7.4.4}inventory\_make\_product()}{28}{subsubsection.5.7.4.4}%
+\contentsline {subsubsection}{\numberline {5.7.4.5}inventory\_print()}{28}{subsubsection.5.7.4.5}%
+\contentsline {subsubsection}{\numberline {5.7.4.6}inventory\_remove\_beverage()}{28}{subsubsection.5.7.4.6}%
+\contentsline {subsubsection}{\numberline {5.7.4.7}inventory\_remove\_product()}{29}{subsubsection.5.7.4.7}%
+\contentsline {section}{\numberline {5.8}include/lock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ctrl.h File Reference}{29}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{31}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Macro Definition Documentation}{31}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}CLOSED\_THRESHOLD}{31}{subsubsection.5.8.2.1}%
+\contentsline {subsubsection}{\numberline {5.8.2.2}OPEN\_THRESHOLD}{31}{subsubsection.5.8.2.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.3}SERVO\_PIN}{31}{subsubsection.5.8.2.3}%
+\contentsline {subsection}{\numberline {5.8.3}Function Documentation}{31}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}is\_box\_closed()}{32}{subsubsection.5.8.3.1}%
+\contentsline {subsubsection}{\numberline {5.8.3.2}lock\_ctrl\_init()}{32}{subsubsection.5.8.3.2}%
+\contentsline {subsubsection}{\numberline {5.8.3.3}lock\_door()}{32}{subsubsection.5.8.3.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.4}play\_close()}{32}{subsubsection.5.8.3.4}%
+\contentsline {subsubsection}{\numberline {5.8.3.5}play\_open()}{32}{subsubsection.5.8.3.5}%
+\contentsline {subsubsection}{\numberline {5.8.3.6}unlock\_door()}{33}{subsubsection.5.8.3.6}%
+\contentsline {section}{\numberline {5.9}include/login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{33}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{33}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Variable Documentation}{33}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}PROGMEM}{34}{subsubsection.5.9.2.1}%
+\contentsline {section}{\numberline {5.10}include/rfid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}access.h File Reference}{34}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{36}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Macro Definition Documentation}{36}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}MAX\_ROOMS}{36}{subsubsection.5.10.2.1}%
+\contentsline {subsubsection}{\numberline {5.10.2.2}RST\_PIN}{36}{subsubsection.5.10.2.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.3}SS\_PIN}{37}{subsubsection.5.10.2.3}%
+\contentsline {subsubsection}{\numberline {5.10.2.4}UID\_LENGTH}{37}{subsubsection.5.10.2.4}%
+\contentsline {subsection}{\numberline {5.10.3}Enumeration Type Documentation}{37}{subsection.5.10.3}%
+\contentsline {subsubsection}{\numberline {5.10.3.1}RFIDcommand}{37}{subsubsection.5.10.3.1}%
+\contentsline {subsection}{\numberline {5.10.4}Function Documentation}{37}{subsection.5.10.4}%
+\contentsline {subsubsection}{\numberline {5.10.4.1}add\_user()}{37}{subsubsection.5.10.4.1}%
+\contentsline {subsubsection}{\numberline {5.10.4.2}check\_command()}{38}{subsubsection.5.10.4.2}%
+\contentsline {subsubsection}{\numberline {5.10.4.3}compare\_UID()}{38}{subsubsection.5.10.4.3}%
+\contentsline {subsubsection}{\numberline {5.10.4.4}count\_rooms()}{38}{subsubsection.5.10.4.4}%
+\contentsline {subsubsection}{\numberline {5.10.4.5}display\_commands()}{39}{subsubsection.5.10.4.5}%
+\contentsline {subsubsection}{\numberline {5.10.4.6}display\_commands\_um()}{39}{subsubsection.5.10.4.6}%
+\contentsline {subsubsection}{\numberline {5.10.4.7}find\_empty\_index()}{39}{subsubsection.5.10.4.7}%
+\contentsline {subsubsection}{\numberline {5.10.4.8}get\_users\_db()}{39}{subsubsection.5.10.4.8}%
+\contentsline {subsubsection}{\numberline {5.10.4.9}print\_all\_users()}{41}{subsubsection.5.10.4.9}%
+\contentsline {subsubsection}{\numberline {5.10.4.10}print\_single\_user()}{41}{subsubsection.5.10.4.10}%
+\contentsline {subsubsection}{\numberline {5.10.4.11}print\_uid()}{41}{subsubsection.5.10.4.11}%
+\contentsline {subsubsection}{\numberline {5.10.4.12}read\_confirmation()}{42}{subsubsection.5.10.4.12}%
+\contentsline {subsubsection}{\numberline {5.10.4.13}read\_integer()}{42}{subsubsection.5.10.4.13}%
+\contentsline {subsubsection}{\numberline {5.10.4.14}read\_RFID\_tag()}{42}{subsubsection.5.10.4.14}%
+\contentsline {subsubsection}{\numberline {5.10.4.15}remove\_user()}{42}{subsubsection.5.10.4.15}%
+\contentsline {subsubsection}{\numberline {5.10.4.16}rfid\_get\_last\_uid()}{43}{subsubsection.5.10.4.16}%
+\contentsline {subsubsection}{\numberline {5.10.4.17}rfid\_set\_last\_uid()}{43}{subsubsection.5.10.4.17}%
+\contentsline {subsubsection}{\numberline {5.10.4.18}setup\_RFID\_reader()}{43}{subsubsection.5.10.4.18}%
+\contentsline {subsubsection}{\numberline {5.10.4.19}user\_management()}{44}{subsubsection.5.10.4.19}%
+\contentsline {subsubsection}{\numberline {5.10.4.20}validate\_rfid()}{44}{subsubsection.5.10.4.20}%
+\contentsline {subsection}{\numberline {5.10.5}Variable Documentation}{44}{subsection.5.10.5}%
+\contentsline {subsubsection}{\numberline {5.10.5.1}userCount}{44}{subsubsection.5.10.5.1}%
+\contentsline {subsubsection}{\numberline {5.10.5.2}users}{45}{subsubsection.5.10.5.2}%
+\contentsline {section}{\numberline {5.11}include/sale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{45}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{46}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Function Documentation}{46}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}send\_sale\_html\_graph()}{46}{subsubsection.5.11.2.1}%
+\contentsline {subsubsection}{\numberline {5.11.2.2}send\_sale\_html\_page()}{46}{subsubsection.5.11.2.2}%
+\contentsline {subsection}{\numberline {5.11.3}Variable Documentation}{47}{subsection.5.11.3}%
+\contentsline {subsubsection}{\numberline {5.11.3.1}PROGMEM}{47}{subsubsection.5.11.3.1}%
+\contentsline {section}{\numberline {5.12}include/style\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}css.h File Reference}{48}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Detailed Description}{48}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Variable Documentation}{48}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}PROGMEM}{48}{subsubsection.5.12.2.1}%
+\contentsline {section}{\numberline {5.13}include/weight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}scale.h File Reference}{49}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{50}{subsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.13.2}Macro Definition Documentation}{50}{subsection.5.13.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.1}BEER\_WEIGHT}{50}{subsubsection.5.13.2.1}%
+\contentsline {subsubsection}{\numberline {5.13.2.2}HX711\_DOUT}{50}{subsubsection.5.13.2.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.3}HX711\_SCK}{51}{subsubsection.5.13.2.3}%
+\contentsline {subsubsection}{\numberline {5.13.2.4}SCALE\_DEFAULT\_SETTLE\_TIME\_MS}{51}{subsubsection.5.13.2.4}%
+\contentsline {subsubsection}{\numberline {5.13.2.5}SCALE\_TOL}{51}{subsubsection.5.13.2.5}%
+\contentsline {subsection}{\numberline {5.13.3}Function Documentation}{51}{subsection.5.13.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.1}get\_beer\_cans\_taken()}{51}{subsubsection.5.13.3.1}%
+\contentsline {subsubsection}{\numberline {5.13.3.2}get\_weight()}{51}{subsubsection.5.13.3.2}%
+\contentsline {subsubsection}{\numberline {5.13.3.3}get\_weight\_reference()}{52}{subsubsection.5.13.3.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.4}reset\_weight\_reference()}{52}{subsubsection.5.13.3.4}%
+\contentsline {subsubsection}{\numberline {5.13.3.5}set\_weight\_reference()}{52}{subsubsection.5.13.3.5}%
+\contentsline {subsubsection}{\numberline {5.13.3.6}setup\_scale()}{52}{subsubsection.5.13.3.6}%
+\contentsline {subsubsection}{\numberline {5.13.3.7}tare\_complete()}{53}{subsubsection.5.13.3.7}%
+\contentsline {subsubsection}{\numberline {5.13.3.8}tare\_scale()}{53}{subsubsection.5.13.3.8}%
+\contentsline {subsubsection}{\numberline {5.13.3.9}update\_scale()}{53}{subsubsection.5.13.3.9}%
+\contentsline {subsubsection}{\numberline {5.13.3.10}weight\_reference\_is\_set()}{54}{subsubsection.5.13.3.10}%
+\contentsline {subsection}{\numberline {5.13.4}Variable Documentation}{54}{subsection.5.13.4}%
+\contentsline {subsubsection}{\numberline {5.13.4.1}scale}{54}{subsubsection.5.13.4.1}%
+\contentsline {section}{\numberline {5.14}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{54}{section.5.14}%
+\contentsline {section}{\numberline {5.15}src/buzzer.cpp File Reference}{54}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Function Documentation}{55}{subsection.5.15.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.1}play\_lock()}{55}{subsubsection.5.15.1.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.2}play\_unlock()}{55}{subsubsection.5.15.1.2}%
+\contentsline {subsubsection}{\numberline {5.15.1.3}play\_warning()}{55}{subsubsection.5.15.1.3}%
+\contentsline {subsection}{\numberline {5.15.2}Variable Documentation}{56}{subsection.5.15.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.1}BUZZERPIN}{56}{subsubsection.5.15.2.1}%
+\contentsline {subsubsection}{\numberline {5.15.2.2}HIGH\_TONE}{56}{subsubsection.5.15.2.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.3}LOW\_TONE}{56}{subsubsection.5.15.2.3}%
+\contentsline {subsubsection}{\numberline {5.15.2.4}TONE\_LENGTH}{56}{subsubsection.5.15.2.4}%
+\contentsline {section}{\numberline {5.16}src/database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.cpp File Reference}{57}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{58}{subsection.5.16.1}%
+\contentsline {subsection}{\numberline {5.16.2}Function Documentation}{58}{subsection.5.16.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.1}count\_rooms()}{58}{subsubsection.5.16.2.1}%
+\contentsline {subsubsection}{\numberline {5.16.2.2}find\_empty\_index()}{58}{subsubsection.5.16.2.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.3}get\_users\_db()}{59}{subsubsection.5.16.2.3}%
+\contentsline {subsubsection}{\numberline {5.16.2.4}print\_all\_users()}{59}{subsubsection.5.16.2.4}%
+\contentsline {subsubsection}{\numberline {5.16.2.5}print\_single\_user()}{59}{subsubsection.5.16.2.5}%
+\contentsline {subsubsection}{\numberline {5.16.2.6}print\_uid()}{59}{subsubsection.5.16.2.6}%
+\contentsline {subsubsection}{\numberline {5.16.2.7}read\_confirmation()}{60}{subsubsection.5.16.2.7}%
+\contentsline {subsubsection}{\numberline {5.16.2.8}read\_integer()}{60}{subsubsection.5.16.2.8}%
+\contentsline {subsubsection}{\numberline {5.16.2.9}remove\_user()}{60}{subsubsection.5.16.2.9}%
+\contentsline {subsubsection}{\numberline {5.16.2.10}user\_management()}{60}{subsubsection.5.16.2.10}%
+\contentsline {section}{\numberline {5.17}src/fridge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.cpp File Reference}{61}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{61}{subsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.17.2}Variable Documentation}{61}{subsection.5.17.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.1}fridge}{62}{subsubsection.5.17.2.1}%
+\contentsline {section}{\numberline {5.18}src/graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.cpp File Reference}{62}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Function Documentation}{62}{subsection.5.18.1}%
+\contentsline {subsubsection}{\numberline {5.18.1.1}graph\_add\_to\_room\_clasic()}{62}{subsubsection.5.18.1.1}%
+\contentsline {subsubsection}{\numberline {5.18.1.2}graph\_add\_to\_room\_green()}{63}{subsubsection.5.18.1.2}%
+\contentsline {subsection}{\numberline {5.18.2}Variable Documentation}{63}{subsection.5.18.2}%
+\contentsline {subsubsection}{\numberline {5.18.2.1}classicHeight}{63}{subsubsection.5.18.2.1}%
+\contentsline {subsubsection}{\numberline {5.18.2.2}greenHeight}{63}{subsubsection.5.18.2.2}%
+\contentsline {section}{\numberline {5.19}src/init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale.cpp File Reference}{64}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Function Documentation}{64}{subsection.5.19.1}%
+\contentsline {subsubsection}{\numberline {5.19.1.1}init\_users\_and\_products()}{64}{subsubsection.5.19.1.1}%
+\contentsline {subsubsection}{\numberline {5.19.1.2}perform\_sale()}{64}{subsubsection.5.19.1.2}%
+\contentsline {subsubsection}{\numberline {5.19.1.3}read\_current\_weight\_blocking()}{65}{subsubsection.5.19.1.3}%
+\contentsline {section}{\numberline {5.20}src/inventory.cpp File Reference}{65}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{66}{subsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.20.2}Function Documentation}{66}{subsection.5.20.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.1}inventory\_add\_beverage()}{66}{subsubsection.5.20.2.1}%
+\contentsline {subsubsection}{\numberline {5.20.2.2}inventory\_add\_product()}{66}{subsubsection.5.20.2.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.3}inventory\_init()}{67}{subsubsection.5.20.2.3}%
+\contentsline {subsubsection}{\numberline {5.20.2.4}inventory\_make\_product()}{67}{subsubsection.5.20.2.4}%
+\contentsline {subsubsection}{\numberline {5.20.2.5}inventory\_print()}{68}{subsubsection.5.20.2.5}%
+\contentsline {subsubsection}{\numberline {5.20.2.6}inventory\_remove\_beverage()}{68}{subsubsection.5.20.2.6}%
+\contentsline {subsubsection}{\numberline {5.20.2.7}inventory\_remove\_product()}{68}{subsubsection.5.20.2.7}%
+\contentsline {section}{\numberline {5.21}src/lock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ctrl.cpp File Reference}{69}{section.5.21}%
+\contentsline {subsection}{\numberline {5.21.1}Detailed Description}{70}{subsection.5.21.1}%
+\contentsline {subsection}{\numberline {5.21.2}Function Documentation}{70}{subsection.5.21.2}%
+\contentsline {subsubsection}{\numberline {5.21.2.1}is\_box\_closed()}{70}{subsubsection.5.21.2.1}%
+\contentsline {subsubsection}{\numberline {5.21.2.2}lock\_ctrl\_init()}{70}{subsubsection.5.21.2.2}%
+\contentsline {subsubsection}{\numberline {5.21.2.3}lock\_door()}{71}{subsubsection.5.21.2.3}%
+\contentsline {subsubsection}{\numberline {5.21.2.4}play\_close()}{71}{subsubsection.5.21.2.4}%
+\contentsline {subsubsection}{\numberline {5.21.2.5}play\_open()}{71}{subsubsection.5.21.2.5}%
+\contentsline {subsubsection}{\numberline {5.21.2.6}unlock\_door()}{71}{subsubsection.5.21.2.6}%
+\contentsline {subsection}{\numberline {5.21.3}Variable Documentation}{71}{subsection.5.21.3}%
+\contentsline {subsubsection}{\numberline {5.21.3.1}boxClosed}{71}{subsubsection.5.21.3.1}%
+\contentsline {subsubsection}{\numberline {5.21.3.2}BUZZER}{72}{subsubsection.5.21.3.2}%
+\contentsline {subsubsection}{\numberline {5.21.3.3}HIGH\_TONE}{72}{subsubsection.5.21.3.3}%
+\contentsline {subsubsection}{\numberline {5.21.3.4}LOCK\_POS}{72}{subsubsection.5.21.3.4}%
+\contentsline {subsubsection}{\numberline {5.21.3.5}lockServo}{72}{subsubsection.5.21.3.5}%
+\contentsline {subsubsection}{\numberline {5.21.3.6}LOW\_TONE}{72}{subsubsection.5.21.3.6}%
+\contentsline {subsubsection}{\numberline {5.21.3.7}TONE\_LENGTH}{72}{subsubsection.5.21.3.7}%
+\contentsline {subsubsection}{\numberline {5.21.3.8}UNLOCK\_POS}{73}{subsubsection.5.21.3.8}%
+\contentsline {section}{\numberline {5.22}src/main.cpp File Reference}{73}{section.5.22}%
+\contentsline {subsection}{\numberline {5.22.1}Detailed Description}{74}{subsection.5.22.1}%
+\contentsline {subsection}{\numberline {5.22.2}Function Documentation}{74}{subsection.5.22.2}%
+\contentsline {subsubsection}{\numberline {5.22.2.1}connect\_wifi\_and\_start\_mdns()}{74}{subsubsection.5.22.2.1}%
+\contentsline {subsubsection}{\numberline {5.22.2.2}loop()}{74}{subsubsection.5.22.2.2}%
+\contentsline {subsubsection}{\numberline {5.22.2.3}print\_graph\_arrays()}{74}{subsubsection.5.22.2.3}%
+\contentsline {subsubsection}{\numberline {5.22.2.4}rfid()}{75}{subsubsection.5.22.2.4}%
+\contentsline {subsubsection}{\numberline {5.22.2.5}server()}{75}{subsubsection.5.22.2.5}%
+\contentsline {subsubsection}{\numberline {5.22.2.6}setup()}{75}{subsubsection.5.22.2.6}%
+\contentsline {subsubsection}{\numberline {5.22.2.7}setup\_inventory\_and\_scale()}{75}{subsubsection.5.22.2.7}%
+\contentsline {subsubsection}{\numberline {5.22.2.8}setup\_rfid\_and\_lock()}{75}{subsubsection.5.22.2.8}%
+\contentsline {subsubsection}{\numberline {5.22.2.9}setup\_web\_routes()}{75}{subsubsection.5.22.2.9}%
+\contentsline {subsection}{\numberline {5.22.3}Variable Documentation}{75}{subsection.5.22.3}%
+\contentsline {subsubsection}{\numberline {5.22.3.1}activeCommand}{75}{subsubsection.5.22.3.1}%
+\contentsline {subsubsection}{\numberline {5.22.3.2}CAL\_FACTOR}{76}{subsubsection.5.22.3.2}%
+\contentsline {subsubsection}{\numberline {5.22.3.3}classicHeight}{76}{subsubsection.5.22.3.3}%
+\contentsline {subsubsection}{\numberline {5.22.3.4}demo\_beer}{76}{subsubsection.5.22.3.4}%
+\contentsline {subsubsection}{\numberline {5.22.3.5}doorCloseTimer}{76}{subsubsection.5.22.3.5}%
+\contentsline {subsubsection}{\numberline {5.22.3.6}doorUnlocked}{76}{subsubsection.5.22.3.6}%
+\contentsline {subsubsection}{\numberline {5.22.3.7}greenHeight}{76}{subsubsection.5.22.3.7}%
+\contentsline {subsubsection}{\numberline {5.22.3.8}START\_BEER\_QTY}{77}{subsubsection.5.22.3.8}%
+\contentsline {subsubsection}{\numberline {5.22.3.9}WIFI\_PASS}{77}{subsubsection.5.22.3.9}%
+\contentsline {subsubsection}{\numberline {5.22.3.10}WIFI\_SSID}{77}{subsubsection.5.22.3.10}%
+\contentsline {section}{\numberline {5.23}src/rfid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}access.cpp File Reference}{77}{section.5.23}%
+\contentsline {subsection}{\numberline {5.23.1}Detailed Description}{78}{subsection.5.23.1}%
+\contentsline {subsection}{\numberline {5.23.2}Function Documentation}{78}{subsection.5.23.2}%
+\contentsline {subsubsection}{\numberline {5.23.2.1}add\_user()}{78}{subsubsection.5.23.2.1}%
+\contentsline {subsubsection}{\numberline {5.23.2.2}check\_command()}{79}{subsubsection.5.23.2.2}%
+\contentsline {subsubsection}{\numberline {5.23.2.3}compare\_UID()}{79}{subsubsection.5.23.2.3}%
+\contentsline {subsubsection}{\numberline {5.23.2.4}display\_commands()}{79}{subsubsection.5.23.2.4}%
+\contentsline {subsubsection}{\numberline {5.23.2.5}display\_commands\_um()}{80}{subsubsection.5.23.2.5}%
+\contentsline {subsubsection}{\numberline {5.23.2.6}read\_RFID\_tag()}{80}{subsubsection.5.23.2.6}%
+\contentsline {subsubsection}{\numberline {5.23.2.7}rfid\_get\_last\_uid()}{80}{subsubsection.5.23.2.7}%
+\contentsline {subsubsection}{\numberline {5.23.2.8}rfid\_set\_last\_uid()}{81}{subsubsection.5.23.2.8}%
+\contentsline {subsubsection}{\numberline {5.23.2.9}setup\_RFID\_reader()}{81}{subsubsection.5.23.2.9}%
+\contentsline {subsubsection}{\numberline {5.23.2.10}validate\_rfid()}{81}{subsubsection.5.23.2.10}%
+\contentsline {subsection}{\numberline {5.23.3}Variable Documentation}{82}{subsection.5.23.3}%
+\contentsline {subsubsection}{\numberline {5.23.3.1}hasUID}{82}{subsubsection.5.23.3.1}%
+\contentsline {subsubsection}{\numberline {5.23.3.2}lastUID}{82}{subsubsection.5.23.3.2}%
+\contentsline {subsubsection}{\numberline {5.23.3.3}userCount}{82}{subsubsection.5.23.3.3}%
+\contentsline {subsubsection}{\numberline {5.23.3.4}users}{82}{subsubsection.5.23.3.4}%
+\contentsline {section}{\numberline {5.24}src/sale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.cpp File Reference}{82}{section.5.24}%
+\contentsline {subsection}{\numberline {5.24.1}Detailed Description}{83}{subsection.5.24.1}%
+\contentsline {subsection}{\numberline {5.24.2}Function Documentation}{83}{subsection.5.24.2}%
+\contentsline {subsubsection}{\numberline {5.24.2.1}send\_sale\_html\_graph()}{83}{subsubsection.5.24.2.1}%
+\contentsline {subsubsection}{\numberline {5.24.2.2}send\_sale\_html\_page()}{84}{subsubsection.5.24.2.2}%
+\contentsline {subsection}{\numberline {5.24.3}Variable Documentation}{84}{subsection.5.24.3}%
+\contentsline {subsubsection}{\numberline {5.24.3.1}PROGMEM}{84}{subsubsection.5.24.3.1}%
+\contentsline {section}{\numberline {5.25}src/weight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}scale.cpp File Reference}{85}{section.5.25}%
+\contentsline {subsection}{\numberline {5.25.1}Detailed Description}{86}{subsection.5.25.1}%
+\contentsline {subsection}{\numberline {5.25.2}Function Documentation}{86}{subsection.5.25.2}%
+\contentsline {subsubsection}{\numberline {5.25.2.1}get\_beer\_cans\_taken()}{86}{subsubsection.5.25.2.1}%
+\contentsline {subsubsection}{\numberline {5.25.2.2}get\_weight()}{87}{subsubsection.5.25.2.2}%
+\contentsline {subsubsection}{\numberline {5.25.2.3}get\_weight\_reference()}{87}{subsubsection.5.25.2.3}%
+\contentsline {subsubsection}{\numberline {5.25.2.4}reset\_weight\_reference()}{87}{subsubsection.5.25.2.4}%
+\contentsline {subsubsection}{\numberline {5.25.2.5}scale()}{87}{subsubsection.5.25.2.5}%
+\contentsline {subsubsection}{\numberline {5.25.2.6}set\_weight\_reference()}{87}{subsubsection.5.25.2.6}%
+\contentsline {subsubsection}{\numberline {5.25.2.7}setup\_scale()}{88}{subsubsection.5.25.2.7}%
+\contentsline {subsubsection}{\numberline {5.25.2.8}tare\_complete()}{88}{subsubsection.5.25.2.8}%
+\contentsline {subsubsection}{\numberline {5.25.2.9}tare\_scale()}{88}{subsubsection.5.25.2.9}%
+\contentsline {subsubsection}{\numberline {5.25.2.10}update\_scale()}{88}{subsubsection.5.25.2.10}%
+\contentsline {subsubsection}{\numberline {5.25.2.11}weight\_reference\_is\_set()}{89}{subsubsection.5.25.2.11}%
+\contentsline {subsection}{\numberline {5.25.3}Variable Documentation}{89}{subsection.5.25.3}%
+\contentsline {subsubsection}{\numberline {5.25.3.1}g\_referenceWeight}{89}{subsubsection.5.25.3.1}%
+\contentsline {chapter}{Index}{91}{section*.87}%

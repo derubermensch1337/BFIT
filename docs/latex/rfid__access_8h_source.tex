@@ -1,0 +1,125 @@
+\hypertarget{rfid__access_8h_source}{}\doxysection{rfid\+\_\+access.\+h}
+\label{rfid__access_8h_source}\index{include/rfid\_access.h@{include/rfid\_access.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 }
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#ifndef RFID\_ACCESS\_H}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#define RFID\_ACCESS\_H  }}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include <SPI.h>}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include <MFRC522.h>}}
+\DoxyCodeLine{00014 }
+\DoxyCodeLine{00015 \textcolor{comment}{// Pins}}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00017}\mbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{00017}} \textcolor{comment}{}\textcolor{preprocessor}{\#define SS\_PIN 15 }\textcolor{comment}{// Use GPIO pins for HUZZAH instead of D8}}
+\DoxyCodeLine{00018 }
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00020}\mbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{00020}} \textcolor{preprocessor}{\#define RST\_PIN 0 }\textcolor{comment}{// Instead of D3}}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022 \textcolor{comment}{// Constants}}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00024}\mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{00024}} \textcolor{comment}{}\textcolor{preprocessor}{\#define MAX\_ROOMS 17}}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00027}\mbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{00027}} \textcolor{preprocessor}{\#define UID\_LENGTH 4}}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00032}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{00032}} \textcolor{keyword}{enum} \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \{}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00033}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{00033}}     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\_NONE}},}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00034}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9}{00034}}     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9}{CMD\_ADD\_USER}},}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00035}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af0dbb98d6e74436e08413e33db3da4ea}{00035}}     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af0dbb98d6e74436e08413e33db3da4ea}{CMD\_OPEN}},}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00036}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a171a61e1f4e3aeffede191f404cf7aa5}{00036}}     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a171a61e1f4e3aeffede191f404cf7aa5}{CMD\_LOCK}},}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00037}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af9ffb51e36746199fdde38844470e37f}{00037}}     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af9ffb51e36746199fdde38844470e37f}{CMD\_REMOVE\_USER}},}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00038}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4ae2ccac439844d0d33b31edeeed580291}{00038}}     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4ae2ccac439844d0d33b31edeeed580291}{CMD\_CONFIRM}},}
+\DoxyCodeLine{00039     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a5539e4cde8c47d51f0ba38343f1d6390}{CMD\_PRINT}}}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00040}\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a5539e4cde8c47d51f0ba38343f1d6390}{00040}} \};}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00045}\mbox{\hyperlink{structUser}{00045}} \textcolor{keyword}{struct }\mbox{\hyperlink{structUser}{User}} \{}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00046}\mbox{\hyperlink{structUser_aa41e1006d2ec97bd889727f528f6315d}{00046}}     \textcolor{keywordtype}{byte} \mbox{\hyperlink{structUser_aa41e1006d2ec97bd889727f528f6315d}{uid}}[\mbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{UID\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00047}\mbox{\hyperlink{structUser_ad2ab91c29844ac28a6c54f185e9e86a6}{00047}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structUser_ad2ab91c29844ac28a6c54f185e9e86a6}{roomNumber}};}
+\DoxyCodeLine{\Hypertarget{rfid__access_8h_source_l00048}\mbox{\hyperlink{structUser_a656f555d559d402e87d8a9698e03e2ba}{00048}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structUser_a656f555d559d402e87d8a9698e03e2ba}{balance}}; }
+\DoxyCodeLine{00049 \};}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00054 \textcolor{keyword}{extern} \mbox{\hyperlink{structUser}{User}} \mbox{\hyperlink{rfid__access_8h_ad1ade64ec1f94c9ff0835615a52a941a}{users}}[\mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\_ROOMS}}];}
+\DoxyCodeLine{00055 }
+\DoxyCodeLine{00059 \textcolor{keyword}{extern} \textcolor{keywordtype}{int} \mbox{\hyperlink{rfid__access_8h_a23424c8ba4bf5c99fbb09f4d86787465}{userCount}};}
+\DoxyCodeLine{00060 }
+\DoxyCodeLine{00066 \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \mbox{\hyperlink{rfid__access_8h_af1a3f68ddfb9fe868fcf7773c07e4a28}{check\_command}}(}
+\DoxyCodeLine{00067     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00068 );}
+\DoxyCodeLine{00069 }
+\DoxyCodeLine{00075 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_a8e4bb51959939a9527c2f592cb742f84}{setup\_RFID\_reader}}(}
+\DoxyCodeLine{00076     MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}}
+\DoxyCodeLine{00077 );}
+\DoxyCodeLine{00078 }
+\DoxyCodeLine{00086 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_abc2ed4592afe3616dfab8e42c9d3c99c}{add\_user}}(}
+\DoxyCodeLine{00087     MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}}
+\DoxyCodeLine{00088 );}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00096 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_ad745c57a9162c9705468fecedffdbe4b}{remove\_user}}(}
+\DoxyCodeLine{00097 );}
+\DoxyCodeLine{00098 }
+\DoxyCodeLine{00107 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\_UID}}(}
+\DoxyCodeLine{00108     \textcolor{keywordtype}{byte} *uid1, }
+\DoxyCodeLine{00109     \textcolor{keywordtype}{byte} *uid2}
+\DoxyCodeLine{00110 );}
+\DoxyCodeLine{00111 }
+\DoxyCodeLine{00120 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_a0add745e34488b9c793c8a45308228b3}{read\_RFID\_tag}}(}
+\DoxyCodeLine{00121     MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}, }
+\DoxyCodeLine{00122     \textcolor{keywordtype}{byte} *uidBuffer}
+\DoxyCodeLine{00123 );}
+\DoxyCodeLine{00124 }
+\DoxyCodeLine{00128 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_adcc1679df91328826349cba6ac5f1ee9}{display\_commands}}(}
+\DoxyCodeLine{00129     \textcolor{keywordtype}{void}}
+\DoxyCodeLine{00130 );}
+\DoxyCodeLine{00131 }
+\DoxyCodeLine{00135 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075}{display\_commands\_um}}(}
+\DoxyCodeLine{00136 );}
+\DoxyCodeLine{00137 }
+\DoxyCodeLine{00143 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_ac2c85ddce939a0783611c6417ef9d203}{get\_users\_db}}(}
+\DoxyCodeLine{00144     \mbox{\hyperlink{structUser}{User}}* ptr}
+\DoxyCodeLine{00145 );}
+\DoxyCodeLine{00146 }
+\DoxyCodeLine{00154 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_a5b70a33a9dd9de849ef2cf5c2190395c}{user\_management}}(}
+\DoxyCodeLine{00155     \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} cmd, }
+\DoxyCodeLine{00156     \mbox{\hyperlink{structUser}{User}}* ptr, }
+\DoxyCodeLine{00157     MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}}
+\DoxyCodeLine{00158 );}
+\DoxyCodeLine{00159 }
+\DoxyCodeLine{00167 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_ad134e233e23721f4762373cf2e781a6d}{validate\_rfid}}(}
+\DoxyCodeLine{00168     MFRC522 myRFID}
+\DoxyCodeLine{00169 );}
+\DoxyCodeLine{00170 }
+\DoxyCodeLine{00177 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_a95b7f5158425cbc9144616c6e9a16f68}{print\_single\_user}}(}
+\DoxyCodeLine{00178     \mbox{\hyperlink{structUser}{User}}* ptr, }
+\DoxyCodeLine{00179     \textcolor{keywordtype}{int} idx}
+\DoxyCodeLine{00180 );}
+\DoxyCodeLine{00186 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_a1fec7802968f92d8a82b2c3c48414fc9}{print\_all\_users}}(}
+\DoxyCodeLine{00187     \mbox{\hyperlink{structUser}{User}}* ptr}
+\DoxyCodeLine{00188 );}
+\DoxyCodeLine{00189 }
+\DoxyCodeLine{00195 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_af2dd70513ccb1d0c9ce1b509c5a971db}{print\_uid}}(}
+\DoxyCodeLine{00196     \textcolor{keywordtype}{byte}* ptr}
+\DoxyCodeLine{00197 );}
+\DoxyCodeLine{00198 }
+\DoxyCodeLine{00204 \textcolor{keywordtype}{int} \mbox{\hyperlink{rfid__access_8h_ae73ed12a431c429f1bdd5d5d81a977ce}{read\_integer}}(}
+\DoxyCodeLine{00205 );}
+\DoxyCodeLine{00206 }
+\DoxyCodeLine{00213 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_a51940e2d9df35efbab60ea3076d03266}{read\_confirmation}}(}
+\DoxyCodeLine{00214 );}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{00222 \textcolor{keywordtype}{int} \mbox{\hyperlink{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0}{find\_empty\_index}}(}
+\DoxyCodeLine{00223     \mbox{\hyperlink{structUser}{User}}* ptr}
+\DoxyCodeLine{00224 );}
+\DoxyCodeLine{00225 }
+\DoxyCodeLine{00232 \textcolor{keywordtype}{int} \mbox{\hyperlink{rfid__access_8h_aee642965bad74cd187195f79bd5f291d}{count\_rooms}}(}
+\DoxyCodeLine{00233     \mbox{\hyperlink{structUser}{User}}* ptr}
+\DoxyCodeLine{00234 );}
+\DoxyCodeLine{00235 }
+\DoxyCodeLine{00242 \textcolor{keywordtype}{void} \mbox{\hyperlink{rfid__access_8h_aee72324df2418506e4d0fb015d1500be}{rfid\_set\_last\_uid}}(}
+\DoxyCodeLine{00243     \textcolor{keyword}{const} \textcolor{keywordtype}{byte} *uidIn}
+\DoxyCodeLine{00244 );}
+\DoxyCodeLine{00245 }
+\DoxyCodeLine{00252 \textcolor{keywordtype}{bool} \mbox{\hyperlink{rfid__access_8h_a38522f06db7c720fa309716c24f5fb57}{rfid\_get\_last\_uid}}( }
+\DoxyCodeLine{00253     \textcolor{keywordtype}{byte} *uidOut}
+\DoxyCodeLine{00254 );}
+\DoxyCodeLine{00255 }
+\DoxyCodeLine{00256 }
+\DoxyCodeLine{00257 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

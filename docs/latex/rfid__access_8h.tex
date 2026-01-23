@@ -1,0 +1,554 @@
+\hypertarget{rfid__access_8h}{}\doxysection{include/rfid\+\_\+access.h File Reference}
+\label{rfid__access_8h}\index{include/rfid\_access.h@{include/rfid\_access.h}}
+{\ttfamily \#include $<$SPI.\+h$>$}\newline
+{\ttfamily \#include $<$MFRC522.\+h$>$}\newline
+Include dependency graph for rfid\+\_\+access.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{rfid__access_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rfid__access_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structUser}{User}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structUser}{User}} record stored in the RFID user database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}{SS\+\_\+\+PIN}}~15
+\begin{DoxyCompactList}\small\item\em GPIO pin connected to SS. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}{RST\+\_\+\+PIN}}~0
+\begin{DoxyCompactList}\small\item\em GPIO pin connected to RST. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}~17
+\begin{DoxyCompactList}\small\item\em Maximum number of rooms supported by the system. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}{UID\+\_\+\+LENGTH}}~4
+\begin{DoxyCompactList}\small\item\em Length of an RFID UID in bytes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \{ \newline
+\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}{CMD\+\_\+\+NONE}}
+, \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9}{CMD\+\_\+\+ADD\+\_\+\+USER}}
+, \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af0dbb98d6e74436e08413e33db3da4ea}{CMD\+\_\+\+OPEN}}
+, \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a171a61e1f4e3aeffede191f404cf7aa5}{CMD\+\_\+\+LOCK}}
+, \newline
+\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af9ffb51e36746199fdde38844470e37f}{CMD\+\_\+\+REMOVE\+\_\+\+USER}}
+, \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4ae2ccac439844d0d33b31edeeed580291}{CMD\+\_\+\+CONFIRM}}
+, \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a5539e4cde8c47d51f0ba38343f1d6390}{CMD\+\_\+\+PRINT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Supported serial commands for the RFID management interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} \mbox{\hyperlink{rfid__access_8h_af1a3f68ddfb9fe868fcf7773c07e4a28}{check\+\_\+command}} (void)
+\begin{DoxyCompactList}\small\item\em brief Reads a command from the serial interface and maps it to an RFIDcommand. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_a8e4bb51959939a9527c2f592cb742f84}{setup\+\_\+\+RFID\+\_\+reader}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
+\begin{DoxyCompactList}\small\item\em Initializes SPI and the MFRC522 RFID reader. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_abc2ed4592afe3616dfab8e42c9d3c99c}{add\+\_\+user}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
+\begin{DoxyCompactList}\small\item\em Adds a new user by reading room number and scanning an RFID tag. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_ad745c57a9162c9705468fecedffdbe4b}{remove\+\_\+user}} ()
+\begin{DoxyCompactList}\small\item\em Removes a user from the database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\+\_\+\+UID}} (byte $\ast$uid1, byte $\ast$uid2)
+\begin{DoxyCompactList}\small\item\em Compares two RFID UIDs. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_a0add745e34488b9c793c8a45308228b3}{read\+\_\+\+RFID\+\_\+tag}} (MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}, byte $\ast$uid\+Buffer)
+\begin{DoxyCompactList}\small\item\em Reads an RFID tag UID from the MFRC522 reader. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_adcc1679df91328826349cba6ac5f1ee9}{display\+\_\+commands}} (void)
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075}{display\+\_\+commands\+\_\+um}} ()
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands for user-\/management mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_ac2c85ddce939a0783611c6417ef9d203}{get\+\_\+users\+\_\+db}} (\mbox{\hyperlink{structUser}{User}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Copies the current user database to a provided buffer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_a5b70a33a9dd9de849ef2cf5c2190395c}{user\+\_\+management}} (\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} cmd, \mbox{\hyperlink{structUser}{User}} $\ast$ptr, MFRC522 \&\mbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
+\begin{DoxyCompactList}\small\item\em Executes user-\/management actions based on the provided command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_ad134e233e23721f4762373cf2e781a6d}{validate\+\_\+rfid}} (MFRC522 my\+RFID)
+\begin{DoxyCompactList}\small\item\em Validates an RFID tag against the registered user database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_a95b7f5158425cbc9144616c6e9a16f68}{print\+\_\+single\+\_\+user}} (\mbox{\hyperlink{structUser}{User}} $\ast$ptr, int idx)
+\begin{DoxyCompactList}\small\item\em brief Prints a single user entry to the serial interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_a1fec7802968f92d8a82b2c3c48414fc9}{print\+\_\+all\+\_\+users}} (\mbox{\hyperlink{structUser}{User}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Prints all users in the database to the serial interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_af2dd70513ccb1d0c9ce1b509c5a971db}{print\+\_\+uid}} (byte $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em Prints a UID buffer to the serial interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rfid__access_8h_ae73ed12a431c429f1bdd5d5d81a977ce}{read\+\_\+integer}} ()
+\begin{DoxyCompactList}\small\item\em Reads an integer from the serial interface. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_a51940e2d9df35efbab60ea3076d03266}{read\+\_\+confirmation}} ()
+\begin{DoxyCompactList}\small\item\em Reads a confirmation input from the serial interface. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0}{find\+\_\+empty\+\_\+index}} (\mbox{\hyperlink{structUser}{User}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em brief Finds an empty slot in the user database. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rfid__access_8h_aee642965bad74cd187195f79bd5f291d}{count\+\_\+rooms}} (\mbox{\hyperlink{structUser}{User}} $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em brief Counts the number of occupied user entries in the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{rfid__access_8h_aee72324df2418506e4d0fb015d1500be}{rfid\+\_\+set\+\_\+last\+\_\+uid}} (const byte $\ast$uid\+In)
+\begin{DoxyCompactList}\small\item\em Function for storing the last used RFID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{rfid__access_8h_a38522f06db7c720fa309716c24f5fb57}{rfid\+\_\+get\+\_\+last\+\_\+uid}} (byte $\ast$uid\+Out)
+\begin{DoxyCompactList}\small\item\em Function for restoring the last used RFID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structUser}{User}} \mbox{\hyperlink{rfid__access_8h_ad1ade64ec1f94c9ff0835615a52a941a}{users}} \mbox{[}\mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Global user database array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{rfid__access_8h_a23424c8ba4bf5c99fbb09f4d86787465}{user\+Count}}
+\begin{DoxyCompactList}\small\item\em Number of currently registered users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Amal Araweelo Almis 
+
+Baldur G. Toftegaard 
+
+Anssi Sohlman 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}\label{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}} 
+\index{rfid\_access.h@{rfid\_access.h}!MAX\_ROOMS@{MAX\_ROOMS}}
+\index{MAX\_ROOMS@{MAX\_ROOMS}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_ROOMS}{MAX\_ROOMS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+ROOMS~17}
+
+
+
+Maximum number of rooms supported by the system. 
+
+\mbox{\Hypertarget{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}\label{rfid__access_8h_a36932b0e869e0114f32e255f61306d6b}} 
+\index{rfid\_access.h@{rfid\_access.h}!RST\_PIN@{RST\_PIN}}
+\index{RST\_PIN@{RST\_PIN}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{RST\_PIN}{RST\_PIN}}
+{\footnotesize\ttfamily \#define RST\+\_\+\+PIN~0}
+
+
+
+GPIO pin connected to RST. 
+
+\mbox{\Hypertarget{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}\label{rfid__access_8h_a86fac98c9b4c98a3e50fc45440878391}} 
+\index{rfid\_access.h@{rfid\_access.h}!SS\_PIN@{SS\_PIN}}
+\index{SS\_PIN@{SS\_PIN}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{SS\_PIN}{SS\_PIN}}
+{\footnotesize\ttfamily \#define SS\+\_\+\+PIN~15}
+
+
+
+GPIO pin connected to SS. 
+
+\mbox{\Hypertarget{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}\label{rfid__access_8h_a685be41cf665c6412e45be53ca20543f}} 
+\index{rfid\_access.h@{rfid\_access.h}!UID\_LENGTH@{UID\_LENGTH}}
+\index{UID\_LENGTH@{UID\_LENGTH}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{UID\_LENGTH}{UID\_LENGTH}}
+{\footnotesize\ttfamily \#define UID\+\_\+\+LENGTH~4}
+
+
+
+Length of an RFID UID in bytes. 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}} 
+\index{rfid\_access.h@{rfid\_access.h}!RFIDcommand@{RFIDcommand}}
+\index{RFIDcommand@{RFIDcommand}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{RFIDcommand}{RFIDcommand}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}}}
+
+
+
+Supported serial commands for the RFID management interface. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_NONE@{CMD\_NONE}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_NONE@{CMD\_NONE}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc}} 
+CMD\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_ADD\_USER@{CMD\_ADD\_USER}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_ADD\_USER@{CMD\_ADD\_USER}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9}} 
+CMD\+\_\+\+ADD\+\_\+\+USER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_OPEN@{CMD\_OPEN}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_OPEN@{CMD\_OPEN}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af0dbb98d6e74436e08413e33db3da4ea}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af0dbb98d6e74436e08413e33db3da4ea}} 
+CMD\+\_\+\+OPEN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_LOCK@{CMD\_LOCK}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_LOCK@{CMD\_LOCK}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a171a61e1f4e3aeffede191f404cf7aa5}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a171a61e1f4e3aeffede191f404cf7aa5}} 
+CMD\+\_\+\+LOCK&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_REMOVE\_USER@{CMD\_REMOVE\_USER}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_REMOVE\_USER@{CMD\_REMOVE\_USER}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af9ffb51e36746199fdde38844470e37f}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4af9ffb51e36746199fdde38844470e37f}} 
+CMD\+\_\+\+REMOVE\+\_\+\+USER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_CONFIRM@{CMD\_CONFIRM}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_CONFIRM@{CMD\_CONFIRM}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4ae2ccac439844d0d33b31edeeed580291}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4ae2ccac439844d0d33b31edeeed580291}} 
+CMD\+\_\+\+CONFIRM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CMD\_PRINT@{CMD\_PRINT}!rfid\_access.h@{rfid\_access.h}}\index{rfid\_access.h@{rfid\_access.h}!CMD\_PRINT@{CMD\_PRINT}}}\mbox{\Hypertarget{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a5539e4cde8c47d51f0ba38343f1d6390}\label{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4a5539e4cde8c47d51f0ba38343f1d6390}} 
+CMD\+\_\+\+PRINT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rfid__access_8h_abc2ed4592afe3616dfab8e42c9d3c99c}\label{rfid__access_8h_abc2ed4592afe3616dfab8e42c9d3c99c}} 
+\index{rfid\_access.h@{rfid\_access.h}!add\_user@{add\_user}}
+\index{add\_user@{add\_user}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{add\_user()}{add\_user()}}
+{\footnotesize\ttfamily bool add\+\_\+user (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid }\end{DoxyParamCaption})}
+
+
+
+Adds a new user by reading room number and scanning an RFID tag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rfid} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_af1a3f68ddfb9fe868fcf7773c07e4a28}\label{rfid__access_8h_af1a3f68ddfb9fe868fcf7773c07e4a28}} 
+\index{rfid\_access.h@{rfid\_access.h}!check\_command@{check\_command}}
+\index{check\_command@{check\_command}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{check\_command()}{check\_command()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} check\+\_\+command (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+brief Reads a command from the serial interface and maps it to an RFIDcommand. 
+
+\begin{DoxyReturn}{Returns}
+RFIDcommand 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_ab4c09e9a60679c0c9ade2946fbf583ad}\label{rfid__access_8h_ab4c09e9a60679c0c9ade2946fbf583ad}} 
+\index{rfid\_access.h@{rfid\_access.h}!compare\_UID@{compare\_UID}}
+\index{compare\_UID@{compare\_UID}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{compare\_UID()}{compare\_UID()}}
+{\footnotesize\ttfamily bool compare\+\_\+\+UID (\begin{DoxyParamCaption}\item[{byte $\ast$}]{uid1,  }\item[{byte $\ast$}]{uid2 }\end{DoxyParamCaption})}
+
+
+
+Compares two RFID UIDs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid1} & \\
+\hline
+{\em uid2} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_aee642965bad74cd187195f79bd5f291d}\label{rfid__access_8h_aee642965bad74cd187195f79bd5f291d}} 
+\index{rfid\_access.h@{rfid\_access.h}!count\_rooms@{count\_rooms}}
+\index{count\_rooms@{count\_rooms}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{count\_rooms()}{count\_rooms()}}
+{\footnotesize\ttfamily int count\+\_\+rooms (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structUser}{User}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+brief Counts the number of occupied user entries in the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_adcc1679df91328826349cba6ac5f1ee9}\label{rfid__access_8h_adcc1679df91328826349cba6ac5f1ee9}} 
+\index{rfid\_access.h@{rfid\_access.h}!display\_commands@{display\_commands}}
+\index{display\_commands@{display\_commands}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{display\_commands()}{display\_commands()}}
+{\footnotesize\ttfamily void display\+\_\+commands (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Prints the available serial commands. 
+
+\mbox{\Hypertarget{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075}\label{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075}} 
+\index{rfid\_access.h@{rfid\_access.h}!display\_commands\_um@{display\_commands\_um}}
+\index{display\_commands\_um@{display\_commands\_um}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{display\_commands\_um()}{display\_commands\_um()}}
+{\footnotesize\ttfamily void display\+\_\+commands\+\_\+um (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prints the available serial commands for user-\/management mode. 
+
+\mbox{\Hypertarget{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0}\label{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0}} 
+\index{rfid\_access.h@{rfid\_access.h}!find\_empty\_index@{find\_empty\_index}}
+\index{find\_empty\_index@{find\_empty\_index}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{find\_empty\_index()}{find\_empty\_index()}}
+{\footnotesize\ttfamily int find\+\_\+empty\+\_\+index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structUser}{User}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+brief Finds an empty slot in the user database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_ac2c85ddce939a0783611c6417ef9d203}\label{rfid__access_8h_ac2c85ddce939a0783611c6417ef9d203}} 
+\index{rfid\_access.h@{rfid\_access.h}!get\_users\_db@{get\_users\_db}}
+\index{get\_users\_db@{get\_users\_db}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{get\_users\_db()}{get\_users\_db()}}
+{\footnotesize\ttfamily void get\+\_\+users\+\_\+db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structUser}{User}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Copies the current user database to a provided buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rfid__access_8h_a1fec7802968f92d8a82b2c3c48414fc9}\label{rfid__access_8h_a1fec7802968f92d8a82b2c3c48414fc9}} 
+\index{rfid\_access.h@{rfid\_access.h}!print\_all\_users@{print\_all\_users}}
+\index{print\_all\_users@{print\_all\_users}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{print\_all\_users()}{print\_all\_users()}}
+{\footnotesize\ttfamily void print\+\_\+all\+\_\+users (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structUser}{User}} $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Prints all users in the database to the serial interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rfid__access_8h_a95b7f5158425cbc9144616c6e9a16f68}\label{rfid__access_8h_a95b7f5158425cbc9144616c6e9a16f68}} 
+\index{rfid\_access.h@{rfid\_access.h}!print\_single\_user@{print\_single\_user}}
+\index{print\_single\_user@{print\_single\_user}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{print\_single\_user()}{print\_single\_user()}}
+{\footnotesize\ttfamily void print\+\_\+single\+\_\+user (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structUser}{User}} $\ast$}]{ptr,  }\item[{int}]{idx }\end{DoxyParamCaption})}
+
+
+
+brief Prints a single user entry to the serial interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+{\em idx} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rfid__access_8h_af2dd70513ccb1d0c9ce1b509c5a971db}\label{rfid__access_8h_af2dd70513ccb1d0c9ce1b509c5a971db}} 
+\index{rfid\_access.h@{rfid\_access.h}!print\_uid@{print\_uid}}
+\index{print\_uid@{print\_uid}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{print\_uid()}{print\_uid()}}
+{\footnotesize\ttfamily void print\+\_\+uid (\begin{DoxyParamCaption}\item[{byte $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Prints a UID buffer to the serial interface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rfid__access_8h_a51940e2d9df35efbab60ea3076d03266}\label{rfid__access_8h_a51940e2d9df35efbab60ea3076d03266}} 
+\index{rfid\_access.h@{rfid\_access.h}!read\_confirmation@{read\_confirmation}}
+\index{read\_confirmation@{read\_confirmation}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{read\_confirmation()}{read\_confirmation()}}
+{\footnotesize\ttfamily bool read\+\_\+confirmation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads a confirmation input from the serial interface. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_ae73ed12a431c429f1bdd5d5d81a977ce}\label{rfid__access_8h_ae73ed12a431c429f1bdd5d5d81a977ce}} 
+\index{rfid\_access.h@{rfid\_access.h}!read\_integer@{read\_integer}}
+\index{read\_integer@{read\_integer}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{read\_integer()}{read\_integer()}}
+{\footnotesize\ttfamily int read\+\_\+integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads an integer from the serial interface. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_a0add745e34488b9c793c8a45308228b3}\label{rfid__access_8h_a0add745e34488b9c793c8a45308228b3}} 
+\index{rfid\_access.h@{rfid\_access.h}!read\_RFID\_tag@{read\_RFID\_tag}}
+\index{read\_RFID\_tag@{read\_RFID\_tag}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{read\_RFID\_tag()}{read\_RFID\_tag()}}
+{\footnotesize\ttfamily bool read\+\_\+\+RFID\+\_\+tag (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid,  }\item[{byte $\ast$}]{uid\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Reads an RFID tag UID from the MFRC522 reader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rfid} & \\
+\hline
+{\em uid\+Buffer} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_ad745c57a9162c9705468fecedffdbe4b}\label{rfid__access_8h_ad745c57a9162c9705468fecedffdbe4b}} 
+\index{rfid\_access.h@{rfid\_access.h}!remove\_user@{remove\_user}}
+\index{remove\_user@{remove\_user}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{remove\_user()}{remove\_user()}}
+{\footnotesize\ttfamily bool remove\+\_\+user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes a user from the database. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_a38522f06db7c720fa309716c24f5fb57}\label{rfid__access_8h_a38522f06db7c720fa309716c24f5fb57}} 
+\index{rfid\_access.h@{rfid\_access.h}!rfid\_get\_last\_uid@{rfid\_get\_last\_uid}}
+\index{rfid\_get\_last\_uid@{rfid\_get\_last\_uid}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{rfid\_get\_last\_uid()}{rfid\_get\_last\_uid()}}
+{\footnotesize\ttfamily bool rfid\+\_\+get\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{byte $\ast$}]{uid\+Out }\end{DoxyParamCaption})}
+
+
+
+Function for restoring the last used RFID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid\+Out} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_aee72324df2418506e4d0fb015d1500be}\label{rfid__access_8h_aee72324df2418506e4d0fb015d1500be}} 
+\index{rfid\_access.h@{rfid\_access.h}!rfid\_set\_last\_uid@{rfid\_set\_last\_uid}}
+\index{rfid\_set\_last\_uid@{rfid\_set\_last\_uid}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{rfid\_set\_last\_uid()}{rfid\_set\_last\_uid()}}
+{\footnotesize\ttfamily void rfid\+\_\+set\+\_\+last\+\_\+uid (\begin{DoxyParamCaption}\item[{const byte $\ast$}]{uid\+In }\end{DoxyParamCaption})}
+
+
+
+Function for storing the last used RFID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid\+Out} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rfid__access_8h_a8e4bb51959939a9527c2f592cb742f84}\label{rfid__access_8h_a8e4bb51959939a9527c2f592cb742f84}} 
+\index{rfid\_access.h@{rfid\_access.h}!setup\_RFID\_reader@{setup\_RFID\_reader}}
+\index{setup\_RFID\_reader@{setup\_RFID\_reader}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{setup\_RFID\_reader()}{setup\_RFID\_reader()}}
+{\footnotesize\ttfamily void setup\+\_\+\+RFID\+\_\+reader (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid }\end{DoxyParamCaption})}
+
+
+
+Initializes SPI and the MFRC522 RFID reader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rfid} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rfid__access_8h_a5b70a33a9dd9de849ef2cf5c2190395c}\label{rfid__access_8h_a5b70a33a9dd9de849ef2cf5c2190395c}} 
+\index{rfid\_access.h@{rfid\_access.h}!user\_management@{user\_management}}
+\index{user\_management@{user\_management}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{user\_management()}{user\_management()}}
+{\footnotesize\ttfamily void user\+\_\+management (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}}}]{cmd,  }\item[{\mbox{\hyperlink{structUser}{User}} $\ast$}]{ptr,  }\item[{MFRC522 \&}]{rfid }\end{DoxyParamCaption})}
+
+
+
+Executes user-\/management actions based on the provided command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+{\em ptr} & \\
+\hline
+{\em rfid} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{rfid__access_8h_ad134e233e23721f4762373cf2e781a6d}\label{rfid__access_8h_ad134e233e23721f4762373cf2e781a6d}} 
+\index{rfid\_access.h@{rfid\_access.h}!validate\_rfid@{validate\_rfid}}
+\index{validate\_rfid@{validate\_rfid}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{validate\_rfid()}{validate\_rfid()}}
+{\footnotesize\ttfamily bool validate\+\_\+rfid (\begin{DoxyParamCaption}\item[{MFRC522}]{my\+RFID }\end{DoxyParamCaption})}
+
+
+
+Validates an RFID tag against the registered user database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em my\+RFID} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{rfid__access_8h_a23424c8ba4bf5c99fbb09f4d86787465}\label{rfid__access_8h_a23424c8ba4bf5c99fbb09f4d86787465}} 
+\index{rfid\_access.h@{rfid\_access.h}!userCount@{userCount}}
+\index{userCount@{userCount}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{userCount}{userCount}}
+{\footnotesize\ttfamily int user\+Count\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Number of currently registered users. 
+
+\mbox{\Hypertarget{rfid__access_8h_ad1ade64ec1f94c9ff0835615a52a941a}\label{rfid__access_8h_ad1ade64ec1f94c9ff0835615a52a941a}} 
+\index{rfid\_access.h@{rfid\_access.h}!users@{users}}
+\index{users@{users}!rfid\_access.h@{rfid\_access.h}}
+\doxysubsubsection{\texorpdfstring{users}{users}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structUser}{User}} users\mbox{[}\mbox{\hyperlink{rfid__access_8h_a251d94cd24a2ca3369fc3f8eca8c19ae}{MAX\+\_\+\+ROOMS}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global user database array. 
+

@@ -1,0 +1,159 @@
+\hypertarget{lock__ctrl_8h}{}\doxysection{include/lock\+\_\+ctrl.h File Reference}
+\label{lock__ctrl_8h}\index{include/lock\_ctrl.h@{include/lock\_ctrl.h}}
+
+
+Door lock control interface using a servo and light sensor.  
+
+
+{\ttfamily \#include $<$Servo.\+h$>$}\newline
+Include dependency graph for lock\+\_\+ctrl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{lock__ctrl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{lock__ctrl_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lock__ctrl_8h_a5218f89aa292654356a48989319aafb1}{SERVO\+\_\+\+PIN}}~16
+\begin{DoxyCompactList}\small\item\em GPIO pin connected to the servo motor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lock__ctrl_8h_a5c6cfb21c3902ddd46bf2bea4b63ba52}{CLOSED\+\_\+\+THRESHOLD}}~70
+\begin{DoxyCompactList}\small\item\em Light threshold indicating a closed box. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lock__ctrl_8h_a95ae562e6521f4c71629109c11a93e7c}{OPEN\+\_\+\+THRESHOLD}}~100
+\begin{DoxyCompactList}\small\item\em Light threshold indicating an open box. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lock__ctrl_8h_a73f85ca7eef43ea76053c19cb6515a3f}{lock\+\_\+ctrl\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the lock control module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lock__ctrl_8h_acc746d35b26615d437e9c3df2ec0cdfc}{lock\+\_\+door}} ()
+\begin{DoxyCompactList}\small\item\em Locks the door using the servo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lock__ctrl_8h_ac3411e1e911a7479c9880084ef1c62eb}{unlock\+\_\+door}} ()
+\begin{DoxyCompactList}\small\item\em Unlocks the door using the servo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{lock__ctrl_8h_ac854db649e8e27e6f2f34df2311c07ea}{is\+\_\+box\+\_\+closed}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether the box is closed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lock__ctrl_8h_a31ffbd66baac0dcbd686e4e59e5d3c45}{play\+\_\+open}} ()
+\begin{DoxyCompactList}\small\item\em Plays the sound effect for door opening. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lock__ctrl_8h_a5d3b72f442ced251e4b9a4e6a869c55a}{play\+\_\+close}} ()
+\begin{DoxyCompactList}\small\item\em Play sound effect when the door closes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Door lock control interface using a servo and light sensor. 
+
+\begin{DoxyAuthor}{Author}
+Amal Araweelo Almis 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lock__ctrl_8h_a5c6cfb21c3902ddd46bf2bea4b63ba52}\label{lock__ctrl_8h_a5c6cfb21c3902ddd46bf2bea4b63ba52}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!CLOSED\_THRESHOLD@{CLOSED\_THRESHOLD}}
+\index{CLOSED\_THRESHOLD@{CLOSED\_THRESHOLD}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{CLOSED\_THRESHOLD}{CLOSED\_THRESHOLD}}
+{\footnotesize\ttfamily \#define CLOSED\+\_\+\+THRESHOLD~70}
+
+
+
+Light threshold indicating a closed box. 
+
+\mbox{\Hypertarget{lock__ctrl_8h_a95ae562e6521f4c71629109c11a93e7c}\label{lock__ctrl_8h_a95ae562e6521f4c71629109c11a93e7c}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!OPEN\_THRESHOLD@{OPEN\_THRESHOLD}}
+\index{OPEN\_THRESHOLD@{OPEN\_THRESHOLD}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{OPEN\_THRESHOLD}{OPEN\_THRESHOLD}}
+{\footnotesize\ttfamily \#define OPEN\+\_\+\+THRESHOLD~100}
+
+
+
+Light threshold indicating an open box. 
+
+\mbox{\Hypertarget{lock__ctrl_8h_a5218f89aa292654356a48989319aafb1}\label{lock__ctrl_8h_a5218f89aa292654356a48989319aafb1}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!SERVO\_PIN@{SERVO\_PIN}}
+\index{SERVO\_PIN@{SERVO\_PIN}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{SERVO\_PIN}{SERVO\_PIN}}
+{\footnotesize\ttfamily \#define SERVO\+\_\+\+PIN~16}
+
+
+
+GPIO pin connected to the servo motor. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lock__ctrl_8h_ac854db649e8e27e6f2f34df2311c07ea}\label{lock__ctrl_8h_ac854db649e8e27e6f2f34df2311c07ea}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!is\_box\_closed@{is\_box\_closed}}
+\index{is\_box\_closed@{is\_box\_closed}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{is\_box\_closed()}{is\_box\_closed()}}
+{\footnotesize\ttfamily bool is\+\_\+box\+\_\+closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks whether the box is closed. 
+
+Uses the light sensor to determine door state.
+
+\begin{DoxyReturn}{Returns}
+true Box is closed. 
+
+false Box is open. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lock__ctrl_8h_a73f85ca7eef43ea76053c19cb6515a3f}\label{lock__ctrl_8h_a73f85ca7eef43ea76053c19cb6515a3f}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!lock\_ctrl\_init@{lock\_ctrl\_init}}
+\index{lock\_ctrl\_init@{lock\_ctrl\_init}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{lock\_ctrl\_init()}{lock\_ctrl\_init()}}
+{\footnotesize\ttfamily void lock\+\_\+ctrl\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the lock control module. 
+
+Must be called once during system startup before any other lock control functions are used. \mbox{\Hypertarget{lock__ctrl_8h_acc746d35b26615d437e9c3df2ec0cdfc}\label{lock__ctrl_8h_acc746d35b26615d437e9c3df2ec0cdfc}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!lock\_door@{lock\_door}}
+\index{lock\_door@{lock\_door}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{lock\_door()}{lock\_door()}}
+{\footnotesize\ttfamily void lock\+\_\+door (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Locks the door using the servo. 
+
+\mbox{\Hypertarget{lock__ctrl_8h_a5d3b72f442ced251e4b9a4e6a869c55a}\label{lock__ctrl_8h_a5d3b72f442ced251e4b9a4e6a869c55a}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!play\_close@{play\_close}}
+\index{play\_close@{play\_close}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{play\_close()}{play\_close()}}
+{\footnotesize\ttfamily void play\+\_\+close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Play sound effect when the door closes. 
+
+\mbox{\Hypertarget{lock__ctrl_8h_a31ffbd66baac0dcbd686e4e59e5d3c45}\label{lock__ctrl_8h_a31ffbd66baac0dcbd686e4e59e5d3c45}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!play\_open@{play\_open}}
+\index{play\_open@{play\_open}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{play\_open()}{play\_open()}}
+{\footnotesize\ttfamily void play\+\_\+open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Plays the sound effect for door opening. 
+
+\mbox{\Hypertarget{lock__ctrl_8h_ac3411e1e911a7479c9880084ef1c62eb}\label{lock__ctrl_8h_ac3411e1e911a7479c9880084ef1c62eb}} 
+\index{lock\_ctrl.h@{lock\_ctrl.h}!unlock\_door@{unlock\_door}}
+\index{unlock\_door@{unlock\_door}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{unlock\_door()}{unlock\_door()}}
+{\footnotesize\ttfamily void unlock\+\_\+door (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unlocks the door using the servo. 
+

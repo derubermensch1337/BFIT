@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['price_279',['price',['../structproduct.html#a5fc0d0d05bda9e33b16e714d5a79324b',1,'product']]],
+  ['products_5fin_5finventory_280',['products_in_inventory',['../structinventory.html#ae3104c8dd1c87f90a381bb0ea04e7483',1,'inventory']]],
+  ['progmem_281',['PROGMEM',['../admin__html_8h.html#abd0ee36707d12ea3bab500c5e31cb252',1,'PROGMEM():&#160;admin_html.h'],['../index__html_8h.html#a92af15c18628c19c4d98263e428df3ca',1,'PROGMEM():&#160;index_html.h'],['../login__html_8h.html#ac72b2e98a74464d7aa73f8379b61ad3f',1,'PROGMEM():&#160;login_html.h'],['../sale__html_8h.html#a2e129e4ccc4f01ca773ac9354c0ee6c9',1,'PROGMEM():&#160;sale_html.h'],['../style__css_8h.html#ae26481e5033c52070fb9ba2913afa0af',1,'PROGMEM():&#160;style_css.h'],['../sale__html_8cpp.html#a2e129e4ccc4f01ca773ac9354c0ee6c9',1,'PROGMEM():&#160;sale_html.cpp']]]
+];

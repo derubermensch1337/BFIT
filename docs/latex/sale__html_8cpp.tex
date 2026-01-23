@@ -1,0 +1,140 @@
+\hypertarget{sale__html_8cpp}{}\doxysection{src/sale\+\_\+html.cpp File Reference}
+\label{sale__html_8cpp}\index{src/sale\_html.cpp@{src/sale\_html.cpp}}
+{\ttfamily \#include \char`\"{}index\+\_\+html.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sale\+\_\+html.\+h\char`\"{}}\newline
+Include dependency graph for sale\+\_\+html.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sale__html_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sale__html_8cpp_a765ff78b52fcc468640556f618934a52}{send\+\_\+sale\+\_\+html\+\_\+graph}} (ESP8266\+Web\+Server \&\mbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}}, uint8\+\_\+t room\+\_\+number, const char $\ast$bar\+\_\+type, int bar\+\_\+height)
+\begin{DoxyCompactList}\small\item\em Sends a single sales bar element to the client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f}{send\+\_\+sale\+\_\+html\+\_\+page}} (ESP8266\+Web\+Server \&\mbox{\hyperlink{main_8cpp_a58141c4f251beaa1fee89b632d87152f}{server}}, uint8\+\_\+t room\+\_\+count, const int $\ast$\mbox{\hyperlink{main_8cpp_a9ce470c42fa52a1e1348aaa5a745614f}{green\+Height}}, const int $\ast$classic\+Heights)
+\begin{DoxyCompactList}\small\item\em Sends the complete sales graph page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char SALE\+\_\+\+BOX\+\_\+\+START\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9}{PROGMEM}} = R\char`\"{}rawliteral( $<$div class=\char`\"{}sale\+\_\+box\char`\"{}$>$)rawliteral\char`\"{}
+\begin{DoxyCompactList}\small\item\em Opening container for the sales graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Baldur G. Toftegaard 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sale__html_8cpp_a765ff78b52fcc468640556f618934a52}\label{sale__html_8cpp_a765ff78b52fcc468640556f618934a52}} 
+\index{sale\_html.cpp@{sale\_html.cpp}!send\_sale\_html\_graph@{send\_sale\_html\_graph}}
+\index{send\_sale\_html\_graph@{send\_sale\_html\_graph}!sale\_html.cpp@{sale\_html.cpp}}
+\doxysubsubsection{\texorpdfstring{send\_sale\_html\_graph()}{send\_sale\_html\_graph()}}
+{\footnotesize\ttfamily void send\+\_\+sale\+\_\+html\+\_\+graph (\begin{DoxyParamCaption}\item[{ESP8266\+Web\+Server \&}]{server,  }\item[{uint8\+\_\+t}]{room\+\_\+number,  }\item[{const char $\ast$}]{bar\+\_\+type,  }\item[{int}]{bar\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+Sends a single sales bar element to the client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & \\
+\hline
+{\em room\+\_\+number} & \\
+\hline
+{\em bar\+\_\+type} & \\
+\hline
+{\em bar\+\_\+height} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & The server \\
+\hline
+{\em room\+\_\+number} & Number of the relevant room \\
+\hline
+{\em bar\+\_\+type} & The type of the bar graph \\
+\hline
+{\em bar\+\_\+height} & The height of the bar graph \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f}\label{sale__html_8cpp_ab009b9b9e097e104b4478d286fd58a9f}} 
+\index{sale\_html.cpp@{sale\_html.cpp}!send\_sale\_html\_page@{send\_sale\_html\_page}}
+\index{send\_sale\_html\_page@{send\_sale\_html\_page}!sale\_html.cpp@{sale\_html.cpp}}
+\doxysubsubsection{\texorpdfstring{send\_sale\_html\_page()}{send\_sale\_html\_page()}}
+{\footnotesize\ttfamily void send\+\_\+sale\+\_\+html\+\_\+page (\begin{DoxyParamCaption}\item[{ESP8266\+Web\+Server \&}]{server,  }\item[{uint8\+\_\+t}]{room\+\_\+count,  }\item[{const int $\ast$}]{green\+Height,  }\item[{const int $\ast$}]{classic\+Heights }\end{DoxyParamCaption})}
+
+
+
+Sends the complete sales graph page. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em server} & \\
+\hline
+{\em room\+\_\+count} & ~\newline
+ \\
+\hline
+{\em green\+Height} & \\
+\hline
+{\em classic\+Heights} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyParams}{Parameters}
+{\em server} & The server \\
+\hline
+{\em room\+\_\+count} & The number of rooms \\
+\hline
+{\em green\+Height} & The hight of the green bar \\
+\hline
+{\em classic\+Heights} & The hight of the clasic bar (not used in prototype) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9}\label{sale__html_8cpp_a2e129e4ccc4f01ca773ac9354c0ee6c9}} 
+\index{sale\_html.cpp@{sale\_html.cpp}!PROGMEM@{PROGMEM}}
+\index{PROGMEM@{PROGMEM}!sale\_html.cpp@{sale\_html.cpp}}
+\doxysubsubsection{\texorpdfstring{PROGMEM}{PROGMEM}}
+{\footnotesize\ttfamily const char SALE\+\_\+\+BOX\+\_\+\+STOP \mbox{[}$\,$\mbox{]} PROGMEM = R\char`\"{}rawliteral( $<$div class=\char`\"{}sale\+\_\+box\char`\"{}$>$)rawliteral\char`\"{}}
+
+
+
+Opening container for the sales graph. 
+
+Closing container for the complete sales graph.
+
+Closing container for a single room graph.
+
+Closing fragment for a single sales bar.
+
+HTML fragment defining the height style of a bar.
+
+HTML fragment defining the CSS class type for a bar.
+
+HTML fragment for the room identifier.
+
+Opening container for a single room graph.
+
+Opening container for the sales graph.
+
+Opening container for the sales graph.
+
+String used for the HTML footer.
+
+This is responsible for updating the graphs.
+
+Opening container for the sales graph.
+
+Interpreted as a string by the compiler.
+
+Opening container for the sales graph.
+
+is handled like a string by the compiler 
