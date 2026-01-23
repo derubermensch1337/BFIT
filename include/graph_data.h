@@ -25,7 +25,10 @@ extern int classicHeight[ROOM_COUNT];
  * @param roomNumber 
  * @param delta 
 */
-void graph_add_to_room_green(uint8_t roomNumber, int delta);
+void graph_add_to_room_green(
+    uint8_t roomNumber, 
+    int delta
+);
 
 /**
  * @brief Adds a value to the classic sales bar of a given room.
@@ -33,7 +36,10 @@ void graph_add_to_room_green(uint8_t roomNumber, int delta);
  * @param roomNumber 
  * @param delta 
 */
-void graph_add_to_room_clasic(uint8_t roomNumber, int delta);
+void graph_add_to_room_clasic(
+    uint8_t roomNumber,
+    int delta
+);
 
 /**
  * @brief Prints the current graph height arrays.

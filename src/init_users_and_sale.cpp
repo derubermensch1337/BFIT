@@ -100,7 +100,7 @@ void perform_sale(inventory *fridge_inventory)
 
 
     for (uint8_t index = 0; index < fridge_inventory->number_of_products_stocked; index++) {
-        products_stocked *beverage_in_inventory = &fridge_inventory->produckts_in_inventory[index];
+        products_stocked *beverage_in_inventory = &fridge_inventory->products_in_inventory[index];
 
         if (beverage_in_inventory->beverage.beverage_variant != beer) continue;
 

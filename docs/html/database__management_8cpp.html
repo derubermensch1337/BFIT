@@ -108,6 +108,28 @@ Include dependency graph for database_management.cpp:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<<<<<<< HEAD
+<tr class="memitem:a94d9e7ef2a92977cb88d517ab29310cb" id="r_a94d9e7ef2a92977cb88d517ab29310cb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a94d9e7ef2a92977cb88d517ab29310cb">user_management</a> (<a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a> incomingCommand, <a class="el" href="struct_user.html">User</a> *ptr, MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
+<tr class="memdesc:a94d9e7ef2a92977cb88d517ab29310cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes user-management actions based on the provided command.  <br /></td></tr>
+<tr class="memitem:ad745c57a9162c9705468fecedffdbe4b" id="r_ad745c57a9162c9705468fecedffdbe4b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad745c57a9162c9705468fecedffdbe4b">remove_user</a> ()</td></tr>
+<tr class="memdesc:ad745c57a9162c9705468fecedffdbe4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user from the database.  <br /></td></tr>
+<tr class="memitem:ac2c85ddce939a0783611c6417ef9d203" id="r_ac2c85ddce939a0783611c6417ef9d203"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac2c85ddce939a0783611c6417ef9d203">get_users_db</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:ac2c85ddce939a0783611c6417ef9d203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the current user database to a provided buffer.  <br /></td></tr>
+<tr class="memitem:a1fec7802968f92d8a82b2c3c48414fc9" id="r_a1fec7802968f92d8a82b2c3c48414fc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1fec7802968f92d8a82b2c3c48414fc9">print_all_users</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:a1fec7802968f92d8a82b2c3c48414fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all users in the database to the serial interface.  <br /></td></tr>
+<tr class="memitem:a95b7f5158425cbc9144616c6e9a16f68" id="r_a95b7f5158425cbc9144616c6e9a16f68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95b7f5158425cbc9144616c6e9a16f68">print_single_user</a> (<a class="el" href="struct_user.html">User</a> *ptr, int idx)</td></tr>
+<tr class="memdesc:a95b7f5158425cbc9144616c6e9a16f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Prints a single user entry to the serial interface.  <br /></td></tr>
+<tr class="memitem:af2dd70513ccb1d0c9ce1b509c5a971db" id="r_af2dd70513ccb1d0c9ce1b509c5a971db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2dd70513ccb1d0c9ce1b509c5a971db">print_uid</a> (byte *ptr)</td></tr>
+<tr class="memdesc:af2dd70513ccb1d0c9ce1b509c5a971db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a UID buffer to the serial interface.  <br /></td></tr>
+<tr class="memitem:ae73ed12a431c429f1bdd5d5d81a977ce" id="r_ae73ed12a431c429f1bdd5d5d81a977ce"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae73ed12a431c429f1bdd5d5d81a977ce">read_integer</a> ()</td></tr>
+<tr class="memdesc:ae73ed12a431c429f1bdd5d5d81a977ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an integer from the serial interface.  <br /></td></tr>
+<tr class="memitem:a51940e2d9df35efbab60ea3076d03266" id="r_a51940e2d9df35efbab60ea3076d03266"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a51940e2d9df35efbab60ea3076d03266">read_confirmation</a> ()</td></tr>
+<tr class="memdesc:a51940e2d9df35efbab60ea3076d03266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a confirmation input from the serial interface.  <br /></td></tr>
+<tr class="memitem:a4df3b276724481c8cc667599b6733ff0" id="r_a4df3b276724481c8cc667599b6733ff0"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4df3b276724481c8cc667599b6733ff0">find_empty_index</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:a4df3b276724481c8cc667599b6733ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Finds an empty slot in the user database.  <br /></td></tr>
+<tr class="memitem:aee642965bad74cd187195f79bd5f291d" id="r_aee642965bad74cd187195f79bd5f291d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aee642965bad74cd187195f79bd5f291d">count_rooms</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:aee642965bad74cd187195f79bd5f291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Counts the number of occupied user entries in the database.  <br /></td></tr>
+=======
 <tr class="memitem:a94d9e7ef2a92977cb88d517ab29310cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database__management_8cpp.html#a94d9e7ef2a92977cb88d517ab29310cb">user_management</a> (<a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a> incomingCommand, <a class="el" href="structUser.html">User</a> *ptr, MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
 <tr class="memdesc:a94d9e7ef2a92977cb88d517ab29310cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes user-management actions based on the provided command.  <a href="database__management_8cpp.html#a94d9e7ef2a92977cb88d517ab29310cb">More...</a><br /></td></tr>
 <tr class="separator:a94d9e7ef2a92977cb88d517ab29310cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +160,7 @@ Functions</h2></td></tr>
 <tr class="memitem:aee642965bad74cd187195f79bd5f291d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="database__management_8cpp.html#aee642965bad74cd187195f79bd5f291d">count_rooms</a> (<a class="el" href="structUser.html">User</a> *ptr)</td></tr>
 <tr class="memdesc:aee642965bad74cd187195f79bd5f291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Counts the number of occupied user entries in the database.  <a href="database__management_8cpp.html#aee642965bad74cd187195f79bd5f291d">More...</a><br /></td></tr>
 <tr class="separator:aee642965bad74cd187195f79bd5f291d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+>>>>>>> 39895d3f36d0ef8d69556f8789a37a17e10acda4
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Used to read and write non-volatile memory on ESP8266. </p>

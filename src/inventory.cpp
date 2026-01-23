@@ -43,7 +43,7 @@ bool inventory_add_product (
     if (inventory->number_of_products_stocked >= INVENTORY_CAPACITY)     // check if the user has atempted to add more products than that suported by the code. If so return false. 
         return false;  
 
-    products_stocked *product_in_fridge = &inventory->produckts_in_inventory[
+    products_stocked *product_in_fridge = &inventory->products_in_inventory[
         inventory->number_of_products_stocked];                         // we make an pointer into the product_stock struct of the inventory.
     
     product_in_fridge->beverage = product;                              // we can now use that pointer to add the product.
@@ -61,21 +61,21 @@ bool inventory_remove_product (
         index < inventory->number_of_products_stocked;
         index++
     ){
-        products_stocked *products_in_inventory = &inventory->produckts_in_inventory[index];
+        products_stocked *products_in_inventory = &inventory->products_in_inventory[index];
 
         if (products_in_inventory->beverage.beverage_variant == beverage.beverage_variant &&
             strcmp(products_in_inventory->beverage.name, beverage.name) == 0
         ){
             for (uint8_t second_index = index; second_index + 1 < inventory->number_of_products_stocked; second_index++
             ){
-                inventory->produckts_in_inventory[second_index] = inventory->produckts_in_inventory[second_index+1];
+                inventory->products_in_inventory[second_index] = inventory->products_in_inventory[second_index+1];
                 
             }
             inventory->number_of_products_stocked--;
 
-            memset(&inventory->produckts_in_inventory[inventory->number_of_products_stocked],
+            memset(&inventory->products_in_inventory[inventory->number_of_products_stocked],
                 0,
-                sizeof(inventory->produckts_in_inventory[0]));
+                sizeof(inventory->products_in_inventory[0]));
         }
     }
     return true;
@@ -91,7 +91,7 @@ bool inventory_add_beverage(
 
     for (uint8_t index = 0; index < inventory->number_of_products_stocked; index++
     ){
-        products_stocked *product_in_inventory = &inventory->produckts_in_inventory[index];
+        products_stocked *product_in_inventory = &inventory->products_in_inventory[index];
 
         if (product_in_inventory->beverage.beverage_variant == beverag.beverage_variant &&
             strcmp(product_in_inventory->beverage.name, beverag.name) == 0
@@ -116,7 +116,7 @@ bool inventory_remove_beverage(
 
     for (uint8_t index = 0; index < inventory->number_of_products_stocked; index++
     ){
-        products_stocked *product_in_inventory = &inventory->produckts_in_inventory[index];
+        products_stocked *product_in_inventory = &inventory->products_in_inventory[index];
 
         if (product_in_inventory->beverage.beverage_variant == beverag.beverage_variant &&
             strcmp(product_in_inventory->beverage.name, beverag.name) == 0
@@ -135,25 +135,25 @@ void inventory_print (
         index < inventory->number_of_products_stocked;
         index++
     ){
-        products_stocked *produckts_in_inventory = &inventory->produckts_in_inventory[index];
+        products_stocked *products_in_inventory = &inventory->products_in_inventory[index];
         
         Serial.print("Product ");
         Serial.print(index);
         Serial.print(": ");
 
-        Serial.print(produckts_in_inventory->beverage.name);
+        Serial.print(products_in_inventory->beverage.name);
         Serial.print(", type=");
-        Serial.print((int)produckts_in_inventory->beverage.beverage_variant);
+        Serial.print((int)products_in_inventory->beverage.beverage_variant);
 
         Serial.print(", weight=");
-        Serial.print(produckts_in_inventory->beverage.weight);
+        Serial.print(products_in_inventory->beverage.weight);
 
         Serial.print(", price=");
-        Serial.print(produckts_in_inventory->beverage.price);
+        Serial.print(products_in_inventory->beverage.price);
 
         Serial.print(", qty=");
-        Serial.print(produckts_in_inventory->current_quantity);
+        Serial.print(products_in_inventory->current_quantity);
         Serial.print("/");
-        Serial.println(produckts_in_inventory->original_quantity);
+        Serial.println(products_in_inventory->original_quantity);
     }   
 }
