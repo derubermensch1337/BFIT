@@ -30,10 +30,13 @@ const char INDEX_HTML_FOOT[] PROGMEM = R"rawliteral(
         <script>
             async function refreshGraphs() {
                 try {
+                    /* Send a HTML GET request (no cashe to prevent old data from desplaying) */
                     const res = await fetch('/saleHeights', { cache: 'no-store' });
+                    /* Convert the HTML respons into a JavaScript object */
                     const data = await res.json();
 
-                    for (const room in data) {
+                    /* Loop through all rooms key in JSON object*/
+                    for (const room in data) {  
                         const green  = document.getElementById(room + "_green");
                         const clasic = document.getElementById(room + "_clasic");
 

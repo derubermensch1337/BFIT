@@ -1,6 +1,6 @@
 /**
  * @file    inventory.h
- * @brief   Functions responsible for keeping track of the fridge inventory.
+ * @brief   Inventory system for tracking the inventory of both the fridge and the induvidual users
  * @author  Baldur G. Toftegaard
 */
 
@@ -15,6 +15,7 @@
 
 /** 
  * @brief Types of beverages supported by the system. 
+ * @enum enum docomentation ?
 */
 typedef enum {
     beer,                   /**< Beer */
@@ -49,6 +50,8 @@ typedef struct {
 typedef struct {
     products_stocked produckts_in_inventory[INVENTORY_CAPACITY];    /**< The beverages being stocked */
     uint8_t number_of_products_stocked;                             /**< Number of beverages stocked, prevents overflow */
+    uint8_t room_number;                                            /**<Not used in the current system */
+    /**< Store the FRID belonging to the spesific user, not implemented */
 } inventory;
 
 

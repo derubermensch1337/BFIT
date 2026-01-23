@@ -1,0 +1,131 @@
+\doxysection{include/\+lock\+\_\+ctrl.h File Reference}
+\hypertarget{lock__ctrl_8h}{}\label{lock__ctrl_8h}\index{include/lock\_ctrl.h@{include/lock\_ctrl.h}}
+{\ttfamily \+\#include $<$Servo.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{lock__ctrl_8h_a5218f89aa292654356a48989319aafb1}{SERVO\+\_\+\+PIN}}~16
+\item 
+\+\#define \doxymbox{\hyperlink{lock__ctrl_8h_a6ddfa85dd52c2aa1af587be3349cb467}{LIGHT\+\_\+\+PIN}}~A0
+\item 
+\+\#define \doxymbox{\hyperlink{lock__ctrl_8h_a5c6cfb21c3902ddd46bf2bea4b63ba52}{CLOSED\+\_\+\+THRESHOLD}}~70
+\item 
+\+\#define \doxymbox{\hyperlink{lock__ctrl_8h_a95ae562e6521f4c71629109c11a93e7c}{OPEN\+\_\+\+THRESHOLD}}~100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{lock__ctrl_8h_a73f85ca7eef43ea76053c19cb6515a3f}{lock\+\_\+ctrl\+\_\+init}} ()
+\item 
+void \doxymbox{\hyperlink{lock__ctrl_8h_acc746d35b26615d437e9c3df2ec0cdfc}{lock\+\_\+door}} ()
+\item 
+void \doxymbox{\hyperlink{lock__ctrl_8h_ac3411e1e911a7479c9880084ef1c62eb}{unlock\+\_\+door}} ()
+\item 
+bool \doxymbox{\hyperlink{lock__ctrl_8h_ac854db649e8e27e6f2f34df2311c07ea}{is\+\_\+box\+\_\+closed}} ()
+\item 
+void \doxymbox{\hyperlink{lock__ctrl_8h_a993aaefb682b242b95da53a7aed9b007}{play\+\_\+warning}} (unsigned long t)
+\item 
+void \doxymbox{\hyperlink{lock__ctrl_8h_a31ffbd66baac0dcbd686e4e59e5d3c45}{play\+\_\+open}} ()
+\item 
+void \doxymbox{\hyperlink{lock__ctrl_8h_a5d3b72f442ced251e4b9a4e6a869c55a}{play\+\_\+close}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Authors}
+Amal Araweelo Almis 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+16-\/01-\/2026 
+\end{DoxyDate}
+\begin{DoxyParagraph}{Revision history}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Version  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Date  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Description  \\
+0.\+1  &16-\/01-\/2026  &Created file.  \\
+&&\\
+\end{DoxyTable}
+
+\end{DoxyParagraph}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2026 
+\end{DoxyCopyright}
+
+
+\label{doc-define-members}
+\Hypertarget{lock__ctrl_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{lock__ctrl_8h_a5c6cfb21c3902ddd46bf2bea4b63ba52}\index{lock\_ctrl.h@{lock\_ctrl.h}!CLOSED\_THRESHOLD@{CLOSED\_THRESHOLD}}
+\index{CLOSED\_THRESHOLD@{CLOSED\_THRESHOLD}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{CLOSED\_THRESHOLD}{CLOSED\_THRESHOLD}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a5c6cfb21c3902ddd46bf2bea4b63ba52} 
+\+\#define CLOSED\+\_\+\+THRESHOLD~70}
+
+\Hypertarget{lock__ctrl_8h_a6ddfa85dd52c2aa1af587be3349cb467}\index{lock\_ctrl.h@{lock\_ctrl.h}!LIGHT\_PIN@{LIGHT\_PIN}}
+\index{LIGHT\_PIN@{LIGHT\_PIN}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{LIGHT\_PIN}{LIGHT\_PIN}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a6ddfa85dd52c2aa1af587be3349cb467} 
+\+\#define LIGHT\+\_\+\+PIN~A0}
+
+\Hypertarget{lock__ctrl_8h_a95ae562e6521f4c71629109c11a93e7c}\index{lock\_ctrl.h@{lock\_ctrl.h}!OPEN\_THRESHOLD@{OPEN\_THRESHOLD}}
+\index{OPEN\_THRESHOLD@{OPEN\_THRESHOLD}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{OPEN\_THRESHOLD}{OPEN\_THRESHOLD}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a95ae562e6521f4c71629109c11a93e7c} 
+\+\#define OPEN\+\_\+\+THRESHOLD~100}
+
+\Hypertarget{lock__ctrl_8h_a5218f89aa292654356a48989319aafb1}\index{lock\_ctrl.h@{lock\_ctrl.h}!SERVO\_PIN@{SERVO\_PIN}}
+\index{SERVO\_PIN@{SERVO\_PIN}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{SERVO\_PIN}{SERVO\_PIN}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a5218f89aa292654356a48989319aafb1} 
+\+\#define SERVO\+\_\+\+PIN~16}
+
+
+
+\label{doc-func-members}
+\Hypertarget{lock__ctrl_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{lock__ctrl_8h_ac854db649e8e27e6f2f34df2311c07ea}\index{lock\_ctrl.h@{lock\_ctrl.h}!is\_box\_closed@{is\_box\_closed}}
+\index{is\_box\_closed@{is\_box\_closed}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{is\_box\_closed()}{is\_box\_closed()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_ac854db649e8e27e6f2f34df2311c07ea} 
+bool is\+\_\+box\+\_\+closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lock__ctrl_8h_a73f85ca7eef43ea76053c19cb6515a3f}\index{lock\_ctrl.h@{lock\_ctrl.h}!lock\_ctrl\_init@{lock\_ctrl\_init}}
+\index{lock\_ctrl\_init@{lock\_ctrl\_init}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{lock\_ctrl\_init()}{lock\_ctrl\_init()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a73f85ca7eef43ea76053c19cb6515a3f} 
+void lock\+\_\+ctrl\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lock__ctrl_8h_acc746d35b26615d437e9c3df2ec0cdfc}\index{lock\_ctrl.h@{lock\_ctrl.h}!lock\_door@{lock\_door}}
+\index{lock\_door@{lock\_door}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{lock\_door()}{lock\_door()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_acc746d35b26615d437e9c3df2ec0cdfc} 
+void lock\+\_\+door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lock__ctrl_8h_a5d3b72f442ced251e4b9a4e6a869c55a}\index{lock\_ctrl.h@{lock\_ctrl.h}!play\_close@{play\_close}}
+\index{play\_close@{play\_close}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{play\_close()}{play\_close()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a5d3b72f442ced251e4b9a4e6a869c55a} 
+void play\+\_\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lock__ctrl_8h_a31ffbd66baac0dcbd686e4e59e5d3c45}\index{lock\_ctrl.h@{lock\_ctrl.h}!play\_open@{play\_open}}
+\index{play\_open@{play\_open}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{play\_open()}{play\_open()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a31ffbd66baac0dcbd686e4e59e5d3c45} 
+void play\+\_\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lock__ctrl_8h_a993aaefb682b242b95da53a7aed9b007}\index{lock\_ctrl.h@{lock\_ctrl.h}!play\_warning@{play\_warning}}
+\index{play\_warning@{play\_warning}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{play\_warning()}{play\_warning()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_a993aaefb682b242b95da53a7aed9b007} 
+void play\+\_\+warning (\begin{DoxyParamCaption}\item[{unsigned long}]{t}{}\end{DoxyParamCaption})}
+
+\Hypertarget{lock__ctrl_8h_ac3411e1e911a7479c9880084ef1c62eb}\index{lock\_ctrl.h@{lock\_ctrl.h}!unlock\_door@{unlock\_door}}
+\index{unlock\_door@{unlock\_door}!lock\_ctrl.h@{lock\_ctrl.h}}
+\doxysubsubsection{\texorpdfstring{unlock\_door()}{unlock\_door()}}
+{\footnotesize\ttfamily \label{lock__ctrl_8h_ac3411e1e911a7479c9880084ef1c62eb} 
+void unlock\+\_\+door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
