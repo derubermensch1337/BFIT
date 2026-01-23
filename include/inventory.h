@@ -31,7 +31,7 @@ typedef enum {
 typedef struct {
     char name[20];                  /**< Beverage  name */              
     beverage_type beverage_variant; /**< Beverage  type */
-    uint16_t weight;                 /**< Beverage  weight */
+    uint16_t weight;                /**< Beverage  weight */
     uint8_t price;                  /**< Beverage  price */
 } product;
 
@@ -45,12 +45,13 @@ typedef struct {
 } products_stocked;
 
 /**
- * @brief Struckt for holding the fridge inventory.
-*/
+ * @brief Strukt used for making the inventory
+ * 
+ */
 typedef struct {
     products_stocked produckts_in_inventory[INVENTORY_CAPACITY];    /**< The beverages being stocked */
     uint8_t number_of_products_stocked;                             /**< Number of beverages stocked, prevents overflow */
-    uint8_t room_number;                                            /**<Not used in the current system */
+    uint8_t room_number;                                            /**< Not used in the current system */
     /**< Store the FRID belonging to the spesific user, not implemented */
 } inventory;
 
@@ -61,23 +62,23 @@ typedef struct {
  * @param Inventory Inventory instance to initialize 
  */
 void inventory_init(
-    inventory *inventory
+    inventory *inventory    /*< Inventory you cant to initialize, ensures that the memory space is empty */
 );
 
 /**
- * @brief Function for defining a new item.
+ * @brief Function for making a new product.
  * 
- * @param name 
- * @param type 
+ * @param name
+ * @param type
  * @param weight 
  * @param price 
  * @return item created
  */
 product inventory_make_product(
-    const char *name, 
-    beverage_type type, 
-    uint16_t weight, 
-    uint8_t price
+    const char *name,               /**< Display name of product */
+    beverage_type type,             /**< What type of product it is, whuld allow to sort by product type */
+    uint16_t weight,                /**< Weight of the product, used for detecting how much of the product that was removed */
+    uint8_t price                   /**< Price of the product, this whuld make it posible to automaticaly calculate the bill for eatch user */
 );
 
 /**
@@ -90,9 +91,9 @@ product inventory_make_product(
  * @return false - there was an error adding the product
  */
 bool inventory_add_product (
-        inventory *inventory,
-        product product,
-        uint16_t quantity
+        inventory *inventory,       /**< Inventory you want to add a product to */
+        product product,            /**< The product you want to add to the inventory */
+        uint16_t quantity           /**< The amount of the priduct you want to add to the inventory */
 );
 
 /**
@@ -105,8 +106,8 @@ bool inventory_add_product (
  * @return false - there was an error removing the product
  */
 bool inventory_remove_product(
-    inventory *inventory, 
-    product beverage
+    inventory *inventory,           /**< Inventory you want to remove a product from */
+    product beverage                /**< Beverage you want to remove */
 );
 
 /**
@@ -119,9 +120,9 @@ bool inventory_remove_product(
  * @return false - there was an error adding the beverage
  */
 bool inventory_add_beverage(
-    inventory *inventory,
-    product  beverage,
-    uint16_t amount
+    inventory *inventory,       /**< The inventory you want to add a beverage to */
+    product  beverage,          /**< The beverage you want to edit the amount of */
+    uint16_t amount             /**< The amount you want to add to the inventory */
 );
 
 /**
@@ -134,9 +135,9 @@ bool inventory_add_beverage(
  * @return false - there was an error removing the beverage
  */
 bool inventory_remove_beverage(
-    inventory *inventory, 
-    product beverag, 
-    uint8_t amount
+    inventory *inventory,       /**< The inventory you want to add a beverage to */
+    product beverag,            /**< The beverage you want to edit the amount of */ 
+    uint8_t amount              /**< The amount you want to remove from the inventory */
 );
     
 /**
@@ -145,7 +146,7 @@ bool inventory_remove_beverage(
  * @param inventory 
  */
 void inventory_print(
-    inventory *inventory
+    inventory *inventory    /**< Inventory you want to print the content of */
 );
 
 #endif

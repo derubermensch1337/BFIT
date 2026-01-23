@@ -10,7 +10,9 @@
 #include "rfid_access.h"
 #include "graph_data.h"
 
-
+/**
+ * @brief Not used in prototype, shuld be moved to inventory.cpp
+ */
 void init_users_and_products (
 ){
     // inventory room_1;
@@ -71,7 +73,6 @@ void perform_sale(inventory *fridge_inventory)
 
     // Check if reference exists
     if (!weight_reference_is_set()) {
-        Serial.println("Weight reference is not set");
         float ref = read_current_weight_blocking();
         set_weight_reference(ref);
         return;
