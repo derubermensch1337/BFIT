@@ -66,21 +66,6 @@ int classicHeight[ROOM_COUNT] = {
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
 };
 
-void print_graph_arrays(
-){
-    Serial.println("=== GRAPH DATA ===");
-    for (uint8_t i = 0; i < ROOM_COUNT; i++) {
-        Serial.print("Room ");
-        Serial.print(i + 1);
-        Serial.print(" | green = ");
-        Serial.print(greenHeight[i]);
-        Serial.print(" | classic = ");
-        Serial.println(classicHeight[i]);
-    }
-    Serial.println("==================");
-}
-
-
 // Demo inventory product
 product demo_beer;
 
@@ -178,7 +163,7 @@ static void setup_inventory_and_scale()
   Serial.println("Initial inventory:");
   inventory_print(&fridge);
 
-  // Establish baseline reference (your perform_sale() does this on first call)
+  // Establish baseline reference
   perform_sale(&fridge);
 }
 
@@ -228,14 +213,6 @@ void loop()
 
   // Keep scale updated
   update_scale();
-
-  // Print weight once per second (non-blocking)
-  static uint32_t lastWeightPrintMs = 0;
-  if (millis() - lastWeightPrintMs >= 1000) {
-    lastWeightPrintMs = millis();
-    //Serial.print("Weight: ");
-    //Serial.println(get_weight());
-  }
 
   // If MFRC522 got disconnected / serial monitor toggled: re-init
   byte v = rfid.PCD_ReadRegister(rfid.VersionReg);
@@ -317,11 +294,8 @@ void loop()
         display_commands();
         perform_sale(&fridge);
         Serial.println("[SALE] Running perform_sale() after door close");
-        print_graph_arrays();
       }
-
       break;
   }
-
   yield();
 }
