@@ -44,33 +44,33 @@ bool \doxymbox{\hyperlink{rfid__access_8h_abc2ed4592afe3616dfab8e42c9d3c99c}{add
 bool \doxymbox{\hyperlink{rfid__access_8h_ad745c57a9162c9705468fecedffdbe4b}{remove\+\_\+user}} ()
 \begin{DoxyCompactList}\small\item\em Removes a user from the database. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{rfid__access_8h_ab4c09e9a60679c0c9ade2946fbf583ad}{compare\+\_\+\+UID}} (byte \texorpdfstring{$\ast$}{*}uid1, byte \texorpdfstring{$\ast$}{*}uid2)
-\item 
+\begin{DoxyCompactList}\small\item\em Compares two RFID UIDs. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{rfid__access_8h_a0add745e34488b9c793c8a45308228b3}{read\+\_\+\+RFID\+\_\+tag}} (MFRC522 \&\doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}}, byte \texorpdfstring{$\ast$}{*}uid\+Buffer)
-\item 
+\begin{DoxyCompactList}\small\item\em Reads an RFID tag UID from the MFRC522 reader. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_adcc1679df91328826349cba6ac5f1ee9}{display\+\_\+commands}} (void)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075}{display\+\_\+commands\+\_\+um}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Prints the available serial commands for user-\/management mode. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_ac2c85ddce939a0783611c6417ef9d203}{get\+\_\+users\+\_\+db}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\begin{DoxyCompactList}\small\item\em Get the users db object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Copies the current user database to a provided buffer. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_a5b70a33a9dd9de849ef2cf5c2190395c}{user\+\_\+management}} (\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} cmd, \doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr, MFRC522 \&\doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
-\item 
+\begin{DoxyCompactList}\small\item\em Executes user-\/management actions based on the provided command. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{rfid__access_8h_ad134e233e23721f4762373cf2e781a6d}{validate\+\_\+rfid}} (MFRC522 my\+RFID)
-\item 
+\begin{DoxyCompactList}\small\item\em Validates an RFID tag against the registered user database. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_a95b7f5158425cbc9144616c6e9a16f68}{print\+\_\+single\+\_\+user}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr, int idx)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Prints a single user entry to the serial interface. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_a1fec7802968f92d8a82b2c3c48414fc9}{print\+\_\+all\+\_\+users}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints all users in the database to the serial interface. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_af2dd70513ccb1d0c9ce1b509c5a971db}{print\+\_\+uid}} (byte \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints a UID buffer to the serial interface. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{rfid__access_8h_ae73ed12a431c429f1bdd5d5d81a977ce}{read\+\_\+integer}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads an integer from the serial interface. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{rfid__access_8h_a51940e2d9df35efbab60ea3076d03266}{read\+\_\+confirmation}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads a confirmation input from the serial interface. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0}{find\+\_\+empty\+\_\+index}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Finds an empty slot in the user database. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{rfid__access_8h_aee642965bad74cd187195f79bd5f291d}{count\+\_\+rooms}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Counts the number of occupied user entries in the database. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{rfid__access_8h_aee72324df2418506e4d0fb015d1500be}{rfid\+\_\+set\+\_\+last\+\_\+uid}} (const byte \texorpdfstring{$\ast$}{*}uid\+In)
 \begin{DoxyCompactList}\small\item\em Function for storing the last used RFID. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{rfid__access_8h_a38522f06db7c720fa309716c24f5fb57}{rfid\+\_\+get\+\_\+last\+\_\+uid}} (byte \texorpdfstring{$\ast$}{*}uid\+Out)
@@ -223,6 +223,10 @@ brief Reads a command from the serial interface and maps it to an \doxylink{rfid
 bool compare\+\_\+\+UID (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{uid1}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{uid2}{}\end{DoxyParamCaption})}
 
 
+
+Compares two RFID UIDs. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em uid1} & \\
 \hline
@@ -241,6 +245,10 @@ false
 int count\+\_\+rooms (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
 
 
+
+brief Counts the number of occupied user entries in the database. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em ptr} & \\
 \hline
@@ -254,17 +262,29 @@ int
 {\footnotesize\ttfamily \label{rfid__access_8h_adcc1679df91328826349cba6ac5f1ee9} 
 void display\+\_\+commands (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 
+
+
+Prints the available serial commands. 
+
 \Hypertarget{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075}\index{rfid\_access.h@{rfid\_access.h}!display\_commands\_um@{display\_commands\_um}}
 \index{display\_commands\_um@{display\_commands\_um}!rfid\_access.h@{rfid\_access.h}}
 \doxysubsubsection{\texorpdfstring{display\_commands\_um()}{display\_commands\_um()}}
 {\footnotesize\ttfamily \label{rfid__access_8h_a301fdf0545d6da25fbe5ed4abcc6f075} 
 void display\+\_\+commands\+\_\+um (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Prints the available serial commands for user-\/management mode. 
+
 \Hypertarget{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0}\index{rfid\_access.h@{rfid\_access.h}!find\_empty\_index@{find\_empty\_index}}
 \index{find\_empty\_index@{find\_empty\_index}!rfid\_access.h@{rfid\_access.h}}
 \doxysubsubsection{\texorpdfstring{find\_empty\_index()}{find\_empty\_index()}}
 {\footnotesize\ttfamily \label{rfid__access_8h_a4df3b276724481c8cc667599b6733ff0} 
 int find\+\_\+empty\+\_\+index (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
+
+
+
+brief Finds an empty slot in the user database. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -282,7 +302,7 @@ void get\+\_\+users\+\_\+db (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink
 
 
 
-Get the users db object. 
+Copies the current user database to a provided buffer. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -296,6 +316,10 @@ Get the users db object.
 void print\+\_\+all\+\_\+users (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
 
 
+
+Prints all users in the database to the serial interface. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em ptr} & \\
 \hline
@@ -305,6 +329,10 @@ void print\+\_\+all\+\_\+users (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperl
 \doxysubsubsection{\texorpdfstring{print\_single\_user()}{print\_single\_user()}}
 {\footnotesize\ttfamily \label{rfid__access_8h_a95b7f5158425cbc9144616c6e9a16f68} 
 void print\+\_\+single\+\_\+user (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+brief Prints a single user entry to the serial interface. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -320,6 +348,10 @@ void print\+\_\+single\+\_\+user (\begin{DoxyParamCaption}\item[{\doxymbox{\hype
 void print\+\_\+uid (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
 
 
+
+Prints a UID buffer to the serial interface. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em ptr} & \\
 \hline
@@ -329,6 +361,10 @@ void print\+\_\+uid (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}
 \doxysubsubsection{\texorpdfstring{read\_confirmation()}{read\_confirmation()}}
 {\footnotesize\ttfamily \label{rfid__access_8h_a51940e2d9df35efbab60ea3076d03266} 
 bool read\+\_\+confirmation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads a confirmation input from the serial interface. 
 
 \begin{DoxyReturn}{Returns}
 true 
@@ -341,6 +377,10 @@ false
 {\footnotesize\ttfamily \label{rfid__access_8h_ae73ed12a431c429f1bdd5d5d81a977ce} 
 int read\+\_\+integer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
+
+
+Reads an integer from the serial interface. 
+
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
@@ -349,6 +389,10 @@ int
 \doxysubsubsection{\texorpdfstring{read\_RFID\_tag()}{read\_RFID\_tag()}}
 {\footnotesize\ttfamily \label{rfid__access_8h_a0add745e34488b9c793c8a45308228b3} 
 bool read\+\_\+\+RFID\+\_\+tag (\begin{DoxyParamCaption}\item[{MFRC522 \&}]{rfid}{, }\item[{byte \texorpdfstring{$\ast$}{*}}]{uid\+Buffer}{}\end{DoxyParamCaption})}
+
+
+
+Reads an RFID tag UID from the MFRC522 reader. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -439,6 +483,10 @@ Initializes SPI and the MFRC522 RFID reader.
 void user\+\_\+management (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}}}]{cmd}{, }\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{MFRC522 \&}]{rfid}{}\end{DoxyParamCaption})}
 
 
+
+Executes user-\/management actions based on the provided command. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em cmd} & \\
 \hline
@@ -452,6 +500,10 @@ void user\+\_\+management (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{r
 \doxysubsubsection{\texorpdfstring{validate\_rfid()}{validate\_rfid()}}
 {\footnotesize\ttfamily \label{rfid__access_8h_ad134e233e23721f4762373cf2e781a6d} 
 bool validate\+\_\+rfid (\begin{DoxyParamCaption}\item[{MFRC522}]{my\+RFID}{}\end{DoxyParamCaption})}
+
+
+
+Validates an RFID tag against the registered user database. 
 
 
 \begin{DoxyParams}{Parameters}

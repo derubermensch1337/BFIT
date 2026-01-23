@@ -11,25 +11,25 @@ Used to read and write non-\/volatile memory on ESP8266.
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{database__management_8cpp_a94d9e7ef2a92977cb88d517ab29310cb}{user\+\_\+management}} (\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}} incoming\+Command, \doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr, MFRC522 \&\doxymbox{\hyperlink{main_8cpp_a7cc33c6b9b1bd83e02864b1eb0530a63}{rfid}})
-\item 
+\begin{DoxyCompactList}\small\item\em Executes user-\/management actions based on the provided command. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{database__management_8cpp_ad745c57a9162c9705468fecedffdbe4b}{remove\+\_\+user}} ()
 \begin{DoxyCompactList}\small\item\em Removes a user from the database. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{database__management_8cpp_ac2c85ddce939a0783611c6417ef9d203}{get\+\_\+users\+\_\+db}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\begin{DoxyCompactList}\small\item\em Get the users db object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Copies the current user database to a provided buffer. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{database__management_8cpp_a1fec7802968f92d8a82b2c3c48414fc9}{print\+\_\+all\+\_\+users}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints all users in the database to the serial interface. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{database__management_8cpp_a95b7f5158425cbc9144616c6e9a16f68}{print\+\_\+single\+\_\+user}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr, int idx)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Prints a single user entry to the serial interface. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{database__management_8cpp_af2dd70513ccb1d0c9ce1b509c5a971db}{print\+\_\+uid}} (byte \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em Prints a UID buffer to the serial interface. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{database__management_8cpp_ae73ed12a431c429f1bdd5d5d81a977ce}{read\+\_\+integer}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads an integer from the serial interface. \end{DoxyCompactList}\item 
 bool \doxymbox{\hyperlink{database__management_8cpp_a51940e2d9df35efbab60ea3076d03266}{read\+\_\+confirmation}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads a confirmation input from the serial interface. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{database__management_8cpp_a4df3b276724481c8cc667599b6733ff0}{find\+\_\+empty\+\_\+index}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\item 
+\begin{DoxyCompactList}\small\item\em brief Finds an empty slot in the user database. \end{DoxyCompactList}\item 
 int \doxymbox{\hyperlink{database__management_8cpp_aee642965bad74cd187195f79bd5f291d}{count\+\_\+rooms}} (\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}ptr)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em brief Counts the number of occupied user entries in the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -62,6 +62,10 @@ Copyright (c) 2026
 int count\+\_\+rooms (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
 
 
+
+brief Counts the number of occupied user entries in the database. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em ptr} & \\
 \hline
@@ -74,6 +78,10 @@ int
 \doxysubsubsection{\texorpdfstring{find\_empty\_index()}{find\_empty\_index()}}
 {\footnotesize\ttfamily \label{database__management_8cpp_a4df3b276724481c8cc667599b6733ff0} 
 int find\+\_\+empty\+\_\+index (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
+
+
+
+brief Finds an empty slot in the user database. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -91,7 +99,7 @@ void get\+\_\+users\+\_\+db (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink
 
 
 
-Get the users db object. 
+Copies the current user database to a provided buffer. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -105,6 +113,10 @@ Get the users db object.
 void print\+\_\+all\+\_\+users (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
 
 
+
+Prints all users in the database to the serial interface. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em ptr} & \\
 \hline
@@ -114,6 +126,10 @@ void print\+\_\+all\+\_\+users (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperl
 \doxysubsubsection{\texorpdfstring{print\_single\_user()}{print\_single\_user()}}
 {\footnotesize\ttfamily \label{database__management_8cpp_a95b7f5158425cbc9144616c6e9a16f68} 
 void print\+\_\+single\+\_\+user (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{int}]{idx}{}\end{DoxyParamCaption})}
+
+
+
+brief Prints a single user entry to the serial interface. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -129,6 +145,10 @@ void print\+\_\+single\+\_\+user (\begin{DoxyParamCaption}\item[{\doxymbox{\hype
 void print\+\_\+uid (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}{*}}]{ptr}{}\end{DoxyParamCaption})}
 
 
+
+Prints a UID buffer to the serial interface. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em ptr} & \\
 \hline
@@ -138,6 +158,10 @@ void print\+\_\+uid (\begin{DoxyParamCaption}\item[{byte \texorpdfstring{$\ast$}
 \doxysubsubsection{\texorpdfstring{read\_confirmation()}{read\_confirmation()}}
 {\footnotesize\ttfamily \label{database__management_8cpp_a51940e2d9df35efbab60ea3076d03266} 
 bool read\+\_\+confirmation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads a confirmation input from the serial interface. 
 
 \begin{DoxyReturn}{Returns}
 true 
@@ -149,6 +173,10 @@ false
 \doxysubsubsection{\texorpdfstring{read\_integer()}{read\_integer()}}
 {\footnotesize\ttfamily \label{database__management_8cpp_ae73ed12a431c429f1bdd5d5d81a977ce} 
 int read\+\_\+integer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads an integer from the serial interface. 
 
 \begin{DoxyReturn}{Returns}
 int 
@@ -173,6 +201,10 @@ false
 \doxysubsubsection{\texorpdfstring{user\_management()}{user\_management()}}
 {\footnotesize\ttfamily \label{database__management_8cpp_a94d9e7ef2a92977cb88d517ab29310cb} 
 void user\+\_\+management (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{rfid__access_8h_aff8e30d9f71191b67c6c684478ab46d4}{RFIDcommand}}}]{cmd}{, }\item[{\doxymbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{ptr}{, }\item[{MFRC522 \&}]{rfid}{}\end{DoxyParamCaption})}
+
+
+
+Executes user-\/management actions based on the provided command. 
 
 
 \begin{DoxyParams}{Parameters}

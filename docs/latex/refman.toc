@@ -1,0 +1,320 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}BFIT }{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Directory Hierarchy}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Directories}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Class Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Class List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}File Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}File List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Directory Documentation}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}include Directory Reference}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}src Directory Reference}{9}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}inventory Struct Reference}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{11}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Member Data Documentation}{11}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}number\_of\_products\_stocked}{11}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}produckts\_in\_inventory}{11}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}room\_number}{12}{subsubsection.6.1.2.3}%
+\contentsline {section}{\numberline {6.2}product Struct Reference}{12}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{12}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Member Data Documentation}{12}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}beverage\_variant}{12}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}name}{12}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}price}{13}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}weight}{13}{subsubsection.6.2.2.4}%
+\contentsline {section}{\numberline {6.3}products\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}stocked Struct Reference}{13}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{13}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Member Data Documentation}{13}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}beverage}{13}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}current\_quantity}{14}{subsubsection.6.3.2.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.3}original\_quantity}{14}{subsubsection.6.3.2.3}%
+\contentsline {section}{\numberline {6.4}User Struct Reference}{14}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{14}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Member Data Documentation}{14}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}balance}{14}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}roomNumber}{14}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}uid}{14}{subsubsection.6.4.2.3}%
+\contentsline {chapter}{\numberline {7}File Documentation}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}admin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{15}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{15}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Variable Documentation}{15}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}PROGMEM}{15}{subsubsection.7.1.2.1}%
+\contentsline {section}{\numberline {7.2}admin\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.7.2}%
+\contentsline {section}{\numberline {7.3}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}buzzer.h File Reference}{16}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Macro Definition Documentation}{17}{subsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.1.1}BUZZER\_H}{17}{subsubsection.7.3.1.1}%
+\contentsline {subsection}{\numberline {7.3.2}Function Documentation}{17}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}play\_lock()}{17}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}play\_unlock()}{17}{subsubsection.7.3.2.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.3}play\_warning()}{17}{subsubsection.7.3.2.3}%
+\contentsline {section}{\numberline {7.4}buzzer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.7.4}%
+\contentsline {section}{\numberline {7.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fridge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.h File Reference}{18}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{18}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Variable Documentation}{18}{subsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.2.1}fridge}{18}{subsubsection.7.5.2.1}%
+\contentsline {section}{\numberline {7.6}fridge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{18}{section.7.6}%
+\contentsline {section}{\numberline {7.7}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.h File Reference}{18}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Macro Definition Documentation}{19}{subsection.7.7.1}%
+\contentsline {subsubsection}{\numberline {7.7.1.1}ROOM\_COUNT}{19}{subsubsection.7.7.1.1}%
+\contentsline {subsection}{\numberline {7.7.2}Function Documentation}{19}{subsection.7.7.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.1}graph\_add\_to\_room\_clasic()}{19}{subsubsection.7.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.7.2.2}graph\_add\_to\_room\_green()}{19}{subsubsection.7.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.7.2.3}print\_graph\_arrays()}{20}{subsubsection.7.7.2.3}%
+\contentsline {subsection}{\numberline {7.7.3}Variable Documentation}{20}{subsection.7.7.3}%
+\contentsline {subsubsection}{\numberline {7.7.3.1}classicHeight}{20}{subsubsection.7.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.7.3.2}greenHeight}{20}{subsubsection.7.7.3.2}%
+\contentsline {section}{\numberline {7.8}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{20}{section.7.8}%
+\contentsline {section}{\numberline {7.9}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{20}{section.7.9}%
+\contentsline {subsection}{\numberline {7.9.1}Detailed Description}{21}{subsection.7.9.1}%
+\contentsline {subsection}{\numberline {7.9.2}Variable Documentation}{21}{subsection.7.9.2}%
+\contentsline {subsubsection}{\numberline {7.9.2.1}PROGMEM}{21}{subsubsection.7.9.2.1}%
+\contentsline {section}{\numberline {7.10}index\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{22}{section.7.10}%
+\contentsline {section}{\numberline {7.11}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale.h File Reference}{22}{section.7.11}%
+\contentsline {subsection}{\numberline {7.11.1}Detailed Description}{23}{subsection.7.11.1}%
+\contentsline {subsection}{\numberline {7.11.2}Macro Definition Documentation}{23}{subsection.7.11.2}%
+\contentsline {subsubsection}{\numberline {7.11.2.1}number\_of\_users}{23}{subsubsection.7.11.2.1}%
+\contentsline {subsection}{\numberline {7.11.3}Function Documentation}{23}{subsection.7.11.3}%
+\contentsline {subsubsection}{\numberline {7.11.3.1}init\_users\_and\_products()}{23}{subsubsection.7.11.3.1}%
+\contentsline {subsubsection}{\numberline {7.11.3.2}perform\_sale()}{23}{subsubsection.7.11.3.2}%
+\contentsline {section}{\numberline {7.12}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{section.7.12}%
+\contentsline {section}{\numberline {7.13}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inventory.h File Reference}{24}{section.7.13}%
+\contentsline {subsection}{\numberline {7.13.1}Detailed Description}{25}{subsection.7.13.1}%
+\contentsline {subsection}{\numberline {7.13.2}Macro Definition Documentation}{25}{subsection.7.13.2}%
+\contentsline {subsubsection}{\numberline {7.13.2.1}INVENTORY\_CAPACITY}{25}{subsubsection.7.13.2.1}%
+\contentsline {subsection}{\numberline {7.13.3}Enumeration Type Documentation}{25}{subsection.7.13.3}%
+\contentsline {subsubsection}{\numberline {7.13.3.1}beverage\_type}{25}{subsubsection.7.13.3.1}%
+\contentsline {subsection}{\numberline {7.13.4}Function Documentation}{26}{subsection.7.13.4}%
+\contentsline {subsubsection}{\numberline {7.13.4.1}inventory\_add\_beverage()}{26}{subsubsection.7.13.4.1}%
+\contentsline {subsubsection}{\numberline {7.13.4.2}inventory\_add\_product()}{26}{subsubsection.7.13.4.2}%
+\contentsline {subsubsection}{\numberline {7.13.4.3}inventory\_init()}{27}{subsubsection.7.13.4.3}%
+\contentsline {subsubsection}{\numberline {7.13.4.4}inventory\_make\_product()}{27}{subsubsection.7.13.4.4}%
+\contentsline {subsubsection}{\numberline {7.13.4.5}inventory\_print()}{28}{subsubsection.7.13.4.5}%
+\contentsline {subsubsection}{\numberline {7.13.4.6}inventory\_remove\_beverage()}{28}{subsubsection.7.13.4.6}%
+\contentsline {subsubsection}{\numberline {7.13.4.7}inventory\_remove\_product()}{28}{subsubsection.7.13.4.7}%
+\contentsline {section}{\numberline {7.14}inventory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.7.14}%
+\contentsline {section}{\numberline {7.15}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ctrl.h File Reference}{30}{section.7.15}%
+\contentsline {subsection}{\numberline {7.15.1}Detailed Description}{30}{subsection.7.15.1}%
+\contentsline {subsection}{\numberline {7.15.2}Macro Definition Documentation}{31}{subsection.7.15.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.1}CLOSED\_THRESHOLD}{31}{subsubsection.7.15.2.1}%
+\contentsline {subsubsection}{\numberline {7.15.2.2}LIGHT\_PIN}{31}{subsubsection.7.15.2.2}%
+\contentsline {subsubsection}{\numberline {7.15.2.3}OPEN\_THRESHOLD}{31}{subsubsection.7.15.2.3}%
+\contentsline {subsubsection}{\numberline {7.15.2.4}SERVO\_PIN}{31}{subsubsection.7.15.2.4}%
+\contentsline {subsection}{\numberline {7.15.3}Function Documentation}{31}{subsection.7.15.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.1}is\_box\_closed()}{31}{subsubsection.7.15.3.1}%
+\contentsline {subsubsection}{\numberline {7.15.3.2}lock\_ctrl\_init()}{31}{subsubsection.7.15.3.2}%
+\contentsline {subsubsection}{\numberline {7.15.3.3}lock\_door()}{31}{subsubsection.7.15.3.3}%
+\contentsline {subsubsection}{\numberline {7.15.3.4}play\_close()}{31}{subsubsection.7.15.3.4}%
+\contentsline {subsubsection}{\numberline {7.15.3.5}play\_open()}{31}{subsubsection.7.15.3.5}%
+\contentsline {subsubsection}{\numberline {7.15.3.6}play\_warning()}{32}{subsubsection.7.15.3.6}%
+\contentsline {subsubsection}{\numberline {7.15.3.7}unlock\_door()}{32}{subsubsection.7.15.3.7}%
+\contentsline {section}{\numberline {7.16}lock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ctrl.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{32}{section.7.16}%
+\contentsline {section}{\numberline {7.17}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{32}{section.7.17}%
+\contentsline {subsection}{\numberline {7.17.1}Detailed Description}{33}{subsection.7.17.1}%
+\contentsline {subsection}{\numberline {7.17.2}Variable Documentation}{33}{subsection.7.17.2}%
+\contentsline {subsubsection}{\numberline {7.17.2.1}PROGMEM}{33}{subsubsection.7.17.2.1}%
+\contentsline {section}{\numberline {7.18}login\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.7.18}%
+\contentsline {section}{\numberline {7.19}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rfid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}access.h File Reference}{34}{section.7.19}%
+\contentsline {subsection}{\numberline {7.19.1}Detailed Description}{35}{subsection.7.19.1}%
+\contentsline {subsection}{\numberline {7.19.2}Macro Definition Documentation}{35}{subsection.7.19.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.1}MAX\_ROOMS}{35}{subsubsection.7.19.2.1}%
+\contentsline {subsubsection}{\numberline {7.19.2.2}RST\_PIN}{35}{subsubsection.7.19.2.2}%
+\contentsline {subsubsection}{\numberline {7.19.2.3}SS\_PIN}{35}{subsubsection.7.19.2.3}%
+\contentsline {subsubsection}{\numberline {7.19.2.4}UID\_LENGTH}{36}{subsubsection.7.19.2.4}%
+\contentsline {subsection}{\numberline {7.19.3}Enumeration Type Documentation}{36}{subsection.7.19.3}%
+\contentsline {subsubsection}{\numberline {7.19.3.1}RFIDcommand}{36}{subsubsection.7.19.3.1}%
+\contentsline {subsection}{\numberline {7.19.4}Function Documentation}{36}{subsection.7.19.4}%
+\contentsline {subsubsection}{\numberline {7.19.4.1}add\_user()}{36}{subsubsection.7.19.4.1}%
+\contentsline {subsubsection}{\numberline {7.19.4.2}check\_command()}{36}{subsubsection.7.19.4.2}%
+\contentsline {subsubsection}{\numberline {7.19.4.3}compare\_UID()}{37}{subsubsection.7.19.4.3}%
+\contentsline {subsubsection}{\numberline {7.19.4.4}count\_rooms()}{37}{subsubsection.7.19.4.4}%
+\contentsline {subsubsection}{\numberline {7.19.4.5}display\_commands()}{37}{subsubsection.7.19.4.5}%
+\contentsline {subsubsection}{\numberline {7.19.4.6}display\_commands\_um()}{37}{subsubsection.7.19.4.6}%
+\contentsline {subsubsection}{\numberline {7.19.4.7}find\_empty\_index()}{38}{subsubsection.7.19.4.7}%
+\contentsline {subsubsection}{\numberline {7.19.4.8}get\_users\_db()}{38}{subsubsection.7.19.4.8}%
+\contentsline {subsubsection}{\numberline {7.19.4.9}print\_all\_users()}{38}{subsubsection.7.19.4.9}%
+\contentsline {subsubsection}{\numberline {7.19.4.10}print\_single\_user()}{38}{subsubsection.7.19.4.10}%
+\contentsline {subsubsection}{\numberline {7.19.4.11}print\_uid()}{39}{subsubsection.7.19.4.11}%
+\contentsline {subsubsection}{\numberline {7.19.4.12}read\_confirmation()}{39}{subsubsection.7.19.4.12}%
+\contentsline {subsubsection}{\numberline {7.19.4.13}read\_integer()}{39}{subsubsection.7.19.4.13}%
+\contentsline {subsubsection}{\numberline {7.19.4.14}read\_RFID\_tag()}{39}{subsubsection.7.19.4.14}%
+\contentsline {subsubsection}{\numberline {7.19.4.15}remove\_user()}{40}{subsubsection.7.19.4.15}%
+\contentsline {subsubsection}{\numberline {7.19.4.16}rfid\_get\_last\_uid()}{40}{subsubsection.7.19.4.16}%
+\contentsline {subsubsection}{\numberline {7.19.4.17}rfid\_set\_last\_uid()}{40}{subsubsection.7.19.4.17}%
+\contentsline {subsubsection}{\numberline {7.19.4.18}setup\_RFID\_reader()}{41}{subsubsection.7.19.4.18}%
+\contentsline {subsubsection}{\numberline {7.19.4.19}user\_management()}{41}{subsubsection.7.19.4.19}%
+\contentsline {subsubsection}{\numberline {7.19.4.20}validate\_rfid()}{41}{subsubsection.7.19.4.20}%
+\contentsline {subsection}{\numberline {7.19.5}Variable Documentation}{41}{subsection.7.19.5}%
+\contentsline {subsubsection}{\numberline {7.19.5.1}userCount}{41}{subsubsection.7.19.5.1}%
+\contentsline {subsubsection}{\numberline {7.19.5.2}users}{42}{subsubsection.7.19.5.2}%
+\contentsline {section}{\numberline {7.20}rfid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}access.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.7.20}%
+\contentsline {section}{\numberline {7.21}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.h File Reference}{43}{section.7.21}%
+\contentsline {subsection}{\numberline {7.21.1}Detailed Description}{44}{subsection.7.21.1}%
+\contentsline {subsection}{\numberline {7.21.2}Function Documentation}{44}{subsection.7.21.2}%
+\contentsline {subsubsection}{\numberline {7.21.2.1}send\_sale\_html\_graph()}{44}{subsubsection.7.21.2.1}%
+\contentsline {subsubsection}{\numberline {7.21.2.2}send\_sale\_html\_page()}{44}{subsubsection.7.21.2.2}%
+\contentsline {subsection}{\numberline {7.21.3}Variable Documentation}{45}{subsection.7.21.3}%
+\contentsline {subsubsection}{\numberline {7.21.3.1}PROGMEM}{45}{subsubsection.7.21.3.1}%
+\contentsline {section}{\numberline {7.22}sale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{46}{section.7.22}%
+\contentsline {section}{\numberline {7.23}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}style\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}css.h File Reference}{46}{section.7.23}%
+\contentsline {subsection}{\numberline {7.23.1}Detailed Description}{46}{subsection.7.23.1}%
+\contentsline {subsection}{\numberline {7.23.2}Variable Documentation}{47}{subsection.7.23.2}%
+\contentsline {subsubsection}{\numberline {7.23.2.1}PROGMEM}{47}{subsubsection.7.23.2.1}%
+\contentsline {section}{\numberline {7.24}style\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}css.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{47}{section.7.24}%
+\contentsline {section}{\numberline {7.25}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}scale.h File Reference}{48}{section.7.25}%
+\contentsline {subsection}{\numberline {7.25.1}Detailed Description}{49}{subsection.7.25.1}%
+\contentsline {subsection}{\numberline {7.25.2}Macro Definition Documentation}{49}{subsection.7.25.2}%
+\contentsline {subsubsection}{\numberline {7.25.2.1}BEER\_WEIGHT}{49}{subsubsection.7.25.2.1}%
+\contentsline {subsubsection}{\numberline {7.25.2.2}HX711\_DOUT}{49}{subsubsection.7.25.2.2}%
+\contentsline {subsubsection}{\numberline {7.25.2.3}HX711\_SCK}{49}{subsubsection.7.25.2.3}%
+\contentsline {subsubsection}{\numberline {7.25.2.4}SCALE\_DEFAULT\_SETTLE\_TIME\_MS}{49}{subsubsection.7.25.2.4}%
+\contentsline {subsubsection}{\numberline {7.25.2.5}SCALE\_TOL}{50}{subsubsection.7.25.2.5}%
+\contentsline {subsection}{\numberline {7.25.3}Enumeration Type Documentation}{50}{subsection.7.25.3}%
+\contentsline {subsubsection}{\numberline {7.25.3.1}weight\_recall\_action}{50}{subsubsection.7.25.3.1}%
+\contentsline {subsection}{\numberline {7.25.4}Function Documentation}{51}{subsection.7.25.4}%
+\contentsline {subsubsection}{\numberline {7.25.4.1}get\_beer\_cans\_taken()}{51}{subsubsection.7.25.4.1}%
+\contentsline {subsubsection}{\numberline {7.25.4.2}get\_weight()}{51}{subsubsection.7.25.4.2}%
+\contentsline {subsubsection}{\numberline {7.25.4.3}get\_weight\_reference()}{51}{subsubsection.7.25.4.3}%
+\contentsline {subsubsection}{\numberline {7.25.4.4}reset\_weight\_reference()}{52}{subsubsection.7.25.4.4}%
+\contentsline {subsubsection}{\numberline {7.25.4.5}set\_weight\_reference()}{52}{subsubsection.7.25.4.5}%
+\contentsline {subsubsection}{\numberline {7.25.4.6}setup\_scale()}{52}{subsubsection.7.25.4.6}%
+\contentsline {subsubsection}{\numberline {7.25.4.7}tare\_complete()}{52}{subsubsection.7.25.4.7}%
+\contentsline {subsubsection}{\numberline {7.25.4.8}tare\_scale()}{52}{subsubsection.7.25.4.8}%
+\contentsline {subsubsection}{\numberline {7.25.4.9}update\_scale()}{53}{subsubsection.7.25.4.9}%
+\contentsline {subsubsection}{\numberline {7.25.4.10}weight\_reference\_is\_set()}{53}{subsubsection.7.25.4.10}%
+\contentsline {subsection}{\numberline {7.25.5}Variable Documentation}{53}{subsection.7.25.5}%
+\contentsline {subsubsection}{\numberline {7.25.5.1}scale}{53}{subsubsection.7.25.5.1}%
+\contentsline {section}{\numberline {7.26}weight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}scale.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.7.26}%
+\contentsline {section}{\numberline {7.27}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{54}{section.7.27}%
+\contentsline {section}{\numberline {7.28}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}buzzer.cpp File Reference}{54}{section.7.28}%
+\contentsline {subsection}{\numberline {7.28.1}Function Documentation}{55}{subsection.7.28.1}%
+\contentsline {subsubsection}{\numberline {7.28.1.1}play\_lock()}{55}{subsubsection.7.28.1.1}%
+\contentsline {subsubsection}{\numberline {7.28.1.2}play\_unlock()}{55}{subsubsection.7.28.1.2}%
+\contentsline {subsubsection}{\numberline {7.28.1.3}play\_warning()}{55}{subsubsection.7.28.1.3}%
+\contentsline {subsection}{\numberline {7.28.2}Variable Documentation}{55}{subsection.7.28.2}%
+\contentsline {subsubsection}{\numberline {7.28.2.1}BUZZERPIN}{55}{subsubsection.7.28.2.1}%
+\contentsline {subsubsection}{\numberline {7.28.2.2}HIGH\_TONE}{55}{subsubsection.7.28.2.2}%
+\contentsline {subsubsection}{\numberline {7.28.2.3}LOW\_TONE}{55}{subsubsection.7.28.2.3}%
+\contentsline {subsubsection}{\numberline {7.28.2.4}TONE\_LENGTH}{55}{subsubsection.7.28.2.4}%
+\contentsline {section}{\numberline {7.29}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}database\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.cpp File Reference}{56}{section.7.29}%
+\contentsline {subsection}{\numberline {7.29.1}Detailed Description}{56}{subsection.7.29.1}%
+\contentsline {subsection}{\numberline {7.29.2}Function Documentation}{57}{subsection.7.29.2}%
+\contentsline {subsubsection}{\numberline {7.29.2.1}count\_rooms()}{57}{subsubsection.7.29.2.1}%
+\contentsline {subsubsection}{\numberline {7.29.2.2}find\_empty\_index()}{57}{subsubsection.7.29.2.2}%
+\contentsline {subsubsection}{\numberline {7.29.2.3}get\_users\_db()}{57}{subsubsection.7.29.2.3}%
+\contentsline {subsubsection}{\numberline {7.29.2.4}print\_all\_users()}{58}{subsubsection.7.29.2.4}%
+\contentsline {subsubsection}{\numberline {7.29.2.5}print\_single\_user()}{58}{subsubsection.7.29.2.5}%
+\contentsline {subsubsection}{\numberline {7.29.2.6}print\_uid()}{58}{subsubsection.7.29.2.6}%
+\contentsline {subsubsection}{\numberline {7.29.2.7}read\_confirmation()}{58}{subsubsection.7.29.2.7}%
+\contentsline {subsubsection}{\numberline {7.29.2.8}read\_integer()}{59}{subsubsection.7.29.2.8}%
+\contentsline {subsubsection}{\numberline {7.29.2.9}remove\_user()}{59}{subsubsection.7.29.2.9}%
+\contentsline {subsubsection}{\numberline {7.29.2.10}user\_management()}{59}{subsubsection.7.29.2.10}%
+\contentsline {section}{\numberline {7.30}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}fridge\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.cpp File Reference}{59}{section.7.30}%
+\contentsline {subsection}{\numberline {7.30.1}Detailed Description}{60}{subsection.7.30.1}%
+\contentsline {subsection}{\numberline {7.30.2}Variable Documentation}{60}{subsection.7.30.2}%
+\contentsline {subsubsection}{\numberline {7.30.2.1}fridge}{60}{subsubsection.7.30.2.1}%
+\contentsline {section}{\numberline {7.31}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}graph\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.cpp File Reference}{60}{section.7.31}%
+\contentsline {subsection}{\numberline {7.31.1}Function Documentation}{60}{subsection.7.31.1}%
+\contentsline {subsubsection}{\numberline {7.31.1.1}graph\_add\_to\_room\_clasic()}{60}{subsubsection.7.31.1.1}%
+\contentsline {subsubsection}{\numberline {7.31.1.2}graph\_add\_to\_room\_green()}{61}{subsubsection.7.31.1.2}%
+\contentsline {subsection}{\numberline {7.31.2}Variable Documentation}{61}{subsection.7.31.2}%
+\contentsline {subsubsection}{\numberline {7.31.2.1}classicHeight}{61}{subsubsection.7.31.2.1}%
+\contentsline {subsubsection}{\numberline {7.31.2.2}greenHeight}{61}{subsubsection.7.31.2.2}%
+\contentsline {section}{\numberline {7.32}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}init\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}users\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}and\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale.cpp File Reference}{61}{section.7.32}%
+\contentsline {subsection}{\numberline {7.32.1}Function Documentation}{62}{subsection.7.32.1}%
+\contentsline {subsubsection}{\numberline {7.32.1.1}init\_users\_and\_products()}{62}{subsubsection.7.32.1.1}%
+\contentsline {subsubsection}{\numberline {7.32.1.2}perform\_sale()}{62}{subsubsection.7.32.1.2}%
+\contentsline {subsubsection}{\numberline {7.32.1.3}read\_current\_weight\_blocking()}{62}{subsubsection.7.32.1.3}%
+\contentsline {section}{\numberline {7.33}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}inventory.cpp File Reference}{62}{section.7.33}%
+\contentsline {subsection}{\numberline {7.33.1}Detailed Description}{63}{subsection.7.33.1}%
+\contentsline {subsection}{\numberline {7.33.2}Function Documentation}{63}{subsection.7.33.2}%
+\contentsline {subsubsection}{\numberline {7.33.2.1}inventory\_add\_beverage()}{63}{subsubsection.7.33.2.1}%
+\contentsline {subsubsection}{\numberline {7.33.2.2}inventory\_add\_product()}{63}{subsubsection.7.33.2.2}%
+\contentsline {subsubsection}{\numberline {7.33.2.3}inventory\_init()}{64}{subsubsection.7.33.2.3}%
+\contentsline {subsubsection}{\numberline {7.33.2.4}inventory\_make\_product()}{64}{subsubsection.7.33.2.4}%
+\contentsline {subsubsection}{\numberline {7.33.2.5}inventory\_print()}{65}{subsubsection.7.33.2.5}%
+\contentsline {subsubsection}{\numberline {7.33.2.6}inventory\_remove\_beverage()}{65}{subsubsection.7.33.2.6}%
+\contentsline {subsubsection}{\numberline {7.33.2.7}inventory\_remove\_product()}{66}{subsubsection.7.33.2.7}%
+\contentsline {section}{\numberline {7.34}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}lock\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ctrl.cpp File Reference}{66}{section.7.34}%
+\contentsline {subsection}{\numberline {7.34.1}Detailed Description}{67}{subsection.7.34.1}%
+\contentsline {subsection}{\numberline {7.34.2}Function Documentation}{67}{subsection.7.34.2}%
+\contentsline {subsubsection}{\numberline {7.34.2.1}is\_box\_closed()}{67}{subsubsection.7.34.2.1}%
+\contentsline {subsubsection}{\numberline {7.34.2.2}lock\_ctrl\_init()}{67}{subsubsection.7.34.2.2}%
+\contentsline {subsubsection}{\numberline {7.34.2.3}lock\_door()}{67}{subsubsection.7.34.2.3}%
+\contentsline {subsubsection}{\numberline {7.34.2.4}play\_close()}{67}{subsubsection.7.34.2.4}%
+\contentsline {subsubsection}{\numberline {7.34.2.5}play\_open()}{67}{subsubsection.7.34.2.5}%
+\contentsline {subsubsection}{\numberline {7.34.2.6}unlock\_door()}{67}{subsubsection.7.34.2.6}%
+\contentsline {subsection}{\numberline {7.34.3}Variable Documentation}{67}{subsection.7.34.3}%
+\contentsline {subsubsection}{\numberline {7.34.3.1}boxClosed}{67}{subsubsection.7.34.3.1}%
+\contentsline {subsubsection}{\numberline {7.34.3.2}BUZZER}{68}{subsubsection.7.34.3.2}%
+\contentsline {subsubsection}{\numberline {7.34.3.3}HIGH\_TONE}{68}{subsubsection.7.34.3.3}%
+\contentsline {subsubsection}{\numberline {7.34.3.4}LOCK\_POS}{68}{subsubsection.7.34.3.4}%
+\contentsline {subsubsection}{\numberline {7.34.3.5}lockServo}{68}{subsubsection.7.34.3.5}%
+\contentsline {subsubsection}{\numberline {7.34.3.6}LOW\_TONE}{68}{subsubsection.7.34.3.6}%
+\contentsline {subsubsection}{\numberline {7.34.3.7}TONE\_LENGTH}{68}{subsubsection.7.34.3.7}%
+\contentsline {subsubsection}{\numberline {7.34.3.8}UNLOCK\_POS}{68}{subsubsection.7.34.3.8}%
+\contentsline {section}{\numberline {7.35}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.cpp File Reference}{68}{section.7.35}%
+\contentsline {subsection}{\numberline {7.35.1}Detailed Description}{69}{subsection.7.35.1}%
+\contentsline {subsection}{\numberline {7.35.2}Function Documentation}{69}{subsection.7.35.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.1}connect\_wifi\_and\_start\_mdns()}{69}{subsubsection.7.35.2.1}%
+\contentsline {subsubsection}{\numberline {7.35.2.2}loop()}{69}{subsubsection.7.35.2.2}%
+\contentsline {subsubsection}{\numberline {7.35.2.3}print\_graph\_arrays()}{70}{subsubsection.7.35.2.3}%
+\contentsline {subsubsection}{\numberline {7.35.2.4}rfid()}{70}{subsubsection.7.35.2.4}%
+\contentsline {subsubsection}{\numberline {7.35.2.5}server()}{70}{subsubsection.7.35.2.5}%
+\contentsline {subsubsection}{\numberline {7.35.2.6}setup()}{70}{subsubsection.7.35.2.6}%
+\contentsline {subsubsection}{\numberline {7.35.2.7}setup\_inventory\_and\_scale()}{70}{subsubsection.7.35.2.7}%
+\contentsline {subsubsection}{\numberline {7.35.2.8}setup\_rfid\_and\_lock()}{70}{subsubsection.7.35.2.8}%
+\contentsline {subsubsection}{\numberline {7.35.2.9}setup\_web\_routes()}{70}{subsubsection.7.35.2.9}%
+\contentsline {subsection}{\numberline {7.35.3}Variable Documentation}{70}{subsection.7.35.3}%
+\contentsline {subsubsection}{\numberline {7.35.3.1}activeCommand}{70}{subsubsection.7.35.3.1}%
+\contentsline {subsubsection}{\numberline {7.35.3.2}CAL\_FACTOR}{70}{subsubsection.7.35.3.2}%
+\contentsline {subsubsection}{\numberline {7.35.3.3}classicHeight}{71}{subsubsection.7.35.3.3}%
+\contentsline {subsubsection}{\numberline {7.35.3.4}demo\_beer}{71}{subsubsection.7.35.3.4}%
+\contentsline {subsubsection}{\numberline {7.35.3.5}doorCloseTimer}{71}{subsubsection.7.35.3.5}%
+\contentsline {subsubsection}{\numberline {7.35.3.6}doorUnlocked}{71}{subsubsection.7.35.3.6}%
+\contentsline {subsubsection}{\numberline {7.35.3.7}greenHeight}{71}{subsubsection.7.35.3.7}%
+\contentsline {subsubsection}{\numberline {7.35.3.8}START\_BEER\_QTY}{71}{subsubsection.7.35.3.8}%
+\contentsline {subsubsection}{\numberline {7.35.3.9}WIFI\_PASS}{71}{subsubsection.7.35.3.9}%
+\contentsline {subsubsection}{\numberline {7.35.3.10}WIFI\_SSID}{71}{subsubsection.7.35.3.10}%
+\contentsline {section}{\numberline {7.36}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}rfid\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}access.cpp File Reference}{71}{section.7.36}%
+\contentsline {subsection}{\numberline {7.36.1}Detailed Description}{72}{subsection.7.36.1}%
+\contentsline {subsection}{\numberline {7.36.2}Function Documentation}{72}{subsection.7.36.2}%
+\contentsline {subsubsection}{\numberline {7.36.2.1}add\_user()}{72}{subsubsection.7.36.2.1}%
+\contentsline {subsubsection}{\numberline {7.36.2.2}check\_command()}{73}{subsubsection.7.36.2.2}%
+\contentsline {subsubsection}{\numberline {7.36.2.3}compare\_UID()}{73}{subsubsection.7.36.2.3}%
+\contentsline {subsubsection}{\numberline {7.36.2.4}display\_commands()}{73}{subsubsection.7.36.2.4}%
+\contentsline {subsubsection}{\numberline {7.36.2.5}display\_commands\_um()}{73}{subsubsection.7.36.2.5}%
+\contentsline {subsubsection}{\numberline {7.36.2.6}read\_RFID\_tag()}{73}{subsubsection.7.36.2.6}%
+\contentsline {subsubsection}{\numberline {7.36.2.7}rfid\_get\_last\_uid()}{74}{subsubsection.7.36.2.7}%
+\contentsline {subsubsection}{\numberline {7.36.2.8}rfid\_set\_last\_uid()}{74}{subsubsection.7.36.2.8}%
+\contentsline {subsubsection}{\numberline {7.36.2.9}setup\_RFID\_reader()}{74}{subsubsection.7.36.2.9}%
+\contentsline {subsubsection}{\numberline {7.36.2.10}validate\_rfid()}{75}{subsubsection.7.36.2.10}%
+\contentsline {subsection}{\numberline {7.36.3}Variable Documentation}{75}{subsection.7.36.3}%
+\contentsline {subsubsection}{\numberline {7.36.3.1}hasUID}{75}{subsubsection.7.36.3.1}%
+\contentsline {subsubsection}{\numberline {7.36.3.2}lastUID}{75}{subsubsection.7.36.3.2}%
+\contentsline {subsubsection}{\numberline {7.36.3.3}userCount}{75}{subsubsection.7.36.3.3}%
+\contentsline {subsubsection}{\numberline {7.36.3.4}users}{75}{subsubsection.7.36.3.4}%
+\contentsline {section}{\numberline {7.37}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}sale\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}html.cpp File Reference}{75}{section.7.37}%
+\contentsline {subsection}{\numberline {7.37.1}Detailed Description}{76}{subsection.7.37.1}%
+\contentsline {subsection}{\numberline {7.37.2}Function Documentation}{76}{subsection.7.37.2}%
+\contentsline {subsubsection}{\numberline {7.37.2.1}send\_sale\_html\_graph()}{76}{subsubsection.7.37.2.1}%
+\contentsline {subsubsection}{\numberline {7.37.2.2}send\_sale\_html\_page()}{77}{subsubsection.7.37.2.2}%
+\contentsline {subsection}{\numberline {7.37.3}Variable Documentation}{77}{subsection.7.37.3}%
+\contentsline {subsubsection}{\numberline {7.37.3.1}PROGMEM}{77}{subsubsection.7.37.3.1}%
+\contentsline {section}{\numberline {7.38}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}weight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}scale.cpp File Reference}{78}{section.7.38}%
+\contentsline {subsection}{\numberline {7.38.1}Detailed Description}{78}{subsection.7.38.1}%
+\contentsline {subsection}{\numberline {7.38.2}Function Documentation}{78}{subsection.7.38.2}%
+\contentsline {subsubsection}{\numberline {7.38.2.1}get\_beer\_cans\_taken()}{78}{subsubsection.7.38.2.1}%
+\contentsline {subsubsection}{\numberline {7.38.2.2}get\_weight()}{79}{subsubsection.7.38.2.2}%
+\contentsline {subsubsection}{\numberline {7.38.2.3}get\_weight\_reference()}{79}{subsubsection.7.38.2.3}%
+\contentsline {subsubsection}{\numberline {7.38.2.4}reset\_weight\_reference()}{79}{subsubsection.7.38.2.4}%
+\contentsline {subsubsection}{\numberline {7.38.2.5}scale()}{79}{subsubsection.7.38.2.5}%
+\contentsline {subsubsection}{\numberline {7.38.2.6}set\_weight\_reference()}{80}{subsubsection.7.38.2.6}%
+\contentsline {subsubsection}{\numberline {7.38.2.7}setup\_scale()}{80}{subsubsection.7.38.2.7}%
+\contentsline {subsubsection}{\numberline {7.38.2.8}tare\_complete()}{80}{subsubsection.7.38.2.8}%
+\contentsline {subsubsection}{\numberline {7.38.2.9}tare\_scale()}{80}{subsubsection.7.38.2.9}%
+\contentsline {subsubsection}{\numberline {7.38.2.10}update\_scale()}{80}{subsubsection.7.38.2.10}%
+\contentsline {subsubsection}{\numberline {7.38.2.11}weight\_reference\_is\_set()}{81}{subsubsection.7.38.2.11}%
+\contentsline {subsection}{\numberline {7.38.3}Variable Documentation}{81}{subsection.7.38.3}%
+\contentsline {subsubsection}{\numberline {7.38.3.1}g\_referenceWeight}{81}{subsubsection.7.38.3.1}%
+\contentsline {chapter}{Index}{83}{section*.54}%

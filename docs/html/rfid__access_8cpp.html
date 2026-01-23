@@ -103,10 +103,15 @@ Functions</h2></td></tr>
 <tr class="memitem:abc2ed4592afe3616dfab8e42c9d3c99c" id="r_abc2ed4592afe3616dfab8e42c9d3c99c"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#abc2ed4592afe3616dfab8e42c9d3c99c">add_user</a> (MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
 <tr class="memdesc:abc2ed4592afe3616dfab8e42c9d3c99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new user by reading room number and scanning an RFID tag.  <br /></td></tr>
 <tr class="memitem:ad134e233e23721f4762373cf2e781a6d" id="r_ad134e233e23721f4762373cf2e781a6d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad134e233e23721f4762373cf2e781a6d">validate_rfid</a> (MFRC522 myRFID)</td></tr>
+<tr class="memdesc:ad134e233e23721f4762373cf2e781a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates an RFID tag against the registered user database.  <br /></td></tr>
 <tr class="memitem:ab4c09e9a60679c0c9ade2946fbf583ad" id="r_ab4c09e9a60679c0c9ade2946fbf583ad"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab4c09e9a60679c0c9ade2946fbf583ad">compare_UID</a> (byte *uid1, byte *uid2)</td></tr>
+<tr class="memdesc:ab4c09e9a60679c0c9ade2946fbf583ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two RFID UIDs.  <br /></td></tr>
 <tr class="memitem:a0add745e34488b9c793c8a45308228b3" id="r_a0add745e34488b9c793c8a45308228b3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0add745e34488b9c793c8a45308228b3">read_RFID_tag</a> (MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>, byte *uidBuffer)</td></tr>
+<tr class="memdesc:a0add745e34488b9c793c8a45308228b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an RFID tag UID from the MFRC522 reader.  <br /></td></tr>
 <tr class="memitem:adf824566d577c7c8088aa454c831f906" id="r_adf824566d577c7c8088aa454c831f906"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adf824566d577c7c8088aa454c831f906">display_commands</a> ()</td></tr>
+<tr class="memdesc:adf824566d577c7c8088aa454c831f906"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the available serial commands.  <br /></td></tr>
 <tr class="memitem:a301fdf0545d6da25fbe5ed4abcc6f075" id="r_a301fdf0545d6da25fbe5ed4abcc6f075"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a301fdf0545d6da25fbe5ed4abcc6f075">display_commands_um</a> ()</td></tr>
+<tr class="memdesc:a301fdf0545d6da25fbe5ed4abcc6f075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the available serial commands for user-management mode.  <br /></td></tr>
 <tr class="memitem:aee72324df2418506e4d0fb015d1500be" id="r_aee72324df2418506e4d0fb015d1500be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee72324df2418506e4d0fb015d1500be">rfid_set_last_uid</a> (const byte *uidIn)</td></tr>
 <tr class="memdesc:aee72324df2418506e4d0fb015d1500be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for storing the last used RFID.  <br /></td></tr>
 <tr class="memitem:a38522f06db7c720fa309716c24f5fb57" id="r_a38522f06db7c720fa309716c24f5fb57"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a38522f06db7c720fa309716c24f5fb57">rfid_get_last_uid</a> (byte *uidOut)</td></tr>
@@ -192,6 +197,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares two RFID UIDs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uid1</td><td></td></tr>
@@ -220,6 +227,8 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>Prints the available serial commands. </p>
+
 </div>
 </div>
 <a id="a301fdf0545d6da25fbe5ed4abcc6f075" name="a301fdf0545d6da25fbe5ed4abcc6f075"></a>
@@ -236,6 +245,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints the available serial commands for user-management mode. </p>
 
 </div>
 </div>
@@ -257,6 +268,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads an RFID tag UID from the MFRC522 reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td></td></tr>
@@ -365,6 +378,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Validates an RFID tag against the registered user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">myRFID</td><td></td></tr>

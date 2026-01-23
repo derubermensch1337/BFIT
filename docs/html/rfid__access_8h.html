@@ -135,20 +135,33 @@ Functions</h2></td></tr>
 <tr class="memitem:ad745c57a9162c9705468fecedffdbe4b" id="r_ad745c57a9162c9705468fecedffdbe4b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad745c57a9162c9705468fecedffdbe4b">remove_user</a> ()</td></tr>
 <tr class="memdesc:ad745c57a9162c9705468fecedffdbe4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user from the database.  <br /></td></tr>
 <tr class="memitem:ab4c09e9a60679c0c9ade2946fbf583ad" id="r_ab4c09e9a60679c0c9ade2946fbf583ad"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ab4c09e9a60679c0c9ade2946fbf583ad">compare_UID</a> (byte *uid1, byte *uid2)</td></tr>
+<tr class="memdesc:ab4c09e9a60679c0c9ade2946fbf583ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two RFID UIDs.  <br /></td></tr>
 <tr class="memitem:a0add745e34488b9c793c8a45308228b3" id="r_a0add745e34488b9c793c8a45308228b3"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a0add745e34488b9c793c8a45308228b3">read_RFID_tag</a> (MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>, byte *uidBuffer)</td></tr>
+<tr class="memdesc:a0add745e34488b9c793c8a45308228b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an RFID tag UID from the MFRC522 reader.  <br /></td></tr>
 <tr class="memitem:adcc1679df91328826349cba6ac5f1ee9" id="r_adcc1679df91328826349cba6ac5f1ee9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adcc1679df91328826349cba6ac5f1ee9">display_commands</a> (void)</td></tr>
+<tr class="memdesc:adcc1679df91328826349cba6ac5f1ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the available serial commands.  <br /></td></tr>
 <tr class="memitem:a301fdf0545d6da25fbe5ed4abcc6f075" id="r_a301fdf0545d6da25fbe5ed4abcc6f075"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a301fdf0545d6da25fbe5ed4abcc6f075">display_commands_um</a> ()</td></tr>
+<tr class="memdesc:a301fdf0545d6da25fbe5ed4abcc6f075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the available serial commands for user-management mode.  <br /></td></tr>
 <tr class="memitem:ac2c85ddce939a0783611c6417ef9d203" id="r_ac2c85ddce939a0783611c6417ef9d203"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac2c85ddce939a0783611c6417ef9d203">get_users_db</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
-<tr class="memdesc:ac2c85ddce939a0783611c6417ef9d203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the users db object.  <br /></td></tr>
+<tr class="memdesc:ac2c85ddce939a0783611c6417ef9d203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copies the current user database to a provided buffer.  <br /></td></tr>
 <tr class="memitem:a5b70a33a9dd9de849ef2cf5c2190395c" id="r_a5b70a33a9dd9de849ef2cf5c2190395c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5b70a33a9dd9de849ef2cf5c2190395c">user_management</a> (<a class="el" href="#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a> cmd, <a class="el" href="struct_user.html">User</a> *ptr, MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
+<tr class="memdesc:a5b70a33a9dd9de849ef2cf5c2190395c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes user-management actions based on the provided command.  <br /></td></tr>
 <tr class="memitem:ad134e233e23721f4762373cf2e781a6d" id="r_ad134e233e23721f4762373cf2e781a6d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad134e233e23721f4762373cf2e781a6d">validate_rfid</a> (MFRC522 myRFID)</td></tr>
+<tr class="memdesc:ad134e233e23721f4762373cf2e781a6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Validates an RFID tag against the registered user database.  <br /></td></tr>
 <tr class="memitem:a95b7f5158425cbc9144616c6e9a16f68" id="r_a95b7f5158425cbc9144616c6e9a16f68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95b7f5158425cbc9144616c6e9a16f68">print_single_user</a> (<a class="el" href="struct_user.html">User</a> *ptr, int idx)</td></tr>
+<tr class="memdesc:a95b7f5158425cbc9144616c6e9a16f68"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Prints a single user entry to the serial interface.  <br /></td></tr>
 <tr class="memitem:a1fec7802968f92d8a82b2c3c48414fc9" id="r_a1fec7802968f92d8a82b2c3c48414fc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1fec7802968f92d8a82b2c3c48414fc9">print_all_users</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:a1fec7802968f92d8a82b2c3c48414fc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints all users in the database to the serial interface.  <br /></td></tr>
 <tr class="memitem:af2dd70513ccb1d0c9ce1b509c5a971db" id="r_af2dd70513ccb1d0c9ce1b509c5a971db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2dd70513ccb1d0c9ce1b509c5a971db">print_uid</a> (byte *ptr)</td></tr>
+<tr class="memdesc:af2dd70513ccb1d0c9ce1b509c5a971db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a UID buffer to the serial interface.  <br /></td></tr>
 <tr class="memitem:ae73ed12a431c429f1bdd5d5d81a977ce" id="r_ae73ed12a431c429f1bdd5d5d81a977ce"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae73ed12a431c429f1bdd5d5d81a977ce">read_integer</a> ()</td></tr>
+<tr class="memdesc:ae73ed12a431c429f1bdd5d5d81a977ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads an integer from the serial interface.  <br /></td></tr>
 <tr class="memitem:a51940e2d9df35efbab60ea3076d03266" id="r_a51940e2d9df35efbab60ea3076d03266"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a51940e2d9df35efbab60ea3076d03266">read_confirmation</a> ()</td></tr>
+<tr class="memdesc:a51940e2d9df35efbab60ea3076d03266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a confirmation input from the serial interface.  <br /></td></tr>
 <tr class="memitem:a4df3b276724481c8cc667599b6733ff0" id="r_a4df3b276724481c8cc667599b6733ff0"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a4df3b276724481c8cc667599b6733ff0">find_empty_index</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:a4df3b276724481c8cc667599b6733ff0"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Finds an empty slot in the user database.  <br /></td></tr>
 <tr class="memitem:aee642965bad74cd187195f79bd5f291d" id="r_aee642965bad74cd187195f79bd5f291d"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#aee642965bad74cd187195f79bd5f291d">count_rooms</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:aee642965bad74cd187195f79bd5f291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">brief Counts the number of occupied user entries in the database.  <br /></td></tr>
 <tr class="memitem:aee72324df2418506e4d0fb015d1500be" id="r_aee72324df2418506e4d0fb015d1500be"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aee72324df2418506e4d0fb015d1500be">rfid_set_last_uid</a> (const byte *uidIn)</td></tr>
 <tr class="memdesc:aee72324df2418506e4d0fb015d1500be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for storing the last used RFID.  <br /></td></tr>
 <tr class="memitem:a38522f06db7c720fa309716c24f5fb57" id="r_a38522f06db7c720fa309716c24f5fb57"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a38522f06db7c720fa309716c24f5fb57">rfid_get_last_uid</a> (byte *uidOut)</td></tr>
@@ -315,6 +328,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares two RFID UIDs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">uid1</td><td></td></tr>
@@ -342,6 +357,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>brief Counts the number of occupied user entries in the database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td></td></tr>
@@ -367,6 +384,8 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>Prints the available serial commands. </p>
+
 </div>
 </div>
 <a id="a301fdf0545d6da25fbe5ed4abcc6f075" name="a301fdf0545d6da25fbe5ed4abcc6f075"></a>
@@ -384,6 +403,8 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
+<p>Prints the available serial commands for user-management mode. </p>
+
 </div>
 </div>
 <a id="a4df3b276724481c8cc667599b6733ff0" name="a4df3b276724481c8cc667599b6733ff0"></a>
@@ -400,6 +421,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>brief Finds an empty slot in the user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td></td></tr>
@@ -425,7 +448,7 @@ false </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Get the users db object. </p>
+<p>Copies the current user database to a provided buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td></td></tr>
@@ -449,6 +472,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints all users in the database to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td></td></tr>
@@ -476,6 +501,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>brief Prints a single user entry to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td></td></tr>
@@ -500,6 +527,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints a UID buffer to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td></td></tr>
@@ -523,6 +552,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads a confirmation input from the serial interface. </p>
 <dl class="section return"><dt>Returns</dt><dd>true </dd>
 <dd>
 false </dd></dl>
@@ -543,6 +574,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads an integer from the serial interface. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
@@ -565,6 +598,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Reads an RFID tag UID from the MFRC522 reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td></td></tr>
@@ -704,6 +739,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Executes user-management actions based on the provided command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cmd</td><td></td></tr>
@@ -729,6 +766,8 @@ false </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Validates an RFID tag against the registered user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">myRFID</td><td></td></tr>
