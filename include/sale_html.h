@@ -12,71 +12,71 @@
 #include <pgmspace.h>
 
 /**
- * @brief 
+ * @brief Opening container for the sales graph.
 */
 extern const char SALE_BOX_START[] PROGMEM;
 
 /**
- * @brief 
+ * @brief Opening container for a single room graph.
 */
 extern const char SALE_BOX_ROOM_START[] PROGMEM;
 
 /**
- * @brief 
+ * @brief HTML fragment for the room identifier.
 */
 extern const char SALE_BOX_ROOM_ID[] PROGMEM;
 
 /**
- * @brief 
+ * @brief HTML fragment defining the CSS class type for a bar.
 */
 extern const char SALE_BOX_ROOM_CLASS_TYPE[] PROGMEM;
 
 /**
- * @brief 
+ * @brief HTML fragment defining the height style of a bar.
 */
 extern const char SALE_BOX_ROOM_CLASS_HEIGHT[] PROGMEM;
 
 /**
- * @brief 
+ * @brief Closing fragment for a single sales bar.
 */
 extern const char SALE_BOX_ROOM_END[] PROGMEM;
 
 /**
- * @brief 
+ * @brief Closing container for a single room graph.
 */
 extern const char SALE_BOX_ROOM_STOP[] PROGMEM;
 
 /**
- * @brief 
+ * @brief Closing container for the complete sales graph.
 */
 extern const char SALE_BOX_STOP[] PROGMEM;
 
 /**
- * @brief 
+ * @brief Sends a single sales bar element to the client.
  * @param server 
  * @param room_number 
  * @param bar_type 
  * @param bar_height 
  */
 void send_sale_html_graph(
-    ESP8266WebServer &server,
-    uint8_t room_number,
-    const char *bar_type,
-    int bar_height
+    ESP8266WebServer &server,       /**< The server */
+    uint8_t room_number,            /**< Number of the relevant room */
+    const char *bar_type,           /**< The type of the bar graph */
+    int bar_height                  /**< The height of the bar graph */
 );
 
 /**
- * @brief 
+ * @brief Sends the complete sales graph page.
  * @param server 
- * @param room_count 
+ * @param room_count  
  * @param greenHeight 
  * @param classicHeights 
 */
 void send_sale_html_page(
-    ESP8266WebServer &server,
-    uint8_t room_count,
-    const int *greenHeight,
-    const int *classicHeights
+    ESP8266WebServer &server,       /**< The server */
+    uint8_t room_count,             /**< The number of rooms */
+    const int *greenHeight,         /**< The hight of the green bar */
+    const int *classicHeights       /**< The hight of the clasic bar (not used in prototype) */
 );
 
 #endif
