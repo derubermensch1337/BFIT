@@ -90,7 +90,7 @@ bool remove_user(
 );
 
 /**
- * @brief 
+ * @brief Compares two RFID UIDs.
  * 
  * @param uid1 
  * @param uid2 
@@ -103,7 +103,7 @@ bool compare_UID(
 );
 
 /**
- * @brief 
+ * @brief Reads an RFID tag UID from the MFRC522 reader.
  * 
  * @param rfid 
  * @param uidBuffer 
@@ -116,20 +116,20 @@ bool read_RFID_tag(
 );
 
 /**
- * @brief 
+ * @brief Prints the available serial commands.
 */
 void display_commands(
     void
 );
 
 /**
- * @brief 
+ * @brief Prints the available serial commands for user-management mode. 
 */
 void display_commands_um(
 );
 
 /**
- * @brief Get the users db object
+ * @brief Copies the current user database to a provided buffer.
  * 
  * @param ptr 
 */
@@ -138,7 +138,7 @@ void get_users_db(
 );
 
 /**
- * @brief 
+ * @brief Executes user-management actions based on the provided command.
  * 
  * @param cmd 
  * @param ptr 
@@ -151,7 +151,7 @@ void user_management(
 );
 
 /**
- * @brief 
+ * @brief Validates an RFID tag against the registered user database.
  * 
  * @param myRFID 
  * @return true 
@@ -162,7 +162,7 @@ bool validate_rfid(
 );
 
 /**
- * @brief 
+ * @brief brief Prints a single user entry to the serial interface.
  * 
  * @param ptr 
  * @param idx 
@@ -172,7 +172,7 @@ void print_single_user(
     int idx
 );
 /**
- * @brief 
+ * @brief Prints all users in the database to the serial interface. 
  * 
  * @param ptr 
 */
@@ -181,7 +181,7 @@ void print_all_users(
 );
 
 /**
- * @brief 
+ * @brief Prints a UID buffer to the serial interface.
  * 
  * @param ptr 
 */
@@ -190,7 +190,7 @@ void print_uid(
 );
 
 /**
- * @brief 
+ * @brief Reads an integer from the serial interface.
  * 
  * @return int 
 */
@@ -198,7 +198,7 @@ int read_integer(
 );
 
 /**
- * @brief 
+ * @brief Reads a confirmation input from the serial interface.
  * 
  * @return true 
  * @return false 
@@ -207,7 +207,7 @@ bool read_confirmation(
 );
 
 /**
- * @brief 
+ * @brief brief Finds an empty slot in the user database.
  * 
  * @param ptr 
  * @return int 
@@ -217,7 +217,7 @@ int find_empty_index(
 );
 
 /**
- * @brief 
+ * @brief brief Counts the number of occupied user entries in the database.
  * 
  * @param ptr 
  * @return int 
