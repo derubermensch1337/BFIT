@@ -99,17 +99,23 @@ $(function(){initNavTree('graph__data_8h.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a42b2b0f20098ad8577decdc6aed0dd86" id="r_a42b2b0f20098ad8577decdc6aed0dd86"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a42b2b0f20098ad8577decdc6aed0dd86">ROOM_COUNT</a>&#160;&#160;&#160;18</td></tr>
+<tr class="memdesc:a42b2b0f20098ad8577decdc6aed0dd86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of rooms supported by the sales graph.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a76ce02f73cd88ff2fec783a40c4cb797" id="r_a76ce02f73cd88ff2fec783a40c4cb797"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a76ce02f73cd88ff2fec783a40c4cb797">graph_add_to_room_green</a> (uint8_t roomNumber, int delta)</td></tr>
+<tr class="memdesc:a76ce02f73cd88ff2fec783a40c4cb797"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a value to the green sales bar of a given room.  <br /></td></tr>
 <tr class="memitem:a8faa2070ca493c37553a77d2f81ec41f" id="r_a8faa2070ca493c37553a77d2f81ec41f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8faa2070ca493c37553a77d2f81ec41f">graph_add_to_room_clasic</a> (uint8_t roomNumber, int delta)</td></tr>
+<tr class="memdesc:a8faa2070ca493c37553a77d2f81ec41f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a value to the classic sales bar of a given room.  <br /></td></tr>
 <tr class="memitem:aa65a64c2604100886e8172ebeb401924" id="r_aa65a64c2604100886e8172ebeb401924"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa65a64c2604100886e8172ebeb401924">print_graph_arrays</a> ()</td></tr>
+<tr class="memdesc:aa65a64c2604100886e8172ebeb401924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the current graph height arrays.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a9ce470c42fa52a1e1348aaa5a745614f" id="r_a9ce470c42fa52a1e1348aaa5a745614f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a9ce470c42fa52a1e1348aaa5a745614f">greenHeight</a> [<a class="el" href="#a42b2b0f20098ad8577decdc6aed0dd86">ROOM_COUNT</a>]</td></tr>
+<tr class="memdesc:a9ce470c42fa52a1e1348aaa5a745614f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height values for green product sales per room.  <br /></td></tr>
 <tr class="memitem:a0a2ed5e0c246b8dc17e36e9c80fd6b84" id="r_a0a2ed5e0c246b8dc17e36e9c80fd6b84"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a0a2ed5e0c246b8dc17e36e9c80fd6b84">classicHeight</a> [<a class="el" href="#a42b2b0f20098ad8577decdc6aed0dd86">ROOM_COUNT</a>]</td></tr>
+<tr class="memdesc:a0a2ed5e0c246b8dc17e36e9c80fd6b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Height values for classic product sales per room.  <br /></td></tr>
 </table>
 <a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
 <a id="a42b2b0f20098ad8577decdc6aed0dd86" name="a42b2b0f20098ad8577decdc6aed0dd86"></a>
@@ -123,6 +129,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Number of rooms supported by the sales graph. </p>
 
 </div>
 </div>
@@ -146,6 +154,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Adds a value to the classic sales bar of a given room. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roomNumber</td><td></td></tr>
+    <tr><td class="paramname">delta</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a76ce02f73cd88ff2fec783a40c4cb797" name="a76ce02f73cd88ff2fec783a40c4cb797"></a>
@@ -167,6 +184,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Adds a value to the green sales bar of a given room. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">roomNumber</td><td></td></tr>
+    <tr><td class="paramname">delta</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa65a64c2604100886e8172ebeb401924" name="aa65a64c2604100886e8172ebeb401924"></a>
@@ -183,6 +209,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Prints the current graph height arrays. </p>
 
 </div>
 </div>
@@ -207,6 +235,8 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Height values for classic product sales per room. </p>
+
 </div>
 </div>
 <a id="a9ce470c42fa52a1e1348aaa5a745614f" name="a9ce470c42fa52a1e1348aaa5a745614f"></a>
@@ -228,6 +258,8 @@ Variables</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Height values for green product sales per room. </p>
 
 </div>
 </div>

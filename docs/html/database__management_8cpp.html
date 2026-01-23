@@ -102,7 +102,9 @@ $(function(){initNavTree('database__management_8cpp.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:a94d9e7ef2a92977cb88d517ab29310cb" id="r_a94d9e7ef2a92977cb88d517ab29310cb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a94d9e7ef2a92977cb88d517ab29310cb">user_management</a> (<a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a> incomingCommand, <a class="el" href="struct_user.html">User</a> *ptr, MFRC522 &amp;<a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a>)</td></tr>
 <tr class="memitem:ad745c57a9162c9705468fecedffdbe4b" id="r_ad745c57a9162c9705468fecedffdbe4b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad745c57a9162c9705468fecedffdbe4b">remove_user</a> ()</td></tr>
+<tr class="memdesc:ad745c57a9162c9705468fecedffdbe4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a user from the database.  <br /></td></tr>
 <tr class="memitem:ac2c85ddce939a0783611c6417ef9d203" id="r_ac2c85ddce939a0783611c6417ef9d203"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac2c85ddce939a0783611c6417ef9d203">get_users_db</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
+<tr class="memdesc:ac2c85ddce939a0783611c6417ef9d203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the users db object.  <br /></td></tr>
 <tr class="memitem:a1fec7802968f92d8a82b2c3c48414fc9" id="r_a1fec7802968f92d8a82b2c3c48414fc9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1fec7802968f92d8a82b2c3c48414fc9">print_all_users</a> (<a class="el" href="struct_user.html">User</a> *ptr)</td></tr>
 <tr class="memitem:a95b7f5158425cbc9144616c6e9a16f68" id="r_a95b7f5158425cbc9144616c6e9a16f68"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a95b7f5158425cbc9144616c6e9a16f68">print_single_user</a> (<a class="el" href="struct_user.html">User</a> *ptr, int idx)</td></tr>
 <tr class="memitem:af2dd70513ccb1d0c9ce1b509c5a971db" id="r_af2dd70513ccb1d0c9ce1b509c5a971db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af2dd70513ccb1d0c9ce1b509c5a971db">print_uid</a> (byte *ptr)</td></tr>
@@ -133,6 +135,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
 </div>
@@ -150,6 +159,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
 </div>
@@ -168,6 +184,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Get the users db object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a1fec7802968f92d8a82b2c3c48414fc9" name="a1fec7802968f92d8a82b2c3c48414fc9"></a>
@@ -184,6 +208,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -205,6 +235,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td></td></tr>
+    <tr><td class="paramname">idx</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -222,6 +259,12 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -239,6 +282,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>
@@ -256,6 +302,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 </div>
 </div>
@@ -274,6 +321,11 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Removes a user from the database. </p>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
 </div>
 </div>
 <a id="a94d9e7ef2a92977cb88d517ab29310cb" name="a94d9e7ef2a92977cb88d517ab29310cb"></a>
@@ -285,7 +337,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void user_management </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a></td>          <td class="paramname"><span class="paramname"><em>incomingCommand</em></span>, </td>
+          <td class="paramtype"><a class="el" href="rfid__access_8h.html#aff8e30d9f71191b67c6c684478ab46d4">RFIDcommand</a></td>          <td class="paramname"><span class="paramname"><em>cmd</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -299,6 +351,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cmd</td><td></td></tr>
+    <tr><td class="paramname">ptr</td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

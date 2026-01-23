@@ -106,7 +106,9 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad96e80125cecd9cd19e98c3735491dd4" id="r_ad96e80125cecd9cd19e98c3735491dd4"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad96e80125cecd9cd19e98c3735491dd4">init_users_and_products</a> ()</td></tr>
+<tr class="memdesc:ad96e80125cecd9cd19e98c3735491dd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Old function for initualicing users and products, shuld be moved to <a class="el" href="fridge__state_8h.html" title="File for declearing the fridge inventory, user inventory shuld also be moved to this file,...">fridge_state.h</a>.  <br /></td></tr>
 <tr class="memitem:a2ee24f51473041ace506946c3daacd34" id="r_a2ee24f51473041ace506946c3daacd34"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2ee24f51473041ace506946c3daacd34">perform_sale</a> (<a class="el" href="structinventory.html">inventory</a> *fridge_inventory)</td></tr>
+<tr class="memdesc:a2ee24f51473041ace506946c3daacd34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to actually performe a sale between a user and the fridge.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Function used for declearing the system users and products. </p>
@@ -142,6 +144,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Old function for initualicing users and products, shuld be moved to <a class="el" href="fridge__state_8h.html" title="File for declearing the fridge inventory, user inventory shuld also be moved to this file,...">fridge_state.h</a>. </p>
+<p>Old function for initualicing users and products, shuld be moved to <a class="el" href="fridge__state_8h.html" title="File for declearing the fridge inventory, user inventory shuld also be moved to this file,...">fridge_state.h</a>. </p>
+
 </div>
 </div>
 <a id="a2ee24f51473041ace506946c3daacd34" name="a2ee24f51473041ace506946c3daacd34"></a>
@@ -158,11 +163,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to actually performe a sale between a user and the fridge. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">weight</td><td></td></tr>
     <tr><td class="paramname">user_id</td><td></td></tr>
     <tr><td class="paramname">fridge_inventory</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fridge_inventory</td><td>Inventory that the sale shuld remove item from </td></tr>
   </table>
   </dd>
 </dl>
