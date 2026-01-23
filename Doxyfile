@@ -1,3 +1,7 @@
+BRIEF_MEMBER_DESC = YES
+REPEAT_BRIEF      = NO
+ALWAYS_DETAILED_SEC = NO
+
 ---------------------------------------------
 # Project identity
 #---------------------------------------------

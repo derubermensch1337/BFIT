@@ -44,8 +44,6 @@ static bool \doxymbox{\hyperlink{lock__ctrl_8cpp_ac119c560d40e40619cb536f74f0ea0
 
 
 \doxysubsection{Detailed Description}
-Implements servo-\/based locking control and buzzer feedback for the fridge door. 
-
 \begin{DoxyAuthor}{Authors}
 Amal Araweelo Almis 
 \end{DoxyAuthor}
@@ -60,10 +58,6 @@ Amal Araweelo Almis
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_ac854db649e8e27e6f2f34df2311c07ea} 
 bool is\+\_\+box\+\_\+closed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Checks whether the box is closed. 
-
 Uses the light sensor to determine door state.
 
 \begin{DoxyReturn}{Returns}
@@ -77,19 +71,11 @@ false Box is open.
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_a73f85ca7eef43ea76053c19cb6515a3f} 
 void lock\+\_\+ctrl\+\_\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Initializes the lock control module. 
-
 Must be called once during system startup before any other lock control functions are used. \Hypertarget{lock__ctrl_8cpp_acc746d35b26615d437e9c3df2ec0cdfc}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!lock\_door@{lock\_door}}
 \index{lock\_door@{lock\_door}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{lock\_door()}{lock\_door()}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_acc746d35b26615d437e9c3df2ec0cdfc} 
 void lock\+\_\+door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Locks the door using the servo. 
 
 \Hypertarget{lock__ctrl_8cpp_a5d3b72f442ced251e4b9a4e6a869c55a}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!play\_close@{play\_close}}
 \index{play\_close@{play\_close}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
@@ -97,29 +83,17 @@ Locks the door using the servo.
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_a5d3b72f442ced251e4b9a4e6a869c55a} 
 void play\+\_\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Play sound effect when the door closes. 
-
 \Hypertarget{lock__ctrl_8cpp_a31ffbd66baac0dcbd686e4e59e5d3c45}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!play\_open@{play\_open}}
 \index{play\_open@{play\_open}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{play\_open()}{play\_open()}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_a31ffbd66baac0dcbd686e4e59e5d3c45} 
 void play\+\_\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-
-
-Plays the sound effect for door opening. 
-
 \Hypertarget{lock__ctrl_8cpp_ac3411e1e911a7479c9880084ef1c62eb}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!unlock\_door@{unlock\_door}}
 \index{unlock\_door@{unlock\_door}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{unlock\_door()}{unlock\_door()}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_ac3411e1e911a7479c9880084ef1c62eb} 
 void unlock\+\_\+door (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
-
-
-
-Unlocks the door using the servo. 
 
 
 
@@ -132,19 +106,11 @@ Unlocks the door using the servo.
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_ac119c560d40e40619cb536f74f0ea074} 
 bool box\+Closed = false\hspace{0.3cm}{\ttfamily [static]}}
 
-
-
-Internal latched state indicating whether the box is closed. 
-
 \Hypertarget{lock__ctrl_8cpp_ade03263f2baf50b55111322a7c1630c2}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!BUZZER@{BUZZER}}
 \index{BUZZER@{BUZZER}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{BUZZER}{BUZZER}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_ade03263f2baf50b55111322a7c1630c2} 
 const int BUZZER = 2}
-
-
-
-GPIO pin connected to the buzzer. 
 
 \begin{DoxyNote}{Note}
 This pin choice may cause reset issues on some boards. 
@@ -155,19 +121,11 @@ This pin choice may cause reset issues on some boards.
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_ad2f28c9419f90dda0203c2c45f6ce63f} 
 const double HIGH\+\_\+\+TONE = 1000}
 
-
-
-Frequency (Hz) used for the high-\/tone buzzer sound. 
-
 \Hypertarget{lock__ctrl_8cpp_ae825e09926ffe6e189dc34c83f669a01}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!LOCK\_POS@{LOCK\_POS}}
 \index{LOCK\_POS@{LOCK\_POS}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{LOCK\_POS}{LOCK\_POS}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_ae825e09926ffe6e189dc34c83f669a01} 
 const int LOCK\+\_\+\+POS = 100\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Servo position corresponding to the locked state. 
 
 \Hypertarget{lock__ctrl_8cpp_abab65b22cd1ec97c58f9d750cbfca3b7}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!lockServo@{lockServo}}
 \index{lockServo@{lockServo}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
@@ -181,27 +139,15 @@ Servo lock\+Servo\hspace{0.3cm}{\ttfamily [static]}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_afe109cb6a7f4d3d461b84cd1ff565032} 
 const double LOW\+\_\+\+TONE = 600}
 
-
-
-Frequency (Hz) used for the low-\/tone buzzer sound. 
-
 \Hypertarget{lock__ctrl_8cpp_a6442e319285672d7f65e2cfeeaa8f893}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!TONE\_LENGTH@{TONE\_LENGTH}}
 \index{TONE\_LENGTH@{TONE\_LENGTH}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{TONE\_LENGTH}{TONE\_LENGTH}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_a6442e319285672d7f65e2cfeeaa8f893} 
 const unsigned long TONE\+\_\+\+LENGTH = 200}
 
-
-
-Duration of buzzer tone in milliseconds. 
-
 \Hypertarget{lock__ctrl_8cpp_a45e03b9b268eac2e1d0e116b521f86c4}\index{lock\_ctrl.cpp@{lock\_ctrl.cpp}!UNLOCK\_POS@{UNLOCK\_POS}}
 \index{UNLOCK\_POS@{UNLOCK\_POS}!lock\_ctrl.cpp@{lock\_ctrl.cpp}}
 \doxysubsubsection{\texorpdfstring{UNLOCK\_POS}{UNLOCK\_POS}}
 {\footnotesize\ttfamily \label{lock__ctrl_8cpp_a45e03b9b268eac2e1d0e116b521f86c4} 
 const int UNLOCK\+\_\+\+POS = 0\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Servo position corresponding to the unlocked state (mechanically fixed). 
 

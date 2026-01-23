@@ -182,8 +182,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:a23424c8ba4bf5c99fbb09f4d86787465"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of currently registered users.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Declare functions related to RFID reading and user database. </p>
-<dl class="section author"><dt>Author</dt><dd>Amal Araweelo Almis </dd>
+<div class="textblock"><dl class="section author"><dt>Author</dt><dd>Amal Araweelo Almis </dd>
 <dd>
 Anssi Sohlman </dd>
 <dd>
@@ -201,8 +200,6 @@ Baldur G. Toftegaard </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Maximum number of rooms supported by the system. </p>
-
 </div>
 </div>
 <a id="a36932b0e869e0114f32e255f61306d6b" name="a36932b0e869e0114f32e255f61306d6b"></a>
@@ -216,8 +213,6 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>GPIO pin connected to RST. </p>
 
 </div>
 </div>
@@ -233,8 +228,6 @@ Baldur G. Toftegaard </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>GPIO pin connected to SS. </p>
-
 </div>
 </div>
 <a id="a685be41cf665c6412e45be53ca20543f" name="a685be41cf665c6412e45be53ca20543f"></a>
@@ -248,8 +241,6 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Length of an RFID UID in bytes. </p>
 
 </div>
 </div>
@@ -265,8 +256,6 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Supported serial commands for the RFID management interface. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc" name="aff8e30d9f71191b67c6c684478ab46d4a93c1ce1fac89139d9f4df4b6db21b1cc"></a>CMD_NONE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9" name="aff8e30d9f71191b67c6c684478ab46d4afb71f278c294a7b5dc237659e92929e9"></a>CMD_ADD_USER&#160;</td><td class="fielddoc"></td></tr>
@@ -294,17 +283,15 @@ Baldur G. Toftegaard </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Adds a new user by reading room number and scanning an RFID tag. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>- An instance of a MFRC522 object. </td></tr>
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>An instance of a MFRC522 object. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was added. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was added. </dd>
 <dd>
-false - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not added. </dd></dl>
+false <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not added. </dd></dl>
 
 </div>
 </div>
@@ -322,8 +309,6 @@ false - <a class="el" href="struct_user.html" title="User record stored in the R
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Reads a command from the serial interface and maps it to an <a class="el" href="#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a>. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a> </dd></dl>
 
 </div>
@@ -346,18 +331,16 @@ false - <a class="el" href="struct_user.html" title="User record stored in the R
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Compares two RFID UIDs. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uid1</td><td>- The first uid number. </td></tr>
-    <tr><td class="paramname">uid2</td><td>- The uid number we want to dompare it to. </td></tr>
+    <tr><td class="paramname">uid1</td><td>The first uid number. </td></tr>
+    <tr><td class="paramname">uid2</td><td>The uid number we want to dompare it to. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - Numbers match. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Numbers match. </dd>
 <dd>
-false - NUmbers do not match. </dd></dl>
+false NUmbers do not match. </dd></dl>
 
 </div>
 </div>
@@ -375,15 +358,13 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Counts the number of occupied user entries in the database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int - Number of rooms </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Number of rooms </dd></dl>
 
 </div>
 </div>
@@ -402,8 +383,6 @@ false - NUmbers do not match. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Prints the available serial commands. </p>
-
 </div>
 </div>
 <a id="a301fdf0545d6da25fbe5ed4abcc6f075" name="a301fdf0545d6da25fbe5ed4abcc6f075"></a>
@@ -421,8 +400,6 @@ false - NUmbers do not match. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Prints the available serial commands for user-management mode. </p>
-
 </div>
 </div>
 <a id="a4df3b276724481c8cc667599b6733ff0" name="a4df3b276724481c8cc667599b6733ff0"></a>
@@ -439,15 +416,13 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Finds an empty slot in the user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int - The empty index. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int The empty index. </dd></dl>
 
 </div>
 </div>
@@ -465,8 +440,6 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Copies the current user database to a provided buffer. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
@@ -490,8 +463,6 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prints all users in the database to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
@@ -519,8 +490,6 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>brief Prints a single user entry to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to the users[] array </td></tr>
@@ -545,8 +514,6 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prints a UID buffer to the serial interface. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>A pointer to member of the users[] array </td></tr>
@@ -570,11 +537,9 @@ false - NUmbers do not match. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reads a confirmation input from the serial interface. </p>
-<dl class="section return"><dt>Returns</dt><dd>true - Confirmed. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Confirmed. </dd>
 <dd>
-false - Not confirmed. </dd></dl>
+false Not confirmed. </dd></dl>
 
 </div>
 </div>
@@ -592,9 +557,7 @@ false - Not confirmed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reads an integer from the serial interface. </p>
-<dl class="section return"><dt>Returns</dt><dd>int - Intiger read from serial interface. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>int Intiger read from serial interface. </dd></dl>
 
 </div>
 </div>
@@ -616,8 +579,6 @@ false - Not confirmed. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Reads an RFID tag UID from the MFRC522 reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>An instance of a MFRC522 object </td></tr>
@@ -625,9 +586,9 @@ false - Not confirmed. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - RFID tag was read. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true RFID tag was read. </dd>
 <dd>
-false - No RFID tag was read. </dd></dl>
+false No RFID tag was read. </dd></dl>
 
 </div>
 </div>
@@ -645,11 +606,9 @@ false - No RFID tag was read. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Removes a user from the database. </p>
-<dl class="section return"><dt>Returns</dt><dd>true - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was removed. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was removed. </dd>
 <dd>
-false - <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not removed. </dd></dl>
+false <a class="el" href="struct_user.html" title="User record stored in the RFID user database.">User</a> was not removed. </dd></dl>
 
 </div>
 </div>
@@ -667,17 +626,15 @@ false - <a class="el" href="struct_user.html" title="User record stored in the R
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Function for restoring the last used RFID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uidOut</td><td>- Pointer to user it. </td></tr>
+    <tr><td class="paramname">uidOut</td><td>Pointer to user it. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - There was an last uid to retrive. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true There was an last uid to retrive. </dd>
 <dd>
-false - No last uid was retrived. </dd></dl>
+false No last uid was retrived. </dd></dl>
 
 </div>
 </div>
@@ -695,17 +652,15 @@ false - No last uid was retrived. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Function for storing the last used RFID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">uidOut</td><td>- Pointer to user it. </td></tr>
+    <tr><td class="paramname">uidOut</td><td>Pointer to user it. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - Stored last used uid. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true Stored last used uid. </dd>
 <dd>
-false - Last uid was not stored </dd></dl>
+false Last uid was not stored </dd></dl>
 
 </div>
 </div>
@@ -723,11 +678,9 @@ false - Last uid was not stored </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initializes SPI and the MFRC522 RFID reader. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>- An instance of a MFRC522 object </td></tr>
+    <tr><td class="paramname"><a class="el" href="main_8cpp.html#a7cc33c6b9b1bd83e02864b1eb0530a63">rfid</a></td><td>An instance of a MFRC522 object </td></tr>
   </table>
   </dd>
 </dl>
@@ -757,8 +710,6 @@ false - Last uid was not stored </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Executes user-management actions based on the provided command. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cmd</td><td>The current <a class="el" href="#aff8e30d9f71191b67c6c684478ab46d4" title="Supported serial commands for the RFID management interface.">RFIDcommand</a> (add or remove user) </td></tr>
@@ -784,17 +735,15 @@ false - Last uid was not stored </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Validates an RFID tag against the registered user database. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">myRFID</td><td>An instance of a MFRC522 object </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true - The RFID was a match. </dd>
+<dl class="section return"><dt>Returns</dt><dd>true The RFID was a match. </dd>
 <dd>
-false - There was no matching RFID in the database. </dd></dl>
+false There was no matching RFID in the database. </dd></dl>
 
 </div>
 </div>
@@ -819,8 +768,6 @@ false - There was no matching RFID in the database. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Number of currently registered users. </p>
-
 </div>
 </div>
 <a id="ad1ade64ec1f94c9ff0835615a52a941a" name="ad1ade64ec1f94c9ff0835615a52a941a"></a>
@@ -842,8 +789,6 @@ false - There was no matching RFID in the database. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Global user database array. </p>
 
 </div>
 </div>

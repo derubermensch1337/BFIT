@@ -132,8 +132,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:ac119c560d40e40619cb536f74f0ea074"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal latched state indicating whether the box is closed.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implements servo-based locking control and buzzer feedback for the fridge door. </p>
-<dl class="section author"><dt>Authors</dt><dd>Amal Araweelo Almis </dd></dl>
+<div class="textblock"><dl class="section author"><dt>Authors</dt><dd>Amal Araweelo Almis </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
 <a id="ac854db649e8e27e6f2f34df2311c07ea" name="ac854db649e8e27e6f2f34df2311c07ea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac854db649e8e27e6f2f34df2311c07ea">&#9670;&#160;</a></span>is_box_closed()</h2>
@@ -149,8 +148,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Checks whether the box is closed. </p>
 <p>Uses the light sensor to determine door state.</p>
 <dl class="section return"><dt>Returns</dt><dd>true Box is closed. </dd>
 <dd>
@@ -172,8 +169,6 @@ false Box is open. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initializes the lock control module. </p>
 <p>Must be called once during system startup before any other lock control functions are used. </p>
 
 </div>
@@ -193,8 +188,6 @@ false Box is open. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Locks the door using the servo. </p>
-
 </div>
 </div>
 <a id="a5d3b72f442ced251e4b9a4e6a869c55a" name="a5d3b72f442ced251e4b9a4e6a869c55a"></a>
@@ -211,8 +204,6 @@ false Box is open. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Play sound effect when the door closes. </p>
 
 </div>
 </div>
@@ -231,8 +222,6 @@ false Box is open. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Plays the sound effect for door opening. </p>
-
 </div>
 </div>
 <a id="ac3411e1e911a7479c9880084ef1c62eb" name="ac3411e1e911a7479c9880084ef1c62eb"></a>
@@ -249,8 +238,6 @@ false Box is open. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Unlocks the door using the servo. </p>
 
 </div>
 </div>
@@ -275,8 +262,6 @@ false Box is open. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Internal latched state indicating whether the box is closed. </p>
-
 </div>
 </div>
 <a id="ade03263f2baf50b55111322a7c1630c2" name="ade03263f2baf50b55111322a7c1630c2"></a>
@@ -290,8 +275,6 @@ false Box is open. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>GPIO pin connected to the buzzer. </p>
 <dl class="section note"><dt>Note</dt><dd>This pin choice may cause reset issues on some boards. </dd></dl>
 
 </div>
@@ -307,8 +290,6 @@ false Box is open. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Frequency (Hz) used for the high-tone buzzer sound. </p>
 
 </div>
 </div>
@@ -331,8 +312,6 @@ false Box is open. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Servo position corresponding to the locked state. </p>
 
 </div>
 </div>
@@ -370,8 +349,6 @@ false Box is open. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Frequency (Hz) used for the low-tone buzzer sound. </p>
-
 </div>
 </div>
 <a id="a6442e319285672d7f65e2cfeeaa8f893" name="a6442e319285672d7f65e2cfeeaa8f893"></a>
@@ -385,8 +362,6 @@ false Box is open. </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Duration of buzzer tone in milliseconds. </p>
 
 </div>
 </div>
@@ -409,8 +384,6 @@ false Box is open. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>Servo position corresponding to the unlocked state (mechanically fixed). </p>
 
 </div>
 </div>
